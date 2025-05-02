@@ -1,0 +1,196 @@
+Received: from CH0PR01MB6938.prod.exchangelabs.com (2603:10b6:610:103::9) by
+ DM6PR01MB5929.prod.exchangelabs.com with HTTPS; Wed, 30 Apr 2025 14:49:45
+ +0000
+Received: from PH8P221CA0007.NAMP221.PROD.OUTLOOK.COM (2603:10b6:510:2d8::25)
+ by CH0PR01MB6938.prod.exchangelabs.com (2603:10b6:610:103::9) with Microsoft
+ SMTP Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.20.8699.20; Wed, 30 Apr 2025 14:49:42 +0000
+Received: from CY4PEPF0000EDD6.namprd03.prod.outlook.com
+ (2603:10b6:510:2d8:cafe::42) by PH8P221CA0007.outlook.office365.com
+ (2603:10b6:510:2d8::25) with Microsoft SMTP Server (version=TLS1_3,
+ cipher=TLS_AES_256_GCM_SHA384) id 15.20.8655.41 via Frontend Transport; Wed,
+ 30 Apr 2025 14:49:42 +0000
+Authentication-Results: spf=pass (sender IP is 69.72.47.180)
+ smtp.mailfrom=baseline.mail.campuslabs.com; dkim=pass (signature was
+ verified) header.d=baseline.mail.campuslabs.com;dmarc=pass action=none
+ header.from=baseline.mail.campuslabs.com;compauth=pass reason=100
+Received-SPF: Pass (protection.outlook.com: domain of
+ baseline.mail.campuslabs.com designates 69.72.47.180 as permitted sender)
+ receiver=protection.outlook.com; client-ip=69.72.47.180;
+ helo=m47-180.mailgun.net; pr=C
+Received: from m47-180.mailgun.net (69.72.47.180) by
+ CY4PEPF0000EDD6.mail.protection.outlook.com (10.167.241.202) with Microsoft
+ SMTP Server (version=TLS1_3, cipher=TLS_AES_256_GCM_SHA384) id 15.20.8699.20
+ via Frontend Transport; Wed, 30 Apr 2025 14:49:41 +0000
+DKIM-Signature: a=rsa-sha256; v=1; c=relaxed/relaxed; d=baseline.mail.campuslabs.com; q=dns/txt; s=k1; t=1746024581; x=1746031781;
+ h=Message-Id: Reply-To: To: To: From: From: Subject: Subject: Content-Type: Mime-Version: Date: Sender: Sender;
+ bh=twuIuDuiyJyVFCUwowl/pFQCrHKCd+VZLt4ppSzAgLM=;
+ b=MPTufS4uNyT3tSvKOmpEAJGFMZidoZek91XFpxnc7Z8Fu2z1TjBJce+c52KnIzj8q1+v5G5TZNaFkvqCPY5iVKTVCq54wljAsUszGF6PBfaLJZ4dt0TYDAddNUViNmPYHJYceilv3mUVBIYantKgJAOENGA262nrdbBP7wJkEwg=
+X-Mailgun-Sending-Ip: 69.72.47.180
+X-Mailgun-Sending-Ip-Pool-Name:
+X-Mailgun-Sending-Ip-Pool:
+X-Mailgun-Sid: WyJlYTVkNyIsIm5hdGhyYUBtaXQuZWR1IiwiNDdhOSJd
+Received: by 37fa0619fea8 with HTTP id 6812388596ed29659aeea74e; Wed, 30 Apr 2025
+ 14:49:41 GMT
+Sender: info@baseline.mail.campuslabs.com
+Date: Wed, 30 Apr 2025 14:49:41 +0000
+Content-Type: multipart/alternative;
+ boundary="85a197964b57cce7c8a0b84799ef679255b237652eb76fe17a79f3fc7121"
+Subject: =?UTF-8?q?Last_chance_-_Survey_closes_in_2_days!_Share_Your_Feedback_on_M?=
+ =?UTF-8?q?IT_Recreation_=E2=80=93_Chance_to_Win_a_Massage!?=
+From: "MIT Recreation <info@baseline.mail.campuslabs.com>"
+ <info@baseline.mail.campuslabs.com>
+To: nathra@mit.edu
+Reply-To: mitrecsports@mit.edu
+X-Mailgun-Variables: {"OrganizationId":"1303","EmailId":"373548","ProjectId":"378375","UserId":"44940847"}
+Message-Id: <20250430144941.c43e1fc53397020e@baseline.mail.campuslabs.com>
+Return-Path: bounce+2ac10a.47a9-nathra=mit.edu@baseline.mail.campuslabs.com
+X-MS-Exchange-Organization-ExpirationStartTime: 30 Apr 2025 14:49:42.2547
+ (UTC)
+X-MS-Exchange-Organization-ExpirationStartTimeReason: OriginalSubmit
+X-MS-Exchange-Organization-ExpirationInterval: 1:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: OriginalSubmit
+X-MS-Exchange-Organization-Network-Message-Id: 297ec025-1e22-462c-2619-08dd87f63da7
+X-EOPAttributedMessage: 0
+X-EOPTenantAttributedMessage: 64afd9ba-0ecf-4acf-bc36-935f6235ba8b:0
+X-MS-Exchange-Organization-MessageDirectionality: Incoming
+X-MS-PublicTrafficType: Email
+X-MS-TrafficTypeDiagnostic: CY4PEPF0000EDD6:EE_|CH0PR01MB6938:EE_|DM6PR01MB5929:EE_
+X-MS-Exchange-Organization-AuthSource: CY4PEPF0000EDD6.namprd03.prod.outlook.com
+X-MS-Exchange-Organization-AuthAs: Anonymous
+X-MS-Office365-Filtering-Correlation-Id: 297ec025-1e22-462c-2619-08dd87f63da7
+X-MS-Exchange-AtpMessageProperties: SA|SL
+X-MS-Exchange-Organization-SCL: -1
+X-Microsoft-Antispam: BCL:3;ARA:13230040|3143699003|3072899012|2093699003|3123699003|3092899012|2092899012|13102899012|13012899012|29132699027|12012899012|5062899012|13003099007|8096899003;
+X-Forefront-Antispam-Report: CIP:69.72.47.180;CTRY:US;LANG:en;SCL:-1;SRV:;IPV:NLI;SFV:SKN;H:m47-180.mailgun.net;PTR:m47-180.mailgun.net;CAT:NONE;SFS:(13230040)(3143699003)(3072899012)(2093699003)(3123699003)(3092899012)(2092899012)(13102899012)(13012899012)(29132699027)(12012899012)(5062899012)(13003099007)(8096899003);DIR:INB;
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 30 Apr 2025 14:49:41.8788
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: 297ec025-1e22-462c-2619-08dd87f63da7
+X-MS-Exchange-CrossTenant-Id: 64afd9ba-0ecf-4acf-bc36-935f6235ba8b
+X-MS-Exchange-CrossTenant-AuthSource: CY4PEPF0000EDD6.namprd03.prod.outlook.com
+X-MS-Exchange-CrossTenant-AuthAs: Anonymous
+X-MS-Exchange-CrossTenant-FromEntityHeader: Internet
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: CH0PR01MB6938
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:03.3575086
+X-MS-Exchange-Processed-By-BccFoldering: 15.20.8678.021
+X-Microsoft-Antispam-Mailbox-Delivery:
+	ucf:0;jmr:0;auth:0;dest:I;ENG:(910005)(944506478)(944626604)(920097)(930097)(140003);
+X-Microsoft-Antispam-Message-Info:
+	=?Windows-1252?Q?DtqeZgfb3ylHkosyi2Lu4L6qaqkaqfzdiwv/jkTahBo+ZTp2jBniDBbm?=
+ =?Windows-1252?Q?lOe96FGYmM7t/bDJKob7iyxVoHrZGDJGm+Ov9pEhtfGU3/JL4yZgjF6W?=
+ =?Windows-1252?Q?HuO2UoAO09lIrpg+rwY1rApQ6LpERbWdsCCnrTyqRZMfivWxutcau+cE?=
+ =?Windows-1252?Q?piR9nGJnsNFERisG8CdE+VdVHRBbiQEYYqebvhgb7oTLMpCuhCwc2bDo?=
+ =?Windows-1252?Q?X+xienRLDn5U1/WlGio2tkV5xhCOTlYzb1f8+8Nsr4mgq+PsT0Ln4sPu?=
+ =?Windows-1252?Q?b0Jp9ZzExnXpkfwdGLLimom0Q7NaTt3NjNmq2euNvCNm3wVPWtBt6fEx?=
+ =?Windows-1252?Q?+qTVldPk/kpwEBYj4dV85eCNj/WfB1+ueHbShNWelPfoZxF1FUkv+iQI?=
+ =?Windows-1252?Q?HA3nhEf7l3//1SeoQth6zPLB3XLjZcsEkToVnbuy62i2yxgnfpyW0Mao?=
+ =?Windows-1252?Q?rUuqRWnMG+TV9DOPBOstPcGl3jBFiqCrrhiXU4FNQgBGsCl4MqZha8HS?=
+ =?Windows-1252?Q?REW1ETMQmFmvvGcs/79fnIlcUTLOAsfLxzRNjvSy7K+ZfP8W86NRECIK?=
+ =?Windows-1252?Q?dzDbzo5lzwOtfc9I2jZwGbwQphIAsRPz5tNGjLWp+DJ9tyHBzx5vuJp7?=
+ =?Windows-1252?Q?mKt7xVq3m1HZfNHpriheKEBuPYE+jgnB1rKprTHiSFXGGpY9qfV6F8nM?=
+ =?Windows-1252?Q?3iXUPHvmVvtxJ41JSVb9ZDlUmm+oFLEK0Ie2Sm8sd7EYmgSsXTGUp5iM?=
+ =?Windows-1252?Q?b4Meiy/CpxyoOHxjNYgNfUKfdMlJC9cyNDuXnl7MDfwSSddvS6g3fFBz?=
+ =?Windows-1252?Q?VfzJQGp/Ny8IWDwHdc5/LUDp9sBXp3RPf4RjZ0UNAbBFZuAix7Fw+kM7?=
+ =?Windows-1252?Q?u/fxePSnP/Hc6fju/EF8FGjzDxtJ3jvxNt1ll3nJfFMDbpRYMkB3m8fC?=
+ =?Windows-1252?Q?eqqUMYyhOUIzsdSfnu2XS39cRYx7lRqlt8Rh2EFx077zlRiMsuzoKFxv?=
+ =?Windows-1252?Q?R1l+fvCmHEmE/ujo1KsYQBfaXk+nUYanhbsooo+xRdiWPu79DE4PCTEk?=
+ =?Windows-1252?Q?c7yFUg0jC6OVhXHsNRUiPOooPl+Lh/A6HiS65vBPWWYAo6vmfo/OV7Ef?=
+ =?Windows-1252?Q?OONS0RsZwh9OKbhVy67NAAVoruOuLsKRpXgCXqPs90XbHADvn1/o1RCR?=
+ =?Windows-1252?Q?5N3d/MlWCHLK0zEiVTZmYR9//Fa4LQVIvdfbrgnxwuHLv9Msrsht/LqQ?=
+ =?Windows-1252?Q?t/OhQRvA/tjcns2dA9m0TJcJkX4do41JVZLvAXbyDG8b0v7xKiyWKIS/?=
+ =?Windows-1252?Q?du7zbNcr8tvz0Ixk+mMIb+u3+n1n8BJuD/J82OmNkOQ/ATGHNj3ajdQb?=
+ =?Windows-1252?Q?AobjpEJgmq4tPkGv+tASIfXunVf1SnkxeDvt9O133RhlhE5K9CdXA0z0?=
+ =?Windows-1252?Q?4Wr8z4x9XsSkVcoI0gev1ulxY5ULDox26sQ4c8L2RVQsPyejkxKOVOdr?=
+ =?Windows-1252?Q?HuZSVPmYT9C1nt6NgU34jWJcLH1yhU5dI5uIERAKxY3gFE0N3xXxDA3T?=
+ =?Windows-1252?Q?E0XOVuPr1Ix5ci9HtbH18GJSZmXbkucrF4cUY1TCjB9QEycgwyOaNOUo?=
+ =?Windows-1252?Q?NKbdCRehIMp4BWHXjy2pxYHObiUM3s9qx9AFG0ceOr2b6G9YOKSdqRfK?=
+ =?Windows-1252?Q?fq6s96UrbmIun7urqgEazlq0F/6GOYljc437OS/RFJwLLMSrz2VxOmLh?=
+ =?Windows-1252?Q?/yKD4MA0LnkBFk/LOyrlAFBAumTyOtie9hLEutfKSWKdA6WDW5kFLlDd?=
+ =?Windows-1252?Q?NI1KXKs0TEAFIGV2AQw8VtWeLboDkLMzx/MgkMOWtbW3jpyOaQN6dXLE?=
+ =?Windows-1252?Q?Q3f4oLbzZez9W8PR0lPIRe4L1Fr7aBpW/S2kEqS/HdOnp9NWh3ja+FHD?=
+ =?Windows-1252?Q?ZzXnnYDGLoKPm1xiB6JsdhoVgVbqua7ZwwWfzlnMMyeEY1vzJXKKhm/O?=
+ =?Windows-1252?Q?c+FnF+f8WoZtUPhLb9MRG5SUYkY72BGGgAUvv6JJ1uOd4zHN5eGUAYGE?=
+ =?Windows-1252?Q?RzJIjlS6x5bwTfohTHc8qO7ei3n0Q1BXK71sPYXj2ZoEOgK5UDCFmjxZ?=
+ =?Windows-1252?Q?Hc/Q8zKu9P/3usi1GS7Bl9ucTocENyp6XbWsezIIaiIX0ZLZHuk9sSyv?=
+ =?Windows-1252?Q?+dCIG3dKY8HAk/7HR4nCNE0eonPAo03KZ5nkZb5MFm/EAc37DvgozRDz?=
+ =?Windows-1252?Q?rlZKPWV8FlMIhnzZ+IRDTDPEfnm8TD0NfISS1tzip2YX87JrSoWaeyY7?=
+ =?Windows-1252?Q?+qV52MicTizsOLNb8dOeAyg2JXq1jR1QIRgYtNxvrPGcMTSQvrZgttZd?=
+ =?Windows-1252?Q?cIUxfVPH7n2JDKQmgHR+h5FA6pb9K+3yBmskkbifsatdXGnFMvgNdMk+?=
+ =?Windows-1252?Q?psbHZLi0L4qxwKg8W0h3HYMl75mmkg2Yc7o2yxvJ6F1tXs/ZMBejjWv3?=
+ =?Windows-1252?Q?pFC0t1X7fT0SGZIi3VAS31+zJ3T2O7CY9aUa/GTiSA6RIYgxik3o9oNz?=
+ =?Windows-1252?Q?lpc3V90DP+1/6EudjhaD7inuEjff/nMDNBf9fyf2YMbgZjYmueOkLVZL?=
+ =?Windows-1252?Q?CjnubxKE9Q4mh0h1nPABLGWTOdcgrNMnwOEhw1czdapw/Kms7UwDXov6?=
+ =?Windows-1252?Q?M7dja+IvQHOy6xEq/b/15SA0o00ZohvEpkvEArM6mVY9GYmBMbI7lYfJ?=
+ =?Windows-1252?Q?5JAlnOwyjc7457c2X7L7jQ0CCe2ZpGhYPor+dnrBJLwOVbk0M8PvGdDW?=
+ =?Windows-1252?Q?IiEv08VlPacZr8+K44gjZP9j6hvfn6WKjLVTumjJxhmRrr1lOgCfhPDl?=
+ =?Windows-1252?Q?9rBuuDlHwAs19g=3D=3D?=
+MIME-Version: 1.0
+
+--85a197964b57cce7c8a0b84799ef679255b237652eb76fe17a79f3fc7121
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain; charset=ascii
+
+Dear DAPER Members &amp; Students,You have been randomly selected by MIT Re=
+creation to complete a survey about Recreational facilities, activities, an=
+d programs on campus. This survey assesses your current satisfaction, as we=
+ll as your needs and expectations in regard to campus recreation.&nbsp;Data=
+ collected from this project will be used by administrators to make informe=
+d decisions about programming and/or policies. Upon completion of the surve=
+y, you will have the option to enter a drawing for 3, 60 minute massages at=
+ MIT Recreation. &nbsp;The survey is voluntary and will take you approximat=
+ely 10-15 minutes to complete and will close on Friday, May 2, 2025. Please=
+ note that all of your responses will be kept completely confidential and a=
+ll resulting data will only be reported in the aggregate. By clicking on th=
+e link below you are indicating your willingness to participate in the surv=
+ey. To access the survey please copy and paste the following link into your=
+ internet browser's address bar: https://baseline.campuslabs.com/p/?uuid=3D=
+a8e43438ca6d4bc28a869c40a4c64156 Please note that if you cannot complete th=
+e survey in one sitting you can pick up where you left off previously by cl=
+icking on the link above. As such, please refrain from deleting this email =
+until you have completed the survey.&nbsp;Thank you in advance for your par=
+ticipation! If you have any specific questions about this survey, please co=
+ntact Stephanie Smith at mitrecsports@mit.edu. &nbsp;Sincerely,&nbsp;MIT Re=
+creationDepartment of Athletics, Physical Education and Recreation&nbsp;
+--85a197964b57cce7c8a0b84799ef679255b237652eb76fe17a79f3fc7121
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/html; charset=ascii
+
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dus-ascii"=
+><p>Dear DAPER Members &amp; Students,</p><p><br></p><p>You have been rando=
+mly selected by MIT Recreation to complete a survey about Recreational faci=
+lities, activities, and programs on campus. This survey assesses your curre=
+nt satisfaction, as well as your needs and expectations in regard to campus=
+ recreation.</p><p><span style=3D"color: black;">&nbsp;</span></p><p><span =
+style=3D"color: black;">Data collected from this project will be used by ad=
+ministrators to make informed decisions about programming and/or policies.<=
+/span></p><p><span style=3D"color: black;"> </span></p><p><span style=3D"co=
+lor: black;"> Upon completion of the survey, you will have the option to en=
+ter a drawing for </span><strong style=3D"color: black;">3, 60 minute massa=
+ges at MIT Recreation. </strong></p><p><span style=3D"color: black;">&nbsp;=
+</span></p><p><span style=3D"color: black;">The survey is voluntary and wil=
+l take you approximately 10-15 minutes to complete and will close on Friday=
+, May 2, 2025. Please note that all of your responses will be kept complete=
+ly confidential and all resulting data will only be reported in the aggrega=
+te. By clicking on the link below you are indicating your willingness to pa=
+rticipate in the survey. </span></p><p><span style=3D"color: black;"> </spa=
+n></p><p><a href=3D"https://baseline.campuslabs.com/p/?uuid=3Da8e43438ca6d4=
+bc28a869c40a4c64156" target=3D"_blank">To access the survey please click he=
+re.</a> If the survey does not open automatically, please copy and paste th=
+e following link to your internet browser's address bar:<br><br>https://bas=
+eline.campuslabs.com/p/?uuid=3Da8e43438ca6d4bc28a869c40a4c64156</p><p><span=
+ style=3D"color: black;"> </span></p><p><span style=3D"color: black;"> Plea=
+se note that if you cannot complete the survey in one sitting you can pick =
+up where you left off previously by clicking on the link above. As such, pl=
+ease refrain from deleting this email until you have completed the survey.<=
+/span></p><p><span style=3D"color: black;">&nbsp;</span></p><p><span style=
+=3D"color: black;">Thank you in advance for your participation! If you have=
+ any specific questions about this survey, please contact Stephanie Smith a=
+t </span><a href=3D"mailto:mitrecsports@mit.edu" rel=3D"noopener noreferrer=
+" target=3D"_blank">mitrecsports@mit.edu</a><span style=3D"color: black;">.=
+ </span></p><p><span style=3D"color: black;">&nbsp;</span></p><p><span styl=
+e=3D"color: black;">Sincerely,</span></p><p><span style=3D"color: black;">&=
+nbsp;</span></p><p><span style=3D"color: black;">MIT Recreation</span></p><=
+p><span style=3D"color: black;">Department of Athletics, Physical Education=
+ and Recreation&nbsp;</span></p>=
+
+--85a197964b57cce7c8a0b84799ef679255b237652eb76fe17a79f3fc7121--

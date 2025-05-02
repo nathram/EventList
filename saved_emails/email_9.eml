@@ -1,0 +1,227 @@
+Received: from DS2PR01MB9326.prod.exchangelabs.com (::1) by
+ DM6PR01MB5929.prod.exchangelabs.com with HTTPS; Thu, 1 May 2025 13:36:29
+ +0000
+Received: from MN2PR17CA0001.namprd17.prod.outlook.com (2603:10b6:208:15e::14)
+ by DS2PR01MB9326.prod.exchangelabs.com (2603:10b6:8:276::8) with Microsoft
+ SMTP Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.20.8699.22; Thu, 1 May 2025 13:36:25 +0000
+Received: from BL6PEPF00020E60.namprd04.prod.outlook.com
+ (2603:10b6:208:15e:cafe::95) by MN2PR17CA0001.outlook.office365.com
+ (2603:10b6:208:15e::14) with Microsoft SMTP Server (version=TLS1_3,
+ cipher=TLS_AES_256_GCM_SHA384) id 15.20.8655.42 via Frontend Transport; Thu,
+ 1 May 2025 13:36:24 +0000
+Authentication-Results: spf=pass (sender IP is 18.1.37.68)
+ smtp.mailfrom=math.mit.edu; dkim=none (message not signed)
+ header.d=none;dmarc=pass action=none header.from=math.mit.edu;compauth=pass
+ reason=100
+Received-SPF: Pass (protection.outlook.com: domain of math.mit.edu designates
+ 18.1.37.68 as permitted sender) receiver=protection.outlook.com;
+ client-ip=18.1.37.68; helo=littlewood.mit.edu; pr=C
+Received: from littlewood.mit.edu (18.1.37.68) by
+ BL6PEPF00020E60.mail.protection.outlook.com (10.167.249.21) with Microsoft
+ SMTP Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.20.8699.20 via Frontend Transport; Thu, 1 May 2025 13:36:24 +0000
+Received: from localhost (localhost [127.0.0.1])
+	by littlewood.mit.edu (Postfix) with ESMTP id 8B66271015;
+	Thu,  1 May 2025 09:36:23 -0400 (EDT)
+X-Virus-Scanned: Debian amavisd-new at math.mit.edu
+Received: from littlewood.mit.edu ([127.0.0.1])
+	by localhost (math.mit.edu [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id kBOkb5RxpdTo; Thu,  1 May 2025 09:36:23 -0400 (EDT)
+Received: from [10.21.1.154] (unknown [10.21.1.154])
+	(using TLSv1.2 with cipher ECDHE-RSA-AES128-GCM-SHA256 (128/128 bits))
+	(No client certificate requested)
+	(Authenticated sender: debbie)
+	by littlewood.mit.edu (Postfix) with ESMTPSA id 4507D6C8E0;
+	Thu,  1 May 2025 09:36:23 -0400 (EDT)
+Content-Type: multipart/alternative;
+	boundary="------------qzWNfGFeUXBq3g3Tv2GxOsDq"
+Message-ID: <7899c132-eff6-4575-9a3f-3b4b8195e071@math.mit.edu>
+Date: Thu, 1 May 2025 09:36:22 -0400
+User-Agent: Mozilla Thunderbird
+Subject: [COMM] Requesting your feedback on advising!
+Content-Language: en-US
+References: <DM6PR01MB47009CF234BF88C8F2F8738FDEBA2@DM6PR01MB4700.prod.exchangelabs.com>
+To: <math_majors_25_info@mit.edu>, <math_majors_26_info@mit.edu>,
+	<math_majors_27_info@mit.edu>
+From: Deborah J Bower <debbie@math.mit.edu>
+In-Reply-To: <DM6PR01MB47009CF234BF88C8F2F8738FDEBA2@DM6PR01MB4700.prod.exchangelabs.com>
+X-Forwarded-Message-Id: <DM6PR01MB47009CF234BF88C8F2F8738FDEBA2@DM6PR01MB4700.prod.exchangelabs.com>
+Return-Path: debbie@math.mit.edu
+X-MS-Exchange-Organization-ExpirationStartTime: 01 May 2025 13:36:24.1835
+ (UTC)
+X-MS-Exchange-Organization-ExpirationStartTimeReason: OriginalSubmit
+X-MS-Exchange-Organization-ExpirationInterval: 1:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: OriginalSubmit
+X-MS-Exchange-Organization-Network-Message-Id: e94211b8-ff14-42e3-7ca5-08dd88b52a9c
+X-EOPAttributedMessage: 0
+X-EOPTenantAttributedMessage: 64afd9ba-0ecf-4acf-bc36-935f6235ba8b:0
+X-MS-Exchange-Organization-MessageDirectionality: Incoming
+X-MS-PublicTrafficType: Email
+X-MS-TrafficTypeDiagnostic: BL6PEPF00020E60:EE_|DS2PR01MB9326:EE_|DM6PR01MB5929:EE_
+X-MS-Exchange-Organization-AuthSource: BL6PEPF00020E60.namprd04.prod.outlook.com
+X-MS-Exchange-Organization-AuthAs: Anonymous
+X-MS-Office365-Filtering-Correlation-Id: e94211b8-ff14-42e3-7ca5-08dd88b52a9c
+X-MS-Exchange-AtpMessageProperties: SA|SL
+X-MS-Exchange-Organization-SCL: 1
+X-Microsoft-Antispam: BCL:0;ARA:13230040|12012899012|3072899012|2092899012|13003099007|8096899003;
+X-Forefront-Antispam-Report: CIP:18.1.37.68;CTRY:US;LANG:en;SCL:1;SRV:;IPV:NLI;SFV:NSPM;H:littlewood.mit.edu;PTR:littlewood.mit.edu;CAT:NONE;SFS:(13230040)(12012899012)(3072899012)(2092899012)(13003099007)(8096899003);DIR:INB;
+X-Auto-Response-Suppress: DR, OOF, AutoReply
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 01 May 2025 13:36:24.0566
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: e94211b8-ff14-42e3-7ca5-08dd88b52a9c
+X-MS-Exchange-CrossTenant-Id: 64afd9ba-0ecf-4acf-bc36-935f6235ba8b
+X-MS-Exchange-CrossTenant-AuthSource: BL6PEPF00020E60.namprd04.prod.outlook.com
+X-MS-Exchange-CrossTenant-AuthAs: Anonymous
+X-MS-Exchange-CrossTenant-FromEntityHeader: Internet
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: DS2PR01MB9326
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:05.4651778
+X-MS-Exchange-Processed-By-BccFoldering: 15.20.8678.021
+X-Microsoft-Antispam-Mailbox-Delivery:
+	ucf:0;jmr:0;auth:0;dest:I;ENG:(910005)(920097)(930097)(140003);
+X-Microsoft-Antispam-Message-Info:
+	=?utf-8?B?WWhEWTIramdvQ1ZFSFlsVXRFc2xiWXJ2Uks2a3pRd2o4U0FFd0xUOUY2WTBF?=
+ =?utf-8?B?VTh1b1pVeVUyNVhuMTZFQm1tQjVGM2pZdFZHK2ZESHdVRkd4b3pyaS9KNHJ6?=
+ =?utf-8?B?UDc2UnhSUEJZdXp1dGdKWnpyeWVFbjVUcHA1R2NoTXR4aUQ5V0t4aWFVNStK?=
+ =?utf-8?B?a25hcE5xRXlxWDI1M01rV1Z2MEhydHBUSnVSV2hFaUlqZFVMZWFzeHFla2ky?=
+ =?utf-8?B?UlBLNUVwRy9kYW1QdG1JK0I4UnhQWTVNWC8vQnRnMnAvSktqZ3U3M1dFSXlB?=
+ =?utf-8?B?eVdmV1JqWHpOZllTSHRUNVV2UmlWRDBCd0hwZEprTllFL3lhU0JqNlNzTjVI?=
+ =?utf-8?B?ZmlUbGZoWDFvRGUxa2hQU1MvMDRYN0l6dkN5cUVFMmQ1SEpEc1E1ZnV6eHc4?=
+ =?utf-8?B?QUJrQjZMb2FrYmlvVWo3TVJSTlJFVnpXclBnUEZHN3c2aWJ4Z09pQVpwcnhR?=
+ =?utf-8?B?eDA3eS9ZZ3FWc0FCZVVKaUlQeG5XUUNSNFFha1h5czRHSHhwNTNCL0gxNENi?=
+ =?utf-8?B?b092M1Z2eEpCak90OHpLcHpLVzFQQnlIaGNISEp5MjdZYW55Z00xcFFrSnNu?=
+ =?utf-8?B?YmFWU0ZnVC9McW80c0JzTmY4c0JPWWkrRUZJWHM2YXBKY2MzL0NZZ3F5REUy?=
+ =?utf-8?B?SUNQUlZhbFFMb2NleVJLZzB4SG1OQTVRRktFK1lwZS9kVGRkNzV5bTMzb2FJ?=
+ =?utf-8?B?UHF2dFMybWwvWDJzSDY5ZkdoVG5SLzJkM3lrak5ueVhMakE1OHQxRXdadHFF?=
+ =?utf-8?B?d29ySUNRUlQzRzl2SndJT0trY3VSQUNLL05JTTJZY0tySEEzcEJmR1NzYjdZ?=
+ =?utf-8?B?YzhxUG5ycTZhWlhwOXlWZmliWUlxUnZJVGx2TDJTQUw5dUg3bHlUaFpCNDV2?=
+ =?utf-8?B?VTZXRWNlMnNBbnB4eFN4cDgrMnJ6M0FrcDVpRlRSTnVGbldONkZlY0lrMFlt?=
+ =?utf-8?B?WGpiWE5WaGwrWVNXNnBVb1p4RlBEME55dnBaVFRRNVJPWDNjVlFZK1dZNitY?=
+ =?utf-8?B?K2FqdWJwaHlDc3ZHUUQvOE43bXA3bXFlK0hSZFl2bWUrTEhTak1wUnlhTHkv?=
+ =?utf-8?B?SnhYeGNvemdzbk0rMGFYbzhyYzc1eXltVnllVUE3SmVxdC9vMmsvb2lCbjFx?=
+ =?utf-8?B?T1J2emFhTm5EcS9IRHA1MkhnZEhCRVp5M2RueDV0c2liRUt1dmZiSUdENnR5?=
+ =?utf-8?B?K3dzSkRTTWd6TGJ5UVJGcmMwbGlhNmhETThleFo5M0VURmxSRWY0ZWcwejgx?=
+ =?utf-8?B?UTVNc1NxcnpCNUdDaFdpSUhpb3RGTUl0bzVlYzRPbDdZV3FzZDJLUzNhK25Y?=
+ =?utf-8?B?eFA2a05oRjRJcno4a09kYmI0YmNXM3Rxd0JxenpsV21hWVQ3STR5aGt0MWVI?=
+ =?utf-8?B?YjMyVmdsaHVyY2JEYSt3SlBvdXc5bzBBQ1UwaTRMT0Zsak1BcmkrYXZhUFZY?=
+ =?utf-8?B?QklRMDlJclJ4WFpITjhIRUNPMWFDeElyTzYwVjJta01NWVdSdzVBK1lhcy9Y?=
+ =?utf-8?B?S0VMZHYzbDhycEJudjlOdDJ3ZU9FUi9WNkp2bDhaWTlJK0dMUjZ6Q2FwRXNG?=
+ =?utf-8?B?YUpVK3AwMGFsUXNVdkUwMzhsamUwc2JiM0ZQQmIvU24xME5Xb0VaZjNMbEcr?=
+ =?utf-8?B?QmdNSllNZmhpcjBFbStUQ1F6TEdWQ3I3L0FzRGRZaG44bjhUdG9aMHExL2Zl?=
+ =?utf-8?B?c25LUDZvaWlRNXNrU2JxZTl0ZEZlUG5kc2V3TzdGQW1iYnFTTnlLT0ZzdTBT?=
+ =?utf-8?B?a2s2ZXZieHQrQ0Ztb0tlUFA2RWhyT1RLS2I0c0dhT00rNUV1QitUZmhxKzhQ?=
+ =?utf-8?B?ZjJ5NUtoU1Y2Sis3OVE5aG1NczJrajd6Q3JKeDY5eFIxWlBtdGYxOEZrTG5M?=
+ =?utf-8?B?QjJMSGVPMFBlcmwvVzdxUWhMa0NubFRrZnVRQnJxcjVtMEN6Z3lheE55Tk11?=
+ =?utf-8?B?WkRWUHRxQThaMEFtaldkSlNYdFY0UGhXVHhMS0lEaHQwSHU0eXJTTUpUcFVa?=
+ =?utf-8?B?aUt3OEthRUwwU1Z6V1F3MUVEN2ZmS0hTbTNRa3lHOXJ6QXQyOVdrSFJ4OHdC?=
+ =?utf-8?B?UTNqMm1KU2VJL2lNbDhBYUxOL2F2bGt1NzBIQllFU0Yzd0xkdDlTdk52NC9R?=
+ =?utf-8?B?bHFrcWZ5ODQyY3R1NjdvdTdqWWhzZGJpdDJsSFpnVGlwRUVFanFmMHpMSTJV?=
+ =?utf-8?B?NkJHeHJQQmgvWS80SWpOQXBBK2dEWkxrQStTWTV6cVNlblNUT3NwYmlzUkly?=
+ =?utf-8?B?ckZMNHhKbk9aeUluRFduaHF2SDR4NHVmWUtVcmd2dytwMXFpR1BWTVl6Qklx?=
+ =?utf-8?B?VllubUpaUTl0NGp5bkNIcTVDc0IwMm03UWtSVGlEcmx2SDRZNzZ4YkNsb2hO?=
+ =?utf-8?B?Zy9ZK0c5YVBrRkh2QlVYTy9RYmtxUUEwRUJvdEE1Z0JwbDJtR2JINDI2NXRV?=
+ =?utf-8?B?bTd2OXdNZk9hREN2RHZIdWhCR1k1U0xNbHAyUHlVbHdrZDFUVE1WLzZiK2ZN?=
+ =?utf-8?B?WkV4a0JtR3hOWEtoNGxuNFE1VDY4dm1uZVIwL0tZL05NY01qQzY3NkhIQi9i?=
+ =?utf-8?B?K0dCRi9MbjVWYVdrdkg1MmRKR2RXbk1uTVRGME0wRWpOcFJhYTE3KzkzZVRx?=
+ =?utf-8?B?WWc3Z1RYOHBXUkswS09Za29XWWNjcmRGWnI1Q2pjNEVVSGJWTmo3NzllQ2t5?=
+ =?utf-8?B?YUEwejMzMXdPdXNZajEyankwRjNEbkt4YklVUkFkaDdyVHEzV09Iamx4R0Qr?=
+ =?utf-8?B?MzQyMVBnRU81ZkhZSHNMMm5mUkZqWXNyVWNNTFVNL3ZaYmJacjF2M2kwcjZw?=
+ =?utf-8?B?RURpZ0duNnVLVGozZjhzbEtqZmlYNStpanBIa2EwTVJjR3dWZVJ2Lzlpam9k?=
+ =?utf-8?Q?1q8WEOvTN/ddkRYFDYoJQo7PQWTQB3KoGPLFzNZY=3D?=
+MIME-Version: 1.0
+
+--------------qzWNfGFeUXBq3g3Tv2GxOsDq
+Content-Type: text/plain; charset="UTF-8"; format=flowed
+Content-Transfer-Encoding: 8bit
+
+
+Dear math majors,
+
+*We at CoMM (Council for Math Majors) are hosting an advising event for 
+freshman on Friday 2^nd May at 4-5pm in 2-131!*
+
+**
+
+We need your experience with advising at MIT to help us give freshmen a 
+clearer picture of what to expect, what an advising relationship can 
+look like, and any tips/tricks you recommend.
+
+Here’s a google form <https://forms.gle/1Gro7GUtM6d6eKDH9> that you can 
+fill out to help us (and the newly declared Course 18s), and if you’re 
+passionate, we humbly request your presence at the event to impart your 
+wisdom in person.
+
+No, it doesn’t clash with the SpringFest carnival!
+
+Yes, there will be snacks.
+
+Best,
+
+COMM (Council for Math Majors) (comm-all@mit.edu)
+
+**
+
+**
+
+--------------qzWNfGFeUXBq3g3Tv2GxOsDq
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: 8bit
+
+<!DOCTYPE html><html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  </head>
+  <body style="word-wrap:break-word" vlink="#96607D" link="#467886" lang="EN-US">
+    <div class="moz-forward-container"><br>
+      
+      <meta name="Generator" content="Microsoft Word 15 (filtered medium)">
+      <style>@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}@font-face
+	{font-family:Aptos;
+	panose-1:2 11 0 4 2 2 2 2 2 4;}p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0in;
+	font-size:12.0pt;
+	font-family:"Aptos",sans-serif;
+	mso-ligatures:standardcontextual;}a:link, span.MsoHyperlink
+	{mso-style-priority:99;
+	color:#467886;
+	text-decoration:underline;}.MsoChpDefault
+	{mso-style-type:export-only;
+	font-size:10.0pt;
+	mso-ligatures:none;}div.WordSection1
+	{page:WordSection1;}</style>
+      <div class="WordSection1">
+        <p class="MsoNormal">Dear math majors,</p>
+        <p class="MsoNormal"><o:p>&nbsp;</o:p></p>
+        <p class="MsoNormal"><b>We at CoMM (Council for Math Majors) are
+            hosting an advising event for freshman on Friday 2<sup>nd</sup>
+            May at 4-5pm in 2-131!<o:p></o:p></b></p>
+        <p class="MsoNormal"><b><o:p>&nbsp;</o:p></b></p>
+        <p class="MsoNormal">We need your experience with advising at
+          MIT to help us give freshmen a clearer picture of what to
+          expect, what an advising relationship can look like, and any
+          tips/tricks you recommend.</p>
+        <p class="MsoNormal"><o:p>&nbsp;</o:p></p>
+        <p class="MsoNormal"><a href="https://forms.gle/1Gro7GUtM6d6eKDH9" moz-do-not-send="true">Here’s a google form</a> that you can
+          fill out to help us (and the newly declared Course 18s), and
+          if you’re passionate, we humbly request your presence at the
+          event to impart your wisdom in person.</p>
+        <p class="MsoNormal"><o:p>&nbsp;</o:p></p>
+        <p class="MsoNormal">No, it doesn’t clash with the SpringFest
+          carnival!<br>
+          <br>
+          Yes, there will be snacks.</p>
+        <p class="MsoNormal"><o:p>&nbsp;</o:p></p>
+        <p class="MsoNormal">Best,</p>
+        <p class="MsoNormal"><o:p>&nbsp;</o:p></p>
+        <p class="MsoNormal">COMM (Council for Math Majors) (<a href="mailto:comm-all@mit.edu" moz-do-not-send="true" class="moz-txt-link-freetext">comm-all@mit.edu</a>)</p>
+        <p class="MsoNormal"><b><o:p>&nbsp;</o:p></b></p>
+        <p class="MsoNormal"><b><o:p>&nbsp;</o:p></b></p>
+        <p class="MsoNormal"><o:p>&nbsp;</o:p></p>
+        <p class="MsoNormal"><o:p>&nbsp;</o:p></p>
+      </div>
+    </div>
+  </body>
+</html>
+
+--------------qzWNfGFeUXBq3g3Tv2GxOsDq--

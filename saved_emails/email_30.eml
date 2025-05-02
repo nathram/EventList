@@ -1,0 +1,150 @@
+Received: from PH7PR01MB8513.prod.exchangelabs.com (2603:10b6:510:2ee::22) by
+ DM6PR01MB5929.prod.exchangelabs.com with HTTPS; Wed, 30 Apr 2025 03:24:30
+ +0000
+Received: from CH2PR05CA0055.namprd05.prod.outlook.com (2603:10b6:610:38::32)
+ by PH7PR01MB8513.prod.exchangelabs.com (2603:10b6:510:2ee::22) with Microsoft
+ SMTP Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.20.8699.19; Wed, 30 Apr 2025 03:24:28 +0000
+Received: from DS3PEPF000099D9.namprd04.prod.outlook.com
+ (2603:10b6:610:38:cafe::8b) by CH2PR05CA0055.outlook.office365.com
+ (2603:10b6:610:38::32) with Microsoft SMTP Server (version=TLS1_3,
+ cipher=TLS_AES_256_GCM_SHA384) id 15.20.8655.32 via Frontend Transport; Wed,
+ 30 Apr 2025 03:24:21 +0000
+Authentication-Results: spf=pass (sender IP is 94.136.178.175)
+ smtp.mailfrom=copernicus.org; dkim=pass (signature was verified)
+ header.d=copernicus.org;dmarc=pass action=none
+ header.from=copernicus.org;compauth=pass reason=100
+Received-SPF: Pass (protection.outlook.com: domain of copernicus.org
+ designates 94.136.178.175 as permitted sender)
+ receiver=protection.outlook.com; client-ip=94.136.178.175;
+ helo=st1.snscloud.de; pr=E
+Received: from st1.snscloud.de (94.136.178.175) by
+ DS3PEPF000099D9.mail.protection.outlook.com (10.167.17.10) with Microsoft
+ SMTP Server (version=TLS1_3, cipher=TLS_AES_256_GCM_SHA384) id 15.20.8699.20
+ via Frontend Transport; Wed, 30 Apr 2025 03:24:19 +0000
+Authentication-Results-Original: st1.snscloud.de;        dkim=pass (2048-bit
+ rsa key sha256) header.d=copernicus.org
+          header.i=egu25@copernicus.org header.b=fjEh1ZAx
+          header.a=rsa-sha256 header.s=comailer x-bits=2048;
+        x-trusted-ip=pass
+Copernicus_mail_ID: 03151605181409032119091901130126091407
+Received: by meetingorganizer4.copernicus.org (Postfix, from userid 33)
+	id CF78E6873D; Wed, 30 Apr 2025 05:24:14 +0200 (CEST)
+Date: Wed, 30 Apr 2025 05:24:14 +0200
+To: Nathra Ramrajvel <nathra@mit.edu>
+From: egu25@copernicus.org
+Subject: EGU25 - live presentation successfully uploaded
+Message-ID: <SP8ZwRFlQy78ceChSOjmVpXgsPrGZJ5WvR2kcgpo6I@meetingorganizer.copernicus.org>
+X-Mailer: Copernicus\Core\Common\COMailer
+X-CO-Live: 1
+X-CO-Host: meetingorganizer.copernicus.org (192.168.4.106)
+Content-Type: text/plain; charset=UTF-8
+DKIM-Signature: v=1; d=copernicus.org; s=comailer;
+ a=rsa-sha256; q=dns/txt; t=1745983454; c=relaxed/simple;
+ h=Date:To:From:Subject:Message-ID:X-Mailer:MIME-Version:Content-Type;
+ i=egu25@copernicus.org;
+ bh=yfQjSS9gdqjQK3Ncr6m/ZwEdD4Y/ULuXekBwnnhHtio=;
+ b=fjEh1ZAxx/Y0GpAoKur6yolVrFfbQqw35LJrAtUWQbYCpCPagYbD9+E215TJNQ6F1dCgxQNHT
+ TkP9op54wODpl/H3HjkCGFhe/4/nax3V/nH6tq9BNVmFVJxI7aiPirvCD9lYcYzqdRl9Kf5K/
+ fkfyKtPJh2xeWMsBCW6ys3Mbi1v2szACZNxmrawNcdtX64g2J6KbrkDCH7jlpILbjw1lBOKtf
+ KI/pAdFJNx6LCUVSTunC0rob6zkPI4UdLzO2XsfU6VFi12WQ5484WzNLBg37SbyJXMESLrDFM
+ LPS/MdlbYNAAqiIkd8PPeHZjPurTyh0fYHNAjaWwNAqOOwpotw==
+Return-Path: egu25@copernicus.org
+X-MS-Exchange-Organization-ExpirationStartTime: 30 Apr 2025 03:24:19.9989
+ (UTC)
+X-MS-Exchange-Organization-ExpirationStartTimeReason: OriginalSubmit
+X-MS-Exchange-Organization-ExpirationInterval: 1:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: OriginalSubmit
+X-MS-Exchange-Organization-Network-Message-Id: 8f52250f-d7f6-400f-e0d5-08dd87967ee0
+X-EOPAttributedMessage: 0
+X-EOPTenantAttributedMessage: 64afd9ba-0ecf-4acf-bc36-935f6235ba8b:0
+X-MS-Exchange-Organization-MessageDirectionality: Incoming
+X-MS-PublicTrafficType: Email
+X-MS-TrafficTypeDiagnostic: DS3PEPF000099D9:EE_|PH7PR01MB8513:EE_|DM6PR01MB5929:EE_
+X-MS-Exchange-Organization-AuthSource: DS3PEPF000099D9.namprd04.prod.outlook.com
+X-MS-Exchange-Organization-AuthAs: Anonymous
+X-MS-Office365-Filtering-Correlation-Id: 8f52250f-d7f6-400f-e0d5-08dd87967ee0
+X-MS-Exchange-AtpMessageProperties: SA|SL
+X-MS-Exchange-Organization-SCL: 1
+X-Microsoft-Antispam: BCL:0;ARA:13230040|3072899012|2092899012|12012899012|13003099007;
+X-Forefront-Antispam-Report: CIP:94.136.178.175;CTRY:DE;LANG:en;SCL:1;SRV:;IPV:NLI;SFV:NSPM;H:st1.snscloud.de;PTR:st1.snscloud.de;CAT:NONE;SFS:(13230040)(3072899012)(2092899012)(12012899012)(13003099007);DIR:INB;
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 30 Apr 2025 03:24:19.6761
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: 8f52250f-d7f6-400f-e0d5-08dd87967ee0
+X-MS-Exchange-CrossTenant-Id: 64afd9ba-0ecf-4acf-bc36-935f6235ba8b
+X-MS-Exchange-CrossTenant-AuthSource: DS3PEPF000099D9.namprd04.prod.outlook.com
+X-MS-Exchange-CrossTenant-AuthAs: Anonymous
+X-MS-Exchange-CrossTenant-FromEntityHeader: Internet
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: PH7PR01MB8513
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:11.0936344
+X-MS-Exchange-Processed-By-BccFoldering: 15.20.8678.021
+X-Microsoft-Antispam-Mailbox-Delivery:
+	ucf:0;jmr:0;auth:0;dest:I;ENG:(910005)(944506478)(944626604)(4710137)(4713078)(4999068)(920097)(930097)(140003);
+X-Microsoft-Antispam-Message-Info:
+	=?utf-8?B?WkgrUDdnQVJTcUhDSklGejBML1gxQnpzS1I0eUEvT3RxZHZiTWVEejlHbi9J?=
+ =?utf-8?B?UFdZeDlRKy9qUGYveG1HWElmMFNoRHNSWVFqNkFvUDd3bG80RTFjbkRuQmtz?=
+ =?utf-8?B?YTFyVjczT25aVjNYRGFhVTBkQUIxVUd0RjVKQks5WFhIRW4yTHhxV2NPaXV3?=
+ =?utf-8?B?WXZCM0ZBZVlpZUpYVncxWm5jdUM1QnM4TU02alduS2NkT1BFSG9sRk84VnJG?=
+ =?utf-8?B?NG50NjFIbGVBZzBjc2VrUDF4alBsYkpKdFFkSmFnRFhoL041Umd6dW0zc0c5?=
+ =?utf-8?B?VW9YT2krM2ZCS0owZlh5UU9lYjVSSmFZWjhQZndVaTQzK1JEOE5TOUs5SWdU?=
+ =?utf-8?B?ZU04MHJUeEh2ZzVxU1hBT2pIYlp2U1Z4Rmh5V2ZrVXpjTWE3ZlQrWFVKSlc2?=
+ =?utf-8?B?Y2ZWM1NaUm83b1dQWFBzUFJrWmZ2VE1YRnM5S0FGUHB5VlhTbXN5YUpINFFh?=
+ =?utf-8?B?VDlFV1c1c0FzYVFPdmQxRkRma3IyVnY0czhVYm9FWm4xMU1KaFJYRWhoV0t6?=
+ =?utf-8?B?Z2haeVBnOFIxTnVPWlVvRVhuYjhlYnQyUmQzbXRLZ3VweExueEtsbHBtUm5Y?=
+ =?utf-8?B?YTZqalpPV1hGV2pEVnQybHJJUk1kdG9UMFVvaVUvOW1PUFk2aFRhQzBpUk91?=
+ =?utf-8?B?aHZLamFNeEJIWldjMFp1OGdCVTN5RDY0R09xMHY0YWZ3UGtkTVVxdERLdm5p?=
+ =?utf-8?B?YlhXa25HdEs0Vm5Rbm03K0FreTllRXNCNjN2RTYwdEZOaXNSWlFBanIyT0Rx?=
+ =?utf-8?B?VXNRbGY0YjE2cXV6UjB0aUtkcXdUVmdrS2hyeDZQYWx2Q0RwSjdKa0JwMDM3?=
+ =?utf-8?B?SlYzcXBqVFpqN0dSdGZhcGJIeGtUbWc5Q2tPM3pLZkFqWk9ncWJybDVodDR6?=
+ =?utf-8?B?L0ZaUjNHdjJMRVFoZjI1eGl2R3VVYjFHc25EVDY4QTM5TTRkZExVU256VVNB?=
+ =?utf-8?B?U0l6cW1ONng0c00yT0VyTkFHV2l1ZW5zUmt3WmZkcG5pMUFaTWJMV3dWYVVG?=
+ =?utf-8?B?RXUxTUdjKzNvTVVZNmRIeGlSWE55SDRKT3premRLb2pQbnorU1RzdGhPWG5S?=
+ =?utf-8?B?WU9Id3JnbE5BYy9abSswOHViV2toYk5Ud0FiVXBScGlXZzNKUHRSK3hnWS84?=
+ =?utf-8?B?eHNBUXczb1RzNXc3TGJNRW9hWEdnVm9Vay9UalNpM2R2eEFaUllmYW9oODd5?=
+ =?utf-8?B?UTI1S2pQTTExSWJ5bGc1RkZ1dUt0NWdYelBvMFRrZkhRc0dESXBvb1hMQkFK?=
+ =?utf-8?B?MzJvdGI2RlVXZ0g0M2hUdXg1NjlPZHZJZ0hwc2xGVms3ZGhRK3ZkRzFMN2FG?=
+ =?utf-8?B?YTJnVlQ5QWRvQWEvNjA5K25JSXBnakVMbGV6ZmJkMDNpbGpGaG1ZRkkvNW9I?=
+ =?utf-8?B?MVFCYlZRemo3dmRNVWRyZmZSWHF4UCt3R2swZ2s2WU5HVnorM0FkUmxJZS9u?=
+ =?utf-8?B?OXR5L3laenhyaTRpelJCK1ZhRDRiKy9mMWlCWmFrelZsMXNKMlFadVJteS9G?=
+ =?utf-8?B?dC9vT0h3U3JZZzRjM0lkc0x4ZHJ0Nm5MU0dYaUpTS3RvbXhGblljWnc3VjVZ?=
+ =?utf-8?B?TldmbEJyR0ZhZ3JySFcydVR3WHRiZmdvWnBMbDYxelNOWm00akg1dVE3YUt2?=
+ =?utf-8?B?eit6RXB2RHhrbldNcjF6LytUVEtBV0o0UTRLRUpGM2dpSmJhNEppS2pyaVhi?=
+ =?utf-8?B?RkRlM2JVaU9DTGY5bGJuaTl4SjlaVmgvQVVtT0xsZHdCdnpXQlVQZjAxbSto?=
+ =?utf-8?B?UnMyMXRIdVhiUi9Ea21PMzdHaWtZWGdkQ2R0UllzQzBLOWtjRkNlWURWbnJu?=
+ =?utf-8?B?L3NyZTNySWZVaDlMcURyZUE0bDJOaVNkWStDRGwwLzJJcEJ4YUVvK2hCU2Fq?=
+ =?utf-8?B?UHNGelE0REt0ZXZWVnRLaXpvRStENFpMM3dYNCtoR0VqZDB5a0xuT0RKQWlM?=
+ =?utf-8?B?YzdWeDNFOFBaR0R4ejJsS3NmWFlmT3FJclBDS1dKQjhpUWRuUC9YMjdyRllz?=
+ =?utf-8?B?dXhwbXNCUG5MR3N2L2FuRHhLTXMzZTBFODBQU3N0M1NmeXd5WW5LbWtlRE5I?=
+ =?utf-8?B?RFVsWCtOMUJLZ2UxZzU4Qldoc2VMcnNIelg5NTlmNlVia0RvL294dnBYQkxO?=
+ =?utf-8?B?cDl0RlAyYkJSTU44Q2g2bDVyYmF2UXo4ODRVYVB0QTBxMGFZc3VsRGNmT1hr?=
+ =?utf-8?B?RnhpeVRQYTRHNUdGRFg1VVg1QmkzSU41V1cvcjZsc3B4WVRoeDRxbzZFSEs4?=
+ =?utf-8?B?ekNhc3VvL1p0UmYrVUE4MzJ2WUxhS0lvcFFDRlVoVFNySGRneW8vKzdWQkxm?=
+ =?utf-8?B?TWVoOWNIM2x2UURDanVZNU43bzhkem14aDhwZndNSUdFTXZWcEpaaENmZUxW?=
+ =?utf-8?B?N29hTHpGV0VnYmFDa0NsUlBiTjN5SE83SDdjaW11cHlxdTk2ci9IUUhCODVQ?=
+ =?utf-8?B?RFZrQ2ZKMVV3ZDhiZUtDS1J3NW5aK2tNd2I4a1pVT3dkYURHVG5LMDIxQnB0?=
+ =?utf-8?B?bE9DYWM5MktncVczaHpKM1QvcUZLbnRkUHp5QTNqdEIyRW1hWGMzWlRoOXRk?=
+ =?utf-8?B?RzM5VWFFTThOWWVmUmIrS3hxblNIOTVKOWNuMzhXYS9FRSsxb2RjeFRKZU5R?=
+ =?utf-8?B?RnpzaldwRnFsZkI1SFNnOE1JaGtCMndNc1ZhSlhXVFVqUkVwRFVjTlp6eWJQ?=
+ =?utf-8?B?QUowcC9jVTFXNVJGeWY5b0g0QlZmTVZWWEJXYVYyVW54alNHVHhJZFU4ZW1r?=
+ =?utf-8?B?VDYzZDRBMzYvcXhNeS9CV3d1UUFmNHpPL3RzdWNZVjdicWxmczRIN3ZTSksr?=
+ =?utf-8?B?V1NBQzlreFRVTWtEVmNkb2JhdnA0Y21zWDcxOG16VS9QbzJISkMyYnhIZWJU?=
+ =?utf-8?B?OURBVlloM0JIZEY3VlEyL0E1UkdLRW56VmFqcDQySDBYNnRBVkplMU1NejlQ?=
+ =?utf-8?B?QThQdDIyWFdkdGJqSGtMalhMTUNPc0RUZFpsc05TTUVzblBIVUJNRkxIcURK?=
+ =?utf-8?B?UG1yaFhVL055MzlLamR2cjBJQzM4NXI2eHhQemhqOHV4MkN0OHpMMDEweFVQ?=
+ =?utf-8?B?Zi80VmNONENTanFnPT0=?=
+MIME-Version: 1.0
+
+Dear Nathra Ramrajvel,
+
+Thank you very much for uploading the live presentation corresponding to your following abstract:
+
+EGU25-13415
+Decoding the signal of extreme weather events in the Azores archipelago using GNSS and atmospheric reanalysis products
+by Nathra Ramrajvel et al.
+https://meetingorganizer.copernicus.org/EGU25/EGU25-13415.html
+
+Contact authors and presenting authors can always check uploaded live presentations or upload further versions at: https://meetingorganizer.copernicus.org/EGU25/presentation-upload
+
+Kind regards,
+The Copernicus Meetings team
+egu25@copernicus.org

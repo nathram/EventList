@@ -1,0 +1,1154 @@
+Received: from CO1PR01MB8915.prod.exchangelabs.com (2603:10b6:303:26d::16) by
+ DM6PR01MB5929.prod.exchangelabs.com with HTTPS; Wed, 30 Apr 2025 18:04:57
+ +0000
+Received: from BN9PR03CA0263.namprd03.prod.outlook.com (2603:10b6:408:ff::28)
+ by CO1PR01MB8915.prod.exchangelabs.com (2603:10b6:303:26d::16) with Microsoft
+ SMTP Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.20.8699.19; Wed, 30 Apr 2025 18:04:54 +0000
+Received: from BL02EPF0001A0FF.namprd03.prod.outlook.com
+ (2603:10b6:408:ff:cafe::94) by BN9PR03CA0263.outlook.office365.com
+ (2603:10b6:408:ff::28) with Microsoft SMTP Server (version=TLS1_3,
+ cipher=TLS_AES_256_GCM_SHA384) id 15.20.8655.41 via Frontend Transport; Wed,
+ 30 Apr 2025 18:04:53 +0000
+Authentication-Results: spf=pass (sender IP is 198.2.174.13)
+ smtp.mailfrom=mail13.suw231.rsgsv.net; dkim=pass (signature was verified)
+ header.d=mit.edu;dmarc=pass action=none header.from=mit.edu;compauth=pass
+ reason=100
+Received-SPF: Pass (protection.outlook.com: domain of mail13.suw231.rsgsv.net
+ designates 198.2.174.13 as permitted sender) receiver=protection.outlook.com;
+ client-ip=198.2.174.13; helo=mail13.suw231.rsgsv.net; pr=C
+Received: from mail13.suw231.rsgsv.net (198.2.174.13) by
+ BL02EPF0001A0FF.mail.protection.outlook.com (10.167.242.106) with Microsoft
+ SMTP Server (version=TLS1_3, cipher=TLS_AES_256_GCM_SHA384) id 15.20.8699.20
+ via Frontend Transport; Wed, 30 Apr 2025 18:04:53 +0000
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=mit.edu; s=k3;
+	t=1746036066; x=1746306066; i=advising@mit.edu;
+	bh=eNZGjbwWysG4vGhFjPI+78RQYtkP0jLWaMkCt+d/hxo=;
+	h=Subject:From:Reply-To:To:Date:Message-ID:X-MC-User:Feedback-ID:
+	 List-ID:List-Unsubscribe:List-Unsubscribe-Post:Content-Type:
+	 MIME-Version:CC:Date:Subject:From;
+	b=ObWjOSXQLtZektE2TARDpr8vcaSeKe9AXpSGyIoh8uoiefh2q3MCo3o0g9OVNKd1b
+	 dI/f+2unhLAapuNODFDeSxWfNvdII5rrCbDS4KPa/qypE2lsvCGyHuYHtVmeDqnnXh
+	 S0QRp9ZU5Nsq95SfyqJ7PRXr7eUVqvjnHczYiEZrfJYJmn//ny3MoIkZL4QcnaiYXj
+	 o1YRJG+FdAMbuJ+eQFRGd4otsFDLZU/jNVD0oaLfKWDkRpelgCRw87ncEnKi+yBL2K
+	 FS6RHC/gnZmSKxyYuR3CvFxBF/SdAoC+9LDoT4fBSupayI6yVZYLg6+JdmjUPsC6Xv
+	 G4INK8mqOrW2A==
+Received: from localhost (localhost [127.0.0.1])
+	by mail13.suw231.rsgsv.net (Mailchimp) with ESMTP id 4ZnlNf4KkkzMRKq2V
+	for <nathra@MIT.EDU>; Wed, 30 Apr 2025 18:01:06 +0000 (GMT)
+Subject: =?utf-8?Q?=F0=9F=A7=8BLast=20boba=20and=20UAC=20event=20of=20the=20semester?=
+From: Undergraduate Advising Center <advising@mit.edu>
+Reply-To: =?utf-8?Q?Undergraduate=20Advising=20Center?= <advising@mit.edu>
+To: <nathra@MIT.EDU>
+Date: Wed, 30 Apr 2025 18:00:52 +0000
+Message-ID: <88f983a0e3c2a43fb2a2eabd0.29f0c06973.20250430180047.025298388d.48a30322@mail13.suw231.rsgsv.net>
+X-Mailer: Mailchimp Mailer - **CID025298388d29f0c06973**
+X-Campaign: mailchimp88f983a0e3c2a43fb2a2eabd0.025298388d
+X-campaignid: mailchimp88f983a0e3c2a43fb2a2eabd0.025298388d
+X-Report-Abuse: Please report abuse for this campaign here: https://mailchimp.com/contact/abuse/?u=88f983a0e3c2a43fb2a2eabd0&id=025298388d&e=29f0c06973
+X-MC-User: 88f983a0e3c2a43fb2a2eabd0
+Feedback-ID: 81147954:81147954.13484980:us16:mc
+List-ID: 88f983a0e3c2a43fb2a2eabd0mc list <88f983a0e3c2a43fb2a2eabd0.192610.list-id.mcsv.net>
+X-Accounttype: pr
+List-Unsubscribe: <https://mit.us16.list-manage.com/unsubscribe?u=88f983a0e3c2a43fb2a2eabd0&id=7fd3b71142&t=h&e=29f0c06973&c=025298388d>, <mailto:unsubscribe-mc.us16_88f983a0e3c2a43fb2a2eabd0.025298388d-29f0c06973@unsubscribe.mailchimpapp.net?subject=unsubscribe>
+List-Unsubscribe-Post: List-Unsubscribe=One-Click
+Content-Type: multipart/alternative; boundary="_----------=_MCPart_972492372"
+Return-Path: bounce-mc.us16_81147954.13484980-29f0c06973@mail13.suw231.rsgsv.net
+X-MS-Exchange-Organization-ExpirationStartTime: 30 Apr 2025 18:04:53.8290
+ (UTC)
+X-MS-Exchange-Organization-ExpirationStartTimeReason: OriginalSubmit
+X-MS-Exchange-Organization-ExpirationInterval: 1:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: OriginalSubmit
+X-MS-Exchange-Organization-Network-Message-Id: 0e8bfe89-91cd-46ab-9180-08dd8811824b
+X-EOPAttributedMessage: 0
+X-EOPTenantAttributedMessage: 64afd9ba-0ecf-4acf-bc36-935f6235ba8b:0
+X-MS-Exchange-Organization-MessageDirectionality: Incoming
+X-MS-PublicTrafficType: Email
+X-MS-TrafficTypeDiagnostic: BL02EPF0001A0FF:EE_|CO1PR01MB8915:EE_|DM6PR01MB5929:EE_
+X-MS-Exchange-Organization-AuthSource: BL02EPF0001A0FF.namprd03.prod.outlook.com
+X-MS-Exchange-Organization-AuthAs: Anonymous
+X-MS-Office365-Filtering-Correlation-Id: 0e8bfe89-91cd-46ab-9180-08dd8811824b
+X-MS-Exchange-AtpMessageProperties: SA|SL
+X-MS-Exchange-Organization-SCL: -1
+X-Microsoft-Antispam: BCL:0;ARA:13230040|4022899009|29132699027|1032899013|69100299015|31052699007|39142699007|8096899003|13003099007|4076899003|2066899003;
+X-Forefront-Antispam-Report: CIP:198.2.174.13;CTRY:US;LANG:en;SCL:-1;SRV:;IPV:NLI;SFV:SKN;H:mail13.suw231.rsgsv.net;PTR:mail13.suw231.rsgsv.net;CAT:NONE;SFS:(13230040)(4022899009)(29132699027)(1032899013)(69100299015)(31052699007)(39142699007)(8096899003)(13003099007)(4076899003)(2066899003);DIR:INB;
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 30 Apr 2025 18:04:53.7579
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: 0e8bfe89-91cd-46ab-9180-08dd8811824b
+X-MS-Exchange-CrossTenant-Id: 64afd9ba-0ecf-4acf-bc36-935f6235ba8b
+X-MS-Exchange-CrossTenant-AuthSource: BL02EPF0001A0FF.namprd03.prod.outlook.com
+X-MS-Exchange-CrossTenant-AuthAs: Anonymous
+X-MS-Exchange-CrossTenant-FromEntityHeader: Internet
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: CO1PR01MB8915
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:03.5986149
+X-MS-Exchange-Processed-By-BccFoldering: 15.20.8678.021
+X-Microsoft-Antispam-Mailbox-Delivery:
+	ucf:0;jmr:0;auth:0;dest:I;ENG:(910005)(944506478)(944626604)(920097)(930097)(140003);
+X-Microsoft-Antispam-Message-Info:
+	=?utf-8?B?Vkt0UDBiRG8yMzNtR05lbjg3cnAvVWpMc2FlRS91MVBqZUVKMWRhNXp6bVdv?=
+ =?utf-8?B?OXgwUnkrQ1ozd2tNQjF3TWw0RTVMY3FEdmNjU3BtTzZ4L1lRM2d1UHRIUWZK?=
+ =?utf-8?B?UjJOTzl3WUJrK2tIRzlvNEpRN3kydGJ4bFZtcGFIaEJUY2RaajRUNWxNUENL?=
+ =?utf-8?B?RXFpd3BEQVJGaU5TRTN3bWlCRkFya3dpdWUyL3N6QmR4SVNvZkVnSHJGYnZl?=
+ =?utf-8?B?L1VWZFYrMnpqSk9uU2l5S1c1UC9JSDN3RWhZQTdEQUJETXQvZUlabnppbmNX?=
+ =?utf-8?B?T3VWY3Zmb29Hb3pzVEhRQUNkaDIwNWRjSGhPRHV1eEpHSExTZkN5dXAwRWc3?=
+ =?utf-8?B?OG42OStSZzNJdzNBZWxVZ1Jqd2hZTktrbWE2NG45TDYra2pPQ3phK3l1Y2xH?=
+ =?utf-8?B?SXNzRnZZbGVvT1VsQ3NnbUx0Y2Q5Y1VtVnNVaWJsR2N6Ym1kOWpHaXFLb0JI?=
+ =?utf-8?B?WHJjSEZIU1gzT1A3a3F4YURUbllVazZZQ292em5sL2RGeUIzVTZUK1NlSnVy?=
+ =?utf-8?B?a09JUTdOeE5FU1Y5N1RHZkVrbzJBOVFKZnJ1Qi8vK05tZ1pGRmF5aTIrT2JX?=
+ =?utf-8?B?Yk9ITEpVUXd2NjlLdnZ5WlIzUnNnWi80MEpuM0ZlVzc1Q21QVW5EWjFFS283?=
+ =?utf-8?B?MHo5RWo0UHg1SHo4Y3ZaMzhvSG4wLzZLZWtoS3Z6MmNnRG5CWVdTaFgxamVB?=
+ =?utf-8?B?TTlxNkZUUHIvVkMvN2hqdWc4YzhWc0w3dzJmZzJNaVIwbHo5aHdqNEt6TDI5?=
+ =?utf-8?B?Vnl2UjN4SEFVWEVKZ2ZzVTMvUTN1M1IxbkV2aDdKQkl3L0M1OHZ3K0FSaGYr?=
+ =?utf-8?B?bGd3SUVUbk5xME5nQ0UrL1R4RkNBMjB3YXc3R3hVaW1XbitKQlI2WGRYVmpQ?=
+ =?utf-8?B?cU03NmJZVzJCOExoYkZDRFY2a0hWVmxZN3B3dkNvNzkvRVVaNHgxak9oMU9W?=
+ =?utf-8?B?eE5EZDVUYi8wUzhwMXgxRHJXUFkxcXJ6bnhFV003T3J0WU9JWFpZUFFndlN3?=
+ =?utf-8?B?M3ZXcmhUakZKN3MrRDZJZlRwbWI3UTRQRWtpU0w5alBndzZaRG5RaEMzbGlS?=
+ =?utf-8?B?dmt5SXhkM2huYjRlWWNYS29IeVdIWGVrd09IdVQvSXR1OHVyb0JyQXBWUHRj?=
+ =?utf-8?B?U0JBbzF5NUVobUZwK1FsMmJUcFRqRU5sZlZERlJXb3k2S2R5QTA1ZzZ1VUJx?=
+ =?utf-8?B?dllWSllTKzRWWkh2ZnZNVmRCWjFkT3oxU0FIRkVUZWlJZmVoMzhlWk9uQjR1?=
+ =?utf-8?B?dDlEbjcxMXI1U3dzYW9VbkRZVWJST05QWFNpNjNEeTVDdUVnNFF5TW0zNXBG?=
+ =?utf-8?B?NnIvSG1kenFlR0tKNkNtQmtubGE1cFdTQXBCTnhTM1RJb0hJd0lJdXBHMzJQ?=
+ =?utf-8?B?TnBVV1pqa285dTNSY3krRk8ydXh0c01oQzdNTERsdlJndWJmcjIxbnM0V2Z0?=
+ =?utf-8?B?NlBGWWg5VEJVS1BmeWZ3d2ErQnV1SFphcFBWc0hXb3U1amFld0ZqU0RSMTVS?=
+ =?utf-8?B?a1VBT0pXZXEwd3dGb0JQcEtuK1lDN0Z6VEtTLzRBdXM1bmF3dUVwU3lkZm1h?=
+ =?utf-8?B?ZjhUcS9HN0Y1R28rTVBmOFNYeVpuRHA1dGw3Vk9wMS9kSUFLc0d4enM2MnNs?=
+ =?utf-8?B?NEowRVlVc3FBYXJIenVUd0EvcjFhTjUxR001bUpQWmRrTzREak16ZFdRdGJm?=
+ =?utf-8?B?eWRVY2FRWk01c2JMVUpGWTRFbkdRN056NzZ5MU5nUk1VUlJLSFNqNCt5c1Zn?=
+ =?utf-8?B?RFJmNEk1UHhlcEFzKzFZbmc4V1FSWjh3c0hMcGpwd0VjVTYxelhZamUydzVp?=
+ =?utf-8?B?OUF2RW9QU0RwcFVtY0pjN2l1Yml2YVp2VXlQSitYK3VoTWRCNXJhVUVDajJu?=
+ =?utf-8?B?MGE0TVV6Tmo1LzVEcGlFbW5JUlkvSXRIU2JSWEtYY01oaFdFYkEvalB2WGJ5?=
+ =?utf-8?Q?dz1N/+NC5S5WP5/+ogdXfl0W+fwAJuoJ?=
+MIME-Version: 1.0
+
+--_----------=_MCPart_972492372
+Content-Type: text/plain; charset="utf-8"; format="fixed"
+Content-Transfer-Encoding: quoted-printable
+
+View this email in your browser (https://mailchi.mp/694ba1e71374/last-boba=
+-and-uac-event-of-the-semester?e=3D29f0c06973)
+https://advising.mit.edu/
+
+https://docs.google.com/spreadsheets/d/1EsfztXNQ6eroKv5bkrLIEYHQKiK39RsZKw=
+8YtRS0b0o/edit?usp=3Dsharing
+
+
+** Sip with Diep
+------------------------------------------------------------
+
+Join Associate Dean and UAC Director Diep =E2=80=9Cyip=E2=80=9D Luu and sp=
+ecial guest UAC Associate Dean John Sandoval for a custom-ordered boba tea=
+ and 10 minute conversation about your student experience at MIT.
+
+*First time attendees only=2C please!*
+Sign up! (https://docs.google.com/spreadsheets/d/1EsfztXNQ6eroKv5bkrLIEYHQ=
+KiK39RsZKw8YtRS0b0o/edit?usp=3Dsharing)
+
+
+** =F0=9F=97=93=EF=B8=8F
+------------------------------------------------------------
+
+
+** Last Day of Classes
+------------------------------------------------------------
+
+Tuesday=2C May 13
+
+Celebrate the end of the semester with us (5/13 in 7-103 & 7-104=2C 10a-2p=
+) with snacks and lots of SPA (Stress Prevention Activities) to help you u=
+nwind before finals!
+
+
+** Key Dates and Deadlines (https://registrar.mit.edu/calendar)
+------------------------------------------------------------
+* Thursday=2C May 1: Pre-reg for fall term and summer session begins
+* Tuesday=2C May 13: Last day of classes
+* May 16-21: Final exam period
+* May 28-30: Commencement activities
+* Thursday=2C May 29: Summer session pre-reg deadline
+
+
+
+** Happenings Around Campus
+------------------------------------------------------------
+
+New course offerings=2C programs=2C and events=2C specifically for undergr=
+ads.
+See them here! (https://advising.mit.edu/happenings-around-campus/)
+
+=E2=80=A2 Drop-in Advising Hours End Tuesday=2C May 13 =E2=80=A2
+
+Drop-in Advising: (https://advising.mit.edu/advising-resources/for-student=
+s/drop-in-advising/)
+
+Monday - Friday
+
+12 - 2pm
+
+7-104
+
+Check out the UAC website! (https://advising.mit.edu)
+
+Copyright (C) 2025 MIT Undergraduate Advising Center. All rights reserved.
+You are receiving this email as you are an undergraduate student at MIT.
+Our mailing address is:
+MIT Undergraduate Advising Center
+77 Massachusetts Ave=2C 7-104
+Cambridge=2C MA 02139-4301
+USA
+Want to change how you receive these emails?
+You can update your preferences (https://mit.us16.list-manage.com/profile?=
+u=3D88f983a0e3c2a43fb2a2eabd0&id=3D7fd3b71142&e=3D29f0c06973&c=3D025298388d)=
+ .
+
+This email was sent to nathra@MIT.EDU (mailto:nathra@MIT.EDU)
+why did I get this? (https://mit.us16.list-manage.com/about?u=3D88f983a0e3=
+c2a43fb2a2eabd0&id=3D7fd3b71142&e=3D29f0c06973&c=3D025298388d)     unsubscri=
+be from this list (https://mit.us16.list-manage.com/unsubscribe?u=3D88f983=
+a0e3c2a43fb2a2eabd0&id=3D7fd3b71142&t=3Db&e=3D29f0c06973&c=3D025298388d)   =
+  update subscription preferences (https://mit.us16.list-manage.com/profil=
+e?u=3D88f983a0e3c2a43fb2a2eabd0&id=3D7fd3b71142&e=3D29f0c06973&c=3D025298388=
+d)
+MIT Undergraduate Advising Center . 77 Massachusetts Ave=2C 7-104 . Cambri=
+dge=2C MA 02139-4301 . USA
+--_----------=_MCPart_972492372
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html><html xmlns=3D"http://www.w3.org/1999/xhtml" xmlns:v=3D"urn:=
+schemas-microsoft-com:vml" xmlns:o=3D"urn:schemas-microsoft-com:office:offi=
+ce"><head><!--[if gte mso 15]>
+<xml>
+<o:OfficeDocumentSettings>
+<o:AllowPNG/>
+<o:PixelsPerInch>96</o:PixelsPerInch>
+</o:OfficeDocumentSettings>
+</xml>
+<![endif]-->
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8">
+<meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge">
+<meta name=3D"viewport" content=3D"width=3Ddevice-width, initial-scale=3D1"=
+>
+<title>=F0=9F=A7=8BLast boba and UAC event of the semester</title>
+<link rel=3D"preconnect" href=3D"https://fonts.googleapis.com">
+<link rel=3D"preconnect" href=3D"https://fonts.gstatic.com" crossorigin=3D"=
+">
+<!--[if !mso]><!--><link rel=3D"stylesheet" type=3D"text/css" id=3D"newGoog=
+leFontsStatic" href=3D"https://fonts.googleapis.com/css?family=3DRoboto:400=
+,400i,700,700i,900,900i|Playfair+Display:400,400i,700,700i,900,900i"><!--<!=
+[endif]--><style>          img{-ms-interpolation-mode:bicubic;}
+          table, td{mso-table-lspace:0pt; mso-table-rspace:0pt;}
+          .mceStandardButton, .mceStandardButton td, .mceStandardButton td =
+a{mso-hide:all !important;}
+          p, a, li, td, blockquote{mso-line-height-rule:exactly;}
+          p, a, li, td, body, table, blockquote{-ms-text-size-adjust:100%; =
+-webkit-text-size-adjust:100%;}
+          @media only screen and (max-width: 480px){
+            body, table, td, p, a, li, blockquote{-webkit-text-size-adjust:=
+none !important;}
+          }
+          .mcnPreviewText{display: none !important;}
+          .bodyCell{margin:0 auto; padding:0; width:100%;}
+          .ExternalClass, .ExternalClass p, .ExternalClass td, .ExternalCla=
+ss div, .ExternalClass span, .ExternalClass font{line-height:100%;}
+          .ReadMsgBody{width:100%;} .ExternalClass{width:100%;}
+          a[x-apple-data-detectors]{color:inherit !important; text-decorati=
+on:none !important; font-size:inherit !important; font-family:inherit !impo=
+rtant; font-weight:inherit !important; line-height:inherit !important;}
+            body{height:100%; margin:0; padding:0; width:100%; background: =
+#ffffff;}
+            p{margin:0; padding:0;}
+            table{border-collapse:collapse;}
+            td, p, a{word-break:break-word;}
+            h1, h2, h3, h4, h5, h6{display:block; margin:0; padding:0;}
+            img, a img{border:0; height:auto; outline:none; text-decoration=
+:none;}
+            a[href^=3D"tel"], a[href^=3D"sms"]{color:inherit; cursor:defaul=
+t; text-decoration:none;}
+            li p {margin: 0 !important;}
+            .ProseMirror a {
+                pointer-events: none;
+            }
+            @media only screen and (max-width: 640px){
+                .mceClusterLayout td{padding: 4px !important;}
+            }
+            @media only screen and (max-width: 480px){
+                body{width:100% !important; min-width:100% !important; }
+                body.mobile-native {
+                    -webkit-user-select: none; user-select: none; transitio=
+n: transform 0.2s ease-in; transform-origin: top center;
+                }
+                body.mobile-native.selection-allowed a, body.mobile-native.=
+selection-allowed .ProseMirror {
+                    user-select: auto;
+                    -webkit-user-select: auto;
+                }
+                colgroup{display: none;}
+                img{height: auto !important;}
+                .mceWidthContainer{max-width: 660px !important;}
+                .mceColumn{display: block !important; width: 100% !importan=
+t;}
+                .mceColumn-forceSpan{display: table-cell !important; width:=
+ auto !important;}
+                .mceColumn-forceSpan .mceButton a{min-width:0 !important;}
+                .mceBlockContainer{padding-right:16px !important; padding-l=
+eft:16px !important;}
+                .mceTextBlockContainer{padding-right:16px !important; paddi=
+ng-left:16px !important;}
+                .mceBlockContainerE2E{padding-right:0px; padding-left:0px;}
+                .mceSpacing-24{padding-right:16px !important; padding-left:=
+16px !important;}
+                .mceImage, .mceLogo{width: 100% !important; height: auto !i=
+mportant;}
+                .mceFooterSection .mceText, .mceFooterSection .mceText p{fo=
+nt-size: 16px !important; line-height: 140% !important;}
+            }
+            div[contenteditable=3D"true"] {outline: 0;}
+            .ProseMirror h1.empty-node:only-child::before,
+            .ProseMirror h2.empty-node:only-child::before,
+            .ProseMirror h3.empty-node:only-child::before,
+            .ProseMirror h4.empty-node:only-child::before {
+                content: 'Heading';
+            }
+            .ProseMirror p.empty-node:only-child::before, .ProseMirror:empt=
+y::before {
+                content: 'Start typing...';
+            }
+            .mceImageBorder {display: inline-block;}
+            .mceImageBorder img {border: 0 !important;}
+body, #bodyTable { background-color: rgb(117, 0, 20); }.mceText, .mcnTextCo=
+ntent, .mceLabel { font-family: Arial, "Helvetica Neue", Helvetica, sans-se=
+rif; }.mceText, .mcnTextContent, .mceLabel { color: rgb(0, 0, 0); }.mceText=
+ h1 { margin-bottom: 0px; }.mceText p { margin-bottom: 0px; }.mceText ul { =
+margin-bottom: 0px; }.mceText label { margin-bottom: 0px; }.mceText input {=
+ margin-bottom: 0px; }.mceSpacing-12 .mceInput + .mceErrorMessage { margin-=
+top: -6px; }.mceText h1 { margin-bottom: 0px; }.mceText p { margin-bottom: =
+0px; }.mceText ul { margin-bottom: 0px; }.mceText label { margin-bottom: 0p=
+x; }.mceText input { margin-bottom: 0px; }.mceSpacing-24 .mceInput + .mceEr=
+rorMessage { margin-top: -12px; }.mceInput { background-color: transparent;=
+ border: 2px solid rgb(208, 208, 208); width: 60%; color: rgb(77, 77, 77); =
+display: block; }.mceInput[type=3D"radio"], .mceInput[type=3D"checkbox"] { =
+float: left; margin-right: 12px; display: inline; width: auto !important; }=
+.mceLabel > .mceInput { margin-bottom: 0px; margin-top: 2px; }.mceLabel { d=
+isplay: block; }.mceText p, .mcnTextContent p { color: rgb(0, 0, 0); font-f=
+amily: Arial, "Helvetica Neue", Helvetica, sans-serif; font-size: 16px; fon=
+t-weight: normal; line-height: 1.5; mso-line-height-alt: 150%; text-align: =
+center; letter-spacing: 0px; direction: ltr; margin: 0px; }.mceText h1, .mc=
+nTextContent h1 { color: rgb(0, 0, 0); font-family: "Playfair Display", Geo=
+rgia, "Times New Roman", serif; font-size: 31px; font-weight: bold; line-he=
+ight: 1.5; mso-line-height-alt: 150%; text-align: center; letter-spacing: 0=
+px; direction: ltr; }.mceText a, .mcnTextContent a { color: rgb(139, 149, 1=
+58); font-style: normal; font-weight: normal; text-decoration: underline; d=
+irection: ltr; }.mceText h1 a, .mceText h2 a, .mceText h3 a, .mceText h4 a,=
+ .mceText h5 a, .mceText h6 a, .mcnTextContent h1 a, .mcnTextContent h2 a, =
+.mcnTextContent h3 a, .mcnTextContent h4 a, .mcnTextContent h5 a, .mcnTextC=
+ontent h6 a { color: inherit; font-weight: inherit; }.mceSectionHeader .mce=
+Text p, .mceSectionHeader .mcnTextContent p { }.mceSectionHeader .mceText a=
+, .mceSectionHeader .mcnTextContent a { font-style: normal; }.mceSectionBod=
+y .mceText h1, .mceSectionBody .mcnTextContent h1 { }.mceSectionBody .mceTe=
+xt p, .mceSectionBody .mcnTextContent p { }.mceSectionBody .mceText a, .mce=
+SectionBody .mcnTextContent a { font-style: normal; }.mceSectionFooter .mce=
+Text p, .mceSectionFooter .mcnTextContent p { }.mceSectionFooter .mceText a=
+, .mceSectionFooter .mcnTextContent a { font-style: normal; }
+@media only screen and (max-width: 480px) {
+            .mceText p { margin: 0px; font-size: 16px !important; line-heig=
+ht: 1.5 !important; mso-line-height-alt: 150%; }
+          }
+@media only screen and (max-width: 480px) {
+            .mceText h1 { font-size: 31px !important; line-height: 1.5 !imp=
+ortant; mso-line-height-alt: 150%; }
+          }
+@media only screen and (max-width: 480px) {
+            .bodyCell { padding-left: 16px !important; padding-right: 16px =
+!important; }
+          }
+@media only screen and (max-width: 480px) {
+            .mceButtonContainer { width: fit-content !important; max-width:=
+ fit-content !important; }
+          }
+@media only screen and (max-width: 480px) {
+            .mceButtonLink { padding: 18px 28px !important; font-size: 16px=
+ !important; }
+          }
+@media only screen and (max-width: 480px) {
+            .mceDividerBlock { border-top-width: 2px !important; }
+          }
+@media only screen and (max-width: 480px) {
+            .mceDividerContainer { width: 100% !important; }
+          }
+#dataBlockId-17 p, #dataBlockId-17 h1, #dataBlockId-17 h2, #dataBlockId-17 =
+h3, #dataBlockId-17 h4, #dataBlockId-17 ul { text-align: center; }#dataBloc=
+kId-39 p, #dataBlockId-39 h1, #dataBlockId-39 h2, #dataBlockId-39 h3, #data=
+BlockId-39 h4, #dataBlockId-39 ul { text-align: left; }</style></head>
+<body>
+<!--
+-->
+<!--[if !gte mso 9]><!----><span class=3D"mcnPreviewText" style=3D"display:=
+none; font-size:0px; line-height:0px; max-height:0px; max-width:0px; opacit=
+y:0; overflow:hidden; visibility:hidden; mso-hide:all;">Sip with Diep signu=
+p, last day of classes event, and happenings around campus.</span><!--<![en=
+dif]-->
+<!--
+-->
+<div style=3D"display: none; max-height: 0px; overflow: hidden;">=CD=8F =E2=
+=80=8C &nbsp; =E2=80=87  =CD=8F =E2=80=8C &nbsp; =E2=80=87  =CD=8F =E2=80=
+=8C &nbsp; =E2=80=87  =CD=8F =E2=80=8C &nbsp; =E2=80=87  =CD=8F =E2=80=8C &=
+nbsp; =E2=80=87  =CD=8F =E2=80=8C &nbsp; =E2=80=87  =CD=8F =E2=80=8C &nbsp;=
+ =E2=80=87  =CD=8F =E2=80=8C &nbsp; =E2=80=87  =CD=8F =E2=80=8C &nbsp; =E2=
+=80=87  =CD=8F =E2=80=8C &nbsp; =E2=80=87  =CD=8F =E2=80=8C &nbsp; =E2=80=
+=87  =CD=8F =E2=80=8C &nbsp; =E2=80=87  =CD=8F =E2=80=8C &nbsp; =E2=80=87  =
+=CD=8F =E2=80=8C &nbsp; =E2=80=87  =CD=8F =E2=80=8C &nbsp; =E2=80=87  =CD=
+=8F =E2=80=8C &nbsp; =E2=80=87  =CD=8F =E2=80=8C &nbsp; =E2=80=87  =CD=8F =
+=E2=80=8C &nbsp; =E2=80=87  =CD=8F =E2=80=8C &nbsp; =E2=80=87  =CD=8F =E2=
+=80=8C &nbsp; =E2=80=87  =CD=8F =E2=80=8C &nbsp; =E2=80=87  =CD=8F =E2=80=
+=8C &nbsp; =E2=80=87  =CD=8F =E2=80=8C &nbsp; =E2=80=87  =CD=8F =E2=80=8C &=
+nbsp; =E2=80=87  =CD=8F =E2=80=8C &nbsp; =E2=80=87  =CD=8F =E2=80=8C &nbsp;=
+ =E2=80=87  =CD=8F =E2=80=8C &nbsp; =E2=80=87  =CD=8F =E2=80=8C &nbsp; =E2=
+=80=87  =CD=8F =E2=80=8C &nbsp; =E2=80=87  =CD=8F =E2=80=8C &nbsp; =E2=80=
+=87  =CD=8F =E2=80=8C &nbsp; =E2=80=87  =CD=8F =E2=80=8C &nbsp; =E2=80=87  =
+=CD=8F =E2=80=8C &nbsp; =E2=80=87  =CD=8F =E2=80=8C &nbsp; =E2=80=87  =CD=
+=8F =E2=80=8C &nbsp; =E2=80=87  =CD=8F =E2=80=8C &nbsp; =E2=80=87  =CD=8F =
+=E2=80=8C &nbsp; =E2=80=87  =CD=8F =E2=80=8C &nbsp; =E2=80=87  =CD=8F =E2=
+=80=8C &nbsp; =E2=80=87  =CD=8F =E2=80=8C &nbsp; =E2=80=87  =CD=8F =E2=80=
+=8C &nbsp; =E2=80=87  =CD=8F =E2=80=8C &nbsp; =E2=80=87  =CD=8F =E2=80=8C &=
+nbsp; =E2=80=87  =CD=8F =E2=80=8C &nbsp; =E2=80=87  =CD=8F =E2=80=8C &nbsp;=
+ =E2=80=87  =CD=8F =E2=80=8C &nbsp; =E2=80=87  =CD=8F =E2=80=8C &nbsp; =E2=
+=80=87  =CD=8F =E2=80=8C &nbsp; =E2=80=87  =CD=8F =E2=80=8C &nbsp; =E2=80=
+=87  =CD=8F =E2=80=8C &nbsp; =E2=80=87  =CD=8F =E2=80=8C &nbsp; =E2=80=87  =
+=CD=8F =E2=80=8C &nbsp; =E2=80=87  =CD=8F =E2=80=8C &nbsp; =E2=80=87  =CD=
+=8F =E2=80=8C &nbsp; =E2=80=87  =CD=8F =E2=80=8C &nbsp; =E2=80=87  =CD=8F =
+=E2=80=8C &nbsp; =E2=80=87  =CD=8F =E2=80=8C &nbsp; =E2=80=87  =CD=8F =E2=
+=80=8C &nbsp; =E2=80=87  =CD=8F =E2=80=8C &nbsp; =E2=80=87  =CD=8F =E2=80=
+=8C &nbsp; =E2=80=87  =CD=8F =E2=80=8C &nbsp; =E2=80=87  =CD=8F =E2=80=8C &=
+nbsp; =E2=80=87  =CD=8F =E2=80=8C &nbsp; =E2=80=87  =CD=8F =E2=80=8C &nbsp;=
+ =E2=80=87  =CD=8F =E2=80=8C &nbsp; =E2=80=87  =CD=8F =E2=80=8C &nbsp; =E2=
+=80=87  =CD=8F =E2=80=8C &nbsp; =E2=80=87  =CD=8F =E2=80=8C &nbsp; =E2=80=
+=87  =CD=8F =E2=80=8C &nbsp; =E2=80=87  =CD=8F =E2=80=8C &nbsp; =E2=80=87  =
+=CD=8F =E2=80=8C &nbsp; =E2=80=87  =CD=8F =E2=80=8C &nbsp; =E2=80=87  =CD=
+=8F =E2=80=8C &nbsp; =E2=80=87  =CD=8F =E2=80=8C &nbsp; =E2=80=87  =CD=8F =
+=E2=80=8C &nbsp; =E2=80=87  =CD=8F =E2=80=8C &nbsp; =E2=80=87  =CD=8F =E2=
+=80=8C &nbsp; =E2=80=87  =CD=8F =E2=80=8C &nbsp; =E2=80=87  =CD=8F =E2=80=
+=8C &nbsp; =E2=80=87  =CD=8F =E2=80=8C &nbsp; =E2=80=87  =CD=8F =E2=80=8C &=
+nbsp; =E2=80=87  =CD=8F =E2=80=8C &nbsp; =E2=80=87  =CD=8F =E2=80=8C &nbsp;=
+ =E2=80=87  =CD=8F =E2=80=8C &nbsp; =E2=80=87  =CD=8F =E2=80=8C &nbsp; =E2=
+=80=87  =CD=8F =E2=80=8C &nbsp; =E2=80=87  =CD=8F =E2=80=8C &nbsp; =E2=80=
+=87  =CD=8F =E2=80=8C &nbsp; =E2=80=87  =CD=8F =E2=80=8C &nbsp; =E2=80=87  =
+=CD=8F =E2=80=8C &nbsp; =E2=80=87  =CD=8F =E2=80=8C &nbsp; =E2=80=87  =CD=
+=8F =E2=80=8C &nbsp; =E2=80=87  =CD=8F =E2=80=8C &nbsp; =E2=80=87  =CD=8F =
+=E2=80=8C &nbsp; =E2=80=87  =CD=8F =E2=80=8C &nbsp; =E2=80=87  =CD=8F =E2=
+=80=8C &nbsp; =E2=80=87  =CD=8F =E2=80=8C &nbsp; =E2=80=87  =CD=8F =E2=80=
+=8C &nbsp; =E2=80=87  =CD=8F =E2=80=8C &nbsp; =E2=80=87  =CD=8F =E2=80=8C &=
+nbsp; =E2=80=87  =CD=8F =E2=80=8C &nbsp; =E2=80=87  =CD=8F =E2=80=8C &nbsp;=
+ =E2=80=87  =CD=8F =E2=80=8C &nbsp; =E2=80=87  =CD=8F =E2=80=8C &nbsp; =E2=
+=80=87  =CD=8F =E2=80=8C &nbsp; =E2=80=87  =CD=8F =E2=80=8C &nbsp; =E2=80=
+=87  =CD=8F =E2=80=8C &nbsp; =E2=80=87  =CD=8F =E2=80=8C &nbsp; =E2=80=87  =
+=CD=8F =E2=80=8C &nbsp; =E2=80=87  =CD=8F =E2=80=8C &nbsp; =E2=80=87  =CD=
+=8F =E2=80=8C &nbsp; =E2=80=87  =CD=8F =E2=80=8C &nbsp; =E2=80=87  =CD=8F =
+=E2=80=8C &nbsp; =E2=80=87  =CD=8F =E2=80=8C &nbsp; =E2=80=87  =CD=8F =E2=
+=80=8C &nbsp; =E2=80=87  =CD=8F =E2=80=8C &nbsp; =E2=80=87  =CD=8F =E2=80=
+=8C &nbsp; =E2=80=87  =CD=8F =E2=80=8C &nbsp; =E2=80=87  =CD=8F =E2=80=8C &=
+nbsp; =E2=80=87  =CD=8F =E2=80=8C &nbsp; =E2=80=87  =CD=8F =E2=80=8C &nbsp;=
+ =E2=80=87  =CD=8F =E2=80=8C &nbsp; =E2=80=87  =CD=8F =E2=80=8C &nbsp; =E2=
+=80=87  =CD=8F =E2=80=8C &nbsp; =E2=80=87  =CD=8F =E2=80=8C &nbsp; =E2=80=
+=87  =CD=8F =E2=80=8C &nbsp; =E2=80=87  =CD=8F =E2=80=8C &nbsp; =E2=80=87  =
+=CD=8F =E2=80=8C &nbsp; =E2=80=87  =CD=8F =E2=80=8C &nbsp; =E2=80=87  =CD=
+=8F =E2=80=8C &nbsp; =E2=80=87  =CD=8F =E2=80=8C &nbsp; =E2=80=87  =CD=8F =
+=E2=80=8C &nbsp; =E2=80=87  =CD=8F =E2=80=8C &nbsp; =E2=80=87  =CD=8F =E2=
+=80=8C &nbsp; =E2=80=87  =CD=8F =E2=80=8C &nbsp; =E2=80=87  =CD=8F =E2=80=
+=8C &nbsp; =E2=80=87  =CD=8F =E2=80=8C &nbsp; =E2=80=87  =CD=8F =E2=80=8C &=
+nbsp; =E2=80=87  =CD=8F =E2=80=8C &nbsp; =E2=80=87  =CD=8F =E2=80=8C &nbsp;=
+ =E2=80=87  =CD=8F =E2=80=8C &nbsp; =E2=80=87  =CD=8F =E2=80=8C &nbsp; =E2=
+=80=87  =CD=8F =E2=80=8C &nbsp; =E2=80=87  =CD=8F =E2=80=8C &nbsp; =E2=80=
+=87  =CD=8F =E2=80=8C &nbsp; =E2=80=87  =CD=8F =E2=80=8C &nbsp; =E2=80=87  =
+=CD=8F =E2=80=8C &nbsp; =E2=80=87  =CD=8F =E2=80=8C &nbsp; =E2=80=87  =CD=
+=8F =E2=80=8C &nbsp; =E2=80=87  =CD=8F =E2=80=8C &nbsp; =E2=80=87  =CD=8F =
+=E2=80=8C &nbsp; =E2=80=87  =CD=8F =E2=80=8C &nbsp; =E2=80=87  =CD=8F =E2=
+=80=8C &nbsp; =E2=80=87  =CD=8F =E2=80=8C &nbsp; =E2=80=87  =CD=8F =E2=80=
+=8C &nbsp; =E2=80=87  =CD=8F =E2=80=8C &nbsp; =E2=80=87  =CD=8F =E2=80=8C &=
+nbsp; =E2=80=87  =CD=8F =E2=80=8C &nbsp; =E2=80=87  =CD=8F =E2=80=8C &nbsp;=
+ =E2=80=87  =CD=8F =E2=80=8C &nbsp; =E2=80=87  =CD=8F =E2=80=8C &nbsp; =E2=
+=80=87  =CD=8F =E2=80=8C &nbsp; =E2=80=87  =CD=8F =E2=80=8C &nbsp; =E2=80=
+=87  =CD=8F =E2=80=8C &nbsp; =E2=80=87  =CD=8F =E2=80=8C &nbsp; =E2=80=87  =
+=CD=8F =E2=80=8C &nbsp; =E2=80=87  =CD=8F =E2=80=8C &nbsp; =E2=80=87  =CD=
+=8F =E2=80=8C &nbsp; =E2=80=87  =CD=8F =E2=80=8C &nbsp; =E2=80=87  =CD=8F =
+=E2=80=8C &nbsp; =E2=80=87  =CD=8F =E2=80=8C &nbsp; =E2=80=87  =CD=8F =E2=
+=80=8C &nbsp; =E2=80=87  =CD=8F =E2=80=8C &nbsp; =E2=80=87  =CD=8F =E2=80=
+=8C &nbsp; =E2=80=87  =CD=8F =E2=80=8C &nbsp; =E2=80=87  =CD=8F =E2=80=8C &=
+nbsp; =E2=80=87  =CD=8F =E2=80=8C &nbsp; =E2=80=87  =CD=8F =E2=80=8C &nbsp;=
+ =E2=80=87  =CD=8F =E2=80=8C &nbsp; =E2=80=87  =CD=8F =E2=80=8C &nbsp; =E2=
+=80=87  =CD=8F =E2=80=8C &nbsp; =E2=80=87  =CD=8F =E2=80=8C &nbsp; =E2=80=
+=87  =CD=8F =E2=80=8C &nbsp; =E2=80=87  =CD=8F =E2=80=8C &nbsp; =E2=80=87  =
+=CD=8F =E2=80=8C &nbsp; =E2=80=87  =CD=8F =E2=80=8C &nbsp; =E2=80=87  =CD=
+=8F =E2=80=8C &nbsp; =E2=80=87  =CD=8F =E2=80=8C &nbsp; =E2=80=87  =CD=8F =
+=E2=80=8C &nbsp; =E2=80=87  =CD=8F =E2=80=8C &nbsp; =E2=80=87  =CD=8F =E2=
+=80=8C &nbsp; =E2=80=87  =CD=8F =E2=80=8C &nbsp; =E2=80=87  =CD=8F =E2=80=
+=8C &nbsp; =E2=80=87  =CD=8F =E2=80=8C &nbsp; =E2=80=87  =CD=8F =E2=80=8C &=
+nbsp; =E2=80=87  =CD=8F =E2=80=8C &nbsp; =E2=80=87  =CD=8F =E2=80=8C &nbsp;=
+ =E2=80=87  =CD=8F =E2=80=8C &nbsp; =E2=80=87  =CD=8F =E2=80=8C &nbsp; =E2=
+=80=87  =CD=8F =E2=80=8C &nbsp; =E2=80=87  =CD=8F =E2=80=8C &nbsp; =E2=80=
+=87  =CD=8F =E2=80=8C &nbsp; =E2=80=87  =CD=8F =E2=80=8C &nbsp; =E2=80=87  =
+=CD=8F =E2=80=8C &nbsp; =E2=80=87  =CD=8F =E2=80=8C &nbsp; =E2=80=87  =CD=
+=8F =E2=80=8C &nbsp; =E2=80=87  =CD=8F =E2=80=8C &nbsp; =E2=80=87  =CD=8F =
+=E2=80=8C &nbsp; =E2=80=87  =CD=8F =E2=80=8C &nbsp; =E2=80=87  =CD=8F =E2=
+=80=8C &nbsp; =E2=80=87  =CD=8F =E2=80=8C &nbsp; =E2=80=87  =CD=8F =E2=80=
+=8C &nbsp; =E2=80=87  =CD=8F =E2=80=8C &nbsp; =E2=80=87  =CD=8F =E2=80=8C &=
+nbsp; =E2=80=87  =CD=8F =E2=80=8C &nbsp; =E2=80=87  =CD=8F =E2=80=8C &nbsp;=
+ =E2=80=87  =CD=8F =E2=80=8C &nbsp; =E2=80=87  =CD=8F =E2=80=8C &nbsp; =E2=
+=80=87  =CD=8F =E2=80=8C &nbsp; =E2=80=87  =CD=8F =E2=80=8C &nbsp; =E2=80=
+=87  =CD=8F =E2=80=8C &nbsp; =E2=80=87  =CD=8F =E2=80=8C &nbsp; =E2=80=87  =
+=CD=8F =E2=80=8C &nbsp; =E2=80=87  =CD=8F =E2=80=8C &nbsp; =E2=80=87  =CD=
+=8F =E2=80=8C &nbsp; =E2=80=87  =CD=8F =E2=80=8C &nbsp; =E2=80=87  =CD=8F =
+=E2=80=8C &nbsp; =E2=80=87  =CD=8F =E2=80=8C &nbsp; =E2=80=87  =CD=8F =E2=
+=80=8C &nbsp; =E2=80=87  =CD=8F =E2=80=8C &nbsp; =E2=80=87  =CD=8F =E2=80=
+=8C &nbsp; =E2=80=87  =CD=8F =E2=80=8C &nbsp; =E2=80=87  =CD=8F =E2=80=8C &=
+nbsp; =E2=80=87  =CD=8F =E2=80=8C &nbsp; =E2=80=87  =CD=8F =E2=80=8C &nbsp;=
+ =E2=80=87  =CD=8F =E2=80=8C &nbsp; =E2=80=87  =CD=8F =E2=80=8C &nbsp; =E2=
+=80=87  =CD=8F =E2=80=8C &nbsp; =E2=80=87  =CD=8F =E2=80=8C &nbsp; =E2=80=
+=87  =CD=8F =E2=80=8C &nbsp; =E2=80=87  =CD=8F =E2=80=8C &nbsp; =E2=80=87  =
+=CD=8F =E2=80=8C &nbsp; =E2=80=87  =CD=8F =E2=80=8C &nbsp; =E2=80=87  =CD=
+=8F =E2=80=8C &nbsp; =E2=80=87  =CD=8F =E2=80=8C &nbsp; =E2=80=87  =CD=8F =
+=E2=80=8C &nbsp; =E2=80=87  =CD=8F =E2=80=8C &nbsp; =E2=80=87  =CD=8F =E2=
+=80=8C &nbsp; =E2=80=87  =CD=8F =E2=80=8C &nbsp; =E2=80=87  =CD=8F =E2=80=
+=8C &nbsp; =E2=80=87  =CD=8F =E2=80=8C &nbsp; =E2=80=87  =CD=8F =E2=80=8C &=
+nbsp; =E2=80=87  =CD=8F =E2=80=8C &nbsp; =E2=80=87  =CD=8F =E2=80=8C &nbsp;=
+ =E2=80=87  =CD=8F =E2=80=8C &nbsp; =E2=80=87  =CD=8F =E2=80=8C &nbsp; =E2=
+=80=87  =CD=8F =E2=80=8C &nbsp; =E2=80=87  =CD=8F =E2=80=8C &nbsp; =E2=80=
+=87  =CD=8F =E2=80=8C &nbsp; =E2=80=87  =CD=8F =E2=80=8C &nbsp; =E2=80=87  =
+=CD=8F =E2=80=8C &nbsp; =E2=80=87  =CD=8F =E2=80=8C &nbsp; =E2=80=87  =CD=
+=8F =E2=80=8C &nbsp; =E2=80=87  =CD=8F =E2=80=8C &nbsp; =E2=80=87  =CD=8F =
+=E2=80=8C &nbsp; =E2=80=87  =CD=8F =E2=80=8C &nbsp; =E2=80=87  =CD=8F =E2=
+=80=8C &nbsp; =E2=80=87  =CD=8F =E2=80=8C &nbsp; =E2=80=87  =CD=8F =E2=80=
+=8C &nbsp; =E2=80=87  =CD=8F =E2=80=8C &nbsp; =E2=80=87  =CD=8F =E2=80=8C &=
+nbsp; =E2=80=87  =CD=8F =E2=80=8C &nbsp; =E2=80=87  =CD=8F =E2=80=8C &nbsp;=
+ =E2=80=87  =CD=8F =E2=80=8C &nbsp; =E2=80=87  =CD=8F =E2=80=8C &nbsp; =E2=
+=80=87  =CD=8F =E2=80=8C &nbsp; =E2=80=87  =CD=8F =E2=80=8C &nbsp; =E2=80=
+=87  =CD=8F =E2=80=8C &nbsp; =E2=80=87  =CD=8F =E2=80=8C &nbsp; =E2=80=87  =
+=CD=8F =E2=80=8C &nbsp; =E2=80=87  =CD=8F =E2=80=8C &nbsp; =E2=80=87  =CD=
+=8F =E2=80=8C &nbsp; =E2=80=87  =CD=8F =E2=80=8C &nbsp; =E2=80=87  =CD=8F =
+=E2=80=8C &nbsp; =E2=80=87  =CD=8F =E2=80=8C &nbsp; =E2=80=87  =CD=8F =E2=
+=80=8C &nbsp; =E2=80=87  =CD=8F =E2=80=8C &nbsp; =E2=80=87  =CD=8F =E2=80=
+=8C &nbsp; =E2=80=87  =CD=8F =E2=80=8C &nbsp; =E2=80=87  =CD=8F =E2=80=8C &=
+nbsp; =E2=80=87  =CD=8F =E2=80=8C &nbsp; =E2=80=87  =CD=8F =E2=80=8C &nbsp;=
+ =E2=80=87  =CD=8F =E2=80=8C &nbsp; =E2=80=87  =CD=8F =E2=80=8C &nbsp; =E2=
+=80=87  =CD=8F =E2=80=8C &nbsp; =E2=80=87  =CD=8F =E2=80=8C &nbsp; =E2=80=
+=87  =CD=8F =E2=80=8C &nbsp; =E2=80=87  =CD=8F =E2=80=8C &nbsp; =E2=80=87  =
+=CD=8F =E2=80=8C &nbsp; =E2=80=87  =CD=8F =E2=80=8C &nbsp; =E2=80=87  =CD=
+=8F =E2=80=8C &nbsp; =E2=80=87  =CD=8F =E2=80=8C &nbsp; =E2=80=87  =CD=8F =
+=E2=80=8C &nbsp; =E2=80=87  =CD=8F =E2=80=8C &nbsp; =E2=80=87  =CD=8F =E2=
+=80=8C &nbsp; =E2=80=87  =CD=8F =E2=80=8C &nbsp; =E2=80=87  =CD=8F =E2=80=
+=8C &nbsp; =E2=80=87  =CD=8F =E2=80=8C &nbsp; =E2=80=87  =CD=8F =E2=80=8C &=
+nbsp; =E2=80=87  =CD=8F =E2=80=8C &nbsp; =E2=80=87  =CD=8F =E2=80=8C &nbsp;=
+ =E2=80=87  =CD=8F =E2=80=8C &nbsp; =E2=80=87  =CD=8F =E2=80=8C &nbsp; =E2=
+=80=87  =CD=8F =E2=80=8C &nbsp; =E2=80=87  =CD=8F =E2=80=8C &nbsp; =E2=80=
+=87  =CD=8F =E2=80=8C &nbsp; =E2=80=87  =CD=8F =E2=80=8C &nbsp; =E2=80=87  =
+=CD=8F =E2=80=8C &nbsp; =E2=80=87  =CD=8F =E2=80=8C &nbsp; =E2=80=87  =CD=
+=8F =E2=80=8C &nbsp; =E2=80=87=C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=
+=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =
+=C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=
+=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =
+=C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=
+=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =
+=C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=
+=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =
+=C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=
+=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =
+=C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=
+=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =
+=C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=
+=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =
+=C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=
+=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =
+=C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=
+=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =
+=C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=
+=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =
+=C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=
+=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =
+=C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=
+=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =
+=C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=
+=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =
+=C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=
+=AD =C2=AD =C2=AD</div><div style=3D"display:none;">=E2=80=87=EF=BB=BF=CD=
+=8F =E2=80=87=EF=BB=BF=CD=8F =E2=80=87=EF=BB=BF=CD=8F =E2=80=87=EF=BB=BF=CD=
+=8F=E2=80=87=EF=BB=BF=CD=8F =E2=80=87=EF=BB=BF=CD=8F =E2=80=87=EF=BB=BF=CD=
+=8F =E2=80=87=EF=BB=BF=CD=8F=E2=80=87=EF=BB=BF=CD=8F =E2=80=87=EF=BB=BF=CD=
+=8F =E2=80=87=EF=BB=BF=CD=8F =E2=80=87=EF=BB=BF=CD=8F=E2=80=87=EF=BB=BF=CD=
+=8F =E2=80=87=EF=BB=BF=CD=8F =E2=80=87=EF=BB=BF=CD=8F =E2=80=87=EF=BB=BF=CD=
+=8F=E2=80=87=EF=BB=BF=CD=8F =E2=80=87=EF=BB=BF=CD=8F =E2=80=87=EF=BB=BF=CD=
+=8F =E2=80=87=EF=BB=BF=CD=8F=E2=80=87=EF=BB=BF=CD=8F =E2=80=87=EF=BB=BF=CD=
+=8F =E2=80=87=EF=BB=BF=CD=8F =E2=80=87=EF=BB=BF=CD=8F</div><!--[if !mso]><!=
+--><div style=3D"display:none; font-size:0px; line-height:0px; max-height:0=
+px; max-width:0px; opacity:0; overflow:hidden; visibility:hidden; mso-hide:=
+all;"><img src=3D"https://mit.us16.list-manage.com/track/open.php?u=3D88f98=
+3a0e3c2a43fb2a2eabd0&amp;id=3D025298388d&amp;e=3D29f0c06973" height=3D"1" w=
+idth=3D"1" style=3D"display:none; font-size:0px; line-height:0px; opacity:0=
+; overflow:hidden; visibility:hidden; mso-hide:all;" alt=3D""></div><!--<![=
+endif]-->
+<center>
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" height=3D"100%" wid=
+th=3D"100%" id=3D"bodyTable" style=3D"background-color: rgb(117, 0, 20);">
+<tbody><tr>
+<td class=3D"bodyCell" align=3D"center" valign=3D"top">
+<table id=3D"root" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=
+=3D"100%"><tbody data-block-id=3D"3" class=3D"mceWrapper"><tr><td style=3D"=
+background-color:#750014" valign=3D"top" align=3D"center" class=3D"mceSecti=
+onHeader"><!--[if (gte mso 9)|(IE)]><table align=3D"center" border=3D"0" ce=
+llspacing=3D"0" cellpadding=3D"0" width=3D"660" style=3D"width:660px;"><tr>=
+<td><![endif]--><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wid=
+th=3D"100%" style=3D"max-width:660px" role=3D"presentation"><tbody><tr><td =
+style=3D"background-color:#ffffff" valign=3D"top" class=3D"mceWrapperInner"=
+><table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" w=
+idth=3D"100%" role=3D"presentation" data-block-id=3D"2"><tbody><tr class=3D=
+"mceRow"><td style=3D"background-position:center;background-repeat:no-repea=
+t;background-size:cover" valign=3D"top"><table border=3D"0" cellpadding=3D"=
+0" cellspacing=3D"0" width=3D"100%" role=3D"presentation"><tbody><tr><td st=
+yle=3D"padding-top:0;padding-bottom:0" valign=3D"top" class=3D"mceColumn" d=
+ata-block-id=3D"-6" colspan=3D"12" width=3D"100%"><table border=3D"0" cellp=
+adding=3D"0" cellspacing=3D"0" width=3D"100%" role=3D"presentation"><tbody>=
+<tr><td style=3D"padding-top:0;padding-bottom:0;padding-right:0;padding-lef=
+t:0" valign=3D"top" id=3D"blockContainerId-1"><table width=3D"100%" style=
+=3D"border:0;border-radius:0;border-collapse:separate"><tbody><tr><td style=
+=3D"padding-left:24px;padding-right:24px;padding-top:48px;padding-bottom:12=
+px" class=3D"mceTextBlockContainer"><div data-block-id=3D"1" class=3D"mceTe=
+xt" id=3D"dataBlockId-1" style=3D"width:100%"><p class=3D"last-child"><a hr=
+ef=3D"https://mailchi.mp/694ba1e71374/last-boba-and-uac-event-of-the-semest=
+er?e=3D29f0c06973">View this email in your browser</a></p></div></td></tr><=
+/tbody></table></td></tr></tbody></table></td></tr></tbody></table></td></t=
+r></tbody></table></td></tr></tbody></table><!--[if (gte mso 9)|(IE)]></td>=
+</tr></table><![endif]--></td></tr></tbody><tbody data-block-id=3D"15" clas=
+s=3D"mceWrapper"><tr><td style=3D"background-color:#750014" valign=3D"top" =
+align=3D"center" class=3D"mceSectionBody"><!--[if (gte mso 9)|(IE)]><table =
+align=3D"center" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" width=3D"=
+660" style=3D"width:660px;"><tr><td><![endif]--><table border=3D"0" cellpad=
+ding=3D"0" cellspacing=3D"0" width=3D"100%" style=3D"max-width:660px" role=
+=3D"presentation"><tbody><tr><td style=3D"background-color:#ffffff" valign=
+=3D"top" class=3D"mceWrapperInner"><table align=3D"center" border=3D"0" cel=
+lpadding=3D"0" cellspacing=3D"0" width=3D"100%" role=3D"presentation" data-=
+block-id=3D"14"><tbody><tr class=3D"mceRow"><td style=3D"background-positio=
+n:center;background-repeat:no-repeat;background-size:cover" valign=3D"top">=
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" role=
+=3D"presentation"><tbody><tr><td style=3D"padding-top:0;padding-bottom:0" v=
+align=3D"top" class=3D"mceColumn" data-block-id=3D"-7" colspan=3D"12" width=
+=3D"100%"><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"=
+100%" role=3D"presentation"><tbody><tr><td style=3D"background-color:transp=
+arent" valign=3D"top" id=3D"blockContainerId-4"><table border=3D"0" cellpad=
+ding=3D"0" cellspacing=3D"0" width=3D"100%" role=3D"presentation" data-bloc=
+k-id=3D"4"><tbody><tr><td valign=3D"top" class=3D"mceSpacerBlock" height=3D=
+"20"></td></tr></tbody></table></td></tr><tr><td style=3D"padding-top:12px;=
+padding-bottom:12px;padding-right:0;padding-left:0" valign=3D"top" class=3D=
+"mceImageBlockContainer" align=3D"center" id=3D"blockContainerId-5"><div><!=
+--[if !mso]><!--></div><a href=3D"https://mit.us16.list-manage.com/track/cl=
+ick?u=3D88f983a0e3c2a43fb2a2eabd0&amp;id=3D08b7821a5f&amp;e=3D29f0c06973" s=
+tyle=3D"display:block" target=3D"_blank" data-block-id=3D"5"><table align=
+=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"85%" =
+style=3D"border-collapse:separate;margin:0;vertical-align:top;max-width:85%=
+;width:85%;height:auto" role=3D"presentation" data-testid=3D"image-5"><tbod=
+y><tr><td style=3D"border:0;border-radius:0;margin:0" valign=3D"top"><img a=
+lt=3D"" src=3D"https://mcusercontent.com/88f983a0e3c2a43fb2a2eabd0/images/1=
+67c160e-60d2-24c2-6dfc-68733890ee31.png" width=3D"561" height=3D"auto" styl=
+e=3D"display:block;max-width:100%;height:auto;border-radius:0" class=3D"ima=
+geDropZone mceImage"></td></tr></tbody></table></a><div><!--<![endif]--></d=
+iv><div>
+<!--[if mso]>
+<a href=3D"https://advising.mit.edu/"><span class=3D"mceImageBorder" style=
+=3D"border:0;vertical-align:top;margin:0"><img role=3D"presentation" class=
+=3D"imageDropZone mceImage" src=3D"https://mcusercontent.com/88f983a0e3c2a4=
+3fb2a2eabd0/images/167c160e-60d2-24c2-6dfc-68733890ee31.png" alt=3D"" width=
+=3D"561" height=3D"auto" style=3D"display:block;max-width:561px;width:561px=
+;height:auto"/></span></a>
+<![endif]-->
+</div></td></tr><tr><td style=3D"background-color:transparent;padding-top:2=
+0px;padding-bottom:0;padding-right:24px;padding-left:24px" valign=3D"top" c=
+lass=3D"mceDividerBlockContainer" id=3D"blockContainerId-6"><table align=3D=
+"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" st=
+yle=3D"background-color:transparent;width:100%" role=3D"presentation" class=
+=3D"mceDividerContainer" data-block-id=3D"6"><tbody><tr><td style=3D"min-wi=
+dth:100%;border-top-width:1px;border-top-style:solid;border-top-color:#7500=
+14;line-height:0;font-size:0" valign=3D"top" class=3D"mceDividerBlock">&nbs=
+p;</td></tr></tbody></table></td></tr><tr><td valign=3D"top" class=3D"mceGu=
+tterContainer" id=3D"gutterContainerId-36"><table border=3D"0" cellpadding=
+=3D"0" cellspacing=3D"0" width=3D"100%" style=3D"border-collapse:separate" =
+role=3D"presentation"><tbody><tr><td style=3D"padding-top:12px;padding-bott=
+om:12px;padding-right:0;padding-left:0" valign=3D"top" class=3D"mceLayoutCo=
+ntainer" id=3D"blockContainerId-36"><table align=3D"center" border=3D"0" ce=
+llpadding=3D"0" cellspacing=3D"0" width=3D"100%" role=3D"presentation" data=
+-block-id=3D"36" id=3D"section_3ef5ca77d2a8a10b6e66f2cfec6c95ad" class=3D"m=
+ceLayout"><tbody><tr class=3D"mceRow"><td style=3D"background-position:cent=
+er;background-repeat:no-repeat;background-size:cover" valign=3D"top"><table=
+ border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" role=3D"pr=
+esentation"><tbody><tr><td valign=3D"top" class=3D"mceColumn" data-block-id=
+=3D"-9" colspan=3D"12" width=3D"100%"><table border=3D"0" cellpadding=3D"0"=
+ cellspacing=3D"0" width=3D"100%" role=3D"presentation"><tbody><tr><td vali=
+gn=3D"top" align=3D"center" id=3D"blockContainerId--5"><table align=3D"cent=
+er" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" role=3D=
+"presentation" data-block-id=3D"-5"><tbody><tr class=3D"mceRow"><td style=
+=3D"background-position:center;background-repeat:no-repeat;background-size:=
+cover" valign=3D"top"><table border=3D"0" cellpadding=3D"0" cellspacing=3D"=
+0" width=3D"100%" role=3D"presentation"><tbody><tr><td valign=3D"top" class=
+=3D"mceColumn" data-block-id=3D"-10" colspan=3D"12" width=3D"100%"><table b=
+order=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" role=3D"pres=
+entation"><tbody><tr><td valign=3D"top" id=3D"blockContainerId-42"><table a=
+lign=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"1=
+00%" role=3D"presentation" data-block-id=3D"42"><tbody><tr class=3D"mceRow"=
+><td style=3D"background-position:center;background-repeat:no-repeat;backgr=
+ound-size:cover;padding-top:0px;padding-bottom:0px" valign=3D"top"><table b=
+order=3D"0" cellpadding=3D"0" cellspacing=3D"24" width=3D"100%" style=3D"ta=
+ble-layout:fixed" role=3D"presentation"><colgroup><col span=3D"1" width=3D"=
+8.333333333333332%"><col span=3D"1" width=3D"8.333333333333332%"><col span=
+=3D"1" width=3D"8.333333333333332%"><col span=3D"1" width=3D"8.333333333333=
+332%"><col span=3D"1" width=3D"8.333333333333332%"><col span=3D"1" width=3D=
+"8.333333333333332%"><col span=3D"1" width=3D"8.333333333333332%"><col span=
+=3D"1" width=3D"8.333333333333332%"><col span=3D"1" width=3D"8.333333333333=
+332%"><col span=3D"1" width=3D"8.333333333333332%"><col span=3D"1" width=3D=
+"8.333333333333332%"><col span=3D"1" width=3D"8.333333333333332%"></colgrou=
+p><tbody><tr><td style=3D"padding-top:0;padding-bottom:0" valign=3D"top" cl=
+ass=3D"mceColumn" data-block-id=3D"38" colspan=3D"6" width=3D"50%"><table b=
+order=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" role=3D"pres=
+entation"><tbody><tr><td style=3D"padding-top:12px;padding-bottom:12px;padd=
+ing-right:16px;padding-left:16px" valign=3D"top" class=3D"mceImageBlockCont=
+ainer" id=3D"blockContainerId-37"><div><!--[if !mso]><!--></div><a href=3D"=
+https://mit.us16.list-manage.com/track/click?u=3D88f983a0e3c2a43fb2a2eabd0&=
+amp;id=3Ddfa68bffda&amp;e=3D29f0c06973" style=3D"display:block" target=3D"_=
+blank" data-block-id=3D"37"><table align=3D"center" border=3D"0" cellpaddin=
+g=3D"0" cellspacing=3D"0" width=3D"100%" style=3D"border-collapse:separate;=
+margin:0;vertical-align:top;max-width:100%;width:100%;height:auto" role=3D"=
+presentation" data-testid=3D"image-37"><tbody><tr><td style=3D"border:0;bor=
+der-radius:0;margin:0" valign=3D"top"><img alt=3D"" src=3D"https://mcuserco=
+ntent.com/88f983a0e3c2a43fb2a2eabd0/images/1d03dfac-f6f1-49ff-02c9-21092507=
+36ab.png" width=3D"298" height=3D"auto" style=3D"display:block;max-width:10=
+0%;height:auto;border-radius:0" class=3D"imageDropZone mceImage"></td></tr>=
+</tbody></table></a><div><!--<![endif]--></div><div>
+<!--[if mso]>
+<a href=3D"https://docs.google.com/spreadsheets/d/1EsfztXNQ6eroKv5bkrLIEYHQ=
+KiK39RsZKw8YtRS0b0o/edit?usp=3Dsharing"><span class=3D"mceImageBorder" styl=
+e=3D"border:0;vertical-align:top;margin:0"><img role=3D"presentation" class=
+=3D"imageDropZone mceImage" src=3D"https://mcusercontent.com/88f983a0e3c2a4=
+3fb2a2eabd0/images/1d03dfac-f6f1-49ff-02c9-2109250736ab.png" alt=3D"" width=
+=3D"298" height=3D"auto" style=3D"display:block;max-width:298px;width:298px=
+;height:auto"/></span></a>
+<![endif]-->
+</div></td></tr></tbody></table></td><td style=3D"padding-top:0;padding-bot=
+tom:0" valign=3D"top" class=3D"mceColumn" data-block-id=3D"41" colspan=3D"6=
+" width=3D"50%"><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wid=
+th=3D"100%" role=3D"presentation"><tbody><tr><td style=3D"padding-top:0;pad=
+ding-bottom:0;padding-right:0;padding-left:0" valign=3D"top" id=3D"blockCon=
+tainerId-39"><table width=3D"100%" style=3D"border:0;border-radius:0;border=
+-collapse:separate"><tbody><tr><td style=3D"padding-left:16px;padding-right=
+:16px;padding-top:12px;padding-bottom:12px" class=3D"mceTextBlockContainer"=
+><div data-block-id=3D"39" class=3D"mceText" id=3D"dataBlockId-39" style=3D=
+"width:100%"><h1><span style=3D"font-size: 30px"><span style=3D"font-family=
+: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif">Sip with Diep</=
+span></span></h1><p><span style=3D"font-family: 'Roboto', 'Helvetica Neue',=
+ Helvetica, Arial, sans-serif">Join Associate Dean and UAC Director Diep =
+=E2=80=9Cyip=E2=80=9D Luu and special guest UAC Associate Dean John Sandova=
+l for a custom-ordered boba tea and 10 minute conversation about your stude=
+nt experience at MIT.</span></p><p><br></p><p class=3D"last-child"><strong>=
+<span style=3D"color:#ff1423;"><span style=3D"font-family: 'Roboto', 'Helve=
+tica Neue', Helvetica, Arial, sans-serif">*First time attendees only, pleas=
+e!*</span></span></strong></p></div></td></tr></tbody></table></td></tr><tr=
+><td style=3D"padding-top:0;padding-bottom:0;padding-right:16px;padding-lef=
+t:16px" valign=3D"top" class=3D"mceButtonBlockContainer" align=3D"left" id=
+=3D"blockContainerId-40"><div><!--[if !mso]><!--></div><table align=3D"left=
+" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentation" da=
+ta-block-id=3D"40" class=3D"mceButtonContainer"><tbody><tr class=3D"mceStan=
+dardButton"><td style=3D"background-color:#ff1423;border-radius:8px;text-al=
+ign:center" valign=3D"top" class=3D"mceButton"><a href=3D"https://mit.us16.=
+list-manage.com/track/click?u=3D88f983a0e3c2a43fb2a2eabd0&amp;id=3D7ab983e4=
+65&amp;e=3D29f0c06973" target=3D"_blank" class=3D"mceButtonLink" style=3D"b=
+ackground-color:#ff1423;border-radius:8px;border:2px solid #ff1423;color:#f=
+fffff;display:block;font-family:Arial, 'Helvetica Neue', Helvetica, sans-se=
+rif;font-size:16px;font-weight:normal;font-style:normal;padding:16px 28px;t=
+ext-decoration:none;min-width:30px;text-align:center;direction:ltr;letter-s=
+pacing:0px" rel=3D"noreferrer">Sign up!</a></td></tr></tbody></table><div><=
+!--<![endif]--></div><table align=3D"left" border=3D"0" cellpadding=3D"0" c=
+ellspacing=3D"0" role=3D"presentation" data-block-id=3D"40" class=3D"mceBut=
+tonContainer"><tbody><tr>
+<!--[if mso]>
+<td align=3D"left">
+<v:roundrect xmlns:v=3D"urn:schemas-microsoft-com:vml"
+xmlns:w=3D"urn:schemas-microsoft-com:office:word"
+href=3D"https://docs.google.com/spreadsheets/d/1EsfztXNQ6eroKv5bkrLIEYHQKiK=
+39RsZKw8YtRS0b0o/edit?usp=3Dsharing"
+style=3D"v-text-anchor:middle; width:118.71000000000001px; height:54.5px;"
+arcsize=3D"7%"
+strokecolor=3D"#ff1423"
+strokeweight=3D"2px"
+fillcolor=3D"#ff1423">
+<v:stroke dashstyle=3D"solid"/>
+<w:anchorlock />
+<center style=3D"
+color: #ffffff;
+display: block;
+font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+font-size: 16;
+font-style: normal;
+font-weight: normal;
+letter-spacing: 0px;
+text-decoration: none;
+text-align: center;
+direction: ltr;"
+>
+Sign up!
+</center>
+</v:roundrect>
+</td>
+<![endif]-->
+</tr></tbody></table></td></tr></tbody></table></td></tr></tbody></table></=
+td></tr></tbody></table></td></tr></tbody></table></td></tr></tbody></table=
+></td></tr></tbody></table></td></tr></tbody></table></td></tr></tbody></ta=
+ble></td></tr></tbody></table></td></tr></tbody></table></td></tr><tr><td s=
+tyle=3D"background-color:transparent;padding-top:20px;padding-bottom:20px;p=
+adding-right:24px;padding-left:24px" valign=3D"top" class=3D"mceDividerBloc=
+kContainer" id=3D"blockContainerId-43"><table align=3D"center" border=3D"0"=
+ cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" style=3D"background-col=
+or:transparent;width:100%" role=3D"presentation" class=3D"mceDividerContain=
+er" data-block-id=3D"43"><tbody><tr><td style=3D"min-width:100%;border-top-=
+width:1px;border-top-style:solid;border-top-color:#750014;line-height:0;fon=
+t-size:0" valign=3D"top" class=3D"mceDividerBlock">&nbsp;</td></tr></tbody>=
+</table></td></tr><tr><td style=3D"padding-top:0;padding-bottom:0;padding-r=
+ight:0;padding-left:0" valign=3D"top" id=3D"blockContainerId-7"><table widt=
+h=3D"100%" style=3D"border:0;border-radius:0;border-collapse:separate"><tbo=
+dy><tr><td style=3D"padding-left:24px;padding-right:24px;padding-top:12px;p=
+adding-bottom:12px" class=3D"mceTextBlockContainer"><div data-block-id=3D"7=
+" class=3D"mceText" id=3D"dataBlockId-7" style=3D"width:100%"><h1 style=3D"=
+line-height: 1.25; mso-line-height-alt: 125%;"><span style=3D"font-size: 30=
+px"><span style=3D"font-family: 'Roboto', 'Helvetica Neue', Helvetica, Aria=
+l, sans-serif">=F0=9F=97=93=EF=B8=8F</span></span></h1><h1 style=3D"line-he=
+ight: 1.25; mso-line-height-alt: 125%;"><span style=3D"font-size: 30px"><sp=
+an style=3D"font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans=
+-serif">Last Day of Classes</span></span></h1><p style=3D"line-height: 1.25=
+; mso-line-height-alt: 125%;"><strong><span style=3D"font-family: 'Roboto',=
+ 'Helvetica Neue', Helvetica, Arial, sans-serif">Tuesday, May 13</span></st=
+rong></p><p style=3D"line-height: 1.25; mso-line-height-alt: 125%;"><br></p=
+><p style=3D"line-height: 1.25; mso-line-height-alt: 125%;" class=3D"last-c=
+hild">Celebrate the end of the semester with us (<strong>5/13 in 7-103 &amp=
+; 7-104, 10a-2p</strong>) with snacks and lots of SPA (<strong>S</strong>tr=
+ess <strong>P</strong>revention <strong>A</strong>ctivities) to help you un=
+wind before finals!</p></div></td></tr></tbody></table></td></tr><tr><td st=
+yle=3D"background-color:transparent;padding-top:20px;padding-bottom:0;paddi=
+ng-right:24px;padding-left:24px" valign=3D"top" class=3D"mceDividerBlockCon=
+tainer" id=3D"blockContainerId-8"><table align=3D"center" border=3D"0" cell=
+padding=3D"0" cellspacing=3D"0" width=3D"100%" style=3D"background-color:tr=
+ansparent;width:100%" role=3D"presentation" class=3D"mceDividerContainer" d=
+ata-block-id=3D"8"><tbody><tr><td style=3D"min-width:100%;border-top-width:=
+1px;border-top-style:solid;border-top-color:#750014;line-height:0;font-size=
+:0" valign=3D"top" class=3D"mceDividerBlock">&nbsp;</td></tr></tbody></tabl=
+e></td></tr><tr><td style=3D"padding-top:0;padding-bottom:0;padding-right:0=
+;padding-left:0" valign=3D"top" id=3D"blockContainerId-9"><table width=3D"1=
+00%" style=3D"border:0;border-radius:0;border-collapse:separate"><tbody><tr=
+><td style=3D"padding-left:24px;padding-right:24px;padding-top:12px;padding=
+-bottom:12px" class=3D"mceTextBlockContainer"><div data-block-id=3D"9" clas=
+s=3D"mceText" id=3D"dataBlockId-9" style=3D"width:100%"><h1><a href=3D"http=
+s://mit.us16.list-manage.com/track/click?u=3D88f983a0e3c2a43fb2a2eabd0&amp;=
+id=3D7c893f5223&amp;e=3D29f0c06973" target=3D"_blank"><span style=3D"font-s=
+ize: 30px"><span style=3D"font-family: 'Roboto', 'Helvetica Neue', Helvetic=
+a, Arial, sans-serif">Key Dates and Deadlines</span></span></a></h1><ul cla=
+ss=3D"last-child"><li style=3D"line-height: 1.25; mso-line-height-alt: 125%=
+; text-align: left;"><p style=3D"line-height: 1.25; mso-line-height-alt: 12=
+5%; text-align: left;"><strong><span style=3D"font-family: 'Roboto', 'Helve=
+tica Neue', Helvetica, Arial, sans-serif">Thursday, May 1: </span></strong>=
+<span style=3D"font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, s=
+ans-serif">Pre-reg for fall term and summer session begins</span></p></li><=
+li style=3D"line-height: 1.25; mso-line-height-alt: 125%; text-align: left;=
+"><p style=3D"line-height: 1.25; mso-line-height-alt: 125%; text-align: lef=
+t;"><strong><span style=3D"font-family: 'Roboto', 'Helvetica Neue', Helveti=
+ca, Arial, sans-serif">Tuesday, May 13: </span></strong><span style=3D"font=
+-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif">Last day=
+ of classes</span></p></li><li style=3D"line-height: 1.25; mso-line-height-=
+alt: 125%; text-align: left;"><p style=3D"line-height: 1.25; mso-line-heigh=
+t-alt: 125%; text-align: left;"><strong><span style=3D"font-family: 'Roboto=
+', 'Helvetica Neue', Helvetica, Arial, sans-serif">May 16-21:</span></stron=
+g><span style=3D"font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial,=
+ sans-serif"> Final exam period</span></p></li><li style=3D"line-height: 1.=
+25; mso-line-height-alt: 125%; text-align: left;"><p style=3D"line-height: =
+1.25; mso-line-height-alt: 125%; text-align: left;"><strong><span style=3D"=
+font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif">May =
+28-30:</span></strong><span style=3D"font-family: 'Roboto', 'Helvetica Neue=
+', Helvetica, Arial, sans-serif"> Commencement activities</span></p></li><l=
+i style=3D"line-height: 1.25; mso-line-height-alt: 125%; text-align: left;"=
+><p style=3D"line-height: 1.25; mso-line-height-alt: 125%; text-align: left=
+;"><strong><span style=3D"font-family: 'Roboto', 'Helvetica Neue', Helvetic=
+a, Arial, sans-serif">Thursday, May 29:</span></strong><span style=3D"font-=
+family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif"> Summer s=
+ession pre-reg deadline</span></p></li></ul></div></td></tr></tbody></table=
+></td></tr><tr><td style=3D"background-color:transparent;padding-top:5px;pa=
+dding-bottom:5px;padding-right:24px;padding-left:24px" valign=3D"top" class=
+=3D"mceDividerBlockContainer" id=3D"blockContainerId-10"><table align=3D"ce=
+nter" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" style=
+=3D"background-color:transparent;width:100%" role=3D"presentation" class=3D=
+"mceDividerContainer" data-block-id=3D"10"><tbody><tr><td style=3D"min-widt=
+h:100%;border-top-width:1px;border-top-style:solid;border-top-color:#750014=
+;line-height:0;font-size:0" valign=3D"top" class=3D"mceDividerBlock">&nbsp;=
+</td></tr></tbody></table></td></tr><tr><td style=3D"padding-top:0;padding-=
+bottom:0;padding-right:0;padding-left:0" valign=3D"top" id=3D"blockContaine=
+rId-11"><table width=3D"100%" style=3D"border:0;background-color:#ebebeb;bo=
+rder-radius:0;border-collapse:separate"><tbody><tr><td style=3D"padding-lef=
+t:24px;padding-right:24px;padding-top:12px;padding-bottom:12px" class=3D"mc=
+eTextBlockContainer"><div data-block-id=3D"11" class=3D"mceText" id=3D"data=
+BlockId-11" style=3D"width:100%"><h1 class=3D"last-child"><span style=3D"fo=
+nt-size: 30px"><span style=3D"font-family: 'Roboto', 'Helvetica Neue', Helv=
+etica, Arial, sans-serif">Happenings Around Campus</span></span></h1></div>=
+</td></tr></tbody></table></td></tr><tr><td style=3D"padding-top:0;padding-=
+bottom:0;padding-right:0;padding-left:0" valign=3D"top" id=3D"blockContaine=
+rId-35"><table width=3D"100%" style=3D"border:0;background-color:#ebebeb;bo=
+rder-radius:0;border-collapse:separate"><tbody><tr><td style=3D"padding-lef=
+t:24px;padding-right:24px;padding-top:0;padding-bottom:12px" class=3D"mceTe=
+xtBlockContainer"><div data-block-id=3D"35" class=3D"mceText" id=3D"dataBlo=
+ckId-35" style=3D"width:100%"><p class=3D"last-child"><span style=3D"color:=
+rgb(117, 0, 20);"><span style=3D"font-size: 16px"><span style=3D"font-famil=
+y: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif"><span style=3D=
+"background-color: #ebebeb">New course offerings, programs, and events, spe=
+cifically for undergrads.</span></span></span></span></p></div></td></tr></=
+tbody></table></td></tr><tr><td style=3D"background-color:#ebebeb;padding-t=
+op:0;padding-bottom:12px;padding-right:24px;padding-left:24px" valign=3D"to=
+p" class=3D"mceButtonBlockContainer" align=3D"center" id=3D"blockContainerI=
+d-34"><div><!--[if !mso]><!--></div><table align=3D"center" border=3D"0" ce=
+llpadding=3D"0" cellspacing=3D"0" role=3D"presentation" data-block-id=3D"34=
+" class=3D"mceButtonContainer"><tbody><tr class=3D"mceStandardButton"><td s=
+tyle=3D"background-color:#ff1423;border-radius:8px;text-align:center" valig=
+n=3D"top" class=3D"mceButton"><a href=3D"https://mit.us16.list-manage.com/t=
+rack/click?u=3D88f983a0e3c2a43fb2a2eabd0&amp;id=3D9eecb51bff&amp;e=3D29f0c0=
+6973" target=3D"_blank" class=3D"mceButtonLink" style=3D"background-color:#=
+ff1423;border-radius:8px;border:2px solid #ff1423;color:#ffffff;display:blo=
+ck;font-family:Arial, 'Helvetica Neue', Helvetica, sans-serif;font-size:16p=
+x;font-weight:normal;font-style:normal;padding:16px 28px;text-decoration:no=
+ne;min-width:30px;text-align:center;direction:ltr;letter-spacing:0px" rel=
+=3D"noreferrer">See them here!</a></td></tr></tbody></table><div><!--<![end=
+if]--></div><table align=3D"center" border=3D"0" cellpadding=3D"0" cellspac=
+ing=3D"0" role=3D"presentation" data-block-id=3D"34" class=3D"mceButtonCont=
+ainer"><tbody><tr>
+<!--[if mso]>
+<td align=3D"center">
+<v:roundrect xmlns:v=3D"urn:schemas-microsoft-com:vml"
+xmlns:w=3D"urn:schemas-microsoft-com:office:word"
+href=3D"https://advising.mit.edu/happenings-around-campus/"
+style=3D"v-text-anchor:middle; width:169.4px; height:54.5px;"
+arcsize=3D"5%"
+strokecolor=3D"#ff1423"
+strokeweight=3D"2px"
+fillcolor=3D"#ff1423">
+<v:stroke dashstyle=3D"solid"/>
+<w:anchorlock />
+<center style=3D"
+color: #ffffff;
+display: block;
+font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+font-size: 16;
+font-style: normal;
+font-weight: normal;
+letter-spacing: 0px;
+text-decoration: none;
+text-align: center;
+direction: ltr;"
+>
+See them here!
+</center>
+</v:roundrect>
+</td>
+<![endif]-->
+</tr></tbody></table></td></tr><tr><td style=3D"background-color:transparen=
+t;padding-top:5px;padding-bottom:5px;padding-right:24px;padding-left:24px" =
+valign=3D"top" class=3D"mceDividerBlockContainer" id=3D"blockContainerId-12=
+"><table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" =
+width=3D"100%" style=3D"background-color:transparent;width:100%" role=3D"pr=
+esentation" class=3D"mceDividerContainer" data-block-id=3D"12"><tbody><tr><=
+td style=3D"min-width:100%;border-top-width:1px;border-top-style:solid;bord=
+er-top-color:#750014;line-height:0;font-size:0" valign=3D"top" class=3D"mce=
+DividerBlock">&nbsp;</td></tr></tbody></table></td></tr><tr><td style=3D"pa=
+dding-top:0;padding-bottom:0;padding-right:0;padding-left:0" valign=3D"top"=
+ id=3D"blockContainerId-44"><table width=3D"100%" style=3D"border:0;border-=
+radius:0;border-collapse:separate"><tbody><tr><td style=3D"padding-left:24p=
+x;padding-right:24px;padding-top:12px;padding-bottom:12px" class=3D"mceText=
+BlockContainer"><div data-block-id=3D"44" class=3D"mceText" id=3D"dataBlock=
+Id-44" style=3D"width:100%"><p><strong><span style=3D"color:#ff1423;"><span=
+ style=3D"font-size: 24px"><span style=3D"font-family: 'Roboto', 'Helvetica=
+ Neue', Helvetica, Arial, sans-serif">=E2=80=A2 Drop-in Advising Hours End =
+Tuesday, May 13 =E2=80=A2</span></span></span></strong></p><p><a href=3D"ht=
+tps://mit.us16.list-manage.com/track/click?u=3D88f983a0e3c2a43fb2a2eabd0&am=
+p;id=3Dea0638ecc1&amp;e=3D29f0c06973" target=3D"_blank"><strong><span style=
+=3D"font-size: 16px"><span style=3D"font-family: 'Roboto', 'Helvetica Neue'=
+, Helvetica, Arial, sans-serif">Drop-in Advising:</span></span></strong></a=
+></p><p><span style=3D"font-size: 16px"><span style=3D"font-family: 'Roboto=
+', 'Helvetica Neue', Helvetica, Arial, sans-serif">Monday - Friday</span></=
+span></p><p><span style=3D"font-size: 16px"><span style=3D"font-family: 'Ro=
+boto', 'Helvetica Neue', Helvetica, Arial, sans-serif">12 - 2pm</span></spa=
+n></p><p class=3D"last-child"><span style=3D"font-size: 16px"><span style=
+=3D"font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif">=
+7-104</span></span></p></div></td></tr></tbody></table></td></tr><tr><td st=
+yle=3D"background-color:transparent;padding-top:0;padding-bottom:20px;paddi=
+ng-right:24px;padding-left:24px" valign=3D"top" class=3D"mceDividerBlockCon=
+tainer" id=3D"blockContainerId-29"><table align=3D"center" border=3D"0" cel=
+lpadding=3D"0" cellspacing=3D"0" width=3D"100%" style=3D"background-color:t=
+ransparent;width:100%" role=3D"presentation" class=3D"mceDividerContainer" =
+data-block-id=3D"29"><tbody><tr><td style=3D"min-width:100%;border-top-widt=
+h:1px;border-top-style:solid;border-top-color:#750014;line-height:0;font-si=
+ze:0" valign=3D"top" class=3D"mceDividerBlock">&nbsp;</td></tr></tbody></ta=
+ble></td></tr><tr><td style=3D"padding-top:12px;padding-bottom:12px;padding=
+-right:48px;padding-left:48px" valign=3D"top" class=3D"mceButtonBlockContai=
+ner" align=3D"center" id=3D"blockContainerId-13"><div><!--[if !mso]><!--></=
+div><table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0=
+" role=3D"presentation" data-block-id=3D"13" class=3D"mceButtonContainer"><=
+tbody><tr class=3D"mceStandardButton"><td style=3D"background-color:#750014=
+;border-radius:8px;text-align:center" valign=3D"top" class=3D"mceButton"><a=
+ href=3D"https://mit.us16.list-manage.com/track/click?u=3D88f983a0e3c2a43fb=
+2a2eabd0&amp;id=3Dce25aaeb39&amp;e=3D29f0c06973" target=3D"_blank" class=3D=
+"mceButtonLink" style=3D"background-color:#750014;border-radius:8px;border:=
+3px none #000000;color:#ffffff;display:block;font-family:'Roboto', 'Helveti=
+ca Neue', Helvetica, Arial, sans-serif;font-size:16px;font-weight:normal;fo=
+nt-style:normal;padding:16px 28px;text-decoration:none;min-width:30px;text-=
+align:center;direction:ltr;letter-spacing:0px" rel=3D"noreferrer">Check out=
+ the UAC website!</a></td></tr></tbody></table><div><!--<![endif]--></div><=
+table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" rol=
+e=3D"presentation" data-block-id=3D"13" class=3D"mceButtonContainer"><tbody=
+><tr>
+<!--[if mso]>
+<td align=3D"center">
+<v:roundrect xmlns:v=3D"urn:schemas-microsoft-com:vml"
+xmlns:w=3D"urn:schemas-microsoft-com:office:word"
+href=3D"https://advising.mit.edu"
+style=3D"v-text-anchor:middle; width:252.23000000000002px; height:51px;"
+arcsize=3D"3%"
+strokecolor=3D"#750014"
+strokeweight=3D"1px"
+fillcolor=3D"#750014">
+<v:stroke dashstyle=3D"solid"/>
+<w:anchorlock />
+<center style=3D"
+color: #ffffff;
+display: block;
+font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+font-size: 16;
+font-style: normal;
+font-weight: normal;
+letter-spacing: 0px;
+text-decoration: none;
+text-align: center;
+direction: ltr;"
+>
+Check out the UAC website!
+</center>
+</v:roundrect>
+</td>
+<![endif]-->
+</tr></tbody></table></td></tr></tbody></table></td></tr></tbody></table></=
+td></tr></tbody></table></td></tr></tbody></table><!--[if (gte mso 9)|(IE)]=
+></td></tr></table><![endif]--></td></tr></tbody><tbody data-block-id=3D"21=
+" class=3D"mceWrapper"><tr><td style=3D"background-color:#750014" valign=3D=
+"top" align=3D"center" class=3D"mceSectionFooter"><!--[if (gte mso 9)|(IE)]=
+><table align=3D"center" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" w=
+idth=3D"660" style=3D"width:660px;"><tr><td><![endif]--><table border=3D"0"=
+ cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" style=3D"max-width:660p=
+x" role=3D"presentation"><tbody><tr><td style=3D"background-color:#ffffff" =
+valign=3D"top" class=3D"mceWrapperInner"><table align=3D"center" border=3D"=
+0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" role=3D"presentation"=
+ data-block-id=3D"20"><tbody><tr class=3D"mceRow"><td style=3D"background-p=
+osition:center;background-repeat:no-repeat;background-size:cover" valign=3D=
+"top"><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%=
+" role=3D"presentation"><tbody><tr><td style=3D"padding-top:0;padding-botto=
+m:0" valign=3D"top" class=3D"mceColumn" data-block-id=3D"-8" colspan=3D"12"=
+ width=3D"100%"><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wid=
+th=3D"100%" role=3D"presentation"><tbody><tr><td style=3D"padding-top:8px;p=
+adding-bottom:8px;padding-right:8px;padding-left:8px" valign=3D"top" id=3D"=
+blockContainerId-19"><table align=3D"center" border=3D"0" cellpadding=3D"0"=
+ cellspacing=3D"0" width=3D"100%" role=3D"presentation" data-block-id=3D"19=
+" id=3D"section_c94c1fdd5c71ecb1b1554daab5c024d7" class=3D"mceFooterSection=
+"><tbody><tr class=3D"mceRow"><td style=3D"background-position:center;backg=
+round-repeat:no-repeat;background-size:cover" valign=3D"top"><table border=
+=3D"0" cellpadding=3D"0" cellspacing=3D"12" width=3D"100%" role=3D"presenta=
+tion"><tbody><tr><td style=3D"padding-top:0;padding-bottom:0" valign=3D"top=
+" class=3D"mceColumn" data-block-id=3D"-3" colspan=3D"12" width=3D"100%"><t=
+able border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" role=
+=3D"presentation"><tbody><tr><td style=3D"padding-top:0;padding-bottom:0;pa=
+dding-right:0;padding-left:0" valign=3D"top" align=3D"center" id=3D"blockCo=
+ntainerId-17"><table width=3D"100%" style=3D"border:0;border-radius:0;borde=
+r-collapse:separate"><tbody><tr><td style=3D"padding-left:16px;padding-righ=
+t:16px;padding-top:12px;padding-bottom:12px" class=3D"mceTextBlockContainer=
+"><div data-block-id=3D"17" class=3D"mceText" id=3D"dataBlockId-17" style=
+=3D"display:inline-block;width:100%"><p class=3D"last-child"><em><span styl=
+e=3D"font-size: 12px">Copyright (C) 2025 MIT Undergraduate Advising Center.=
+ All rights reserved.</span></em><br><span style=3D"font-size: 12px">
+You are receiving this email as you are an undergraduate student at MIT.
+</span><br><br><span style=3D"font-size: 12px">Our mailing address is:</spa=
+n><br><span style=3D"font-size: 12px">
+MIT Undergraduate Advising Center
+77 Massachusetts Ave, 7-104
+Cambridge, MA 02139-4301
+USA
+</span><br><br><span style=3D"font-size: 12px">Want to change how you recei=
+ve these emails?</span><br><span style=3D"font-size: 12px">You can </span><=
+a href=3D"https://mit.us16.list-manage.com/profile?u=3D88f983a0e3c2a43fb2a2=
+eabd0&amp;id=3D7fd3b71142&amp;e=3D29f0c06973&amp;c=3D025298388d"><span styl=
+e=3D"font-size: 12px">update your preferences</span></a><span style=3D"font=
+-size: 12px">.</span></p></div></td></tr></tbody></table></td></tr><tr><td =
+valign=3D"top" class=3D"mceLayoutContainer" align=3D"center" id=3D"blockCon=
+tainerId--2"><table align=3D"center" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%" role=3D"presentation" data-block-id=3D"-2"><tbody=
+><tr class=3D"mceRow"><td style=3D"background-position:center;background-re=
+peat:no-repeat;background-size:cover;padding-top:0px;padding-bottom:0px" va=
+lign=3D"top"><table border=3D"0" cellpadding=3D"0" cellspacing=3D"24" width=
+=3D"100%" role=3D"presentation"><tbody></tbody></table></td></tr></tbody></=
+table></td></tr></tbody></table></td></tr></tbody></table></td></tr></tbody=
+></table></td></tr></tbody></table></td></tr></tbody></table></td></tr></tb=
+ody></table></td></tr></tbody></table><!--[if (gte mso 9)|(IE)]></td></tr><=
+/table><![endif]--></td></tr></tbody></table>
+</td>
+</tr>
+</tbody></table>
+</center>
+            <center>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wid=
+th=3D"100%" id=3D"canspamBarWrapper" style=3D"background-color:#FFFFFF; bor=
+der-top:1px solid #E5E5E5;">
+                    <tr>
+                        <td align=3D"center" valign=3D"top" style=3D"paddin=
+g-top:20px; padding-bottom:20px;">
+                            <table border=3D"0" cellpadding=3D"0" cellspaci=
+ng=3D"0" id=3D"canspamBar">
+                                <tr>
+                                    <td align=3D"center" valign=3D"top" sty=
+le=3D"color:#606060; font-family:Helvetica, Arial, sans-serif; font-size:11=
+px; line-height:150%; padding-right:20px; padding-bottom:5px; padding-left:=
+20px; text-align:center;">
+                                        This email was sent to <a href=3D"m=
+ailto:nathra@MIT.EDU" target=3D"_blank" style=3D"color:#404040 !important;"=
+>nathra@MIT.EDU</a>
+                                        <br>
+                                        <a href=3D"https://mit.us16.list-ma=
+nage.com/about?u=3D88f983a0e3c2a43fb2a2eabd0&amp;id=3D7fd3b71142&amp;e=3D29=
+f0c06973&amp;c=3D025298388d" target=3D"_blank" style=3D"color:#404040 !impo=
+rtant;"><em>why did I get this?</em></a>&nbsp;&nbsp;&nbsp;&nbsp;<a href=3D"=
+https://mit.us16.list-manage.com/unsubscribe?u=3D88f983a0e3c2a43fb2a2eabd0&=
+amp;id=3D7fd3b71142&amp;t=3Db&amp;e=3D29f0c06973&amp;c=3D025298388d" style=
+=3D"color:#404040 !important;">unsubscribe from this list</a>&nbsp;&nbsp;&n=
+bsp;&nbsp;<a href=3D"https://mit.us16.list-manage.com/profile?u=3D88f983a0e=
+3c2a43fb2a2eabd0&amp;id=3D7fd3b71142&amp;e=3D29f0c06973&amp;c=3D025298388d"=
+ style=3D"color:#404040 !important;">update subscription preferences</a>
+                                        <br>
+                                        MIT Undergraduate Advising Center =
+=C2=B7 77 Massachusetts Ave, 7-104 =C2=B7 Cambridge, MA 02139-4301 =C2=B7 U=
+SA
+                                        <br>
+                                        <br>
+
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+                <style type=3D"text/css">
+                    @media only screen and (max-width: 480px){
+                        table#canspamBar td{font-size:14px !important;}
+                        table#canspamBar td a{display:block !important; mar=
+gin-top:10px !important;}
+                    }
+                </style>
+            </center></body></html>=
+
+--_----------=_MCPart_972492372--

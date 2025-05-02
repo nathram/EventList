@@ -1,0 +1,513 @@
+Received: from PH0PR01MB6214.prod.exchangelabs.com (2603:10b6:510:14::12) by
+ DM6PR01MB5929.prod.exchangelabs.com with HTTPS; Tue, 29 Apr 2025 13:38:39
+ +0000
+Received: from MN2PR01CA0053.prod.exchangelabs.com (2603:10b6:208:23f::22) by
+ PH0PR01MB6214.prod.exchangelabs.com (2603:10b6:510:14::12) with Microsoft
+ SMTP Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.20.8699.19; Tue, 29 Apr 2025 13:38:34 +0000
+Received: from BL02EPF0001A0F9.namprd03.prod.outlook.com
+ (2603:10b6:208:23f:cafe::94) by MN2PR01CA0053.outlook.office365.com
+ (2603:10b6:208:23f::22) with Microsoft SMTP Server (version=TLS1_3,
+ cipher=TLS_AES_256_GCM_SHA384) id 15.20.8655.37 via Frontend Transport; Tue,
+ 29 Apr 2025 13:38:14 +0000
+Authentication-Results: spf=pass (sender IP is 18.7.21.50)
+ smtp.mailfrom=mit.edu; dkim=pass (signature was verified)
+ header.d=mit.edu;dmarc=pass action=none header.from=mit.edu;
+Received-SPF: Pass (protection.outlook.com: domain of mit.edu designates
+ 18.7.21.50 as permitted sender) receiver=protection.outlook.com;
+ client-ip=18.7.21.50; helo=mailman.mit.edu; pr=C
+Received: from mailman.mit.edu (18.7.21.50) by
+ BL02EPF0001A0F9.mail.protection.outlook.com (10.167.242.100) with Microsoft
+ SMTP Server (version=TLS1_3, cipher=TLS_AES_256_GCM_SHA384) id 15.20.8699.20
+ via Frontend Transport; Tue, 29 Apr 2025 13:38:34 +0000
+Received: from mailman.mit.edu (localhost [127.0.0.1])
+	by mailman.mit.edu (8.15.2/8.12.8) with ESMTP id 53TDcVDW1128926;
+	Tue, 29 Apr 2025 09:38:32 -0400
+DKIM-Filter: OpenDKIM Filter v2.11.0 unknown-host (unknown-jobid)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=mit.edu; s=mailman;
+	t=1745933912; bh=WdfgG2VJKeG30ImXL3dfsxU1cHSVPC7cZZbxj4TnWLs=;
+	h=Date:MIME-Version:Message-ID:From:Reply-To:Subject:Content-Type:
+	 From;
+	b=cvbLADslTUfBVN6AQY1e6OeqM0SBHNu3Hu3IrmfwHE/OHp6i26fWAjgzJRiAapBv4
+	 lMVKm5dBEM0p08fdhiigFc5K2/tTZhw6Y6UaUCZ+xBz9hHlr6RG2sM4Qf2d5u+lMe7
+	 5YleIaiBRlhSmUubsMR3O38IcHETHhAQeOWSezMUsAz7OHz4elR+aGoeC0nwwcjoOv
+	 gREgyLHTMErIvDUAMLUzmEXuibpiBezFTf8hwHzvzAs/8vR6dRuNj02qe+UUJ5wgAC
+	 +exI6GaPiaW3osNrJB55KhyK1aH/qpWYlxDlDDQcTXW9hmyqr4wiUyeZPVKfg4ZPmL
+	 BSMvLXiseIgqA==
+References: <CAC-8nBkZTWM27hHbe1cUqjWjWGuJNmw4u_yGN=Sc51D1f00RMA@mail.gmail.com>
+In-Reply-To: <CAC-8nBkZTWM27hHbe1cUqjWjWGuJNmw4u_yGN=Sc51D1f00RMA@mail.gmail.com>
+Date: Mon, 28 Apr 2025 10:40:55 -0400
+To: <eecs-opportunities-list@mit.edu>
+X-Mailman-Approved-At: Tue, 29 Apr 2025 09:38:29 -0400
+Message-ID: <mailman.213446.1745933910.2318.eecs-opportunities-list@mit.edu>
+List-Id: EECS Opportunities LIst <eecs-opportunities-list.mit.edu>
+List-Post: <mailto:eecs-opportunities-list@mit.edu>
+From: Robert Tran via EECS-Opportunities-List <eecs-opportunities-list@mit.edu>
+Precedence: list
+X-Topics: INTERNSHIP
+	JOB
+X-Mailman-Version: 2.1.34
+X-BeenThere: eecs-opportunities-list@mit.edu
+List-Subscribe: <https://mailman.mit.edu/mailman/listinfo/eecs-opportunities-list>, 
+ <mailto:eecs-opportunities-list-request@mit.edu?subject=subscribe>
+List-Unsubscribe: <https://mailman.mit.edu/mailman/options/eecs-opportunities-list>, 
+ <mailto:eecs-opportunities-list-request@mit.edu?subject=unsubscribe>
+List-Archive: <https://mailman.mit.edu/mailman/private/eecs-opportunities-list/>
+Reply-To: Robert Tran <rtran@alum.mit.edu>
+List-Help: <mailto:eecs-opportunities-list-request@mit.edu?subject=help>
+Subject: Re: [EECS Opportunities List] Inkeep (Y Combinator AI Startup) is
+ hiring software engineers, full-time + Summer 2025 interns, in-person NYC/SF
+Content-Type: multipart/mixed; boundary="===============0390550540616159425=="
+Errors-To: eecs-opportunities-list-bounces@mit.edu
+Sender: "EECS-Opportunities-List" <eecs-opportunities-list-bounces@mit.edu>
+Return-Path: eecs-opportunities-list-bounces@mit.edu
+X-MS-Exchange-Organization-ExpirationStartTime: 29 Apr 2025 13:38:34.2927
+ (UTC)
+X-MS-Exchange-Organization-ExpirationStartTimeReason: OriginalSubmit
+X-MS-Exchange-Organization-ExpirationInterval: 1:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: OriginalSubmit
+X-MS-Exchange-Organization-Network-Message-Id: c02daa1f-2fcc-4261-155d-08dd87232356
+X-EOPAttributedMessage: 0
+X-MS-Exchange-Organization-MessageDirectionality: Originating
+X-MS-PublicTrafficType: Email
+X-MS-TrafficTypeDiagnostic: BL02EPF0001A0F9:EE_|PH0PR01MB6214:EE_|DM6PR01MB5929:EE_
+X-MS-Exchange-Organization-AuthSource: BL02EPF0001A0F9.namprd03.prod.outlook.com
+X-MS-Exchange-Organization-AuthAs: Anonymous
+X-OriginatorOrg: mitprod.onmicrosoft.com
+X-MS-Office365-Filtering-Correlation-Id: c02daa1f-2fcc-4261-155d-08dd87232356
+X-MS-Exchange-AtpMessageProperties: SA
+X-MS-Exchange-Organization-SCL: -1
+X-Microsoft-Antispam: BCL:0;ARA:13230040|82310400026|12012899012|4022899009|4053099003;
+X-Forefront-Antispam-Report: CIP:18.7.21.50;CTRY:US;LANG:en;SCL:-1;SRV:;IPV:CAL;SFV:SKN;H:mailman.mit.edu;PTR:mailman.mit.edu;CAT:NONE;SFS:(13230040)(82310400026)(12012899012)(4022899009)(4053099003);DIR:INB;
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 29 Apr 2025 13:38:34.2064
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: c02daa1f-2fcc-4261-155d-08dd87232356
+X-MS-Exchange-CrossTenant-Id: 64afd9ba-0ecf-4acf-bc36-935f6235ba8b
+X-MS-Exchange-CrossTenant-OriginalAttributedTenantConnectingIp: TenantId=64afd9ba-0ecf-4acf-bc36-935f6235ba8b;Ip=[18.7.21.50];Helo=[mailman.mit.edu]
+X-MS-Exchange-CrossTenant-AuthSource: BL02EPF0001A0F9.namprd03.prod.outlook.com
+X-MS-Exchange-CrossTenant-AuthAs: Anonymous
+X-MS-Exchange-CrossTenant-FromEntityHeader: HybridOnPrem
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: PH0PR01MB6214
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:05.2792401
+X-MS-Exchange-Processed-By-BccFoldering: 15.20.8678.021
+X-Microsoft-Antispam-Mailbox-Delivery:
+	ucf:0;jmr:0;auth:0;dest:I;ENG:(910005)(944506478)(944626604)(920097)(930097)(140003);
+X-Microsoft-Antispam-Message-Info:
+	=?us-ascii?Q?CQaD82XKEd0t+Z1qK6D4Fo8LbnZNEIQlxzx8SoEYJZ6ahhOb85yK4pU709Yy?=
+ =?us-ascii?Q?qlhojhRQB8vqfzDgRkI3E4SGqGjeXaup4iu/OhWZZlX1c/y61CVYDsbFisSc?=
+ =?us-ascii?Q?830ZBPiUMlKG7CU1GxHPkOgNiJBLynOmMbxrA+Djo1+TTO9SeVlRNk7oZE9A?=
+ =?us-ascii?Q?+qu77UIuaVNSqgancN4jhz4P1exzzIL9LMq3t0Df4RYxWbXrEY0DlYQ6uSNT?=
+ =?us-ascii?Q?4Ub2CdsylpsiMmnB+xjGgS9zL0nn7Zn0wfU31Iaz0NeXhrx2E42FNW9/hioe?=
+ =?us-ascii?Q?PeoiGiumd1Ccop266LVBWR+Wr9mrdJJOnMM7vLN8JFy7CyJl/T/LdeG3+sLT?=
+ =?us-ascii?Q?X1g2+dmRF9h+3qMlfg3SuYljHYT4JeVXbrwFAqfX8T6f5WzcY8JLlDsqS7ZL?=
+ =?us-ascii?Q?b46DPhUYHEpUUPV6QBbX5IJ/O9Tnn8gdklDjJlWuhOcnp/sUuy2cBsahqwEI?=
+ =?us-ascii?Q?bgBi3gwh03vUIGQ04oeivchP1pNRI8I4QiMUYEK88zcU3W2eeLULx2+DYX1Y?=
+ =?us-ascii?Q?74J+P2JMT6m1TPgdxB6N8tQk//8F00ZI3L6uOZaLpnb4EPwfriizxoFTEh1V?=
+ =?us-ascii?Q?Xvr/5YFOf0a3kw/yjU7aAWURe64S3m5+vDFfAARZJCjiv1RtXbjJNUaRwrBU?=
+ =?us-ascii?Q?cciwKFqWXZ4I0huLqxcXRbkMwfLXB16ZUCrCV5JWQmVrjaWtyidsPuZtHA/u?=
+ =?us-ascii?Q?9mGv95JTD7+/LJBMRF+wPlxvA5UD5XhQIaFKN8oBWlQOtyrfGejtr/Ilk8mb?=
+ =?us-ascii?Q?E56/V/t7KbSpiuHfqgQ+mP1fQfDUbE5gXb2Vn0wdH3lPQVHoS2LGMm4m4Auo?=
+ =?us-ascii?Q?FWatzdQpST4saz0taFcGBSlCKjMjhU+8ibJ/LrZebiN9axeT3V5Y9gZnUmC8?=
+ =?us-ascii?Q?TZTjevKi0pTNsjCMaEEoCHOK1DMjUcI4/r5obQ3MiT7xZe+ascboEbqV4AeQ?=
+ =?us-ascii?Q?sAPbgAY8YJYn/apb3Mw6BShFSDM1wCxblX282JV/HDJp3jsAYB5nx3p2B2qe?=
+ =?us-ascii?Q?tyLL2rQ3uH95HCHpZscg/E9FdcIEhwpouQg20g1DkgRQHEd1WooRcackYhSp?=
+ =?us-ascii?Q?tam2zUCTE5jmqpvbTvhKW6IYdZeC//xdj409I5crujlqa5icR72fXZbRshVl?=
+ =?us-ascii?Q?VeRFJJ4QlgMofI5OtDE2Tek8SEZOIXcqrQx6n/1dg2mzNBzYy4kstUya7wRE?=
+ =?us-ascii?Q?wl3aCKGr3MNdakwQAYJei/w9DVEQZMxjKD2mb0pCCBeVKFLXUr4IcbzwYDMl?=
+ =?us-ascii?Q?W6MsPi3Drfq6w1Apeh6RgESA8z6m4nQQVuwoAjmXXN5P/+RU5EVR8OEwwhnP?=
+ =?us-ascii?Q?xDFeuWZU+IYn4vAAO/AjLbKJcvU5GLDZgucTaphIANSqya2qwJXLBNJ3fH5g?=
+ =?us-ascii?Q?dC5UqPchF3I0iIQZPqaNnlIde6K4LK7eOb6NAfxGyn6vTlNiBV7DzU9NPGBN?=
+ =?us-ascii?Q?/obl//PQFBpzf2Y8qflUQ9uMfjDCuhuxafCY0A8p4bNNXXQgnniwqH/w98yT?=
+ =?us-ascii?Q?QpB3EEU+stCFIRWkPeeXJDv9xoCGQP1K1rqy4vuqNfHIb93vYMv4k+kO3tF/?=
+ =?us-ascii?Q?qpNmg300KSfoOloU2TYq/jF4SqmA62wp46cjEBZiJ+3UkNsJh3PRiyvGobcO?=
+ =?us-ascii?Q?/ix7fMQYDlS6cvFT0VOqJKjk22wY0zWpeNY2JOK8Q/fxic2JSUZ/GOqV6Y8c?=
+ =?us-ascii?Q?AY6fNjDTWgNHxjHQgM8iFC4amwvVZ2i8yuaR+dA9Wxs45ejbl65Khqr+dX2U?=
+ =?us-ascii?Q?9gt3K9YTwq/JhAsrlr/C6rc565NHS2dAIgyztY9h8rnuvkNsS2XjfIDHOdTt?=
+ =?us-ascii?Q?zsMbk0JwKifH5f+c11m577c3rqaLyTWbrgjnYOZ6oshxsXuAftuHmSxTdq7M?=
+ =?us-ascii?Q?fUt140SwrYPr/hvk27+aWE8KqXOyJfXRq+/k/ELj1+m+SWVXztE8Kuz+sIdj?=
+ =?us-ascii?Q?HCdJR2VQFpdzOzCeOUopOBGaWQmWCO7PUBHu76yRJ88ftgTyNK86+rO8qlRo?=
+ =?us-ascii?Q?H4K3wC+OrS9aZHWYxJctBSnO2Nn7C5WNY+ySkB8axMyLJ2PoJdubPayU6tFR?=
+ =?us-ascii?Q?aVp7XdHjXyrn403a2/7rD357EKjDMgXTI2kzhrAl3Scs1CorOr4ikMd7nDmp?=
+ =?us-ascii?Q?6CqAkdaexcIgczfI3B7xbzRMKJQCrjFlRRhk3mJHDY/EpxfGvL1ZVIQ=3D?=
+MIME-Version: 1.0
+
+--===============0390550540616159425==
+Content-Type: message/rfc822
+Content-Disposition: inline
+
+Received: from BYAPR05CU005.outbound.protection.outlook.com (mail-westusazon11010056.outbound.protection.outlook.com [52.101.85.56])
+	by mailman.mit.edu (8.15.2/8.12.8) with ESMTPS id 53SEfGDI796448
+	(version=TLSv1.3 cipher=TLS_AES_256_GCM_SHA384 bits=256 verify=OK)
+	for <eecs-opportunities-list@PCH.MIT.EDU>; Mon, 28 Apr 2025 10:41:17 -0400
+DKIM-Filter: OpenDKIM Filter v2.11.0 unknown-host (unknown-jobid)
+Authentication-Results: mailman.mit.edu;
+	dkim=pass (1024-bit key, unprotected) header.d=mitprod.onmicrosoft.com header.i=@mitprod.onmicrosoft.com header.a=rsa-sha256 header.s=selector2-mitprod-onmicrosoft-com header.b=ngpW/jL0;
+	dkim=pass (1024-bit key, unprotected) header.d=alum.mit.edu header.i=@alum.mit.edu header.a=rsa-sha256 header.s=selector2 header.b=T2lvmEL4
+ARC-Seal: i=3; a=rsa-sha256; s=arcselector10001; d=microsoft.com; cv=pass;
+ b=ll8Nvh6WXa7gv2MU5BKplswF7xHaWi25eRK59X9C096zznw1TzejyrctNRRXfDjKTZPdeaoY9MpajrmeryvsNCBtqKp0+VoXpEtzDquByqDWK+/4AFT2q22Tz1c9lKHn9MFcEMLxSAhJrlXgNRDNd642rLpDRak7iM+JxIaTGXESIEg3wZVG1V8e21QqQyislcPJ0i8tiJyyLBVhiU9Z45nrUtalvQFULXAOCzxx0rwRmICiiQ4DSlN3bORJ9rszT2SRxmvYO5Bhxfv6laumexVsCjhwelMmvNOZE4l8WiDH3CifrHVmRT73Dh+IU+yt9OVvB8nGEn8TtPAbU42kDA==
+ARC-Message-Signature: i=3; a=rsa-sha256; c=relaxed/relaxed; d=microsoft.com;
+ s=arcselector10001;
+ h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-AntiSpam-MessageData-ChunkCount:X-MS-Exchange-AntiSpam-MessageData-0:X-MS-Exchange-AntiSpam-MessageData-1;
+ bh=vyl2zHSCtCjeJYS56cy8/EBnLc/3bpXOZ/j8yVjsV7A=;
+ b=XuOuGylMrwGYsAMI21D4Q8RELLrD/Phbe/VnVv3e1HlhHS/d9uG70KyJSzitoyvGQ2P8kOhaP4KzalaShw+mtqsT7EA/QR6BdRTWuGYnjHg4RLLaHAFEAObjf41mTqhxVuWoCe3VcSguiA3bz+E7BxCIcegfNTVAL2Dzzo5Rgt8QZW2tGdwAF7s/2154gOcogkI6S2I2Q9rJUCtah5EuFg2HUTBqL+OEdAP0d5Rod9m6wqXeqKA8dnGiZH86h4vP20R0Na7aJgZHlLmzOzCxHX+IyIGmwoIg250tjYj7uG6crrEcAzSQP7rVqK9q29Dn26UngyvzW76oWYmoiZbgag==
+ARC-Authentication-Results: i=3; mx.microsoft.com 1; spf=pass (sender ip is
+ 2a01:111:f403:2414::615) smtp.rcpttodomain=mit.edu
+ smtp.mailfrom=alum.mit.edu; dmarc=pass (p=reject sp=reject pct=100)
+ action=none header.from=alum.mit.edu; dkim=pass (signature was verified)
+ header.d=alum.mit.edu; arc=pass (0 oda=1 ltdi=1
+ spf=[1,1,smtp.mailfrom=alum.mit.edu] dmarc=[1,1,header.from=alum.mit.edu])
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=mitprod.onmicrosoft.com; s=selector2-mitprod-onmicrosoft-com;
+ h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-SenderADCheck;
+ bh=vyl2zHSCtCjeJYS56cy8/EBnLc/3bpXOZ/j8yVjsV7A=;
+ b=ngpW/jL0KRFSNPKnGRBffYdAoIekgW7CXlaKV/MB018/zo1kkKN/WVW9PQv7B0+d2jicmJNYkcfTr6mh9nvFbsdzRkk7jFR5DmN/0c+AbBq7WrXbWAglwE8ZrXCiZtC0cSDQG3iOurtFiSc0nlddUbgMpAD1QfTgfrc/7erUEWE=
+ARC-Seal: i=2; a=rsa-sha256; s=arcselector10001; d=microsoft.com; cv=pass;
+ b=D3IjE5x1YIJhKJwFZA0Ki6QiBqLe8MO13TtiA3BVGU3AOetEu26KJDbxBInbdb0KZaH+eHzsDgvbFZrOA1/b5YBH4CLh9K9SAB1fRnePnlKxyZRomSNqmIK7F7Ac8Sbn3RtGdmvxp12zSQrWjvCdMEdFXsTrWaaJb8SHlxSFJumfKfrOZMVtFi5+v8ST7ca0R5MdFkfBx4gRK/HUqb9GXuY2mwhVHTh8F1BRnk43B5x8tf2tpxk9QOdm3foQqXS6hZbVHS3IoZpVtpoOb/1UHc90kOKnziD6A6771Jv1SZzqKk4rv3flb6szBqWldcPkwXGVBPsiCY0Hc9Z61bYgrA==
+ARC-Message-Signature: i=2; a=rsa-sha256; c=relaxed/relaxed; d=microsoft.com;
+ s=arcselector10001;
+ h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-AntiSpam-MessageData-ChunkCount:X-MS-Exchange-AntiSpam-MessageData-0:X-MS-Exchange-AntiSpam-MessageData-1;
+ bh=vyl2zHSCtCjeJYS56cy8/EBnLc/3bpXOZ/j8yVjsV7A=;
+ b=aT/S3NRMN5/6vqFKyDB8PqjwClazAdRw797WSO9yaCrkQsBIPdyVWCJR4EbSvY2lzHRjVxyg4puzSuJDYYvnQF8mcvwd07V/nMqqrFiieo5AP3HFC8+FuIyIEQuYkoV7CrS+Kvd7qZBZUisvzLLUBocDBTudw6Fttmrcsi8qHFpTtTsw4X9eJJQ22MOyi4uv7or+wSGofH0+m3lYPkpWgM9yxDFj/wEiNgQyEp4ofCq5ZAW8+izrbbH3uExpboPXWsVxWJhxPLN+2i2JTEtJ3fLV885x6Vg2DQ1KVbez6xdrXisfFhy0wtMpJ7PRoGVYsP8iOoZ4WkKjAmkpmJb58Q==
+ARC-Authentication-Results: i=2; mx.microsoft.com 1; spf=pass (sender ip is
+ 2a01:111:f403:2414::615) smtp.rcpttodomain=mit.edu
+ smtp.mailfrom=alum.mit.edu; dmarc=pass (p=reject sp=reject pct=100)
+ action=none header.from=alum.mit.edu; dkim=pass (signature was verified)
+ header.d=alum.mit.edu; arc=pass (0 oda=1 ltdi=1
+ spf=[1,1,smtp.mailfrom=alum.mit.edu] dmarc=[1,1,header.from=alum.mit.edu])
+Received: from CH0PR03CA0278.namprd03.prod.outlook.com (2603:10b6:610:e6::13)
+ by SJ2PR01MB7983.prod.exchangelabs.com (2603:10b6:a03:4d1::15) with Microsoft
+ SMTP Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.20.8678.30; Mon, 28 Apr 2025 14:41:15 +0000
+Received: from CH1PEPF0000A348.namprd04.prod.outlook.com
+ (2603:10b6:610:e6:cafe::66) by CH0PR03CA0278.outlook.office365.com
+ (2603:10b6:610:e6::13) with Microsoft SMTP Server (version=TLS1_3,
+ cipher=TLS_AES_256_GCM_SHA384) id 15.20.8655.36 via Frontend Transport; Mon,
+ 28 Apr 2025 14:41:14 +0000
+Authentication-Results: spf=pass (sender IP is 2a01:111:f403:2414::615)
+ smtp.mailfrom=alum.mit.edu; dkim=pass (signature was verified)
+ header.d=alum.mit.edu;dmarc=pass action=none header.from=alum.mit.edu;
+Received-SPF: Pass (protection.outlook.com: domain of alum.mit.edu designates
+ 2a01:111:f403:2414::615 as permitted sender) receiver=protection.outlook.com;
+ client-ip=2a01:111:f403:2414::615;
+ helo=NAM11-BN8-obe.outbound.protection.outlook.com; pr=C
+Received: from NAM11-BN8-obe.outbound.protection.outlook.com
+ (2a01:111:f403:2414::615) by CH1PEPF0000A348.mail.protection.outlook.com
+ (2603:10b6:61f:fc00::304) with Microsoft SMTP Server (version=TLS1_3,
+ cipher=TLS_AES_256_GCM_SHA384) id 15.20.8678.33 via Frontend Transport; Mon,
+ 28 Apr 2025 14:41:14 +0000
+ARC-Seal: i=1; a=rsa-sha256; s=arcselector10001; d=microsoft.com; cv=none;
+ b=b2mcQwL9x/UFkq4y/Ho/QSJE5crlEjXztW2yqzuub4MfYRxkBb3HKkv+6qDxvwhU3bYDu2OTzHiCX0Ew1wrEFSELLVSgjnKGOmhTZsqDBknOKPW+bC5/SlfuSzmVuDcjpiKB3fHToSGFle4OGk2kwXyJNCINyAeSxDECCCifyNdTdfn+mUwgxPIO6hAalwCT0Xw1f0y7LnF3b/PNIzxAq9Xi9ltOcPaHwcq2CGHm+A6HS6imDtsgZv79IHm6KuvulYOc+hL4wo3Dlmr60vAWAqmRmZcwAXxpDMaR0ifqDD7NPbzkV3ANTcn1nK7hX8feyL1iFGu9wt08hbnSZtnUgA==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=microsoft.com;
+ s=arcselector10001;
+ h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-AntiSpam-MessageData-ChunkCount:X-MS-Exchange-AntiSpam-MessageData-0:X-MS-Exchange-AntiSpam-MessageData-1;
+ bh=vyl2zHSCtCjeJYS56cy8/EBnLc/3bpXOZ/j8yVjsV7A=;
+ b=O+UnS1Ysre5pc0ceu/QYY6GKVz0YWhW5P85ruKEwcNVkqqL08nBErmh5qEqS/XKppranlXVfKTiY6FMZFonqBaYKeIPyfcwo6749s8a1Gr+ZGYmlmDxKH3WWkd8bOYSBzGKnggQFSNg3SmCia8lvuiIQqPJjA40OcfW8Wm5535GRTwyb7a7xGYIJIQM/Tk13OWGsIetMhK1kpkUcuMHN0KX2XRkllt1gsT1p6VTo59I+MrKPJRXy/4ESJCHriGN7eyEI/QjWs0wpXW+utXo0aZaPmUon+cVeXoJXfrBkgwDMJmp5/f5YlyNoWycEOhXNu4gwGp/2nFQGch22kf6ShQ==
+ARC-Authentication-Results: i=1; mx.microsoft.com 1; spf=pass (sender ip is
+ 18.7.68.33) smtp.rcpttodomain=mit.edu smtp.mailfrom=alum.mit.edu; dmarc=pass
+ (p=reject sp=reject pct=100) action=none header.from=alum.mit.edu; dkim=none
+ (message not signed); arc=none (0)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=alum.mit.edu;
+ s=selector2;
+ h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-SenderADCheck;
+ bh=vyl2zHSCtCjeJYS56cy8/EBnLc/3bpXOZ/j8yVjsV7A=;
+ b=T2lvmEL4TT31TrqGIGMB/qtNfWR8J3Aq1s3KvncqIbqXUKU8PJgZPYZnWF6qBtC8oXgmJ5Oy7g3+UW7+Y90Ok8bxX75DFpZlc6ocNBK/Xv6KcI2GBRshoRuyiReR8j5R9kZwVhlxqlhxEHSC//BHAfuUVJA1hEjtOo2CCGQZN1M=
+Received: from DM5PR08CA0034.namprd08.prod.outlook.com (2603:10b6:4:60::23) by
+ MN2PR12MB4173.namprd12.prod.outlook.com (2603:10b6:208:1d8::10) with
+ Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.8678.29; Mon, 28 Apr
+ 2025 14:41:10 +0000
+Received: from DS3PEPF000099DE.namprd04.prod.outlook.com
+ (2603:10b6:4:60:cafe::5d) by DM5PR08CA0034.outlook.office365.com
+ (2603:10b6:4:60::23) with Microsoft SMTP Server (version=TLS1_3,
+ cipher=TLS_AES_256_GCM_SHA384) id 15.20.8655.34 via Frontend Transport; Mon,
+ 28 Apr 2025 14:41:10 +0000
+X-MS-Exchange-Authentication-Results: spf=pass (sender IP is 18.7.68.33)
+ smtp.mailfrom=alum.mit.edu; dkim=none (message not signed)
+ header.d=none;dmarc=pass action=none header.from=alum.mit.edu;
+Received-SPF: Pass (protection.outlook.com: domain of alum.mit.edu designates
+ 18.7.68.33 as permitted sender) receiver=protection.outlook.com;
+ client-ip=18.7.68.33; helo=outgoing-alum.mit.edu; pr=C
+Received: from outgoing-alum.mit.edu (18.7.68.33) by
+ DS3PEPF000099DE.mail.protection.outlook.com (10.167.17.200) with Microsoft
+ SMTP Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.20.8678.33 via Frontend Transport; Mon, 28 Apr 2025 14:41:09 +0000
+Received: from mail-pj1-f51.google.com (mail-pj1-f51.google.com [209.85.216.51])
+	(authenticated bits=0)
+        (User authenticated as rtran@ALUM.MIT.EDU)
+	by outgoing-alum.mit.edu (8.14.7/8.12.4) with ESMTP id 53SEf6EQ025634
+	(version=TLSv1/SSLv3 cipher=AES128-GCM-SHA256 bits=128 verify=NOT)
+	for <eecs-opportunities-list@mit.edu>; Mon, 28 Apr 2025 10:41:08 -0400
+Received: by mail-pj1-f51.google.com with SMTP id 98e67ed59e1d1-3054e2d13a7so380793a91.2
+        for <eecs-opportunities-list@mit.edu>; Mon, 28 Apr 2025 07:41:08 -0700 (PDT)
+X-Gm-Message-State: AOJu0Yzb8DNZesEvhM8CWF4A9zBFEmczEnSK4oymF2JjxN9J50aJtPGB
+	GXftRik3gqBt3c/PzO4DJK5IlkaU9ccpeHiRF7frxg40NdqySjRJfLtCZaxQHPzG8W3KcKjSlO0
+	nDdmJAlDUvWEo8qraO+WD4EXNssY=
+X-Google-Smtp-Source: AGHT+IEtbrJDTLcTcKD4yvy2FmQbTctYaapYQxuKm4P3W1oJm806m/VwUNzYNrK7aMq2TWU710NSkX9NcNIct83MrMQ=
+X-Received: by 2002:a17:90b:3b83:b0:2ff:6bcf:5411 with SMTP id
+ 98e67ed59e1d1-309f7da6d3amr7171344a91.1.1745851266500; Mon, 28 Apr 2025
+ 07:41:06 -0700 (PDT)
+References: <CAC-8nBkZTWM27hHbe1cUqjWjWGuJNmw4u_yGN=Sc51D1f00RMA@mail.gmail.com>
+In-Reply-To: <CAC-8nBkZTWM27hHbe1cUqjWjWGuJNmw4u_yGN=Sc51D1f00RMA@mail.gmail.com>
+From: Robert Tran <rtran@alum.mit.edu>
+Date: Mon, 28 Apr 2025 10:40:55 -0400
+X-Gmail-Original-Message-ID: <CAC-8nBnh0vAkAG5EXc2gNKEALRQn=LjMqTBXr4vpgMM7u3ofzg@mail.gmail.com>
+X-Gm-Features: ATxdqUH-Tqp3iCu_S64aouFog1YKT8h9GxAqSkJLpF8BrxrAyDZd9AO8U7ILEto
+Message-ID: <CAC-8nBnh0vAkAG5EXc2gNKEALRQn=LjMqTBXr4vpgMM7u3ofzg@mail.gmail.com>
+Subject: Re: Inkeep (Y Combinator AI Startup) is hiring software engineers,
+ full-time + Summer 2025 interns, in-person NYC/SF
+To: <eecs-opportunities-list@mit.edu>
+CC: Robert Tran <rtran@alum.mit.edu>
+Content-Type: multipart/alternative; boundary="0000000000009211aa0633d7ac89"
+X-EOPAttributedMessage: 1
+X-MS-TrafficTypeDiagnostic: DS3PEPF000099DE:EE_|MN2PR12MB4173:EE_|CH1PEPF0000A348:EE_|SJ2PR01MB7983:EE_
+X-MS-Office365-Filtering-Correlation-Id: 6e270b6a-febb-40db-3859-08dd8662ba26
+X-MS-Exchange-SenderADCheck: 1
+X-MS-Exchange-AntiSpam-Relay: 0
+X-Microsoft-Antispam-Untrusted: BCL:0;ARA:13230040|41320700013|43022699015|1800799024|36860700013|82310400026|376014|13003099007|8096899003;
+X-Microsoft-Antispam-Message-Info-Original: =?us-ascii?Q?8Uo8Q5+0PQV33a4Neizj/wBH5bnSh8Se80BeYbzx0h5/1WOEUAIHw23rImOs?=
+ =?us-ascii?Q?hBI+HZkus8CdJhxmgVXAiaJoO9lAZtvmGchjjVvvZ8u8hRtOd8GQ/XvnKsvJ?=
+ =?us-ascii?Q?A2XHzuGG3OzQOonnM7tQbVS4yQvOdPWbBdt4Y99BaFuhSe+LYyKzPUVSfjqY?=
+ =?us-ascii?Q?+pj2726zWQxohK+vEhQi+3FR5DGTkwVtzHy/TB/XduL9zXc6tXkY2XR7D16w?=
+ =?us-ascii?Q?U25eydCXCf7r0Hm/0Z2L8DqKV46p3A1WyUSQY7q4pE7nRLIDkXNZrmPUSrm8?=
+ =?us-ascii?Q?E064DlQ5NtbB/43m4zrHm6Xms0kQC13/L73KLSPjg6ndpwthAalpxOc+tfZu?=
+ =?us-ascii?Q?WYdCBrJ1JAG9NtQgVdl9L+VOYiQZRL4BuiX5XNPy1wpzmvwF+60ivdIZDlfi?=
+ =?us-ascii?Q?z+0bp5Q42HJHPMTzv76IxGrxA+AS9DyfMn1L+23yjhstkdX0LSby0YhcXbY7?=
+ =?us-ascii?Q?jFAqZbXx6GjtGGe7Qk7g0X77/RV7Vr1EW1PJZb/9v7CY2jX0Hj11iSzkd307?=
+ =?us-ascii?Q?+XSst+60p7JjhdIJas9c6XZs46yZyce924PVUQMvO4bKU0NZX1JYSLaPyqpV?=
+ =?us-ascii?Q?VVqqw7CjYpPDuKzFGmEgS1t3iWX7K4scOZDZrS+MmvfdTmcgxHbt9KiyN/51?=
+ =?us-ascii?Q?XUUbeqTzoM7MlBurZguqlnsGNfDXPxJezXbNcpZuhxLhuVlJlzMgGsp7SjYp?=
+ =?us-ascii?Q?jASqk90UoHtYNL6Y+2gH/PPi4LmX6h1wHX4XK9WyasUaZKVDpKjH3YsLMqAB?=
+ =?us-ascii?Q?ocEqrAFEESuq5QAJ6SjcwWn7X1OxOla84pS661E7RK/BxAfPlBVorUAtMNDh?=
+ =?us-ascii?Q?1P01zw+IMucnkU3BJriD/bA8S6aersFm6R5kB1fQPyoSTeuc5X+gnCMrrTwu?=
+ =?us-ascii?Q?Q0VdRJ7nAgx8vI/wHpDmgNmv0JsQU1n/pXbjlmE/jIdZheZYT7+jEHNR7gD3?=
+ =?us-ascii?Q?Stx6s1uFS3GhveNr316ZLZQQSZt8fcVAPfUaVZsb8M8rFV3q1P//636lRHUg?=
+ =?us-ascii?Q?KHKqCOJAcP86JQUY62Fmo6OKMczmLV4CEB0VIBbWc1XxeNTy7NEL5Ogjt6h0?=
+ =?us-ascii?Q?ubYYGkEI54EJC+JBa3PFMBxlXjiKI0dlNttw0lTpPJnM24JBIb+42QskxMGw?=
+ =?us-ascii?Q?jJi7VCEYMtDqbi7Ev+Dk6wCjUU7IhhpCRtLE2DP3j3yhyPXYvcbJel6J2MfS?=
+ =?us-ascii?Q?IQ/qnb3DFWE9zwAuPhHBXTpXik+jnr4iKZ1m2AC8V33kq2I2QHW+hm7shcCc?=
+ =?us-ascii?Q?Tn3QYJZ/OFl+cywh9frF1WWDkPyLt3QOfsNVyLmPAEwNI0rAa0nZnPkmuTGz?=
+ =?us-ascii?Q?roh1NgwzqVSXVfez8lEsk1LypFzR8B8xbPaDm09vb5tQXKOOatwAoDMqMSZz?=
+ =?us-ascii?Q?YW48JnxMdcQDIV7Y5fNWamhxLwvIg9KH/mRxlSjZCapCUpcdQKE+Us5QHP26?=
+ =?us-ascii?Q?8ZSivTmA6QBqUk7Tw6C8qmy+Wq8GlXqdG6Ex+sxFhdsrBjcFIoMGKg=3D=3D?=
+X-Forefront-Antispam-Report-Untrusted: CIP:18.7.68.33;CTRY:US;LANG:en;SCL:1;SRV:;IPV:CAL;SFV:NSPM;H:outgoing-alum.mit.edu;PTR:outgoing-alum.mit.edu;CAT:NONE;SFS:(13230040)(41320700013)(43022699015)(1800799024)(36860700013)(82310400026)(376014)(13003099007)(8096899003);DIR:OUT;SFP:1101;
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: MN2PR12MB4173
+X-EOPTenantAttributedMessage: 64afd9ba-0ecf-4acf-bc36-935f6235ba8b:0
+X-MS-Exchange-Transport-CrossTenantHeadersStripped: CH1PEPF0000A348.namprd04.prod.outlook.com
+X-MS-Exchange-Transport-CrossTenantHeadersPromoted: CH1PEPF0000A348.namprd04.prod.outlook.com
+X-MS-PublicTrafficType: Email
+X-MS-Office365-Filtering-Correlation-Id-Prvs: dd8ee5f2-00a3-4f50-0db3-08dd8662b737
+X-LD-Processed: 64afd9ba-0ecf-4acf-bc36-935f6235ba8b,ExtAddr
+X-MS-Exchange-AtpMessageProperties: SA
+X-Microsoft-Antispam: BCL:0;ARA:13230040|61400799027|376014|14060799003|35042699022|48200799018|9140799003|43022699015|13003099007|8096899003;
+X-Microsoft-Antispam-Message-Info: =?utf-8?B?SzlXYVJWSElRUzcydDBTWmlTNVF2NnJrYVBBeVZ3L0lZNTNleVhxSU5HR3lL?=
+ =?utf-8?B?Sk41Wkx6SkF0NTU3QmxYT2srbGNRL1BKcVBTbTdlUDE2eEllbDE1MDFla1hL?=
+ =?utf-8?B?Mk8wUm5jVm5RbFpMd3hwVlRkbWtnUDZHeXNqcVdYRTlyK1VWVUk5QnJIWVNh?=
+ =?utf-8?B?RU9sKzJpakpNNHlFTFF4TzYwUVpmc3puZis0c3IxZXl0VTd0Zm9HMHdXT2px?=
+ =?utf-8?B?cC93UnlvV2NoSzNpS0tiMHVTWVVrSG1hWlFNUUpnUlNVa0dSZWZ5a1ZqS2pw?=
+ =?utf-8?B?ZFZXQ2NubXpibzdSZDFoMk85dzJGUjZLZ2h6UzQ4L1ZSdUVBdFVIVnpCTTV0?=
+ =?utf-8?B?WTIwWFQ2a3Rjd3RXWFJIeXB2SmlzeEpEdFZJN2dRK3p0VFRDTmEzNlZjeWJs?=
+ =?utf-8?B?eFNMdUYyN2VTQ3JiWGZ4eTEzd1BiakdRenE3ampucTdnQU9VWDg1bi9JWVNW?=
+ =?utf-8?B?Nnk2VjFsQjE2NzVGQTgwQUdoZjV4VElqa0VRdk95cHRGNm9LVEwycFlWT1BY?=
+ =?utf-8?B?V21SL25lM1ZBdnMwSUloVU51Mjh3NTNpRFhKU3VBRHNyYjI2RUN6Q2txc3hx?=
+ =?utf-8?B?VjBXV2U2QXRnNmQxd255WDhmNExxMFNaOFBxbC8zTHowTzh3N01HejdaYkp5?=
+ =?utf-8?B?Q2lUbmQrdFhqdDJBM0p6cXRpQ0pXdzREd2FWWXFQMkMyUDB5T1BEc1Y4eExx?=
+ =?utf-8?B?eVdoelpuVTZPTUtOY0VNem1Ecy9MWkt3R0wvRkxFNWhsQmdCeXhGMDN2SzNB?=
+ =?utf-8?B?Z2dyVUhEL2pUQXdkY3dsYVl5UC9XdEk2MjlNMXJMdFdmSnF5RE5OdXovVUlG?=
+ =?utf-8?B?WkZkYy9TcFBxckxoeHIrK0JyenFGYjFKaldxZDhQeFRmVXpESzdTemtObWpu?=
+ =?utf-8?B?dzZsb0EwWVo2SkVoY05YcndPTUVWZUlXSkt4VEo5QWMzcmkwV0pmSWJjWWlv?=
+ =?utf-8?B?bEVSSGc2UUFybXQxUk9PcWdkOHNBbEgwUk1nNjYzUGRvRlMxSGpScUtiZ3Ro?=
+ =?utf-8?B?UHErZEVnRmV4MzJ1UndiOGVpeFUrREkvcDAzTm9xWWNTZlkzMXJ4MUVHbFlX?=
+ =?utf-8?B?bGJ1ZnJJaXhJTzVIT1VFTC95ZC9WOXE3YU04Ymh1RG82L1pNYmZsaXVuUmdw?=
+ =?utf-8?B?VTQ4dURnekFKK0VJOFFtVXdOWTY3Q2JzeVBzejcybVpzTG9oWXkzNGRhR3hy?=
+ =?utf-8?B?QVZqeVlySmY0OFRqSU1uU0VNUHhDaFFoTDZUL3pOc2JSSjRJeWp4L0REd3k4?=
+ =?utf-8?B?aTUxZlRYV0FaM21UODB1bWppTTl0WkI4Y2g0MTZucllVWmdDTEZDOUtyb1Nh?=
+ =?utf-8?B?Tm5PZ0dFK09lalhtdlhpMjIxODJ3S2dNQVNQVkhUR1Q1NUlUOUcvcEo2N20r?=
+ =?utf-8?B?amlsM2Rzb1V2ckpVaVpKMHYxZUszSTZ5OG03ZFBLZWZtTjdlcTVmOGZRazQ2?=
+ =?utf-8?B?dTB2b1FxeHI0dGd4WHhFNXIvNTVzeFl4ZkNuTFc0SDlsVW5PaGlXQzJlTXVF?=
+ =?utf-8?B?U1J4OUU1QXRUQXF3Z0E2bUV1UEpiL09lM1U2azhvYXM1aitINGtyR3VURTI2?=
+ =?utf-8?B?VmNrU1ovd3VTTEFXMFQ1WEV3TFp2TFliVkVUTGdiZ3ZsR3AvM2NDdXdWdW1x?=
+ =?utf-8?B?Z085WGZMaW1ZWnRuVjJFQk9IVkRhdXQ5VHIyeG5vSjdpUXZOWTZacUJ3ZEhl?=
+ =?utf-8?B?OENiQXZXWEJQSVprVEhCSG9SbndpMWwzZVh1RkI1OHhmSXhrVzg1MXJkNUdQ?=
+ =?utf-8?B?ZUl6eFZuYWxwdm53MUU4MWlBeEEwOUhXbDh0MzZYTzVUVmw0L0JsM2lCckQ0?=
+ =?utf-8?B?SWhXQ253QVluSTd6YTNKS2ZDcEZvWWIrdXVoaWFxU2xCVUR5eEtxZ3ZvUmh4?=
+ =?utf-8?B?d1VVQ1VPY0tJWS8rbnJoSUE5alBVbjRGN3BtT09ZZnJjMG1XeDkwUSsrOHNa?=
+ =?utf-8?Q?dAQQ8jhFBZGy+SdtVwftS0S4Ug1Zk9iP?=
+X-Forefront-Antispam-Report: CIP:2a01:111:f403:2414::615;CTRY:;LANG:en;SCL:1;SRV:;IPV:NLI;SFV:NSPM;H:NAM11-BN8-obe.outbound.protection.outlook.com;PTR:mail-bn8nam11on20615.outbound.protection.outlook.com;CAT:NONE;SFS:(13230040)(61400799027)(376014)(14060799003)(35042699022)(48200799018)(9140799003)(43022699015)(13003099007)(8096899003);DIR:OUT;SFP:1101;
+X-ExternalRecipientOutboundConnectors: 64afd9ba-0ecf-4acf-bc36-935f6235ba8b
+X-Auto-Response-Suppress: DR, OOF, AutoReply
+X-OriginatorOrg: mitprod.onmicrosoft.com
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 28 Apr 2025 14:41:14.3522
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: 6e270b6a-febb-40db-3859-08dd8662ba26
+X-MS-Exchange-CrossTenant-Id: 64afd9ba-0ecf-4acf-bc36-935f6235ba8b
+X-MS-Exchange-CrossTenant-OriginalAttributedTenantConnectingIp: TenantId=3326b102-c043-408b-a990-b89e477d582f;Ip=[18.7.68.33];Helo=[outgoing-alum.mit.edu]
+X-MS-Exchange-CrossTenant-AuthSource: CH1PEPF0000A348.namprd04.prod.outlook.com
+X-MS-Exchange-CrossTenant-AuthAs: Anonymous
+X-MS-Exchange-CrossTenant-FromEntityHeader: Internet
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: SJ2PR01MB7983
+X-Mailman-Approved-At: Tue, 29 Apr 2025 09:38:29 -0400
+MIME-Version: 1.0
+
+--0000000000009211aa0633d7ac89
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+apologies, had initially been sent from my personal. fixed
+
+but would love to get this sent out to eecs. thank you!
+
+On Mon, Apr 28, 2025 at 10:39=E2=80=AFAM robert <rtranare@gmail.com> wrote:
+
+> Hi EECS,
+>
+> *Inkeep (https://inkeep.com <https://inkeep.com>) is hiring software
+> engineers, FULL TIME AND SUMMER 2025 INTERNS, in-person NYC/SF.*
+>
+> At Inkeep, we help companies turn their docs and other content into AI
+> search and support copilots. Think "ChatGPT for your docs" that's
+> trustworthy, can leverage content from any source, and requires zero
+> engineering effort to set up or maintain. Today, we answer over 600k+
+> questions per month for 100+ companies with a focus on technical products=
+.
+> Our customers include Pinecone, Postman, Anthropic, Clerk, PostHog, Scale=
+,
+> Bun, Resend, Metabase, Solana, Midjourney, and many more!
+>
+> More about us:
+>
+>    1. https://inkeep.com
+>    2. https://www.ycombinator.com/companies/inkeep
+>    3. https://www.linkedin.com/company/inkeep/
+>    4. https://docs.inkeep.com/overview/why-inkeep#the-team
+>
+>
+> *Full-time positions*:
+>
+>    - *Fullstack Engineer*. Develop on our agentic AI framework to ship
+>    features end-to-end. Strong background in TypeScript / SQL databases /=
+ API
+>    design, experience with full-stack app development with Next.js or oth=
+er JS
+>    frameworks.
+>    - *Backend Engineer*. Help build and scale our entire backend
+>    infrastructure. You will work on areas such as data ingestion pipeline=
+s,
+>    search engines, and vector databases to build the backbone of Inkeep=
+=E2=80=99s
+>    best-in-class AI products. Requires exceptional Python background and
+>    strong fundamentals in databases: SQL, NoSQL, KV, Vector, Search, etc.
+>    - *Customer Success Engineer*. Our customers are highly technical
+>    teams that integrate the Inkeep platform in many ways. For this role, =
+you
+>    will engage with prospective customers, onboard new customers, and
+>    proactively support our growing customer base to ensure they maximize
+>    Inkeep=E2=80=99s capabilities. Strong Python and TypeScript background=
+, experience
+>    with full-stack app development with Next.js or other JS frameworks,
+>    exceptional customer-facing communication skills.
+>
+>
+> *Full-time roles are immediately available in-person NYC/SF.*
+> ---
+>
+> *Summer 2025 Software Engineer Intern projects:*
+>
+>    - LLM / Agentic AI / ML engineering
+>    - Backend distributed & scalable search & chat infrastructure
+>    - Designing and building beautiful UX for search and chat interfaces
+>
+> Ideal candidates are juniors/seniors, have experience with production
+> systems, and background in python/typescript.
+>
+> *IAP positions are paid. In-person NYC/SF.*
+>
+> ---
+>
+> We are backed by VCs like Khosla Ventures and took part in the Y
+> Combinator W23 program. The Inkeep team has many MIT alumni, and we would
+> love to have more folks from MIT join us.
+>
+> Please reach out to me directly at rtran@alum.mit.edu with a resume asap
+> if this is interesting to you (or if you know someone who is!).
+>
+> Best,
+> Robert Tran
+> Founder & CTO of Inkeep
+> MIT Course 6 & 18, 6 MEng, c/o 2018
+>
+
+--0000000000009211aa0633d7ac89
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8"><d=
+iv dir=3D"ltr">apologies, had initially been sent from my personal. fixed<d=
+iv><br></div><div>but would love to get this sent out to eecs. thank you!</=
+div></div><br><div class=3D"gmail_quote gmail_quote_container"><div dir=3D"=
+ltr" class=3D"gmail_attr">On Mon, Apr 28, 2025 at 10:39=E2=80=AFAM robert &=
+lt;<a href=3D"mailto:rtranare@gmail.com">rtranare@gmail.com</a>&gt; wrote:<=
+br></div><blockquote class=3D"gmail_quote" style=3D"margin:0px 0px 0px 0.8e=
+x;border-left:1px solid rgb(204,204,204);padding-left:1ex"><div dir=3D"ltr"=
+>Hi EECS,<br><br><b>Inkeep (<a href=3D"https://inkeep.com" target=3D"_blank=
+">https://inkeep.com</a>) is hiring software engineers, FULL TIME AND SUMME=
+R 2025 INTERNS, in-person NYC/SF.</b><br><br>At Inkeep, we help companies t=
+urn their docs and other content into AI search and support copilots. Think=
+ &quot;ChatGPT for your docs&quot; that's trustworthy, can leverage content=
+ from any source, and requires zero engineering effort to set up or maintai=
+n. Today, we answer over 600k+ questions per month for 100+ companies with =
+a focus on technical products. Our customers include Pinecone, Postman, Ant=
+hropic, Clerk, PostHog, Scale, Bun, Resend, Metabase, Solana, Midjourney, a=
+nd many more! <br><br>More about us:<br><ol><li><a href=3D"https://inkeep.c=
+om" target=3D"_blank">https://inkeep.com</a></li><li><a href=3D"https://www=
+.ycombinator.com/companies/inkeep" target=3D"_blank">https://www.ycombinato=
+r.com/companies/inkeep</a></li><li><a href=3D"https://www.linkedin.com/comp=
+any/inkeep/" target=3D"_blank">https://www.linkedin.com/company/inkeep/</a>=
+</li><li><a href=3D"https://docs.inkeep.com/overview/why-inkeep#the-team" t=
+arget=3D"_blank">https://docs.inkeep.com/overview/why-inkeep#the-team</a></=
+li></ol><br><b>Full-time positions</b>:<br><ul><li><b>Fullstack Engineer</b=
+>. Develop on our agentic AI framework&nbsp;to ship features end-to-end. St=
+rong background in TypeScript&nbsp;/ SQL databases / API design, experience=
+ with full-stack app development with Next.js or other JS frameworks.</li><=
+li><b>Backend Engineer</b>. Help build and scale our entire backend infrast=
+ructure. You will work on areas such as data ingestion pipelines, search en=
+gines, and vector databases to build the backbone of Inkeep=E2=80=99s best-=
+in-class AI products. Requires exceptional Python background and strong fun=
+damentals in databases: SQL, NoSQL, KV, Vector, Search, etc.</li><li><b>Cus=
+tomer Success Engineer</b>. Our customers are highly technical teams that i=
+ntegrate the Inkeep platform in many ways. For this role, you will engage w=
+ith prospective customers, onboard new customers, and proactively support o=
+ur growing customer base to ensure they maximize Inkeep=E2=80=99s capabilit=
+ies. Strong Python and TypeScript background, experience with full-stack ap=
+p development with Next.js or other JS frameworks, exceptional customer-fac=
+ing communication skills.</li></ul><i>Full-time roles are immediately avail=
+able in-person NYC/SF.<br></i><br>---<br><br><b>Summer 2025 Software Engine=
+er Intern projects:</b><br><ul><li>LLM / Agentic AI / ML engineering</li><l=
+i>Backend distributed &amp; scalable search &amp; chat infrastructure</li><=
+li>Designing and building beautiful UX for search and chat interfaces</li><=
+/ul>Ideal candidates are juniors/seniors, have experience with production s=
+ystems, and background in python/typescript. <br><br><i>IAP positions are p=
+aid. In-person NYC/SF.</i><br><br>---<br><br>We are backed by VCs like Khos=
+la Ventures and took part in the Y Combinator W23 program. The Inkeep team =
+has many MIT alumni, and we would love to have more folks from MIT join us.=
+<br><br>Please reach out to me directly at <a href=3D"mailto:rtran@alum.mit=
+.edu" target=3D"_blank">rtran@alum.mit.edu</a> with a resume asap if this i=
+s interesting to you (or if you know someone who is!).<br><br>Best,<br>Robe=
+rt Tran<br>Founder &amp; CTO of Inkeep<br>MIT Course 6 &amp; 18, 6 MEng, c/=
+o 2018</div>
+</blockquote></div>
+
+--0000000000009211aa0633d7ac89--
+
+--===============0390550540616159425==
+Content-Type: text/plain; charset="us-ascii"
+Content-Transfer-Encoding: 7bit
+Content-Disposition: inline
+
+_______________________________________________
+Opportunities on this list are not vetted by the EECS Undergraduate Office or by MIT overall. You should always carefully research any job openings, opportunities, internships, and companies.
+
+EECS-Opportunities-List mailing list
+EECS-Opportunities-List@mit.edu
+https://mailman.mit.edu/mailman/listinfo/eecs-opportunities-list
+
+--===============0390550540616159425==--

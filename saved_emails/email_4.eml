@@ -1,275 +1,158 @@
-Received: from PH0PR01MB6119.prod.exchangelabs.com (::1) by
- DM6PR01MB5929.prod.exchangelabs.com with HTTPS; Thu, 1 May 2025 14:01:45
+Received: from PH0PR01MB6391.prod.exchangelabs.com (2603:10b6:510:18::12) by
+ DM6PR01MB5929.prod.exchangelabs.com with HTTPS; Fri, 2 May 2025 10:31:21
  +0000
-Received: from SJ0PR03CA0063.namprd03.prod.outlook.com (2603:10b6:a03:331::8)
- by PH0PR01MB6119.prod.exchangelabs.com (2603:10b6:510:d::10) with Microsoft
+Received: from PH0PR07CA0001.namprd07.prod.outlook.com (2603:10b6:510:5::6) by
+ PH0PR01MB6391.prod.exchangelabs.com (2603:10b6:510:18::12) with Microsoft
  SMTP Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
- 15.20.8699.19; Thu, 1 May 2025 14:01:42 +0000
-Received: from CO1PEPF000075F2.namprd03.prod.outlook.com
- (2603:10b6:a03:331:cafe::b2) by SJ0PR03CA0063.outlook.office365.com
- (2603:10b6:a03:331::8) with Microsoft SMTP Server (version=TLS1_3,
- cipher=TLS_AES_256_GCM_SHA384) id 15.20.8655.35 via Frontend Transport; Thu,
- 1 May 2025 14:01:41 +0000
-Authentication-Results: spf=pass (sender IP is 18.1.37.68)
- smtp.mailfrom=math.mit.edu; dkim=none (message not signed)
- header.d=none;dmarc=pass action=none header.from=math.mit.edu;compauth=pass
+ 15.20.8699.24; Fri, 2 May 2025 10:31:19 +0000
+Received: from SN1PEPF0002BA4F.namprd03.prod.outlook.com
+ (2603:10b6:510:5:cafe::22) by PH0PR07CA0001.outlook.office365.com
+ (2603:10b6:510:5::6) with Microsoft SMTP Server (version=TLS1_3,
+ cipher=TLS_AES_256_GCM_SHA384) id 15.20.8655.42 via Frontend Transport; Fri,
+ 2 May 2025 10:31:19 +0000
+Authentication-Results: spf=pass (sender IP is 198.187.196.100)
+ smtp.mailfrom=mit.edu; dkim=none (message not signed)
+ header.d=none;dmarc=pass action=none header.from=mit.edu;compauth=pass
  reason=100
-Received-SPF: Pass (protection.outlook.com: domain of math.mit.edu designates
- 18.1.37.68 as permitted sender) receiver=protection.outlook.com;
- client-ip=18.1.37.68; helo=littlewood.mit.edu; pr=C
-Received: from littlewood.mit.edu (18.1.37.68) by
- CO1PEPF000075F2.mail.protection.outlook.com (10.167.249.41) with Microsoft
+Received-SPF: Pass (protection.outlook.com: domain of mit.edu designates
+ 198.187.196.100 as permitted sender) receiver=protection.outlook.com;
+ client-ip=198.187.196.100; helo=tufmon.touchnet.com; pr=C
+Received: from tufmon.touchnet.com (198.187.196.100) by
+ SN1PEPF0002BA4F.mail.protection.outlook.com (10.167.242.72) with Microsoft
  SMTP Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
- 15.20.8699.20 via Frontend Transport; Thu, 1 May 2025 14:01:41 +0000
-Received: from localhost (localhost [127.0.0.1])
-	by littlewood.mit.edu (Postfix) with ESMTP id 4DD3D71015;
-	Thu,  1 May 2025 10:01:40 -0400 (EDT)
-X-Virus-Scanned: Debian amavisd-new at math.mit.edu
-Received: from littlewood.mit.edu ([127.0.0.1])
-	by localhost (math.mit.edu [127.0.0.1]) (amavisd-new, port 10024)
-	with ESMTP id 3GUU0HS_K15J; Thu,  1 May 2025 10:01:40 -0400 (EDT)
-Received: from [10.21.1.154] (unknown [10.21.1.154])
-	(using TLSv1.2 with cipher ECDHE-RSA-AES128-GCM-SHA256 (128/128 bits))
-	(No client certificate requested)
-	(Authenticated sender: debbie)
-	by littlewood.mit.edu (Postfix) with ESMTPSA id 01A1171012;
-	Thu,  1 May 2025 10:01:40 -0400 (EDT)
-Content-Type: multipart/alternative;
-	boundary="------------r8yGszEO1ZI5TzTWXovrD4Yj"
-Message-ID: <ffab30ac-6435-4134-8e13-94982cf01d5e@math.mit.edu>
-Date: Thu, 1 May 2025 10:01:39 -0400
-User-Agent: Mozilla Thunderbird
-Subject: Summer and Fall Pre-Registration
-Content-Language: en-US
-References: <MN0PR01MB7587737C5E4C179323657B67B4822@MN0PR01MB7587.prod.exchangelabs.com>
-To: <math_majors_25@mit.edu>, <math_majors_26@mit.edu>,
-	<math_majors_27@mit.edu>
-From: Deborah J Bower <debbie@math.mit.edu>
-In-Reply-To: <MN0PR01MB7587737C5E4C179323657B67B4822@MN0PR01MB7587.prod.exchangelabs.com>
-X-Forwarded-Message-Id: <MN0PR01MB7587737C5E4C179323657B67B4822@MN0PR01MB7587.prod.exchangelabs.com>
-Return-Path: debbie@math.mit.edu
-X-MS-Exchange-Organization-ExpirationStartTime: 01 May 2025 14:01:41.4428
+ 15.20.8699.20 via Frontend Transport; Fri, 2 May 2025 10:31:19 +0000
+Received: from tn-sl2-app-f1n1 ([10.99.4.22]) by tufmon.touchnet.com with Microsoft SMTPSVC(10.0.17763.1697);
+	 Fri, 2 May 2025 05:31:18 -0500
+Message-ID: <399838448.1746181878668.JavaMail.TN-SL2-APP-F1N1$@smtp2>
+Date: Fri, 2 May 2025 05:31:18 -0500
+From: sfs@mit.edu
+To: <nathra@mit.edu>, <ramnanjun@yahoo.com>
+Subject: Your MIT payment plan amounts have changed
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+Return-Path: sfs@mit.edu
+X-OriginalArrivalTime: 02 May 2025 10:31:18.0688 (UTC) FILETIME=[572B1A00:01DBBB4D]
+X-MS-Exchange-Organization-ExpirationStartTime: 02 May 2025 10:31:19.6600
  (UTC)
 X-MS-Exchange-Organization-ExpirationStartTimeReason: OriginalSubmit
 X-MS-Exchange-Organization-ExpirationInterval: 1:00:00:00.0000000
 X-MS-Exchange-Organization-ExpirationIntervalReason: OriginalSubmit
-X-MS-Exchange-Organization-Network-Message-Id: e817284b-5096-4532-e516-08dd88b8b2f7
+X-MS-Exchange-Organization-Network-Message-Id: 39cf707c-4973-4944-6c7f-08dd89647a36
 X-EOPAttributedMessage: 0
 X-EOPTenantAttributedMessage: 64afd9ba-0ecf-4acf-bc36-935f6235ba8b:0
 X-MS-Exchange-Organization-MessageDirectionality: Incoming
 X-MS-PublicTrafficType: Email
-X-MS-TrafficTypeDiagnostic: CO1PEPF000075F2:EE_|PH0PR01MB6119:EE_|DM6PR01MB5929:EE_
-X-MS-Exchange-Organization-AuthSource: CO1PEPF000075F2.namprd03.prod.outlook.com
+X-MS-TrafficTypeDiagnostic: SN1PEPF0002BA4F:EE_|PH0PR01MB6391:EE_|DM6PR01MB5929:EE_
+X-MS-Exchange-Organization-AuthSource: SN1PEPF0002BA4F.namprd03.prod.outlook.com
 X-MS-Exchange-Organization-AuthAs: Anonymous
-X-MS-Office365-Filtering-Correlation-Id: e817284b-5096-4532-e516-08dd88b8b2f7
+X-MS-Office365-Filtering-Correlation-Id: 39cf707c-4973-4944-6c7f-08dd89647a36
 X-MS-Exchange-AtpMessageProperties: SA|SL
 X-MS-Exchange-Organization-SCL: 1
-X-Microsoft-Antispam: BCL:0;ARA:13230040|12012899012|2092899012|3072899012|13003099007|8096899003;
-X-Forefront-Antispam-Report: CIP:18.1.37.68;CTRY:US;LANG:en;SCL:1;SRV:;IPV:NLI;SFV:NSPM;H:littlewood.mit.edu;PTR:littlewood.mit.edu;CAT:NONE;SFS:(13230040)(12012899012)(2092899012)(3072899012)(13003099007)(8096899003);DIR:INB;
-X-Auto-Response-Suppress: DR, OOF, AutoReply
-X-MS-Exchange-CrossTenant-OriginalArrivalTime: 01 May 2025 14:01:41.2358
+X-Microsoft-Antispam: BCL:0;ARA:13230040|69100299015|3613699012|4076899003|8096899003;
+X-Forefront-Antispam-Report: CIP:198.187.196.100;CTRY:US;LANG:en;SCL:1;SRV:;IPV:NLI;SFV:NSPM;H:tufmon.touchnet.com;PTR:tufmon.touchnet.com;CAT:NONE;SFS:(13230040)(69100299015)(3613699012)(4076899003)(8096899003);DIR:INB;
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 02 May 2025 10:31:19.5669
  (UTC)
-X-MS-Exchange-CrossTenant-Network-Message-Id: e817284b-5096-4532-e516-08dd88b8b2f7
+X-MS-Exchange-CrossTenant-Network-Message-Id: 39cf707c-4973-4944-6c7f-08dd89647a36
 X-MS-Exchange-CrossTenant-Id: 64afd9ba-0ecf-4acf-bc36-935f6235ba8b
-X-MS-Exchange-CrossTenant-AuthSource: CO1PEPF000075F2.namprd03.prod.outlook.com
+X-MS-Exchange-CrossTenant-AuthSource: SN1PEPF0002BA4F.namprd03.prod.outlook.com
 X-MS-Exchange-CrossTenant-AuthAs: Anonymous
 X-MS-Exchange-CrossTenant-FromEntityHeader: Internet
-X-MS-Exchange-Transport-CrossTenantHeadersStamped: PH0PR01MB6119
-X-MS-Exchange-Transport-EndToEndLatency: 00:00:04.7658547
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: PH0PR01MB6391
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:01.4553392
 X-MS-Exchange-Processed-By-BccFoldering: 15.20.8678.021
 X-Microsoft-Antispam-Mailbox-Delivery:
-	ucf:0;jmr:0;auth:0;dest:I;ENG:(910005)(920097)(930097)(140003);
+	ucf:0;jmr:0;auth:0;dest:I;ENG:(910005)(944506478)(944626604)(920097)(930097)(140003);
 X-Microsoft-Antispam-Message-Info:
-	=?utf-8?B?MmFmQUNaTXR1RVFpKzNIVVg1R2dpMEFhbEIra3Y0WHhUQytsazM2SFdpY3pH?=
- =?utf-8?B?SFpNS3lRVGoxaVhUMXBHTW1VWS9MMUs2QU5yckZPWW9tcXI0QjdxZEdOSm9G?=
- =?utf-8?B?cTVBYXhOcis2OTJRYnV5RXFrYXk2di9TSlVoREY0NS9uVXdCU3RKVkJjM2pD?=
- =?utf-8?B?RkowMldsSVoxYzF1NGpaYmhLT24rV0JyOGduVHpzT0twMTByN3lFTDFSVTBt?=
- =?utf-8?B?dlYreExFakRCaVJVMjBxRDdrNnFDbGE1WnJNbnZXN09TZ1dsOEFaMGlHMlF1?=
- =?utf-8?B?bTVvdk8zby8zQS96YS9qeUhUMXpZZHdDQXhsdDZBeHZ3eXFoTUhaUzJDMitR?=
- =?utf-8?B?U2tWaWtOcm1NQ2ZINjg4STlXTkpia0h5R3g0QmpDRE04UHluSzVNTk5OT29I?=
- =?utf-8?B?MmRlMkRCM3BzT3hDOGxlTEFRa2R1czZsRldTakRQb0wxN3JlR1Bib21NNmUy?=
- =?utf-8?B?RWtMbnBabEticG1BbmhQV09PY1BsL2FkMytIR0dOWjJuQk11L2ozZFpMOVV3?=
- =?utf-8?B?dFNRL0JDQU44aDF6a2xIYjJJanZReTJXcmE1YVRWSnRibXQwS1ExUDhGekFP?=
- =?utf-8?B?ZmFmN2lObUV1dk1RYyt0Nnh1SmFaTTM3dUgwd3pxWnNNd1JRaGh3aFRIaVg5?=
- =?utf-8?B?b0hxWFBXKzBkamVCQXhZT2lzbEJWdW5yM2dsNmNaNHNLNWcvcWJnYzY3elJL?=
- =?utf-8?B?U2RFS3Z2eTNCSmY2ckZPK2ljWGZxM1BXRDBhWDNPdjZpN0xjVnJTOGs0YUQ1?=
- =?utf-8?B?Y3NMcjlleWRLeXBTbHcrUUZVZG5vYlh2T1QybGhIa3FiS25udWNMdkdkRjJx?=
- =?utf-8?B?SU5xbG5ES2JZNEpmM3ZDZUtlL2lua2F0OW45U1Ivb2w3MXh3SUo5MkFCVVBV?=
- =?utf-8?B?dVlNMGFML2RscUk2VU9qMDM5cWFCZDB0blI1aGhuc29aZTloYUo1VUxKS1E2?=
- =?utf-8?B?dHRUWk91SWhmR2pEUmthVndKM1BIeE9hZGlyQSs4MjcvNncvTnZ3bnZJTjB3?=
- =?utf-8?B?OGEzRXVIWXhMTENvczJQYzAxQmhRbVFFM2JjaStXeS91cDMwOEFUTFBtT3BQ?=
- =?utf-8?B?a0ZDcStyUlBObDRrOTFvTWtNZGMyeDJ0VFZPUUdpZzgvNFdWdGNEZExQQnQ4?=
- =?utf-8?B?eHFReW13bzBYY1B4UklQbTREUDdOSm8rUnFKQklzVC9iejVnR01RbHFkUmhl?=
- =?utf-8?B?VTNVdFZ5UjJldmJtMHE4b0VtK0s3T09JWkpNREdlQXltbEFkNVdwbmRWNEpu?=
- =?utf-8?B?c3dWYVFBbjRGejI3U0JGTDBDUmpYYmM5cktobThKM2xuL0dTMnk0TU1CVFdO?=
- =?utf-8?B?dVpxQzlkdVQ2M1VvYnIrRUs2SmMwZHRyV3J2dWlPaUVSd0J0L1d0bnZuVk9C?=
- =?utf-8?B?cERiek1VSGRHNktkcFk4Z25ranVwWGg4cVNaVTVBT2Z3N1RyOU82S2RTdEM0?=
- =?utf-8?B?NUtoUzlQcnJPdUdCQW4zblNIODNKaGpOc3RLUXpzT3p6eFRmU3ZpVXFhWUly?=
- =?utf-8?B?S1BQS01UNVpUcGtrZlIwSzdSVUw3eFRRQ09BRVNzRWp3eml1OTVXWVVvdTFZ?=
- =?utf-8?B?bEh1cUk2cUplRTU3RmpYMmxoeXpwbUFicStybzVFdjBHWmdRVU10N0hhMkNW?=
- =?utf-8?B?WE55VUNRZGJ1WGZjNWJDMFdZb3FDR0FQWVJJajQ3eEhvVHFIMEs0TUhSSW9C?=
- =?utf-8?B?Z1krMVpSSWw2TzgwUlVJUVAvSUxtcHVGa25SMHYxb2VhU3NkdzdUWGwwbzZj?=
- =?utf-8?B?dEwxeUxKN1NKQWNrME96UEJUbVFFVCtEblEyVVArbnMyeVZ0Z2xXa0VmcFhP?=
- =?utf-8?B?T1hQSXVYdGcvYWdadCtIdmpHSDMyL0FTSXRGNGJlOHVKMDRCV01CVkQxNnpC?=
- =?utf-8?B?Wkl3Zm8xa1Zma2tEc0w1VlpBanhTNjB5cW1DNkN2dHB4RVBxT3FkYlRKWnJq?=
- =?utf-8?B?bE5ZdnBwVmhUUS9CZjNSZWFreWJpRW1DeU5hWWxKZ0hiS0MxMVpDTXBNUmlK?=
- =?utf-8?B?ZFl3STF5aW1QN2VtVHBheHN4MlUwWnhzaENQZmtHMUdBSktCNTgrNVIrMWRw?=
- =?utf-8?B?S1ZVbGUwOGgvQ2w0NzA2bHV0MXhPdk83ZkRXbmxVWnFRRVVGTFFpbUV6cVda?=
- =?utf-8?B?ZEVrcTZJM3QzQ3VzVEppbStJajVUUnRKanlZbXNuRDY4VUg0d1hsWHBMVVpi?=
- =?utf-8?B?djVYNFp2WjZYNFdXNTNnMUFMWE96U29zMkdhaVNreG5oRWYwSTEyN2Z6SmJa?=
- =?utf-8?B?RVJOVEdCcHhLMEFNTVYxdTVMMzMzWjdSQUpkRExzMGJkRUNkekt0UElPV095?=
- =?utf-8?B?K0gyL2dFL1ZNR3pKdFpSVC9HWHRvc1BYZzh1N2R3WEt1Skg0WWV5L2pZa20r?=
- =?utf-8?B?QnJSVnZXcWJoVXdTSnNkbjc2M2V6QXRSb2dtdU1KWUJtb2E5OHBwWTRKV1N2?=
- =?utf-8?B?YjdFUmNIZ2l3ZzdLdE5SbW9jbWRpcy80UXVzMmh3VnpPb2NCU3FHcE1Lb3hw?=
- =?utf-8?B?bk84Ty9jblZMNGttSnR5emdTakRDSW9KN2ZrRkRER1pvL1FUUnoyakJjMU1N?=
- =?utf-8?B?VHRSMU9NV3kwVjN1WmJkN2tzSTNYY1dRb3VadTJCYmtaeFovQ0ZMZFcrRStB?=
- =?utf-8?B?a09mSU9nNjFSaWlWRXlyUUhFU04yN2pGN0pqd21HcTNyS3NSZzkxL2xvZTBS?=
- =?utf-8?B?SEtxYzd1bGFCSzJ1U1BiZ3lnVTdSNFJXOWoyQ28xczV2V3lhYkc0WkxlVDR1?=
- =?utf-8?B?LzFaNlp3V2d5UHQzTFdnOVhYTXVYNUVuYVRCU0hNNWpuMGVPd0dscGFnKy8x?=
- =?utf-8?B?ZDdwdWRJVlJDNnBKL09NRVFyS0JqMWJvQWlVUnVYemtMQmxMbk1vZjhYWmhI?=
- =?utf-8?B?c0ttY25zTnlJNHZWOFNmV3dSTDkzUm42WUk4MGExVE9VZGdjUmNpMElGTnA2?=
- =?utf-8?B?QXlKbUJ5VVB6a1dtajBDK0h1OFJ1V1JJNmJMTnBRVGNNaE1HOWFZOXB4MjJh?=
- =?utf-8?Q?XehnAAUmenDEAI=3D?=
+	=?utf-8?B?amhteHlmTGYreWdWVXlKT1hCTnFLZmI1d0NVUW0yV1QxbUszNktkdlZ2d29B?=
+ =?utf-8?B?WFg2dGdsR1BWcFkvUGxrZkV6ODdQNExlWnJpeGNFYVRiN0U0N2pLSVZkTkU1?=
+ =?utf-8?B?aFZxUnowWTZLdGpYR0U0SlhnVGJrc0VCQloyOHNGTGdQOVg2TFAxZFpNK2w1?=
+ =?utf-8?B?NFhjZzVWZ3UrMnVTTjFuckU1L3VWNDhEckozbmtBTHlKRFNuNEdEa2dteHMv?=
+ =?utf-8?B?ZjRqQjlhRlBrQlJCS3A2Rkl5aWpFdEozRkJ0N01Nbm8zc3RKYVhuNWJHdW5E?=
+ =?utf-8?B?OStWLzQwRTNCZCtybzN5d0pvaVN2SmgwUVZwTjBHV2NheDhOQlgxQlQ1VWg4?=
+ =?utf-8?B?L01kUjFjdHBqSkhZdGI1ZjZkZDVlZEdubjN0TjNSWVZLV3dWcTJjbHdzWHBa?=
+ =?utf-8?B?OWt6a0ZONmZldXM0THlsUGZhdnVZd002TEpjVE5wYXZaT3Jsb1NOSVVWcDcv?=
+ =?utf-8?B?c2dLU0pnM1pZRmpFZWIwN216dVc5SmQwRk15aHlmMUYyV1ljVjJvaUZJc1F1?=
+ =?utf-8?B?QmFJa1hJZU5sQU02ZXgyQUlJTUZUekYxWEJWK2d2S2owaTNXT1RNTEpCcUZG?=
+ =?utf-8?B?V04vWnF2ekhNMWRhRncwdnNoK2N6QS9OREFoSnBFT2N0aGwzcXVmUXhqVUZ5?=
+ =?utf-8?B?d2xzRllORXRvQnJyOW5xSmdPNXI3WktqbFlDcUJOVXp2VEErT0RXL2FKVGFX?=
+ =?utf-8?B?dE1HQU03TTFsV2pHemdEQnZKL0R3OUorMWY2aDU3K0k2TUVkQ29jUUc3Y20w?=
+ =?utf-8?B?VjM4SW1RQXZhY1FvS1BweDFqZjJ2d3Z4TUwzZVJZL050QmZTanhvSjJldFQx?=
+ =?utf-8?B?MWE4WElWOHRrUys3RmptRkFlOU1SOW5GVkVzL0dHR3FWeDkrQ0c2c0dIcU5B?=
+ =?utf-8?B?UmorUW1lZTFIR3M1eEkrenhjV3NVSmhCUUhoS01GekkxK0pvRWVlQWJDODNv?=
+ =?utf-8?B?NXhpVzJqcEdaeFpvcGZUZURwd3I3RlJZSWZWUFltTFhXRlMvaFVBcHZqU3lQ?=
+ =?utf-8?B?VkdmSXByTElyUjVSSTQvbTBxUi9xM3Z1YjJkb0drV0NvUEEwY251WFJzTGln?=
+ =?utf-8?B?Z1gvZnFmNVkxL3B2UVhoKzVLanRtc3h2ZVBUajhHQlN2aWRLYkROdktqRDlp?=
+ =?utf-8?B?S29MRnFQRE9SM0ROeUVhZGRoZlF5WisxSTFlUTRYRTdzM0tzV3ZxQU1UdDU0?=
+ =?utf-8?B?WXh4SmF4MVM4RHZXMlFOYzc1RzFLY1VSVkt1bDNvUG56NmFrM29tOGNHQnlz?=
+ =?utf-8?B?OXZ2V1pKc2g3YnJ2eTBRamZYOHI1TUh1enNuNDFKc0d0UW4wU1d1Zmo5b0Rz?=
+ =?utf-8?B?MFV4T3dwYXFOVjJheUZLUmZOWU9DbnN3WEwyaGtmdXU4b0k1UUNYcER2b2hU?=
+ =?utf-8?B?aWxnTFB0WjhkUUhWQ0RzVWRCVkJDNThFMFVZVDRIeDlLdHQ1WkhQeVEvek1t?=
+ =?utf-8?B?UGkrN0lpRU8wd0JKK2lVM2Z5V0F4TkxwMVJVeG1Jc1l2MWZhKzlHalNUSGRM?=
+ =?utf-8?B?aTRhSVdpRzhSZUFwZ0RXQlpQRkllc3VnYzBCRUc4TVgva3Vuc0ViNHJPK1VD?=
+ =?utf-8?B?dDNySzViSTZPZXN3NnN2WE1wQVJQb3JtWVBRcVdiSHZWdEY2UkE4TEVpaTNI?=
+ =?utf-8?B?UFQzWmxBYU5JaXhGZVJXdVJUU05tWUJlVXphZ200SU5taEsvNmVodndNQ3lT?=
+ =?utf-8?B?UmNiVmkzTStOYVN3eXJheUJNeUdEZUFOTHQ2U2RDKzN0cXVQa2JjdXpZZGhK?=
+ =?utf-8?Q?Cz4xLGlmy8FG89HQmM=3D?=
 MIME-Version: 1.0
 
---------------r8yGszEO1ZI5TzTWXovrD4Yj
-Content-Type: text/plain; charset="UTF-8"; format=flowed
-Content-Transfer-Encoding: 8bit
-
-Dear student,
-
-I am writing to remind you of the pre-registration schedule for Summer 
-and Fall 2025. Pay special attention to the deadlines; some have late 
-fees associated with them. All continuing students — including graduate 
-students taking thesis or research credit — are required to pre-register 
-for fall term to maintain their student status. Dates, deadlines, and 
-details are below.
-
-If you have any questions, please contact the Registrar’s Office 
-<mailto:records@mit.edu?subject=Pre-Registration>.
-
-Thank you.
-
-------------------------------------------
-
-*Pre-registration forSummer and Fall 2025 *
-
-*_Summer 2025_*__
-
-  * Pre-registration opened at 9 AM on Thursday, May 1 and closes at 5
-    PM on Thursday, May 29.
-  * Submit your pre-registration
-    <https://registrar.mit.edu/registration-academics/pre-registration>using
-    WebSIS <http://websis.mit.edu/>.
-  * After pre-registration closes, you may use Online Registration
-    <http://registration.mit.edu/>to add your classes beginning June 2.
-
-*_Fall 2025_*
-
-  * Pre-registration
-    <https://registrar.mit.edu/registration-academics/pre-registration>for
-    the fall term opened at 9 AM on Thursday, May 1.
-  * We encourage you to makeCI-H/HW subject selections
-    <https://registrar.mit.edu/registration-academics/academic-requirements/communication-requirement/ci-hhw-subjects/ci-hhw>before
-    June 13. After this date, you may only add yourself to CI-H/HW
-    waitlists.
-  * Once you have submitted your initial pre-registration on WebSIS,
-    <http://websis.mit.edu/>you can modify your subject selections until
-    pre-registration closes on Thursday, August 21 at 5 PM.
-  * There is an $85 late fee for those who do not pre-register by August 21.
-
---------------r8yGszEO1ZI5TzTWXovrD4Yj
-Content-Type: text/html; charset="UTF-8"
-Content-Transfer-Encoding: 8bit
-
-<!DOCTYPE html><html><head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  </head>
-  <body style="word-wrap:break-word" vlink="#954F72" link="#0563C1" lang="EN-US">
-    <div class="moz-forward-container">
-      <div class="WordSection1">
-        <p class="MsoNoSpacing" style="margin:0in"><span style="font-size:11.0pt;font-family:&quot;Calibri&quot;,sans-serif"><o:p></o:p>Dear
-            student,<o:p></o:p></span></p>
-        <p class="MsoNoSpacing" style="margin:0in"><span style="font-size:11.0pt;font-family:&quot;Calibri&quot;,sans-serif">&nbsp;<o:p></o:p></span></p>
-        <p class="MsoNoSpacing" style="margin:0in"><span style="font-size:11.0pt;font-family:&quot;Calibri&quot;,sans-serif">I am
-            writing to remind you of the pre-registration schedule for
-            Summer and Fall 2025. Pay special attention to the
-            deadlines; some have late fees associated with them. All
-            continuing students — including graduate students taking
-            thesis or research credit — are required to pre-register for
-            fall term to maintain their student status. Dates,
-            deadlines, and details are below.
-            <o:p></o:p></span></p>
-        <p class="MsoNoSpacing" style="margin:0in"><span style="font-size:11.0pt;font-family:&quot;Calibri&quot;,sans-serif"><o:p>&nbsp;</o:p></span></p>
-        <p class="MsoNoSpacing" style="margin:0in"><span style="font-size:11.0pt;font-family:&quot;Calibri&quot;,sans-serif">If
-            you have any questions, please contact the
-          </span><a href="mailto:records@mit.edu?subject=Pre-Registration" target="_blank" moz-do-not-send="true"><span style="font-size:11.0pt;font-family:&quot;Calibri&quot;,sans-serif;color:blue">Registrar’s
-              Office</span></a><span style="font-size:11.0pt;font-family:&quot;Calibri&quot;,sans-serif">.<o:p></o:p></span></p>
-        <p class="MsoNoSpacing" style="margin:0in"><span style="font-size:11.0pt;font-family:&quot;Calibri&quot;,sans-serif"><o:p>&nbsp;</o:p></span></p>
-        <p class="MsoNoSpacing" style="margin:0in"><span style="font-size:11.0pt;font-family:&quot;Calibri&quot;,sans-serif">Thank
-            you.<o:p></o:p></span></p>
-        <p class="MsoNoSpacing" style="margin:0in"><span style="font-size:11.0pt;font-family:&quot;Calibri&quot;,sans-serif"><o:p>&nbsp;</o:p></span></p>
-        <p class="MsoNoSpacing" style="margin:0in"><span style="font-size:11.0pt;font-family:&quot;Calibri&quot;,sans-serif"><o:p>&nbsp;</o:p></span></p>
-        <p class="MsoNoSpacing" style="margin:0in"><span style="font-size:11.0pt;font-family:&quot;Calibri&quot;,sans-serif">------------------------------------------<o:p></o:p></span></p>
-        <p class="MsoNoSpacing" style="margin:0in"><b><span style="font-size:11.0pt;font-family:&quot;Calibri&quot;,sans-serif">Pre-registration
-              for<span style="color:#7030A0">
-              </span>Summer and Fall 2025 </span></b><span style="font-size:11.0pt;font-family:&quot;Calibri&quot;,sans-serif"><o:p></o:p></span></p>
-        <p class="MsoNoSpacing" style="margin:0in"><span style="font-size:11.0pt;font-family:&quot;Calibri&quot;,sans-serif"><o:p>&nbsp;</o:p></span></p>
-        <p class="MsoNoSpacing" style="margin:0in"><b><u><span style="font-size:11.0pt;font-family:&quot;Calibri&quot;,sans-serif">Summer
-                2025</span></u></b><u><span style="font-size:11.0pt;font-family:&quot;Calibri&quot;,sans-serif"><o:p></o:p></span></u></p>
-        <ul style="margin-top:0in" type="disc">
-          <li class="MsoNoSpacing" style="margin-top:0in;margin-bottom:0in;mso-list:l1 level1 lfo1">
-            <span style="font-size:11.0pt;font-family:&quot;Calibri&quot;,sans-serif">Pre-registration
-              opened at 9 AM on Thursday, May 1 and closes at 5 PM on
-              Thursday, May 29.&nbsp;
-              <o:p></o:p></span></li>
-          <li class="MsoNoSpacing" style="margin-top:0in;margin-bottom:0in;mso-list:l1 level1 lfo1">
-            <span style="font-size:11.0pt;font-family:&quot;Calibri&quot;,sans-serif">Submit
-              your </span>
-            <a href="https://registrar.mit.edu/registration-academics/pre-registration" moz-do-not-send="true"><span style="font-size:11.0pt;font-family:&quot;Calibri&quot;,sans-serif;color:blue">pre-registration</span></a><span style="font-size:11.0pt;font-family:&quot;Calibri&quot;,sans-serif">
-              using
-            </span><a href="http://websis.mit.edu/" moz-do-not-send="true"><span style="font-size:11.0pt;font-family:&quot;Calibri&quot;,sans-serif">WebSIS</span></a><span style="font-size:11.0pt;font-family:&quot;Calibri&quot;,sans-serif">.<o:p></o:p></span></li>
-          <li class="MsoNoSpacing" style="margin-top:0in;margin-bottom:0in;mso-list:l1 level1 lfo1">
-            <span style="font-size:11.0pt;font-family:&quot;Calibri&quot;,sans-serif">After
-              pre-registration closes, you may use
-            </span><a href="http://registration.mit.edu/" moz-do-not-send="true"><span style="font-size:11.0pt;font-family:&quot;Calibri&quot;,sans-serif">Online
-                Registration</span></a><span style="font-size:11.0pt;font-family:&quot;Calibri&quot;,sans-serif"> to
-              add your classes beginning June 2.
-              <o:p></o:p></span></li>
-        </ul>
-        <p class="MsoNoSpacing" style="margin:0in"><span style="font-size:11.0pt;font-family:&quot;Calibri&quot;,sans-serif"><o:p>&nbsp;</o:p></span></p>
-        <p class="MsoNoSpacing" style="margin:0in"><span style="font-size:11.0pt;font-family:&quot;Calibri&quot;,sans-serif"><o:p>&nbsp;</o:p></span></p>
-        <p class="MsoNoSpacing" style="margin:0in"><b><u><span style="font-size:11.0pt;font-family:&quot;Calibri&quot;,sans-serif">Fall
-                2025</span></u></b><o:p></o:p></p>
-        <ul style="margin-top:0in" type="disc">
-          <li class="MsoNoSpacing" style="margin-top:0in;margin-bottom:0in;mso-list:l0 level1 lfo2">
-            <a href="https://registrar.mit.edu/registration-academics/pre-registration" moz-do-not-send="true"><span style="font-size:11.0pt;font-family:&quot;Calibri&quot;,sans-serif">Pre-registration</span></a><span style="font-size:11.0pt;font-family:&quot;Calibri&quot;,sans-serif"> for
-              the fall term opened at 9 AM on Thursday, May 1.&nbsp; <o:p></o:p></span></li>
-          <li class="MsoListParagraph" style="color:#7030A0;margin-top:0in;margin-bottom:0in;mso-list:l0 level1 lfo2">
-            <span style="font-size:11.0pt;font-family:&quot;Calibri&quot;,sans-serif;color:black">We
-              encourage you to make</span><span style="font-size:11.0pt;font-family:&quot;Calibri&quot;,sans-serif">
-            </span><span style="color:windowtext"><a href="https://registrar.mit.edu/registration-academics/academic-requirements/communication-requirement/ci-hhw-subjects/ci-hhw" target="_blank" moz-do-not-send="true"><span style="font-size:11.0pt;font-family:&quot;Calibri&quot;,sans-serif;color:blue">CI-H/HW
-                  subject selections</span></a></span><span style="font-size:11.0pt;font-family:&quot;Calibri&quot;,sans-serif;color:black">
-              before June 13. After this date, you may only add yourself
-              to CI-H/HW waitlists.
-            </span><span style="font-size:11.0pt;font-family:&quot;Calibri&quot;,sans-serif"><o:p></o:p></span></li>
-          <li class="MsoListParagraph" style="margin-top:0in;margin-bottom:0in;mso-list:l0 level1 lfo2">
-            <span style="font-size:11.0pt;font-family:&quot;Calibri&quot;,sans-serif;color:black">Once
-              you have submitted your initial pre-registration on
-            </span><a href="http://websis.mit.edu/" moz-do-not-send="true"><span style="font-size:11.0pt;font-family:&quot;Calibri&quot;,sans-serif">WebSIS,</span></a><span style="font-size:11.0pt;font-family:&quot;Calibri&quot;,sans-serif;color:black">
-              you can modify your subject selections until pre</span><span style="font-size:11.0pt;font-family:&quot;Calibri&quot;,sans-serif">-registration
-              closes on Thursday, August 21 at 5 PM. <o:p></o:p></span></li>
-          <li class="MsoListParagraph" style="margin-top:0in;margin-bottom:0in;mso-list:l0 level1 lfo2">
-            <span style="font-size:11.0pt;font-family:&quot;Calibri&quot;,sans-serif;color:black">There
-              is an $85 late fee for those who do not pre-register by
-              August 21.</span><span style="font-size:11.0pt;font-family:&quot;Calibri&quot;,sans-serif"><o:p></o:p></span></li>
-        </ul>
-        <p class="MsoNormal"><o:p>&nbsp;</o:p></p>
-        <p class="MsoNormal"><o:p>&nbsp;</o:p></p>
-        <p class="MsoNormal"><o:p>&nbsp;</o:p></p>
-      </div>
-    </div>
-  </body>
-</html>
-
---------------r8yGszEO1ZI5TzTWXovrD4Yj--
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8"><s=
+tyle>    .tbpContentBox    {      max-width: 920px;      font-family: "Treb=
+uchet MS", Arial, Helvetica, sans-serif;    }    a    {      color: #0782C1=
+;    }    ol,ul,dl    {      *margin-right: 0px;      padding: 0 40px;    }=
+    h1,h2,h3,h4,h5,h6    {      font-weight: normal;      line-height: 1.2;=
+    }    blockquote {      border-color: #ccc;      border-style: solid;   =
+   border-width: 0;      font-family: Georgia, Times, "Times New Roman", se=
+rif;      font-style: italic;      padding: 2px 0;      border-left-width: =
+5px;      padding-left: 20px;      padding-right: 8px;    }    hr {      -m=
+oz-border-bottom-colors: none;      -moz-border-left-colors: none;      -mo=
+z-border-right-colors: none;      -moz-border-top-colors: none;      border=
+-color: #ccc currentcolor currentcolor;      border-image: none;      borde=
+r-style: solid none none;      border-width: 1px 0 0;    }    img.right {  =
+    border: 1px solid #ccc;      float: right;      margin-left: 15px;     =
+ padding: 5px;    }    img.left {      border: 1px solid #ccc;      float: =
+left;      margin-right: 15px;      padding: 5px;    }    pre {      -moz-t=
+ab-size: 4;      overflow-wrap: break-word;      white-space: pre-wrap;    =
+}    .marker {      background-color: Yellow;    }    figure {      backgro=
+und: rgba(0, 0, 0, 0.05) none repeat scroll 0 0;      border: 1px solid #cc=
+c;      border-radius: 2px;      display: inline-block;      margin: 10px 2=
+0px;      padding: 10px;      text-align: center;    }    figure > figcapti=
+on {      display: block;      text-align: center;    }    .specialContaine=
+r {      padding: 5px 10px;      background: #eee;      border: 1px solid #=
+ccc;    }</style><div class=3D"tbpContentBox"><div>
+  <img src=3D"https://secure.touchnet.net/C21021_tsa/web/images/email-heade=
+r.jpg?t=3D1746181878653">
+</div>
+<p>Hello,</p>
+<p>
+  <br> Installment amounts for your payment plan have changed to reflect
+  new charges and/or credits.Please log in to view the full disclosure
+  statement for payment plan changes. No adjustments will be made to any
+  installment within 14 days of the payment due date.</p>
+<p>&nbsp;</p>
+<div>
+  <b>Payment Plan Details</b>
+</div>
+<div>
+  <hr>Payment Plan Name: Spring 24/25 MPP  </div>
+<div>   &nbsp;  </div>
+<div>   Changed Payment Plan Installment Schedule:  </div>
+<div>
+  <div> 1 Installment: $0.00 amount due,&nbsp;$10,054.93 paid </div>
+  <div> 2 Installment: $0.00 amount due,&nbsp;$10,054.92 paid </div>
+  <div> 3 Installment: $0.00 amount due,&nbsp;$10,072.43 paid </div>
+  <div> 4 Installment: $0.00 amount due,&nbsp;$10,072.42 paid </div>
+</div>
+<div>
+  <hr>
+</div>
+<div>   Please feel free to contact us at sfs@mit.edu, or 617.258.8600
+  if you have any questions or need assistance. You can also schedule an
+  appointment to chat over the phone or via Zoom if you prefer. Students
+  can access MITPay through WebSIS at student.mit.edu. Authorized Users
+  can access MITPay through https://secure.touchnet.net/C21021_tsa/web/logi=
+n.jsp.<br>
+  <br>Thank you,<br>The SFS Team  </div>
+<div>
+  <img src=3D"https://secure.touchnet.net/C21021_tsa/web/images/email-foote=
+r.jpg?t=3D1746181878653">
+</div></div>

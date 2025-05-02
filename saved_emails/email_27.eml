@@ -1,0 +1,413 @@
+Received: from SJ2PR01MB8658.prod.exchangelabs.com (2603:10b6:a03:56f::8) by
+ DM6PR01MB5929.prod.exchangelabs.com with HTTPS; Wed, 30 Apr 2025 08:40:02
+ +0000
+Received: from BY5PR17CA0022.namprd17.prod.outlook.com (2603:10b6:a03:1b8::35)
+ by SJ2PR01MB8658.prod.exchangelabs.com (2603:10b6:a03:56f::8) with Microsoft
+ SMTP Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.20.8699.19; Wed, 30 Apr 2025 08:39:53 +0000
+Received: from SJ5PEPF000001CF.namprd05.prod.outlook.com
+ (2603:10b6:a03:1b8:cafe::b2) by BY5PR17CA0022.outlook.office365.com
+ (2603:10b6:a03:1b8::35) with Microsoft SMTP Server (version=TLS1_3,
+ cipher=TLS_AES_256_GCM_SHA384) id 15.20.8655.35 via Frontend Transport; Wed,
+ 30 Apr 2025 08:39:53 +0000
+Authentication-Results: spf=permerror (sender IP is 2001:690:21c0:f602::a36)
+ smtp.mailfrom=ciencias.ulisboa.pt; dkim=test (signature was verified)
+ header.d=fc.ul.pt;dmarc=pass action=none header.from=fc.ul.pt;compauth=pass
+ reason=100
+Received-SPF: PermError (protection.outlook.com: domain of ciencias.ulisboa.pt
+ used an invalid SPF mechanism)
+Received: from mx02.fc.ul.pt (2001:690:21c0:f602::a36) by
+ SJ5PEPF000001CF.mail.protection.outlook.com (2603:10b6:a0f:fc02::12b) with
+ Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.8699.20 via Frontend
+ Transport; Wed, 30 Apr 2025 08:39:50 +0000
+Received: from FC-MBX11.fc.ul.pt (FC-MBX11.fc.ul.pt [10.121.30.26])
+	by mx02.fc.ul.pt (8.14.4/8.14.4) with ESMTP id 53U8eK4x053296;
+	Wed, 30 Apr 2025 09:40:22 +0100
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=fc.ul.pt; s=default;
+	t=1746002422; bh=fP2ktYXw4eAfc3VJToJD/fmP/GW85O46h9tF9TDVBNc=;
+	h=References:In-Reply-To:Reply-To:From:Date:Subject:To:CC:From;
+	b=eaIQ0pn2N6c2kR6pIjF/9dVs+eurcia3iqdU7BFnTiTdW4xcXAVyPW+hLMkOL+J7s
+	 Kqd3+vGTJCDygQ8yYX+co3JvrjL+Rg652DoSM3mPBYwBi47b4Uq1y4G6SvaGEPt87C
+	 9g2vFvjqOHEr65oldXhprC1MlHEzxJDEHsx4g7wQ=
+Received: from FC-MBX13.fc.ul.pt (2001:690:21c0:f330::28) by FC-MBX11.fc.ul.pt
+ (2001:690:21c0:f330::26) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.2.1258.12; Wed, 30 Apr
+ 2025 09:38:02 +0100
+Received: from FC-MBX11.fc.ul.pt (2001:690:21c0:f330::26) by FC-MBX13.fc.ul.pt
+ (2001:690:21c0:f330::28) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.2.1258.12; Wed, 30 Apr
+ 2025 09:38:00 +0100
+Received: from smtp.ciencias.ulisboa.pt (194.117.42.59) by FC-MBX11.fc.ul.pt
+ (10.121.30.26) with Microsoft SMTP Server id 15.2.1258.12 via Frontend
+ Transport; Wed, 30 Apr 2025 09:38:00 +0100
+Received: from mail-ed1-f45.google.com (mail-ed1-f45.google.com [209.85.208.45])
+	(using TLSv1.2 with cipher ECDHE-RSA-AES128-GCM-SHA256 (128/128 bits))
+	(No client certificate requested)
+	(Authenticated sender: pjmateus@fc.ul.pt)
+	by smtp.ciencias.ulisboa.pt (Postfix) with ESMTPSA id CA4BA4023B4A;
+	Wed, 30 Apr 2025 09:37:59 +0100 (WEST)
+Received: by mail-ed1-f45.google.com with SMTP id 4fb4d7f45d1cf-5f8619031f1so181541a12.1;
+        Wed, 30 Apr 2025 01:38:00 -0700 (PDT)
+X-Forwarded-Encrypted: i=1; AJvYcCUw28FUS2OcFBckR+LcgEYcqS92QP3gBL2Uqv27oG0PxSj3qhcf2+x4MMxEjkhg83OLKUI6aI6M@mit.edu, AJvYcCWlaIFQYm5vj0zmXrZdoJSj86aeiB5PYZS3uwNzdY1CA6Z1zfWJDgL3cQWS4lDRGKV8onlbH2jynO8=@mit.edu
+X-Gm-Message-State: AOJu0Yy3K/6LpOFu759sJOplsd87SlF+wLLQlgbBwxLFqMGCkCtV2SOh
+	+xYJPdsJcXhM+F6Scp00uUkZMOGq3H7L0bWYfL7CpwmzVJmBOBEccz9N2R8YmMfc/wnsf3k5drW
+	diiDYmSQvH6L8WhJqsXzw/WJjRT8=
+X-Google-Smtp-Source: AGHT+IHMjUgTv3vYp1mJoQ9omS68OYIJkWRzGRb66BoWmiGyZYn9NXNt5ZsPfh9oTahwWFdFvtI9AcAwjFyWk4id9rk=
+X-Received: by 2002:a17:907:2d11:b0:ac7:25c9:5142 with SMTP id
+ a640c23a62f3a-acedc6065aamr74990366b.7.1746002279305; Wed, 30 Apr 2025
+ 01:37:59 -0700 (PDT)
+References: <DM6PR01MB59292FAA1C2F9D161EC0808ED0802@DM6PR01MB5929.prod.exchangelabs.com>
+ <B7DECAA7-F043-43D2-9F05-32F3C7470960@cfa.harvard.edu> <6BA8A26C-DDC8-4CB1-84CF-89A5DD676564@cfa.harvard.edu>
+ <DM6PR01MB5929C5EEA19BC33DE361740FD0832@DM6PR01MB5929.prod.exchangelabs.com>
+In-Reply-To: <DM6PR01MB5929C5EEA19BC33DE361740FD0832@DM6PR01MB5929.prod.exchangelabs.com>
+Reply-To: <pjmateus@fc.ul.pt>
+From: Pedro Mateus <pjmateus@fc.ul.pt>
+Date: Wed, 30 Apr 2025 09:37:22 +0100
+X-Gmail-Original-Message-ID: <CAC-XYObAd+VB2wAN4DW6==TAFUwUVrJ2pw9+_Bv4V3XEuGpYLw@mail.gmail.com>
+X-Gm-Features: ATxdqUEhg0hVzuhcD-91z25DyRXDzMCWlz1RXObG36lZ83iik9Cukgt8qrEO4a4
+Message-ID: <CAC-XYObAd+VB2wAN4DW6==TAFUwUVrJ2pw9+_Bv4V3XEuGpYLw@mail.gmail.com>
+Subject: Re: EGU Poster 2025
+To: Nathra Ramrajvel <nathra@mit.edu>
+CC: Scott Paine <spaine@cfa.harvard.edu>, Dhiman Mondal <dmondal@mit.edu>,
+        Pedro Elosegui <elosegui@mit.edu>,
+        Virgilio de Brito Mendes
+	<vdmendes@ciencias.ulisboa.pt>
+Content-Type: multipart/alternative; boundary="000000000000a29c720633fad576"
+X-FCUL-MailScanner-Information: Please contact the ISP for more information
+X-FCUL-MailScanner-ID: 53U8eK4x053296
+X-FCUL-MailScanner: Found to be clean
+X-FCUL-MailScanner-From: pjmateus@ciencias.ulisboa.pt
+X-Spam-Status: No
+Return-Path: pjmateus@ciencias.ulisboa.pt
+X-MS-Exchange-Organization-ExpirationStartTime: 30 Apr 2025 08:39:51.6616
+ (UTC)
+X-MS-Exchange-Organization-ExpirationStartTimeReason: OriginalSubmit
+X-MS-Exchange-Organization-ExpirationInterval: 1:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: OriginalSubmit
+X-MS-Exchange-Organization-Network-Message-Id: ed4633c9-4889-4501-598b-08dd87c29307
+X-EOPAttributedMessage: 0
+X-EOPTenantAttributedMessage: 64afd9ba-0ecf-4acf-bc36-935f6235ba8b:0
+X-MS-Exchange-Organization-MessageDirectionality: Incoming
+X-MS-PublicTrafficType: Email
+X-MS-TrafficTypeDiagnostic: SJ5PEPF000001CF:EE_|SJ2PR01MB8658:EE_|DM6PR01MB5929:EE_
+X-MS-Exchange-Organization-AuthSource: SJ5PEPF000001CF.namprd05.prod.outlook.com
+X-MS-Exchange-Organization-AuthAs: Anonymous
+X-MS-Office365-Filtering-Correlation-Id: ed4633c9-4889-4501-598b-08dd87c29307
+X-MS-Exchange-AtpMessageProperties: SA|SL
+X-MS-Exchange-Organization-SCL: 1
+X-Microsoft-Antispam: BCL:0;ARA:13230040|43022699015|8096899003|7053199007;
+X-Forefront-Antispam-Report: CIP:2001:690:21c0:f602::a36;CTRY:;LANG:en;SCL:1;SRV:;IPV:NLI;SFV:NSPM;H:mx02.fc.ul.pt;PTR:ErrorRetry;CAT:NONE;SFS:(13230040)(43022699015)(8096899003)(7053199007);DIR:INB;
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 30 Apr 2025 08:39:50.8763
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: ed4633c9-4889-4501-598b-08dd87c29307
+X-MS-Exchange-CrossTenant-Id: 64afd9ba-0ecf-4acf-bc36-935f6235ba8b
+X-MS-Exchange-CrossTenant-AuthSource: SJ5PEPF000001CF.namprd05.prod.outlook.com
+X-MS-Exchange-CrossTenant-AuthAs: Anonymous
+X-MS-Exchange-CrossTenant-FromEntityHeader: Internet
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: SJ2PR01MB8658
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:11.3071749
+X-MS-Exchange-Processed-By-BccFoldering: 15.20.8678.021
+X-Microsoft-Antispam-Mailbox-Delivery:
+	ucf:0;jmr:0;auth:0;dest:I;ENG:(910005)(944506478)(944626604)(920097)(930097)(140003);
+X-Microsoft-Antispam-Message-Info:
+	=?utf-8?B?clBENXlmeEgrcEQrZUpxdFE4bDdJSDFYanBYL054TzNNbHhYaHlyN3N6Tng5?=
+ =?utf-8?B?bFA0ajEzejlTT2d4bGkralIzUkZxK01TNXFvTm5QSEdOUkVyS0VBRUpzR0My?=
+ =?utf-8?B?K1NVV1ZURUlQek4zUW5TTE90a3BKMzhGNFVrMzFEKzRJeEZkVjBpVXg4eGU3?=
+ =?utf-8?B?RkM3UlIvYk83Rlpxejg1WXQxdUhsL003QzI0dGltVWd1STNQQno1dU1jZXpq?=
+ =?utf-8?B?NkVxeUxKZjNjeWJscFRySGRUR0VNcHd3ZzF6OTJSZ1NQM3BpQllwcE9FcUcy?=
+ =?utf-8?B?aFkzZjgxM283MW0rd3JGaHVGNUcyalZWeFBuZnFDQXFBWVpxaS9kWWt5c2Zl?=
+ =?utf-8?B?RDdBeThObGY3dFFKbzRXYWVmWWtHVGNwWllIbGhKaklybE9KOGQvZHVnZk82?=
+ =?utf-8?B?S3pOY1NnWDlBNGVkcS9EbGhHM2tNRlpUVlM1Zk9LcDUxbkNKMlFnaXFBYjds?=
+ =?utf-8?B?MWNMQzQrUFpQR1dSQ2JYWHhWTW5vVTRucTErRU9mODBzNHVyQ0F3cFcxSVdD?=
+ =?utf-8?B?eXU2YXhtVFlOeElUdFhPSUFxczZBdUlWSWdpWkJ6M3ZwbHdrbm9OalpwL2xh?=
+ =?utf-8?B?SWxSZ3p4ODdkNENGSnNVU2pvRlVET1hQRFVhbjFoVU5nbzdvZEZLbmFsZ09J?=
+ =?utf-8?B?aG55TnBDZVlOMTFPSVpSOGxYM0JKMTJuSHZwNkVSY2NvVk9JOTRESW5BMEg4?=
+ =?utf-8?B?K3dKdEV1RnU3VHpPcm40a09DNWlsOWFvYjhucFdkakNuS0pKdjY0VkRlUDJW?=
+ =?utf-8?B?QXY1RkcyYjdLTjc1T3dCcEp5MnliL1M4a0R3dis4M2E3QlNKaWxBRXZhdXd1?=
+ =?utf-8?B?SHFFTktEUndMODk0cWJoS0lZdThLYm5OUTQrSUpKYTRjQ1BnNHd0Vm92bEFW?=
+ =?utf-8?B?bTRXQUJxaUFQZUhFTzRLOE9LK1R0bEZqOGd5cTVIR1Q4V2pkQXVHcHVTcjcz?=
+ =?utf-8?B?Q2EwR3lpc2twK3JmcnU0blpCOElxakpuUXZiWC8rSFpLWitYelgyajBnY1hG?=
+ =?utf-8?B?ODR2cWM2cTUyOERJTGRiRFNNMWVRbHAzRWtYaTFUVlhGSmRuVi8wMitPOStV?=
+ =?utf-8?B?VlhGR0lJZ3Q4Wjg0US9LbnVoRXVZUU5GYlF2UFI4ZThtZUJvWHdxazF3clFq?=
+ =?utf-8?B?TFE1ZkpCbmJvMFhSSzdtQ2h5L2ZkRHVHNVRZRlgzK29LbDhCVG14Ujl1OSs4?=
+ =?utf-8?B?VEhpTFEza3ZERUR3OFdCRlM4TldKL1crbG02a3ZKTWZFL1lPbm8zcWxXVmll?=
+ =?utf-8?B?LzRxb3krNU1EZDUxV1pwZHFpY2RBVkphSm80dGVmcWJkcWNNOE1TcmNkeVgz?=
+ =?utf-8?B?MDJET1M2VzI0aGNGMkZPdlFYanQvZHZpTkJsTk1XdjNNZFRvR1NtYlBuYUpw?=
+ =?utf-8?B?VmZhOE1Ta0NXVHBRcFNwUmRpZm5QRlVQZHAvUFBwb05XcThYVXpiT1BQZ3N5?=
+ =?utf-8?B?L3VncG9jU0U5bDA5NXk1ejNPV0JFTDE5WXNKMmVRbzJHWEJxVXQwSVRCNnor?=
+ =?utf-8?B?SnRjc0JGUmY4OTdodEplaXNOZDlBajd4cWV5d0ZhaWtjUnpKc2JSYVp6Mmkw?=
+ =?utf-8?B?VE5sWThyTDZjYmFyRFVrRHJDcnp1Y1YrNm9rVXBtUHplU0tSQld4eDhEZHFt?=
+ =?utf-8?B?aitzMGlnL0xRTUhKb3JJZi93MEcrMGgxWk9jWDcvT3FrZ0FUR2NHZkhUeit3?=
+ =?utf-8?B?a0JzcnMvcmh1Mnphb3Q4Z09tTXc2QzJQV0JPZ2U4QmtONHozMS81Z2V3T1VT?=
+ =?utf-8?B?VTFjSDFLUGVlNk1GRVhwVWM3U0dTYmtFWDJzc2gvY1U2NEhWOWtnQ3phWmIy?=
+ =?utf-8?B?Zng1TzEyaGFXK09BbFdlOUU4NmZDVi82TWZ5ZUc5dHpjZ3YwMThlMmJ6L0Zs?=
+ =?utf-8?B?S25veUV2N0Y5cVlNRGlGWkdnTGNSWWROdVdtMElqV1JCR2V2QmZqcnozRVJx?=
+ =?utf-8?B?VWozMVlGUmI0cnRob2xXUXd1dTBqaURsays4SGt3Qm9ZVkNQcCtic20wQzJp?=
+ =?utf-8?B?QldSdjVLNkNPYlRPQ3Rvb0dReUpQRTlyZHhXS3Zud1Y5cHZGNzZZbzE2SUR3?=
+ =?utf-8?B?MS96ZGsySzVIZXJOeUFPSitmSHZhbllXSW0zZzNGcTVHYXJjL2JnY0Rka1lv?=
+ =?utf-8?B?dDdjUENJYlZaaHM1M3R4bGRFays3aXN1STRiM1BKV3YrUUZiSlhvRGszL0k5?=
+ =?utf-8?B?U1V2dFdrUTB6L2JsSndFb2JlTzZ3SDd6cVZhaVBoZC9FR2h1QWs2VUthbjhz?=
+ =?utf-8?B?VkdMY2FJbVNBN2V5YWI0OFhkcG95d1N4d2NMeGd5NkgzKzU0RDBoblVKenNI?=
+ =?utf-8?B?WGI1NCt6Qk1FbXhxc2xRd2ZJWDhXTlEzb0JoYXZiSS8rQ0doM3V0andjWmRX?=
+ =?utf-8?B?TnpaYmwzaDY2T3l1QnpsNDM2RzhSS1BtdFFGQXlFR1V2MmdJcmw2ZHBXSFFs?=
+ =?utf-8?B?UEk0aUVwdkpWNm9NQzMrbmtGVit0dk0rNDFORWFLeURwMHVjbDI4QW9MYVdy?=
+ =?utf-8?B?MlAvSGMrREtGNHlyc3RkQlo4TFNRNjAxZzRWcGFDODduN1pLQy92OG9EcFNN?=
+ =?utf-8?B?YWVRQzdyLzJ5dCtVQk4xREwyZVZKN3c3YytSVFo1NFNrdmYzVWQ2SWVkQ3NH?=
+ =?utf-8?B?T0I4YWlkTzRTNUQ5WERlZTJYSDNwa1ZpZXUza2V5THFpbzRqcUFyWWJQM3F1?=
+ =?utf-8?B?K2VIcEhrU0RhWWhISDU1amdwamlVQkRmY3puNXlYSHZNOUJpZXFOY3kvNWZI?=
+ =?utf-8?B?Y1BXRkdhNnN6MEs2dzArbVlScjhhbmJhTFB4MWVFcFd0dlgwRXVCbE5PNzE1?=
+ =?utf-8?B?RFlpdjZ4UjZjSGlEMWxNVGk4UVR1enBhOEdvcUZlTWl4Tm5ZUjBFNGsvNUN3?=
+ =?utf-8?B?NVhUc05xS0Myd3pQdmxlS21ZZz09?=
+MIME-Version: 1.0
+
+--000000000000a29c720633fad576
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+Hi Nathra,
+
+Looks great! nothing to add.
+
+Best,
+Pedro Mateus
+
+Nathra Ramrajvel <nathra@mit.edu> escreveu (quarta, 30/04/2025 =C3=A0(s) 04=
+:45):
+
+> Hello,
+>
+> Thank you all for the suggestions, I have made the changes and submitted
+> the poster!
+>
+> Thanks,
+> Nathra
+> ------------------------------
+> *From:* Scott Paine <spaine@cfa.harvard.edu>
+> *Sent:* Tuesday, April 29, 2025 10:10 PM
+> *To:* Nathra Ramrajvel <nathra@mit.edu>
+> *Cc:* Dhiman Mondal <dmondal@mit.edu>; Pedro Elosegui <elosegui@mit.edu>;
+> pjmateus@fc.ul.pt <pjmateus@fc.ul.pt>; Virgilio de Brito Mendes <
+> vdmendes@ciencias.ulisboa.pt>
+> *Subject:* Re: EGU Poster 2025
+>
+> Oops=E2=80=94just spotted another =E2=80=9CAzoers=E2=80=9D -> =E2=80=9CAz=
+ores=E2=80=9D in the right panel of fig.
+> 1.
+>
+> On Apr 29, 2025, at 10:08=E2=80=AFPM, Scott Paine <spaine@cfa.harvard.edu=
+> wrote:
+>
+> Hi Nathra,
+>
+> Looks great! I noticed only one typo, =E2=80=9Ccontinuously operation=E2=
+=80=9D ->
+> =E2=80=9Ccontinuously operating=E2=80=9D at second bullet point under Dat=
+a & Methods.
+>
+> Best,
+>
+> Scott
+>
+>
+> On Apr 29, 2025, at 6:28=E2=80=AFPM, Nathra Ramrajvel <nathra@mit.edu> wr=
+ote:
+>
+> Hi all,
+>
+> I hope you're doing well!
+>
+> I=E2=80=99ve attached a draft of the poster we=E2=80=99re planning to sub=
+mit for the EGU
+> 2025 conference. Let me know if you have any comments or suggestions by t=
+he
+> end of today! Apologies for the short notice.
+>
+> Thank you,
+> Nathra
+> <Nathra_EGU_2025.pdf>
+>
+>
+>
+>
+
+--=20
+Pedro Mateus
+Investigador no Instituto Dom Luiz (IDL)
+Dep. Eng. Geogr=C3=A1fica, Geof=C3=ADsica e Energia (DEGGE)
+Faculdade Ci=C3=AAncias da Universidade de Lisboa (FCUL), C8, 8.1.52
+1749-016 Lisboa, Portugal
+Tel: +351967578667
+
+--000000000000a29c720633fad576
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8"><d=
+iv dir=3D"ltr"><div class=3D"gmail_default" style=3D"font-family:tahoma,san=
+s-serif;font-size:small">Hi Nathra,<br><br>Looks great!&nbsp;nothing to add=
+.<br><br>Best,<br>Pedro Mateus</div></div><br><div class=3D"gmail_quote gma=
+il_quote_container"><div dir=3D"ltr" class=3D"gmail_attr">Nathra Ramrajvel =
+&lt;<a href=3D"mailto:nathra@mit.edu">nathra@mit.edu</a>&gt; escreveu (quar=
+ta, 30/04/2025 =C3=A0(s) 04:45):<br></div><blockquote class=3D"gmail_quote"=
+ style=3D"margin:0px 0px 0px 0.8ex;border-left:1px solid rgb(204,204,204);p=
+adding-left:1ex"><div class=3D"msg5172734425745049789">
+
+
+
+
+<div dir=3D"ltr">
+<div style=3D"font-family:Aptos,Aptos_EmbeddedFont,Aptos_MSFontService,Cali=
+bri,Helvetica,sans-serif;font-size:12pt;color:rgb(0,0,0)">
+Hello,</div>
+<div style=3D"font-family:Aptos,Aptos_EmbeddedFont,Aptos_MSFontService,Cali=
+bri,Helvetica,sans-serif;font-size:12pt;color:rgb(0,0,0)">
+<br>
+</div>
+<div style=3D"font-family:Aptos,Aptos_EmbeddedFont,Aptos_MSFontService,Cali=
+bri,Helvetica,sans-serif;font-size:12pt;color:rgb(0,0,0)">
+Thank you all for the suggestions, I have made the changes and submitted th=
+e poster!</div>
+<div style=3D"font-family:Aptos,Aptos_EmbeddedFont,Aptos_MSFontService,Cali=
+bri,Helvetica,sans-serif;font-size:12pt;color:rgb(0,0,0)">
+<br>
+</div>
+<div style=3D"font-family:Aptos,Aptos_EmbeddedFont,Aptos_MSFontService,Cali=
+bri,Helvetica,sans-serif;font-size:12pt;color:rgb(0,0,0)">
+Thanks,</div>
+<div style=3D"font-family:Aptos,Aptos_EmbeddedFont,Aptos_MSFontService,Cali=
+bri,Helvetica,sans-serif;font-size:12pt;color:rgb(0,0,0)">
+Nathra</div>
+<div id=3D"m_5172734425745049789appendonsend"></div>
+<hr style=3D"display:inline-block;width:98%">
+<div id=3D"m_5172734425745049789divRplyFwdMsg" dir=3D"ltr"><font face=3D"Ca=
+libri, sans-serif" style=3D"font-size:11pt" color=3D"#000000"><b>From:</b> =
+Scott Paine &lt;<a href=3D"mailto:spaine@cfa.harvard.edu" target=3D"_blank"=
+>spaine@cfa.harvard.edu</a>&gt;<br>
+<b>Sent:</b> Tuesday, April 29, 2025 10:10 PM<br>
+<b>To:</b> Nathra Ramrajvel &lt;<a href=3D"mailto:nathra@mit.edu" target=3D=
+"_blank">nathra@mit.edu</a>&gt;<br>
+<b>Cc:</b> Dhiman Mondal &lt;<a href=3D"mailto:dmondal@mit.edu" target=3D"_=
+blank">dmondal@mit.edu</a>&gt;; Pedro Elosegui &lt;<a href=3D"mailto:eloseg=
+ui@mit.edu" target=3D"_blank">elosegui@mit.edu</a>&gt;; <a href=3D"mailto:p=
+jmateus@fc.ul.pt" target=3D"_blank">pjmateus@fc.ul.pt</a> &lt;<a href=3D"ma=
+ilto:pjmateus@fc.ul.pt" target=3D"_blank">pjmateus@fc.ul.pt</a>&gt;; Virgil=
+io de Brito Mendes &lt;<a href=3D"mailto:vdmendes@ciencias.ulisboa.pt" targ=
+et=3D"_blank">vdmendes@ciencias.ulisboa.pt</a>&gt;<br>
+<b>Subject:</b> Re: EGU Poster 2025</font>
+<div>&nbsp;</div>
+</div>
+<div>Oops=E2=80=94just spotted another =E2=80=9CAzoers=E2=80=9D -&gt; =E2=
+=80=9CAzores=E2=80=9D in the right panel of fig. 1.<br id=3D"m_517273442574=
+5049789x_lineBreakAtBeginningOfMessage">
+<div><br>
+<blockquote type=3D"cite">
+<div>On Apr 29, 2025, at 10:08=E2=80=AFPM, Scott Paine &lt;<a href=3D"mailt=
+o:spaine@cfa.harvard.edu" target=3D"_blank">spaine@cfa.harvard.edu</a>&gt; =
+wrote:</div>
+<br>
+<div>
+<div>Hi Nathra,
+<div><br>
+</div>
+<div>Looks great! I noticed only one typo, =E2=80=9Ccontinuously operation=
+=E2=80=9D -&gt; =E2=80=9Ccontinuously operating=E2=80=9D at second bullet p=
+oint under Data &amp; Methods.</div>
+<div><br>
+</div>
+<div>Best,</div>
+<div><br>
+</div>
+<div>Scott</div>
+<div><br>
+</div>
+<div><br>
+<div>
+<blockquote type=3D"cite">
+<div>On Apr 29, 2025, at 6:28=E2=80=AFPM, Nathra Ramrajvel &lt;<a href=3D"m=
+ailto:nathra@mit.edu" target=3D"_blank">nathra@mit.edu</a>&gt; wrote:</div>
+<br>
+<div>
+<div style=3D"font-style:normal;font-variant-caps:normal;font-weight:400;le=
+tter-spacing:normal;text-align:start;text-indent:0px;text-transform:none;wh=
+ite-space:normal;word-spacing:0px;text-decoration:none;font-family:Aptos,Ap=
+tos_EmbeddedFont,Aptos_MSFontService,Calibri,Helvetica,sans-serif;font-size=
+:12pt">
+Hi all,</div>
+<div style=3D"font-style:normal;font-variant-caps:normal;font-weight:400;le=
+tter-spacing:normal;text-align:start;text-indent:0px;text-transform:none;wh=
+ite-space:normal;word-spacing:0px;text-decoration:none;font-family:Aptos,Ap=
+tos_EmbeddedFont,Aptos_MSFontService,Calibri,Helvetica,sans-serif;font-size=
+:12pt">
+<br>
+</div>
+<div style=3D"font-style:normal;font-variant-caps:normal;font-weight:400;le=
+tter-spacing:normal;text-align:start;text-indent:0px;text-transform:none;wh=
+ite-space:normal;word-spacing:0px;text-decoration:none;font-family:Aptos,Ap=
+tos_EmbeddedFont,Aptos_MSFontService,Calibri,Helvetica,sans-serif;font-size=
+:12pt">
+I hope you're doing well!</div>
+<div style=3D"font-style:normal;font-variant-caps:normal;font-weight:400;le=
+tter-spacing:normal;text-align:start;text-indent:0px;text-transform:none;wh=
+ite-space:normal;word-spacing:0px;text-decoration:none;font-family:Aptos,Ap=
+tos_EmbeddedFont,Aptos_MSFontService,Calibri,Helvetica,sans-serif;font-size=
+:12pt">
+<br>
+</div>
+<div style=3D"font-style:normal;font-variant-caps:normal;font-weight:400;le=
+tter-spacing:normal;text-align:start;text-indent:0px;text-transform:none;wh=
+ite-space:normal;word-spacing:0px;text-decoration:none;font-family:Aptos,Ap=
+tos_EmbeddedFont,Aptos_MSFontService,Calibri,Helvetica,sans-serif;font-size=
+:12pt">
+I=E2=80=99ve attached a draft of the poster we=E2=80=99re planning to submi=
+t for the EGU 2025 conference. Let me know if you have any comments or sugg=
+estions by the end of today! Apologies for the short notice.</div>
+<div style=3D"font-style:normal;font-variant-caps:normal;font-weight:400;le=
+tter-spacing:normal;text-align:start;text-indent:0px;text-transform:none;wh=
+ite-space:normal;word-spacing:0px;text-decoration:none;font-family:Aptos,Ap=
+tos_EmbeddedFont,Aptos_MSFontService,Calibri,Helvetica,sans-serif;font-size=
+:12pt">
+<br>
+</div>
+<div style=3D"font-style:normal;font-variant-caps:normal;font-weight:400;le=
+tter-spacing:normal;text-align:start;text-indent:0px;text-transform:none;wh=
+ite-space:normal;word-spacing:0px;text-decoration:none;font-family:Aptos,Ap=
+tos_EmbeddedFont,Aptos_MSFontService,Calibri,Helvetica,sans-serif;font-size=
+:12pt">
+Thank you,</div>
+<div style=3D"font-style:normal;font-variant-caps:normal;font-weight:400;le=
+tter-spacing:normal;text-align:start;text-indent:0px;text-transform:none;wh=
+ite-space:normal;word-spacing:0px;text-decoration:none;font-family:Aptos,Ap=
+tos_EmbeddedFont,Aptos_MSFontService,Calibri,Helvetica,sans-serif;font-size=
+:12pt">
+Nathra</div>
+<span id=3D"m_5172734425745049789x_cid:6865EBE6-CD9C-4FA8-BAD2-2F1D2CCD94A4=
+">&lt;Nathra_EGU_2025.pdf&gt;</span></div>
+</blockquote>
+</div>
+<br>
+</div>
+</div>
+</div>
+</blockquote>
+</div>
+<br>
+</div>
+</div>
+
+</div></blockquote></div><div><br clear=3D"all"></div><div><br></div><span =
+class=3D"gmail_signature_prefix">-- </span><br><div dir=3D"ltr" class=3D"gm=
+ail_signature"><div dir=3D"ltr"><div><div dir=3D"ltr"><span style=3D"color:=
+rgb(0,0,0)"><font face=3D"trebuchet ms, sans-serif">Pedro Mateus</font></sp=
+an><div><font face=3D"trebuchet ms, sans-serif"><font color=3D"#000000">Inv=
+estigador no Instituto Dom Luiz (IDL)</font><br style=3D"color:rgb(0,0,0)">=
+<span style=3D"color:rgb(0,0,0)">Dep. Eng. Geogr=C3=A1fica, Geof=C3=ADsica =
+e Energia (DEGGE)&nbsp;</span></font></div><div><font face=3D"trebuchet ms,=
+ sans-serif"><span style=3D"color:rgb(0,0,0)">Faculdade Ci=C3=AAncias da&nb=
+sp;</span><span style=3D"color:rgb(0,0,0)">Universidade de Lisboa (FCUL), C=
+8, 8.1.52</span><br style=3D"color:rgb(0,0,0)"><span style=3D"color:rgb(0,0=
+,0)">1749-016 Lisboa,&nbsp;</span><span style=3D"color:rgb(0,0,0)">Portugal=
+</span><br style=3D"color:rgb(0,0,0)"><span style=3D"color:rgb(0,0,0)">Tel:=
+ +351967578667</span></font><br></div></div></div></div></div>
+
+--000000000000a29c720633fad576--

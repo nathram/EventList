@@ -1,0 +1,519 @@
+Received: from IA3PR01MB8749.prod.exchangelabs.com (2603:10b6:208:536::11) by
+ DM6PR01MB5929.prod.exchangelabs.com with HTTPS; Thu, 1 May 2025 00:41:22
+ +0000
+Received: from SA0PR11CA0176.namprd11.prod.outlook.com (2603:10b6:806:1bb::31)
+ by IA3PR01MB8749.prod.exchangelabs.com (2603:10b6:208:536::11) with Microsoft
+ SMTP Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.20.8678.33; Thu, 1 May 2025 00:41:19 +0000
+Received: from SA2PEPF00003F65.namprd04.prod.outlook.com
+ (2603:10b6:806:1bb:cafe::3d) by SA0PR11CA0176.outlook.office365.com
+ (2603:10b6:806:1bb::31) with Microsoft SMTP Server (version=TLS1_3,
+ cipher=TLS_AES_256_GCM_SHA384) id 15.20.8655.40 via Frontend Transport; Thu,
+ 1 May 2025 00:41:19 +0000
+Authentication-Results: spf=pass (sender IP is 207.21.221.178)
+ smtp.mailfrom=campusgroups.com; dkim=pass (signature was verified)
+ header.d=campusgroups.com;dmarc=bestguesspass action=none
+ header.from=campusgroups.com;compauth=pass reason=109
+Received-SPF: Pass (protection.outlook.com: domain of campusgroups.com
+ designates 207.21.221.178 as permitted sender)
+ receiver=protection.outlook.com; client-ip=207.21.221.178;
+ helo=mail2.campusgroups.com; pr=C
+Received: from mail2.campusgroups.com (207.21.221.178) by
+ SA2PEPF00003F65.mail.protection.outlook.com (10.167.248.40) with Microsoft
+ SMTP Server (version=TLS1_3, cipher=TLS_AES_256_GCM_SHA384) id 15.20.8699.20
+ via Frontend Transport; Thu, 1 May 2025 00:41:19 +0000
+Message-ID: <D4248D3BAE98700401F21E0BA4E5DEE1F62B4EDB7C686F78B4F7B0E420DD3A65@6DF085EC01977755F06752C0D1E2B1E84024B053DD04B971A64DECF57329547B.campusgroups.com>
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=campusgroups.com;
+	s=icbrufyectjir; t=1746060079;
+	bh=XNsarSnYMJS/PnkRH90Da47DJFpdgPQ9qmoc8Vos1mw=;
+	h=From:To:Reply-To:Date:Subject:From;
+	b=m7FWYy34CjRKfR93d4KlJsHOgIeI6WahkVF/r/7gUnEl+fpNtPOcVi+rX9xixy2C9
+	 HcgI7kgH9lJvCkTS2nY6ucpkIaX+vJYmN6m6/WBkD1mELOtEnZLemiH4Hn3u0WCqhc
+	 RpZj5wBfcw7x3uYPxzBH3GwC40m4+/c70s/yrNXGLxCyjBDKltGhGRdgFUciISKawO
+	 yyS0HaIQ/qVCsGenrAA+Chg5kVdvh7hGwKfYiV9U+1kcYjxvcskFJK8CuQjvJPGHZT
+	 J9oMHKJ1i74PYS9kOrZgFIB8BudJ5XAIcbyfKIgestPLfMIIpa2VePlpZp5bTTZPSw
+	 QFHyXES6y/SMA==
+Sender: mailer@campusgroups.com
+From: "MIT Student Events Board" <mailer@campusgroups.com>
+To: nathra@mit.edu
+Reply-To: "MIT Student Events Board" <student-events@mit.edu>
+Date: 30 Apr 2025 20:41:19 -0400
+Subject: [SEB Springfest] SPRINGFEST CARNIVAL!!!!!
+Content-Type: text/html; charset="us-ascii"
+Content-Transfer-Encoding: quoted-printable
+Return-Path: mailer@campusgroups.com
+X-MS-Exchange-Organization-ExpirationStartTime: 01 May 2025 00:41:19.6236
+ (UTC)
+X-MS-Exchange-Organization-ExpirationStartTimeReason: OriginalSubmit
+X-MS-Exchange-Organization-ExpirationInterval: 1:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: OriginalSubmit
+X-MS-Exchange-Organization-Network-Message-Id: b017fb20-15cc-4833-cc7d-08dd8848e3bb
+X-EOPAttributedMessage: 0
+X-EOPTenantAttributedMessage: 64afd9ba-0ecf-4acf-bc36-935f6235ba8b:0
+X-MS-Exchange-Organization-MessageDirectionality: Incoming
+X-MS-PublicTrafficType: Email
+X-MS-TrafficTypeDiagnostic: SA2PEPF00003F65:EE_|IA3PR01MB8749:EE_|DM6PR01MB5929:EE_
+X-MS-Exchange-Organization-AuthSource: SA2PEPF00003F65.namprd04.prod.outlook.com
+X-MS-Exchange-Organization-AuthAs: Anonymous
+X-MS-Office365-Filtering-Correlation-Id: b017fb20-15cc-4833-cc7d-08dd8848e3bb
+X-MS-Exchange-AtpMessageProperties: SA|SL
+X-MS-Exchange-Organization-SCL: -1
+X-Microsoft-Antispam: BCL:2;ARA:13230040|69100299015|31052699007|4022899009|12012899012|13012899012|5082899009|4092899012|2092899012|3092899012|3072899012|13102899012|5062899012|8096899003|4076899003|7053199007;
+X-Forefront-Antispam-Report: CIP:207.21.221.178;CTRY:US;LANG:en;SCL:-1;SRV:;IPV:NLI;SFV:SKN;H:mail2.campusgroups.com;PTR:mail2.campusgroups.com;CAT:NONE;SFS:(13230040)(69100299015)(31052699007)(4022899009)(12012899012)(13012899012)(5082899009)(4092899012)(2092899012)(3092899012)(3072899012)(13102899012)(5062899012)(8096899003)(4076899003)(7053199007);DIR:INB;
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 01 May 2025 00:41:19.4903
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: b017fb20-15cc-4833-cc7d-08dd8848e3bb
+X-MS-Exchange-CrossTenant-Id: 64afd9ba-0ecf-4acf-bc36-935f6235ba8b
+X-MS-Exchange-CrossTenant-AuthSource: SA2PEPF00003F65.namprd04.prod.outlook.com
+X-MS-Exchange-CrossTenant-AuthAs: Anonymous
+X-MS-Exchange-CrossTenant-FromEntityHeader: Internet
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: IA3PR01MB8749
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:03.0658518
+X-MS-Exchange-Processed-By-BccFoldering: 15.20.8678.021
+X-Microsoft-Antispam-Mailbox-Delivery:
+	ucf:0;jmr:0;auth:0;dest:I;ENG:(910005)(944506478)(944626604)(920097)(930097)(140003);
+X-Microsoft-Antispam-Message-Info:
+	=?Windows-1252?Q?LbYtHC03TsmiGpAh7dL1U5KcWOSLLsRxfpapgJ7HQ9JqgWlZPDJ350aP?=
+ =?Windows-1252?Q?t79g83UQnsW1sOf4azM+sVx79lUDJsw1IYPjlqRABA5HpUiaMZ62PDfh?=
+ =?Windows-1252?Q?MZBWLJ2q5A4qxvXfKrNzfgDnIN/R/Iy87NPHiUVA2PEohSVW1eqycd/s?=
+ =?Windows-1252?Q?PRzxfkQ1YhK0HCqlK4fRGAZS60z7q22S0rRIfLrUmSPaaYXqFS6n2H8c?=
+ =?Windows-1252?Q?cWx1rOGj9+HRFeDA0uVVs7AxV0DkuCqNW9fX/dNwHNibeUZwzCMnjucw?=
+ =?Windows-1252?Q?jvEBNQncVGVaRqa2bPSeTPDLox0QHyxztsyGM03nm/uXr2OXcRokycuK?=
+ =?Windows-1252?Q?k+KqnlJbhxJBByBkf3BRqxoiuKOV3qBs0TXh+TlEjyCDieuOmJJErRUJ?=
+ =?Windows-1252?Q?iDlcaqDhM2QjfZQbMbjETyge9CFZ5Q5Bumqw2hdrL/cL2kt9hZgX6eSJ?=
+ =?Windows-1252?Q?fMr5FK5K0B4sdxxLCdIo/BWC/tGJpYD0zYCfR6pnSxEvW05Ii9QSwGHs?=
+ =?Windows-1252?Q?Yyh8mjyAmFdYNLMPicnK4+9FxQ0iBIr77iNV01TeOd+jbjS/omgjcxvf?=
+ =?Windows-1252?Q?Z5uWRQfIyvvmIUMH3DwBEIIv1YRw1Ai5bYizGfytWa5+TrFAQ+UUQo8g?=
+ =?Windows-1252?Q?Slpy7dy06P9ysuQuF80oPqFjJB+XOBh+UiovWgVNIe02CcofY+12bKJ6?=
+ =?Windows-1252?Q?d5ClcftJYVc/xd4e5rOjlkbbuNUc2Uqb1x7n6ysETtwiseUr4LoePujT?=
+ =?Windows-1252?Q?BPL+47z2XPZw6rh4Jt+/jvkgkr/WjkurbifsGzrbCE5/0t6EVcZzRjUJ?=
+ =?Windows-1252?Q?mz7gFr7Mfi+bbKA5hXG4f4zmKsXmIaw+O8dcq5vLgaSF8LtTiR0BqGQn?=
+ =?Windows-1252?Q?CVHp0aJZB2Y63y410KwFPx8nFUcw+hiW1R0AqrMNWEBNdDrE9BWCzED/?=
+ =?Windows-1252?Q?RiXX7trGPdsEXHrdBS2dsYhn2OuELg4xCvnHGNgvJLJx8gfXV1T//CMQ?=
+ =?Windows-1252?Q?CVnXzCiDwq8HzeveoRhcAQh7THKVt6YZlL13GJjX+lxAtbsCJEi5mJef?=
+ =?Windows-1252?Q?R/YpwBiIx1A4tHRb4QI/WyJSwIYeqHbFAoXx6PCCvec5CqIGH+XoSKNA?=
+ =?Windows-1252?Q?MlReTLMhFvlUQjGU5rs1xtbsnInhUwVff+B9QY33Di6GUegkx5Twj8jX?=
+ =?Windows-1252?Q?NJq37xMfFD3x5UpqKTWwHl4Fk8uJuT7phI7mC22T4bVFLxBb1NTSr69Q?=
+ =?Windows-1252?Q?RoLIqxcYJK3PymteUxmvEUftV1bb/w1slTi0P/nnQiIZcUFJCBRkNHb4?=
+ =?Windows-1252?Q?GCTvBBJnweCiLrHxhlKOF5DcoNXyxG2mZRlh9SnBlwzMhphfnBlS1x3p?=
+ =?Windows-1252?Q?fV6PS/8lijVH97uzw4Q6O+A/CoxAFoGqtm7hzqSvrjG+oBouKBPZGgfI?=
+ =?Windows-1252?Q?vLaRrjpCoSGlbnoQOqLJyDmUeqlxg8Y/UcG0Y43zCeYaPu3v/ctfzO+1?=
+ =?Windows-1252?Q?ileUIgbwOTM9y1Fta+i4+CF+7C1Ed+Y2rkX9HMYFDaKn/3P69E1cxr7R?=
+ =?Windows-1252?Q?zwo60VdQLiIRTV8gnbUw8IYIBQuvOJFUK3lpUPErbTk1MC/bap5iLIRo?=
+ =?Windows-1252?Q?fY5CWDyEYnnzoYClv2Ro0J9mwjUztbY3it17khYTmmeRxr5Hd1y/JbH1?=
+ =?Windows-1252?Q?iIE/A97GQLfNRwjoVPp3WC9ZjVfcT+v6yber6VZgx5ymk3e8N74JxkVq?=
+ =?Windows-1252?Q?mSB1PdZwbsaD2CtJzfGRC6JptKqi0CUmIier88Ux96a7/OcOO7pE/Ahf?=
+ =?Windows-1252?Q?Hscr5BlUdmyvQC3JtcuYUuyGBoydO0awYuP70t6VvYHH9lfpL7TmOpM2?=
+ =?Windows-1252?Q?qm5s+TDBDzC/4i8R26Xofb7oL3rLC5BwVM5wKyJ/lQIoI9Xi0dTRQhIC?=
+ =?Windows-1252?Q?BlHxxWLu6znj4LXEB1mwAYoF9hQpugxbc8sl1/jViDIkZH/e4Hwhp+ud?=
+ =?Windows-1252?Q?boJTrotQKTkkCRlDIE9c4FTWOu48QMuY6JDRKprz/9qNJxGaL1SHwLF6?=
+ =?Windows-1252?Q?wRYOwITj6f1KTT8B269Brxx0bRdIl/evZ3wbDWVpjfRo1e0U9D9f0jUF?=
+ =?Windows-1252?Q?upYi7F9h9WgVlXPI3I10jZvnsIFt7sxDzWTLZXNBw2Tme4aGOQMYKSKE?=
+ =?Windows-1252?Q?yc+RQrgML+P3ei4bz/n0TXNl6yYx9WZeFBbu30ryznr8C/+tblb4Vl+3?=
+ =?Windows-1252?Q?rigRNZLpVfjBwHYkDcTIl3gwI6tQkx0uxhEI9NMezKi8lwWGm9d8ZaoB?=
+ =?Windows-1252?Q?ierpsjRf0T8z+dRQYTm8AcdwWR/wEncnNRsVobeXSPeue086gkU3IwZu?=
+ =?Windows-1252?Q?k9La7WtTWIgHMy0doMNw+04cJ/iyQYM3x4/WBvA0tT34vLgOZN+44t9P?=
+ =?Windows-1252?Q?SjyB/cBMlMRi9myjRNnX0qu6VpvKOUnDRvIS4/pjVQA=3D?=
+MIME-Version: 1.0
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.=
+w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns=3D"http://www.w3.=
+org/1999/xhtml" xmlns:v=3D"urn:schemas-microsoft-com:vml" xmlns:o=3D"urn:sc=
+hemas-microsoft-com:office:office"><head><!--[if gte mso 15]><xml><o:Office=
+DocumentSettings><o:AllowPNG/><o:PixelsPerInch>96</o:PixelsPerInch></o:Offi=
+ceDocumentSettings></xml><![endif]-->
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dus-ascii"=
+><meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge"><meta name=3D"v=
+iewport" content=3D"width=3Ddevice-width, initial-scale=3D1">
+<style type=3D"text/css">p {margin:10px 0; padding:0;}
+table {border-collapse:collapse;}
+h1, h2, h3, h4, h5, h6 {display:block; margin:0; padding:0;}
+img, a img {border:0; height:auto; outline:none; text-decoration:none;}
+h1{font-family:Arial, Verdana, sans-serif; font-size:26px; font-style:norma=
+l; font-weight:bold; line-height:125%; letter-spacing:normal; text-align:le=
+ft;}
+h2{font-family:Arial, Verdana, sans-serif; font-size:22px; font-style:norma=
+l; font-weight:bold; line-height:125%; letter-spacing:normal; text-align:le=
+ft;}
+h3{font-family:Arial, Verdana, sans-serif; font-size:20px; font-style:norma=
+l; font-weight:bold; line-height:125%; letter-spacing:normal; text-align:le=
+ft;}
+h4{font-family:Arial, Verdana, sans-serif; font-size:18px; font-style:norma=
+l; font-weight:bold; line-height:125%; letter-spacing:normal; text-align:le=
+ft;}
+body, #cgBodyTable, #cgBodyCell {height:100%; margin:0; padding:0; width:10=
+0%;}
+#cgBodyCell {padding:10px;}
+body, #cgBodyTable {background-color:#FAFAFA;}
+#cgBodyCell {border-top:0;}
+.templateContainer {border:0;}
+.templateContainer {max-width:630px !important;}
+#templatePreheader {background-color:#FAFAFA; border-top:0; border-bottom:0=
+; padding-top:9px; padding-bottom:9px;}
+#templatePreheader .cgWidgetTextContent, #templatePreheader .cgWidgetTextCo=
+ntent p {color:#656565; font-family:Arial, Verdana, sans-serif; font-size:1=
+2px; line-height:150%; text-align:left;}
+#templatePreheader .cgWidgetTextContent a, #templatePreheader .cgWidgetText=
+Content p a {color:#656565; font-weight:normal; text-decoration:underline;}
+#templateHeader {background-color:#FFFFFF; border-top:0; border-bottom:0; p=
+adding-top:9px; padding-bottom:0;}
+#templateHeader .cgWidgetTextContent, #templateHeader .cgWidgetTextContent =
+p {color:#202020; font-family:Arial, Verdana, sans-serif; font-size:14px; l=
+ine-height:150%; text-align:left;}
+#templateHeader .cgWidgetTextContent a, #templateHeader .cgWidgetTextConten=
+t p a {color:#2BAADF; font-weight:normal; text-decoration:underline;}
+#templateColumns {background-color:#FFFFFF; border-top:0; border-bottom:2px=
+ solid #EAEAEA; padding-top:0; padding-bottom:9px;}
+#templateColumns .columnContainer .cgWidgetTextContent, #templateColumns .c=
+olumnContainer .cgWidgetTextContent p {color:#202020; font-family:Arial, Ve=
+rdana, sans-serif; font-size:14px; line-height:150%; text-align:left;}
+#templateColumns .columnContainer .cgWidgetTextContent a, #templateColumns =
+.columnContainer .cgWidgetTextContent p a {color:#2BAADF; font-weight:norma=
+l; text-decoration:underline;}
+#templateFooter {background-color:#FAFAFA; border-top:0; border-bottom:0; p=
+adding-top:9px; padding-bottom:9px; }
+#templateFooter .cgWidgetTextContent, #templateFooter .cgWidgetTextContent =
+p {color:#656565; font-family:Arial, Verdana, sans-serif; font-size:12px; l=
+ine-height:150%; text-align:center;}
+#templateFooter .cgWidgetTextContent a, #templateFooter .cgWidgetTextConten=
+t p a {color:#656565; font-weight:normal;text-decoration:underline;}
+a.cgWidgetButton {display:block;}
+.cgWidgetImage {vertical-align:bottom;}
+.cgWidgetTextContent {word-break:break-word;}
+.cgWidgetTextContent img {height:auto !important;}
+.cgWidgetDividerBlock {table-layout:fixed !important;}
+#outlook a {padding:0;}
+img {-ms-interpolation-mode:bicubic;}
+table {mso-table-lspace:0pt; mso-table-rspace:0pt;}
+.ReadMsgBody {width:100%;}
+.ExternalClass {width:100%;}
+p, a, li, td, blockquote {mso-line-height-rule:exactly;}
+a[href^=3Dtel], a[href^=3Dsms] {color:inherit;	cursor:default;	text-decorat=
+ion:none;}
+.ExternalClass, .ExternalClass p, .ExternalClass td, .ExternalClass div, .E=
+xternalClass span, .ExternalClass font {line-height:100%;}
+a[x-apple-data-detectors] {color:inherit !important; text-decoration:none !=
+important; font-size:inherit !important; font-family:inherit !important; fo=
+nt-weight:inherit !important; line-height:inherit !important; }
+@media only screen and (min-width: 768px){ .templateContainer { width:630px=
+ !important;} }
+@media only screen and (max-width: 480px){ body,table,td,p,a,li,blockquote =
+{-webkit-text-size-adjust:none !important;} }
+@media only screen and (max-width: 480px){ body {width:100% !important; min=
+-width:100% !important;} }
+@media only screen and (max-width: 480px){ #cgBodyCell {padding-top:10px !i=
+mportant;} }
+@media only screen and (max-width: 480px){ .columnWrapper {	max-width:100% =
+!important; width:100% !important;} }
+@media only screen and (max-width: 480px){ .cgWidgetImage{ width:100% !impo=
+rtant; } }
+@media only screen and (max-width: 480px){ .cgWidgetShareContent,.cgWidgetC=
+aptionTopContent,.cgWidgetCaptionBottomContent,.cgWidgetTextContentContaine=
+r,.cgWidgetBoxedTextContentContainer,.cgWidgetImageGroupContentContainer,.c=
+gWidgetCaptionLeftTextContentContainer,.cgWidgetCaptionRightTextContentCont=
+ainer,.cgWidgetCaptionLeftImageContentContainer,.cgWidgetCaptionRightImageC=
+ontentContainer,.cgWidgetImageCardLeftTextContentContainer,.cgWidgetImageCa=
+rdRightTextContentContainer{ max-width:100% !important; width:100% !importa=
+nt;} }
+@media only screen and (max-width: 480px){ .cgWidgetBoxedTextContentContain=
+er{ min-width:100% !important;} }
+@media only screen and (max-width: 480px){ .cgWidgetImageGroupContent{ padd=
+ing:9px !important;} }
+@media only screen and (max-width: 480px){ .cgWidgetCaptionLeftContentOuter=
+ .cgWidgetTextContent,.cgWidgetCaptionRightContentOuter .cgWidgetTextConten=
+t{ padding-top:9px !important;} }
+@media only screen and (max-width: 480px){ .cgWidgetImageCardTopImageConten=
+t,.cgWidgetCaptionBlockInner .cgWidgetCaptionTopContent:last-child .cgWidge=
+tTextContent{ padding-top:18px !important;} }
+@media only screen and (max-width: 480px){ .cgWidgetImageCardBottomImageCon=
+tent{ padding-bottom:9px !important;} }
+@media only screen and (max-width: 480px){ .cgWidgetImageGroupBlockInner{ p=
+adding-top:0 !important; padding-bottom:0 !important;} }
+@media only screen and (max-width: 480px){ .cgWidgetImageGroupBlockOuter{ p=
+adding-top:9px !important; padding-bottom:9px !important;} }
+@media only screen and (max-width: 480px){ .cgWidgetTextContent,.cgWidgetBo=
+xedTextContentColumn{ padding-right:18px !important; padding-left:18px !imp=
+ortant;} }
+@media only screen and (max-width: 480px){ .cgWidgetImageCardLeftImageConte=
+nt,.cgWidgetImageCardRightImageContent{ padding-right:18px !important; padd=
+ing-bottom:0 !important; padding-left:18px !important;} }
+@media only screen and (max-width: 480px){ .mcpreview-image-uploader{ displ=
+ay:none !important; width:100% !important;} }
+@media only screen and (max-width: 480px){ h1{ font-size:22px !important; l=
+ine-height:125% !important;} }
+@media only screen and (max-width: 480px){ h2{ font-size:20px !important; l=
+ine-height:125% !important;} }
+@media only screen and (max-width: 480px){ h3{ font-size:18px !important; l=
+ine-height:125% !important;} }
+@media only screen and (max-width: 480px){ h4{ font-size:16px !important; l=
+ine-height:150% !important;} }
+@media only screen and (max-width: 480px){ .cgWidgetBoxedTextContentContain=
+er .cgWidgetTextContent,.cgWidgetBoxedTextContentContainer .cgWidgetTextCon=
+tent p{ font-size:14px !important; line-height:150% !important;} }
+@media only screen and (max-width: 480px){ #templatePreheader{ display:bloc=
+k !important;} }
+@media only screen and (max-width: 480px){ #templatePreheader .cgWidgetText=
+Content,#templatePreheader .cgWidgetTextContent p{ font-size:14px !importan=
+t; line-height:150% !important;} }
+@media only screen and (max-width: 480px){ #templateHeader .cgWidgetTextCon=
+tent,#templateHeader .cgWidgetTextContent p{ font-size:14px !important; lin=
+e-height:150% !important;} }
+@media only screen and (max-width: 480px){ #templateColumns .columnContaine=
+r .cgWidgetTextContent,#templateColumns .columnContainer .cgWidgetTextConte=
+nt p{ font-size:14px !important; line-height:150% !important;} }
+@media only screen and (max-width: 480px){ #templateFooter .cgWidgetTextCon=
+tent,#templateFooter .mcnTextContent p{ font-size:14px !important; line-hei=
+ght:150% !important;} }
+</style></head><body style=3D"height: 100%;margin: 0;padding: 0;width: 100%=
+;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;background-color=
+: #FAFAFA;">
+<center><img alt=3D"" src=3D"https://engage.mit.edu/read/d0edbcaf-2624-11f0=
+-8e0d-0affd37d29fb.png"><table align=3D"center" border=3D"0" cellpadding=3D=
+"0" cellspacing=3D"0" height=3D"100%" id=3D"cgBodyTable" style=3D"border-co=
+llapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-=
+adjust: 100%;-webkit-text-size-adjust: 100%;height: 100%;margin: 0;padding:=
+ 0;width: 100%;font-family: Arial, Verdana, sans-serif; font-size: 14px; li=
+ne-height: 150%;background-color: #FAFAFA;" width=3D"100%">
+	<tbody>
+		<tr>
+			<td align=3D"center" id=3D"cgBodyCell" style=3D"mso-line-height-rule: ex=
+actly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;height: 100=
+%;margin: 0;padding: 10px;width: 100%;border-top: 0;" valign=3D"top"><!-- B=
+EGIN TEMPLATE // --><!--[if gte mso 9]> 			<table align=3D"center" border=
+=3D"0" cellspacing=3D"0" cellpadding=3D"0" width=3D"630" style=3D"width:630=
+px;"> 			<tr> 			<td align=3D"center" valign=3D"top" width=3D"630" style=3D=
+"width:630px;"> 			<![endif]-->
+			<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"templat=
+eContainer" style=3D"border-collapse: collapse;mso-table-lspace: 0pt;mso-ta=
+ble-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;b=
+order: 0;max-width: 630px !important;" width=3D"100%">
+				<tbody>
+					<tr>
+						<td id=3D"templateHeader" style=3D"mso-line-height-rule: exactly;-ms-=
+text-size-adjust: 100%;-webkit-text-size-adjust: 100%;background-color: #FF=
+FFFF;border-top: 0;border-bottom: 0;padding-top: 9px;padding-bottom: 0;" va=
+lign=3D"top">
+						<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"cgWi=
+dgetImageBlock" style=3D"min-width: 100%;border-collapse: collapse;mso-tabl=
+e-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text=
+-size-adjust: 100%;" width=3D"100%">
+							<tbody class=3D"cgWidgetImageBlockOuter">
+								<tr>
+									<td class=3D"cgWidgetImageBlockInner" style=3D"padding: 9px;mso-li=
+ne-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust=
+: 100%;" valign=3D"top">
+									<table align=3D"left" border=3D"0" cellpadding=3D"0" cellspacing=
+=3D"0" class=3D"cgWidgetImageContentContainer" style=3D"min-width: 100%;bor=
+der-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text=
+-size-adjust: 100%;-webkit-text-size-adjust: 100%;" width=3D"100%">
+										<tbody>
+											<tr>
+												<td class=3D"cgWidgetImageContent" style=3D"padding-right: 9px;=
+padding-left: 9px;padding-top: 0;padding-bottom: 0;mso-line-height-rule: ex=
+actly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;" valign=3D=
+"top"><img alt=3D"" class=3D"cgWidgetImage" src=3D"https://engage.mit.edu/u=
+pload/mit/2025/flyer_image_upload_2598601_hatdesign3_430202942.png" style=
+=3D"display: block;" width=3D"594"></td>
+											</tr>
+										</tbody>
+									</table>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						</td>
+					</tr>
+					<tr>
+						<td style=3D"mso-line-height-rule: exactly;-ms-text-size-adjust: 100%=
+;-webkit-text-size-adjust: 100%;" valign=3D"top">
+						<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D=
+"0" id=3D"templateColumns" style=3D"border-collapse: collapse;mso-table-lsp=
+ace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size=
+-adjust: 100%;background-color: #FFFFFF;border-top: 0;border-bottom: 0;padd=
+ing-top: 0;padding-bottom: 0;" width=3D"100%">
+							<tbody>
+								<tr>
+									<td style=3D"mso-line-height-rule: exactly;-ms-text-size-adjust: 1=
+00%;-webkit-text-size-adjust: 100%;" valign=3D"top"><!--[if gte mso 9]> 			=
+				<table align=3D"center" border=3D"0" cellspacing=3D"0" cellpadding=3D"0=
+" width=3D"630" dir=3D"rtl" style=3D"width:630px;"> 							<tr> 							<td =
+align=3D"center" dir=3D"ltr" valign=3D"top" width=3D"420" style=3D"width:42=
+0px;"> 							<![endif]-->
+									<table align=3D"right" border=3D"0" cellpadding=3D"0" cellspacing=
+=3D"0" id=3D"templateBody" style=3D"border-collapse: collapse;mso-table-lsp=
+ace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size=
+-adjust: 100%;background-color: #FFFFFF;border-top: 0;border-bottom: 0;padd=
+ing-top: 0;padding-bottom: 0;" width=3D"420">
+										<tbody>
+											<tr>
+												<td style=3D"mso-line-height-rule: exactly;-ms-text-size-adjust=
+: 100%;-webkit-text-size-adjust: 100%;">
+												<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=
+=3D"cgWidgetTextBlock" style=3D"border-collapse: collapse;mso-table-lspace:=
+ 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adj=
+ust: 100%;" width=3D"100%">
+													<tbody class=3D"cgWidgetTextBlockOuter">
+														<tr>
+															<td class=3D"cgWidgetTextBlockInner" style=3D"mso-line-heigh=
+t-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;"=
+ valign=3D"top">
+															<table align=3D"left" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" class=3D"cgWidgetTextContentContainer" style=3D"border-collapse:=
+ collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust:=
+ 100%;-webkit-text-size-adjust: 100%;" width=3D"100%">
+																<tbody>
+																	<tr>
+																		<td class=3D"cgWidgetTextContent" style=3D"padding-top: 9=
+px;padding-right: 18px;padding-bottom: 9px;padding-left: 18px;mso-line-heig=
+ht-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;=
+word-break: break-word;color: #202020;font-family: Arial, Verdana, sans-ser=
+if; font-size: 14px; line-height: 150%;text-align: left;" valign=3D"top">
+																		<h2>The fun starts THIS FRIDAY at Springfest Carnival</h2=
+>
+
+																		<h3 style=3D"color:#aaaaaa;font-style:italic;">Location: =
+Johnson Ice Rink &amp; Outside the Z</h3>
+
+																		<p></p>
+
+																		<div dir=3D"ltr">Starting off the 2-day long SpringFestiv=
+ities is Springfest Carnival!! And did we mention, everything is FREE?? Tha=
+t&#8217;s right, all MIT community members are invited to have a fun-filled=
+ evening at the Carnival, free of charge!</div>
+																		&nbsp;
+
+																		<ul>
+																			<li aria-level=3D"1" dir=3D"ltr">
+																			<div dir=3D"ltr" role=3D"presentation">TONS AND TONS of =
+fried dough, cookies, and other treats</div>
+																			</li>
+																			<li aria-level=3D"1" dir=3D"ltr">
+																			<div dir=3D"ltr" role=3D"presentation">Large carnival ri=
+des</div>
+																			</li>
+																			<li aria-level=3D"1" dir=3D"ltr">
+																			<div dir=3D"ltr" role=3D"presentation">Balloon artists</=
+div>
+																			</li>
+																			<li aria-level=3D"1" dir=3D"ltr">
+																			<div dir=3D"ltr" role=3D"presentation">Face painters</di=
+v>
+																			</li>
+																			<li aria-level=3D"1" dir=3D"ltr">
+																			<div dir=3D"ltr" role=3D"presentation">Student booths</d=
+iv>
+																			</li>
+																			<li aria-level=3D"1" dir=3D"ltr">
+																			<div dir=3D"ltr" role=3D"presentation">Shirts, stickers,=
+ keychains, and more!<br>
+																			<br>
+																			<br>
+																			<br>
+																			&nbsp;</div>
+																			</li>
+																		</ul>
+																		</td>
+																	</tr>
+																</tbody>
+															</table>
+															</td>
+														</tr>
+													</tbody>
+												</table>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+									<!--[if gte mso 9]> 							</td> 							<td align=3D"center" dir=
+=3D"ltr" valign=3D"top" width=3D"210" style=3D"width:210px;"> 							<![end=
+if]-->
+
+									<table align=3D"left" border=3D"0" cellpadding=3D"0" cellspacing=
+=3D"0" id=3D"templateSidebar" style=3D"border-collapse: collapse;mso-table-=
+lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-s=
+ize-adjust: 100%;background-color: #FFFFFF;border-top: 0;border-bottom: 0;p=
+adding-top: 0;padding-bottom: 0;" width=3D"210">
+										<tbody>
+											<tr>
+												<td style=3D"mso-line-height-rule: exactly;-ms-text-size-adjust=
+: 100%;-webkit-text-size-adjust: 100%;" valign=3D"top">
+												<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=
+=3D"cgWidgetCaptionBlock" width=3D"100%">
+													<tbody class=3D"cgWidgetCaptionBlockOuter">
+														<tr>
+															<td class=3D"cgWidgetCaptionBlockInner" style=3D"padding:9px=
+;" valign=3D"top">
+															<table align=3D"left" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" class=3D"cgWidgetCaptionBottomContent" width=3D"false">
+																<tbody>
+																	<tr>
+																		<td align=3D"center" class=3D"cgWidgetCaptionBottomImageC=
+ontent" style=3D"padding:0 9px 9px 9px;" valign=3D"top">
+																		<h2><img class=3D"cgWidgetImage" src=3D"https://engage.mi=
+t.edu/upload/mit/2025/small_image_upload_2598601_itineraryfinalfinal_430203=
+01.png" width=3D"174"></h2>
+																		</td>
+																	</tr>
+																	<tr>
+																		<td class=3D"cgWidgetTextContent" style=3D"padding:0 9px =
+0 9px;" valign=3D"top">
+																		<h2 style=3D"font-family: Arial, Verdana, sans-serif; fon=
+t-size: 12px; line-height: 150%;"><span style=3D"font-size:18px;">Springfes=
+t Carnival: Friday May 2nd<br>
+																		5PM - 8PM</span></h2>
+																		FREE FOOD, GAMES, AND RIDES<br>
+																		&nbsp;
+																		<h2><span style=3D"font-size:18px;">Springfest Concert:<b=
+r>
+																		Saturday May 3rd<br>
+																		Doors Open 6:30PM</span></h2>
+
+																		<h1>&nbsp;</h1>
+
+																		<h1 style=3D"text-align: center;">TICKET SALES CLOSE FRID=
+AY 8PM</h1>
+																		<br>
+																		<br>
+																		&nbsp;</td>
+																	</tr>
+																</tbody>
+															</table>
+															</td>
+														</tr>
+													</tbody>
+												</table>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+									<!--[if gte mso 9]> 							</td> 							</tr> 							</table> 				=
+			<![endif]--></td>
+								</tr>
+							</tbody>
+						</table>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+<br><br>
+<div style=3D"font: 11px/1.5em Tahoma, Verdana, Geneva, Arial, Helvetica, s=
+ans-serif; border-top: 1px solid #BBB; border-bottom: 1px solid #BBB; paddi=
+ng: 5px 10px 5px;">
+	<strong><span style=3D"font-size:1.1em">MIT Student Events Board</span></s=
+trong>
+	<p style=3D"margin:0">MIT</p>
+</div>
+<div style=3D"color:#555; font: 11px/1.5em Tahoma, Verdana, Geneva, Arial, =
+Helvetica, sans-serif; border-bottom: 1px solid #BBB; padding: 5px 10px 5px=
+;background: #F7F7F7;">
+	<p style=3D"margin: 7px 0 0 0">Email sent by MIT Student Events Board &lt;=
+student-events@mit.edu&gt; to nathra@mit.edu</p>
+	 <a href=3D"https://engage.mit.edu/unsubscribe?uid=3Db3e5b0a5-c678-11ec-9e=
+75-0acdec7e683b&amp;mailings_id=3D7400151">Unsubscribe</a>
+</div></center></body></html>
+

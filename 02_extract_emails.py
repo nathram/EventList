@@ -33,8 +33,8 @@ def run():
         page.press('input[type="email"]', 'Enter')
         #page.click('input[type="submit"]')
 
+        print("Email entered, moving to MIT Touchstone Page")
         time.sleep(10)
-        print("Email entered, moving to MIT Touchstone Page")  # optional, helpful for visibility
 
         # After redirect to Okta
         page.wait_for_selector('input[name="identifier"]', timeout=10000)
@@ -76,40 +76,62 @@ def run():
 
         # [continue extracting emails here...]
 
-        # Step 2: Extract messages (this is simplified; actual selectors may vary)
-        # Wait for the inbox to load
+        # Step 2: Scroll and extract messages
+        NUM_EMAILS_TO_DOWNLOAD = 30  # or however many you want
+        seen_ids = set()
+        downloaded_count = 0
+        max_scrolls = 100  # safety cap
+
         print("Waiting for inbox to load...")
         page.wait_for_selector('[data-convid]', timeout=60000)
         print("Inbox loaded.")
-        
-        emails = page.query_selector_all('[data-convid]')
 
-        for idx, email in enumerate(emails[:5]):  # Adjust number as needed
-            try:
-                email.click()
-                page.wait_for_timeout(2000)
+        for _ in range(max_scrolls):
+            emails = page.query_selector_all('[data-convid]')
 
-                # Step 1: Click the "More actions" (three dots) button
-                page.click('button[aria-label="More actions"]')
-                page.wait_for_timeout(500)
+            for email in emails:
+                cid = email.get_attribute("data-convid")
+                if not cid or cid in seen_ids:
+                    continue
 
-                # Step 2: Click "Download"
-                page.click('button[aria-label="Download"]')
-                page.wait_for_timeout(500)
+                seen_ids.add(cid)
 
-                # Step 3: Wait for and click "Download as EML"
-                with page.expect_download() as download_info:
-                    page.click('button[aria-label="Download as EML"]')
+                try:
+                    email.click()
+                    page.wait_for_timeout(2000)
 
-                download = download_info.value
-                filepath = f"saved_emails/email_{idx+1}.eml"
-                download.save_as(filepath)
-                print(f"✅ Saved {filepath}")
+                    # Click the "More actions" (three dots) button
+                    page.click('button[aria-label="More actions"]')
+                    page.wait_for_timeout(500)
 
-            except Exception as e:
-                print(f"❌ Error downloading email {idx}: {e}")
+                    # Click "Download"
+                    page.click('button[aria-label="Download"]')
+                    page.wait_for_timeout(500)
 
+                    # Wait for and click "Download as EML"
+                    with page.expect_download() as download_info:
+                        page.click('button[aria-label="Download as EML"]')
 
+                    download = download_info.value
+                    filepath = f"saved_emails/email_{downloaded_count+1}.eml"
+                    download.save_as(filepath)
+                    print(f"✅ Saved {filepath}")
+                    downloaded_count += 1
+
+                    if downloaded_count >= NUM_EMAILS_TO_DOWNLOAD:
+                        break
+
+                except Exception as e:
+                    print(f"❌ Error downloading email {downloaded_count}: {e}")
+
+            if downloaded_count >= NUM_EMAILS_TO_DOWNLOAD:
+                break
+
+            # Scroll to load more
+            page.keyboard.press("PageDown")
+            time.sleep(1)
+
+        print(f"✅ Finished downloading {downloaded_count} emails.")
 
 
         browser.close()

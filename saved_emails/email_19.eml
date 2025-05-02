@@ -1,0 +1,725 @@
+Received: from CH3PR01MB8742.prod.exchangelabs.com (2603:10b6:610:207::5) by
+ DM6PR01MB5929.prod.exchangelabs.com with HTTPS; Thu, 1 May 2025 00:11:01
+ +0000
+Received: from SJ0PR03CA0164.namprd03.prod.outlook.com (2603:10b6:a03:338::19)
+ by CH3PR01MB8742.prod.exchangelabs.com (2603:10b6:610:207::5) with Microsoft
+ SMTP Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.20.8699.19; Thu, 1 May 2025 00:10:59 +0000
+Received: from MWH0EPF000989E6.namprd02.prod.outlook.com
+ (2603:10b6:a03:338:cafe::94) by SJ0PR03CA0164.outlook.office365.com
+ (2603:10b6:a03:338::19) with Microsoft SMTP Server (version=TLS1_3,
+ cipher=TLS_AES_256_GCM_SHA384) id 15.20.8655.42 via Frontend Transport; Thu,
+ 1 May 2025 00:10:59 +0000
+Authentication-Results: spf=pass (sender IP is 50.31.42.215)
+ smtp.mailfrom=email.overleaf.com; dkim=pass (signature was verified)
+ header.d=overleaf.com;dmarc=pass action=none
+ header.from=overleaf.com;compauth=pass reason=100
+Received-SPF: Pass (protection.outlook.com: domain of email.overleaf.com
+ designates 50.31.42.215 as permitted sender) receiver=protection.outlook.com;
+ client-ip=50.31.42.215; helo=o1.email.overleaf.com; pr=C
+Received: from o1.email.overleaf.com (50.31.42.215) by
+ MWH0EPF000989E6.mail.protection.outlook.com (10.167.241.133) with Microsoft
+ SMTP Server (version=TLS1_3, cipher=TLS_AES_256_GCM_SHA384) id 15.20.8699.20
+ via Frontend Transport; Thu, 1 May 2025 00:10:58 +0000
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=overleaf.com;
+	h=content-type:from:subject:mime-version:reply-to:to:cc:content-type:
+	from:subject:to;
+	s=s1; bh=qPim/nan0o+wIWcnDkqJHc0bvbGVtC3HtpWTvQ2JRiQ=;
+	b=lPAhZvukv2uMAjglhCPQuRyJUcBcxQuW4uAKRCpSx8YaoevMUVbZsi0wmyUkqTG96BNg
+	xSA0wNSKDWCOan5IolwhKt+xpQCJN8jP5kzGKWyfBY2f4jB1Mb77cLi5WUoP+l0bP1sO+0
+	AlP5WnQWT0VVKAb1mEBX29yHZkOBO8Q72tMN8vWF+Q/wiMP7SBy0jlc2l/VqJQKsiBLd0q
+	2nrTSvuaV7eAAky35bsnpbarqVrVk86+AohjGW+m++OXVdPEwcDRYN/QTZlBGMM0zUXGa7
+	wZuOe6nVNqWhsiBHv4OicVtOa02SrkEcAyAYC2egHLHdjFP1RYTx4mGh7jXGL+3Q==
+Received: by recvd-5579dcd8c4-c9p9s with SMTP id recvd-5579dcd8c4-c9p9s-1-6812BC12-9
+	2025-05-01 00:10:58.150343839 +0000 UTC m=+1908145.375571788
+Received: from [127.0.0.1] (unknown)
+	by geopod-ismtpd-7 (SG) with ESMTP
+	id kztc6IXoT3-bMzbPf1lwjA
+	for <nathra@mit.edu>;
+	Thu, 01 May 2025 00:10:58.111 +0000 (UTC)
+Content-Type: multipart/alternative;
+ boundary="--_NmP-e54130b7acec2a91-Part_1"
+From: Overleaf <welcome@overleaf.com>
+Subject: Overleaf security note: institutional SSO account linked
+Message-ID: <fc614f16-7c91-2c26-30d9-2407913924b5@overleaf.com>
+Date: Thu, 1 May 2025 00:10:58 +0000
+Reply-To: welcome@overleaf.com
+X-SG-EID: =?us-ascii?Q?u001=2EnbRA5h1gF2D76dbqIbAMM58OHOOCfqgiWzN2Wdj=2Fa2hUeGKdeWAft9zW0?=
+ =?us-ascii?Q?ai=2FBCpprwmwBcrpllhh+Sh0fAsbV3Oqk0TRFdnK?=
+ =?us-ascii?Q?fykYErUhKg7HA7CidOKQRDlxvOHRpE40lpdjfQH?=
+ =?us-ascii?Q?aEhQYmcwGvQOEWNWit6w1jEzue9V2+bgbWrgtsE?=
+ =?us-ascii?Q?Bkyr8ejou9rzTrIKzB4mb6aq=2FXtTYRW696MlywZ?=
+ =?us-ascii?Q?duQbChiHIC2=2FYmLnfAtSsY=3D?=
+To: nathra@mit.edu
+X-Entity-ID: u001.cthOsToDAypiMAMSnhoh1Q==
+Return-Path: bounces+794683-eb04-nathra=mit.edu@email.overleaf.com
+X-MS-Exchange-Organization-ExpirationStartTime: 01 May 2025 00:10:59.0644
+ (UTC)
+X-MS-Exchange-Organization-ExpirationStartTimeReason: OriginalSubmit
+X-MS-Exchange-Organization-ExpirationInterval: 1:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: OriginalSubmit
+X-MS-Exchange-Organization-Network-Message-Id: 3997593b-0629-42b0-8218-08dd8844a698
+X-EOPAttributedMessage: 0
+X-EOPTenantAttributedMessage: 64afd9ba-0ecf-4acf-bc36-935f6235ba8b:0
+X-MS-Exchange-Organization-MessageDirectionality: Incoming
+X-MS-PublicTrafficType: Email
+X-MS-TrafficTypeDiagnostic: MWH0EPF000989E6:EE_|CH3PR01MB8742:EE_|DM6PR01MB5929:EE_
+X-MS-Exchange-Organization-AuthSource: MWH0EPF000989E6.namprd02.prod.outlook.com
+X-MS-Exchange-Organization-AuthAs: Anonymous
+X-MS-Office365-Filtering-Correlation-Id: 3997593b-0629-42b0-8218-08dd8844a698
+X-MS-Exchange-AtpMessageProperties: SA|SL
+X-MS-Exchange-Organization-SCL: 1
+X-Microsoft-Antispam: BCL:2;ARA:13230040|5062899012|29132699027|69100299015|12012899012|31052699007|2092899012|3072899012|13003099007|8096899003|4076899003|7053199007;
+X-Forefront-Antispam-Report: CIP:50.31.42.215;CTRY:US;LANG:en;SCL:1;SRV:;IPV:NLI;SFV:NSPM;H:o1.email.overleaf.com;PTR:o1.email.overleaf.com;CAT:NONE;SFS:(13230040)(5062899012)(29132699027)(69100299015)(12012899012)(31052699007)(2092899012)(3072899012)(13003099007)(8096899003)(4076899003)(7053199007);DIR:INB;
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 01 May 2025 00:10:58.8353
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: 3997593b-0629-42b0-8218-08dd8844a698
+X-MS-Exchange-CrossTenant-Id: 64afd9ba-0ecf-4acf-bc36-935f6235ba8b
+X-MS-Exchange-CrossTenant-AuthSource: MWH0EPF000989E6.namprd02.prod.outlook.com
+X-MS-Exchange-CrossTenant-AuthAs: Anonymous
+X-MS-Exchange-CrossTenant-FromEntityHeader: Internet
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: CH3PR01MB8742
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:02.6994647
+X-MS-Exchange-Processed-By-BccFoldering: 15.20.8678.021
+X-Microsoft-Antispam-Mailbox-Delivery:
+	ucf:0;jmr:0;auth:0;dest:I;ENG:(910005)(944506478)(944626604)(920097)(930097)(140003);
+X-Microsoft-Antispam-Message-Info:
+	=?Windows-1252?Q?RS+C49JePOLdWLJGMDw/BfbusZhi+fP505758QX3c2HpdBT+QBPLTwy2?=
+ =?Windows-1252?Q?gJMTiJhpl2A9OmylEaXhOfXAtNYM7JvScpQC0wDhjLhfStB47Mv7xcah?=
+ =?Windows-1252?Q?tUL2xHD+k49/P4BjOBU/SrnPc+Lb2JmRzmlcpHX5/Ae41pezCFSpns1a?=
+ =?Windows-1252?Q?5VGkBSGYrgKOkJ9Azrq/w7ggcpavMyu7dHG476T1iJwqW5kbxL7V3HL4?=
+ =?Windows-1252?Q?pJCsPnMYndqwoO9ZiK9xPHj2NB/nC4GUOrcJGrdKXDktqUNAiqz+dtUU?=
+ =?Windows-1252?Q?wlk2qtiT3w0b0WKR5iptaSyq7Gbdo08jvyt52Dq9rnQR9n3yNxKmkpza?=
+ =?Windows-1252?Q?nGzpdNue99r4Tso2+Af4gy9ox8I2hju2wu85IxMSyhZSSkok3CaHE/2H?=
+ =?Windows-1252?Q?60YsUnacAar7KJ8UfuPmN72gRJyuhO3DafGF8SAN02OUEYH0zum0sJLe?=
+ =?Windows-1252?Q?2QUcEYYT3OTuARQLz6L785r+pDNm5F2crYFlsE06d9xfgMNwIqD0K/9c?=
+ =?Windows-1252?Q?jV/eEHoR6D42DSfeNEuaEMB/tcbTpG2CxCH46VvYn9F3eNYi6TXGKIPF?=
+ =?Windows-1252?Q?MKsvdR2T+iEt5LK1rUaL55LlE7gabgCQkdlaMxwCJHiYt3QLCMahBaFl?=
+ =?Windows-1252?Q?vDRTE8Tuy4Qgjw/hf26ZK7m7lMV3CKR7Dyr04b5rqnnOljWbM0RIoZlB?=
+ =?Windows-1252?Q?xHapcCNdcuL6k28po/vVplMU1MK5AVnowr1cOop690ysnzO7mPk11R7U?=
+ =?Windows-1252?Q?Dg/kBl0HcmU0NnQqDcRRuU7y3uJhbau6yhkMzJJ3di1RD/sqscu/CB/r?=
+ =?Windows-1252?Q?H922l+vP4XYgQcFwDJ25orN/Njk03p2ar/V6QXgViGTAFHlNG3FCxXy1?=
+ =?Windows-1252?Q?CjIJjzR07iib2ptZvsB6VCJsUAuFDlIOhzjozCNRt+aD8RUc1dvMq8F/?=
+ =?Windows-1252?Q?awrdj1UkubNyScFsW2+l4v5gVETeAq1GSv15IQ8bDcZYOmn+2ZllSUcA?=
+ =?Windows-1252?Q?bivFsLr+tsOiEXcOrjOO47St8dSC/zEnBzJdyGXj1KE0L8I3MqSIofOb?=
+ =?Windows-1252?Q?OeJrDQV5VFRZVLEAapuWfE8psvvrbSwQIlJB7R+eA++Z3WrKZQO+fgh9?=
+ =?Windows-1252?Q?nGSNsDHDXKCwGpYabcyctC4lLyFKPWuYO60KkW5ZHz1ByOPKnh0oiKlU?=
+ =?Windows-1252?Q?LMHYFcna1Vs9CXDEskuezNy9dqCw4nzyo4wPEl2O54eXX2VNk2xTvYpd?=
+ =?Windows-1252?Q?BHkXcsuLJnHPU7qwhaZoF4Nt8A/89RdBrW7OoMLblQ5Xm0wLsIvPOeIx?=
+ =?Windows-1252?Q?I8IcB4/aZS4sGICU3eIt79CokDpsT5k5iqg/jkjAuFDzF8u/z/iwwHmP?=
+ =?Windows-1252?Q?kNvUwBiG3qY+7f3cFFX4fTOf19A8Mydg44hmcBGIZ59KR/2pQiS8yQ+j?=
+ =?Windows-1252?Q?nsDAbYZEuVHcp/QfoAM5D9G8pAkBWheLyGzkUMwX8SJN4oU6DK/kkztB?=
+ =?Windows-1252?Q?D9wgPD+bOgPudN/VJI5BwruyDl1C5k1K51Rx0FbRhjQRgRLbZwbxcCx/?=
+ =?Windows-1252?Q?lInxbdCMXlfO/vJWcRBnPqwKg06tMbTYtTDex3ru1lIIi0j+pBPzeBGw?=
+ =?Windows-1252?Q?nBz/is8qxALnL7jVB4LZDhmSqZ0gdDjIbYHdis3MHqg6iaD3Fq6Wz3u9?=
+ =?Windows-1252?Q?lr0oaVbjgJDAMPS4deXPClMCjKjpLj3mTL+OGy7pyMKv+jZO6NTP9RHl?=
+ =?Windows-1252?Q?OQ2vyVf4CGVBVPLxHCjci8nFN2/oMMKgkg0ToVgZw9f8o6nYcCefZQ8k?=
+ =?Windows-1252?Q?hXgXuDqRVY85nqtYjfcxwEOcM+8565z5AEp4qhxffju3r9+tro4cJigY?=
+ =?Windows-1252?Q?R34HWUCKSHEtnVYA0g+Kqr2i10gwqS4XA6I/dtVJPknb3i4AwV0r8H4T?=
+ =?Windows-1252?Q?0ei4Gs5Sd2vUsjnRlNngRd4aDTRYBIiofzcA6WEePndhTbdpgscOMf97?=
+ =?Windows-1252?Q?tChFWbwlKYh4dShAklrfc9+EuzUaRPMAHQtRTF+/fuwKC49aRyGszlPM?=
+ =?Windows-1252?Q?OHwDO1w7MFXWUD8q9d9N082uKTwszTPMh92Gki8V02YfLzokap9FWhQj?=
+ =?Windows-1252?Q?MWVp/TMC19y/9x7N8QRo+SIGJ1BpHrU5DpW1oaMSTRs2fKaKccFiIp4M?=
+ =?Windows-1252?Q?p4TIhlxRUZ9V5iRmqCmCR2rEhIscUoB379M/Rp77KGLL3ya+vAdGMSGS?=
+ =?Windows-1252?Q?FI4+qo7qv/OzSpZtTaPXHTqP7pbn5i1gj0lb81GOONupAZTBCXJxbiNo?=
+ =?Windows-1252?Q?ZBc6RBprtEflkMVN96vMY/nIsUIU7q/CJqAdccvm7ptgd0m82wtYth9B?=
+ =?Windows-1252?Q?P2UEaMA5VSSd+cFNPqX5/VIiy/vs6uW8hQ49MKF5svAUSutNoB2ULG4c?=
+MIME-Version: 1.0
+
+----_NmP-e54130b7acec2a91-Part_1
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: quoted-printable
+
+Hi,
+
+We are writing to let you know that an Institutional SSO account at Massach=
+usetts Institute of Technology was linked to your account nathra@mit.edu on=
+ Thursday 1 May 2025 at 00:10 GMT.
+
+Linked: nathra@mit.edu
+
+If this was you, you can ignore this email.
+
+If this was not you, we recommend getting in touch with our support team at=
+ support@overleaf.com to report this as potentially suspicious activity on =
+your account.
+
+We also encourage you to read our quick guide (https://www.overleaf.com/lea=
+rn/how-to/Keeping_your_account_secure) to keeping your Overleaf account saf=
+e.
+
+Regards,
+The Overleaf Team - https://www.overleaf.com     =20=
+
+----_NmP-e54130b7acec2a91-Part_1
+Content-Type: text/html; charset=us-ascii
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns=3D"ht=
+tp://www.w3.org/1999/xhtml" lang=3D"en" xml:lang=3D"en" style=3D"Margin: 0;=
+ background: #E4E8EE !important; margin: 0; min-height: 100%; padding: 0;">=
+<head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dus-ascii"=
+>
+		<meta name=3D"viewport" content=3D"width=3Ddevice-width">
+		<style>.button td {
+	border-radius: 9999px; }
+
+.force-overleaf-style a,
+.force-overleaf-style a[href] {
+	color: #138A07 !important;
+	text-decoration: none !important;
+	-moz-hyphens: none;
+	-ms-hyphens: none;
+	-webkit-hyphens: none;
+	hyphens: none; }
+	.force-overleaf-style a:visited,
+	.force-overleaf-style a[href]:visited {
+		color: #138A07; }
+	.force-overleaf-style a:hover,
+	.force-overleaf-style a[href]:hover {
+		color: #3d7935; }
+	.force-overleaf-style a:active,
+	.force-overleaf-style a[href]:active {
+		color: #3d7935; }
+</style>
+		<style>@media only screen {
+	html {
+		min-height: 100%;
+		background: #f6f6f6;
+	}
+}
+
+@media only screen and (max-width: 596px) {
+	.small-float-center {
+		margin: 0 auto !important;
+		float: none !important;
+		text-align: center !important;
+	}
+
+	.small-text-center {
+		text-align: center !important;
+	}
+
+	.small-text-left {
+		text-align: left !important;
+	}
+
+	.small-text-right {
+		text-align: right !important;
+	}
+
+	.cta-table {
+		table-layout: fixed;
+	}
+}
+
+@media only screen and (max-width: 596px) {
+	.hide-for-large {
+		display: block !important;
+		width: auto !important;
+		overflow: visible !important;
+		max-height: none !important;
+		font-size: inherit !important;
+		line-height: inherit !important;
+	}
+}
+
+@media only screen and (max-width: 596px) {
+	table.body table.container .hide-for-large,
+	table.body table.container .row.hide-for-large {
+		display: table !important;
+		width: 100% !important;
+	}
+}
+
+@media only screen and (max-width: 596px) {
+	table.body table.container .callout-inner.hide-for-large {
+		display: table-cell !important;
+		width: 100% !important;
+	}
+}
+
+@media only screen and (max-width: 596px) {
+	table.body table.container .show-for-large {
+		display: none !important;
+		width: 0;
+		mso-hide: all;
+		overflow: hidden;
+	}
+}
+
+@media only screen and (max-width: 596px) {
+	table.body img {
+		width: auto;
+		height: auto;
+	}
+
+	table.body center {
+		min-width: 0 !important;
+	}
+
+	table.body .container {
+		width: 95% !important;
+	}
+
+	table.body .columns,
+	table.body .column {
+		height: auto !important;
+		-moz-box-sizing: border-box;
+		-webkit-box-sizing: border-box;
+		box-sizing: border-box;
+		padding-left: 16px !important;
+		padding-right: 16px !important;
+	}
+
+	table.body .columns .column,
+	table.body .columns .columns,
+	table.body .column .column,
+	table.body .column .columns {
+		padding-left: 0 !important;
+		padding-right: 0 !important;
+	}
+
+	table.body .collapse .columns,
+	table.body .collapse .column {
+		padding-left: 0 !important;
+		padding-right: 0 !important;
+	}
+
+	td.small-1,
+	th.small-1 {
+		display: inline-block !important;
+		width: 8.33333% !important;
+	}
+
+	td.small-2,
+	th.small-2 {
+		display: inline-block !important;
+		width: 16.66667% !important;
+	}
+
+	td.small-3,
+	th.small-3 {
+		display: inline-block !important;
+		width: 25% !important;
+	}
+
+	td.small-4,
+	th.small-4 {
+		display: inline-block !important;
+		width: 33.33333% !important;
+	}
+
+	td.small-5,
+	th.small-5 {
+		display: inline-block !important;
+		width: 41.66667% !important;
+	}
+
+	td.small-6,
+	th.small-6 {
+		display: inline-block !important;
+		width: 50% !important;
+	}
+
+	td.small-7,
+	th.small-7 {
+		display: inline-block !important;
+		width: 58.33333% !important;
+	}
+
+	td.small-8,
+	th.small-8 {
+		display: inline-block !important;
+		width: 66.66667% !important;
+	}
+
+	td.small-9,
+	th.small-9 {
+		display: inline-block !important;
+		width: 75% !important;
+	}
+
+	td.small-10,
+	th.small-10 {
+		display: inline-block !important;
+		width: 83.33333% !important;
+	}
+
+	td.small-11,
+	th.small-11 {
+		display: inline-block !important;
+		width: 91.66667% !important;
+	}
+
+	td.small-12,
+	th.small-12 {
+		display: inline-block !important;
+		width: 100% !important;
+	}
+
+	.columns td.small-12,
+	.column td.small-12,
+	.columns th.small-12,
+	.column th.small-12 {
+		display: block !important;
+		width: 100% !important;
+	}
+
+	table.body td.small-offset-1,
+	table.body th.small-offset-1 {
+		margin-left: 8.33333% !important;
+		Margin-left: 8.33333% !important;
+	}
+
+	table.body td.small-offset-2,
+	table.body th.small-offset-2 {
+		margin-left: 16.66667% !important;
+		Margin-left: 16.66667% !important;
+	}
+
+	table.body td.small-offset-3,
+	table.body th.small-offset-3 {
+		margin-left: 25% !important;
+		Margin-left: 25% !important;
+	}
+
+	table.body td.small-offset-4,
+	table.body th.small-offset-4 {
+		margin-left: 33.33333% !important;
+		Margin-left: 33.33333% !important;
+	}
+
+	table.body td.small-offset-5,
+	table.body th.small-offset-5 {
+		margin-left: 41.66667% !important;
+		Margin-left: 41.66667% !important;
+	}
+
+	table.body td.small-offset-6,
+	table.body th.small-offset-6 {
+		margin-left: 50% !important;
+		Margin-left: 50% !important;
+	}
+
+	table.body td.small-offset-7,
+	table.body th.small-offset-7 {
+		margin-left: 58.33333% !important;
+		Margin-left: 58.33333% !important;
+	}
+
+	table.body td.small-offset-8,
+	table.body th.small-offset-8 {
+		margin-left: 66.66667% !important;
+		Margin-left: 66.66667% !important;
+	}
+
+	table.body td.small-offset-9,
+	table.body th.small-offset-9 {
+		margin-left: 75% !important;
+		Margin-left: 75% !important;
+	}
+
+	table.body td.small-offset-10,
+	table.body th.small-offset-10 {
+		margin-left: 83.33333% !important;
+		Margin-left: 83.33333% !important;
+	}
+
+	table.body td.small-offset-11,
+	table.body th.small-offset-11 {
+		margin-left: 91.66667% !important;
+		Margin-left: 91.66667% !important;
+	}
+
+	table.body table.columns td.expander,
+	table.body table.columns th.expander {
+		display: none !important;
+	}
+
+	table.body .right-text-pad,
+	table.body .text-pad-right {
+		padding-left: 10px !important;
+	}
+
+	table.body .left-text-pad,
+	table.body .text-pad-left {
+		padding-right: 10px !important;
+	}
+
+	table.menu {
+		width: 100% !important;
+	}
+
+	table.menu td,
+	table.menu th {
+		width: auto !important;
+		display: inline-block !important;
+	}
+
+	table.menu.vertical td,
+	table.menu.vertical th,
+	table.menu.small-vertical td,
+	table.menu.small-vertical th {
+		display: block !important;
+	}
+
+	table.menu[align=3D"center"] {
+		width: auto !important;
+	}
+
+	table.button.small-expand,
+	table.button.small-expanded {
+		width: 100% !important;
+	}
+
+	table.button.small-expand table,
+	table.button.small-expanded table {
+		width: 100%;
+	}
+
+	table.button.small-expand table a,
+	table.button.small-expanded table a {
+		text-align: center !important;
+		width: 100% !important;
+		padding-left: 0 !important;
+		padding-right: 0 !important;
+	}
+
+	table.button.small-expand center,
+	table.button.small-expanded center {
+		min-width: 0;
+	}
+}</style>
+	</head>
+	<body leftmargin=3D"0" topmargin=3D"0" marginwidth=3D"0" marginheight=3D"0=
+" bgcolor=3D"#F6F6F6" style=3D"-moz-box-sizing: border-box; -ms-text-size-a=
+djust: 100%; -webkit-box-sizing: border-box; -webkit-text-size-adjust: 100%=
+; Margin: 0; box-sizing: border-box; color: #5D6879; font-family: Helvetica=
+, Arial, sans-serif; font-size: 16px; font-weight: normal; line-height: 1.3=
+; margin: 0; min-width: 100%; padding: 0; text-align: left; width: 100% !im=
+portant;">
+		<!-- <span class=3D"preheader"></span> -->
+		<table class=3D"body" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" wi=
+dth=3D"100%" height=3D"100%" style=3D"Margin: 0; background: #E4E8EE; borde=
+r-collapse: collapse; border-spacing: 0; color: #5D6879; font-family: Helve=
+tica, Arial, sans-serif; font-size: 16px; font-weight: normal; height: 100%=
+; line-height: 1.3; margin: 0; padding: 0; text-align: left; vertical-align=
+: top; width: 100%;">
+			<tr style=3D"padding: 0; text-align: left; vertical-align: top;">
+				<td class=3D"body-cell" align=3D"center" valign=3D"top" bgcolor=3D"#F6F=
+6F6" style=3D"-moz-hyphens: auto; -webkit-hyphens: auto; Margin: 0; backgro=
+und: #E4E8EE !important; border-collapse: collapse !important; color: #5D68=
+79; font-family: Helvetica, Arial, sans-serif; font-size: 16px; font-weight=
+: normal; hyphens: auto; line-height: 1.3; margin: 0; padding: 0; padding-b=
+ottom: 20px; text-align: left; vertical-align: top; word-wrap: break-word;"=
+>
+					<center data-parsed=3D"" style=3D"min-width: 580px; width: 100%;">
+
+						<table align=3D"center" class=3D"wrapper header float-center" style=
+=3D"Margin: 0 auto; background: #1E2530; border-bottom: none; border-collap=
+se: collapse; border-spacing: 0; float: none; margin: 0 auto; padding: 0; t=
+ext-align: center; vertical-align: top; width: 100%;"><tr style=3D"padding:=
+ 0; text-align: left; vertical-align: top;"><td class=3D"wrapper-inner" sty=
+le=3D"-moz-hyphens: auto; -webkit-hyphens: auto; Margin: 0; border-collapse=
+: collapse !important; color: #5D6879; font-family: Helvetica, Arial, sans-=
+serif; font-size: 16px; font-weight: normal; hyphens: auto; line-height: 1.=
+3; margin: 0; padding: 20px; text-align: left; vertical-align: top; word-wr=
+ap: break-word;">
+							<table align=3D"center" class=3D"container" style=3D"Margin: 0 auto;=
+ background: transparent; border-collapse: collapse; border-spacing: 0; mar=
+gin: 0 auto; padding: 0; text-align: inherit; vertical-align: top; width: 5=
+80px;"><tbody><tr style=3D"padding: 0; text-align: left; vertical-align: to=
+p;"><td style=3D"-moz-hyphens: auto; -webkit-hyphens: auto; Margin: 0; bord=
+er-collapse: collapse !important; color: #5D6879; font-family: Helvetica, A=
+rial, sans-serif; font-size: 16px; font-weight: normal; hyphens: auto; line=
+-height: 1.3; margin: 0; padding: 0; text-align: left; vertical-align: top;=
+ word-wrap: break-word;">
+							<table class=3D"row collapse" style=3D"border-collapse: collapse; bo=
+rder-spacing: 0; display: table; padding: 0; position: relative; text-align=
+: left; vertical-align: top; width: 100%;"><tbody><tr style=3D"padding: 0; =
+text-align: left; vertical-align: top;">
+								<th class=3D"small-12 large-12 columns first last" style=3D"Margin:=
+ 0 auto; color: #5D6879; font-family: Helvetica, Arial, sans-serif; font-si=
+ze: 16px; font-weight: normal; line-height: 1.3; margin: 0 auto; padding: 0=
+; padding-bottom: 0; padding-left: 0; padding-right: 0; text-align: left; w=
+idth: 588px;"><table style=3D"border-collapse: collapse; border-spacing: 0;=
+ padding: 0; text-align: left; vertical-align: top; width: 100%;"><tr style=
+=3D"padding: 0; text-align: left; vertical-align: top;"><th style=3D"Margin=
+: 0; color: #5D6879; font-family: Helvetica, Arial, sans-serif; font-size: =
+16px; font-weight: normal; line-height: 1.3; margin: 0; padding: 0; text-al=
+ign: left;">
+								<h1 style=3D"Margin: 0; Margin-bottom: px; color: #FFFFFF; font-fam=
+ily: Georgia, serif; font-size: 30px; font-weight: normal; line-height: 1.3=
+; margin: 0; margin-bottom: px; padding: 0; text-align: left; word-wrap: no=
+rmal;">
+									Overleaf
+								</h1>
+								</th>
+								<th class=3D"expander" style=3D"Margin: 0; color: #5D6879; font-fam=
+ily: Helvetica, Arial, sans-serif; font-size: 16px; font-weight: normal; li=
+ne-height: 1.3; margin: 0; padding: 0 !important; text-align: left; visibil=
+ity: hidden; width: 0;"></th></tr></table></th>
+							</tr></tbody></table>
+							</td></tr></tbody></table>
+						</td></tr></table>
+						<table class=3D"spacer float-center" style=3D"Margin: 0 auto; border-=
+collapse: collapse; border-spacing: 0; float: none; margin: 0 auto; padding=
+: 0; text-align: center; vertical-align: top; width: 100%;"><tbody><tr styl=
+e=3D"padding: 0; text-align: left; vertical-align: top;"><td height=3D"20px=
+" style=3D"-moz-hyphens: auto; -webkit-hyphens: auto; Margin: 0; border-col=
+lapse: collapse !important; color: #5D6879; font-family: Helvetica, Arial, =
+sans-serif; font-size: 20px; font-weight: normal; hyphens: auto; line-heigh=
+t: 20px; margin: 0; mso-line-height-rule: exactly; padding: 0; text-align: =
+left; vertical-align: top; word-wrap: break-word;">&nbsp;</td></tr></tbody>=
+</table>
+						<table align=3D"center" class=3D"container main float-center" style=
+=3D"Margin: 0 auto; Margin-top: 10px; background: #FFFFFF; border-collapse:=
+ collapse; border-spacing: 0; float: none; margin: 0 auto; margin-top: 10px=
+; padding: 0; text-align: center; vertical-align: top; width: 580px;"><tbod=
+y><tr style=3D"padding: 0; text-align: left; vertical-align: top;"><td styl=
+e=3D"-moz-hyphens: auto; -webkit-hyphens: auto; Margin: 0; border-collapse:=
+ collapse !important; color: #5D6879; font-family: Helvetica, Arial, sans-s=
+erif; font-size: 16px; font-weight: normal; hyphens: auto; line-height: 1.3=
+; margin: 0; padding: 0; text-align: left; vertical-align: top; word-wrap: =
+break-word;">
+							<table class=3D"spacer" style=3D"border-collapse: collapse; border-s=
+pacing: 0; padding: 0; text-align: left; vertical-align: top; width: 100%;"=
+><tbody><tr style=3D"padding: 0; text-align: left; vertical-align: top;"><t=
+d height=3D"20px" style=3D"-moz-hyphens: auto; -webkit-hyphens: auto; Margi=
+n: 0; border-collapse: collapse !important; color: #5D6879; font-family: He=
+lvetica, Arial, sans-serif; font-size: 20px; font-weight: normal; hyphens: =
+auto; line-height: 20px; margin: 0; mso-line-height-rule: exactly; padding:=
+ 0; text-align: left; vertical-align: top; word-wrap: break-word;">&nbsp;</=
+td></tr></tbody></table>
+
+								<table class=3D"row" style=3D"border-collapse: collapse; border-spa=
+cing: 0; display: table; padding: 0; position: relative; text-align: left; =
+vertical-align: top; width: 100%;">
+		<tbody>
+			<tr style=3D"padding: 0; vertical-align: top;">
+				<th class=3D"small-12 columns" style=3D"line-height: 1.3; margin: 0 aut=
+o; padding: 0; padding-bottom: 16px; padding-left: 16px; padding-right: 16p=
+x; text-align: left; width: 564px;">
+					<table style=3D"border-collapse: collapse; border-spacing: 0; padding:=
+ 0; text-align: left; vertical-align: top; width: 100%; color: #5D6879; fon=
+t-family: Helvetica, Arial, sans-serif; font-size: 16px; font-weight: norma=
+l; line-height: 1.3;">
+						<tr style=3D"padding: 0; text-align: left; vertical-align: top;">
+							<th style=3D"margin: 0; padding: 0; text-align: left;">
+							=09
+									<h3 class=3D"force-overleaf-style" style=3D"margin: 0; color: #5D6=
+879; font-family: Georgia, serif; font-size: 24px; font-weight: normal; lin=
+e-height: 1.3; padding: 0; text-align: left; word-wrap: normal;">
+										Institutional SSO account linked
+									</h3>
+							=09
+							</th>
+							<tr>
+								<td>
+									<p style=3D"height: 20px; margin: 0; padding: 0;">&nbsp;</p>
+
+								=09
+										<p style=3D"margin: 0 0 10px 0; padding: 0;">
+											Hi,
+										</p>
+								=09
+
+								=09
+										<p class=3D"force-overleaf-style" style=3D"margin: 0 0 10px 0; pa=
+dding: 0;">
+											We are writing to let you know that an Institutional SSO account=
+ at Massachusetts Institute of Technology was linked to your account nathra=
+@mit.edu on Thursday 1 May 2025 at 00:10 GMT.
+										</p>
+								=09
+										<p class=3D"force-overleaf-style" style=3D"margin: 0 0 10px 0; pa=
+dding: 0;">
+											<span style=3D"display:inline-block;padding:0 20px;width:100%">L=
+inked: <br><b>nathra@mit.edu</b></span>
+										</p>
+								=09
+										<p class=3D"force-overleaf-style" style=3D"margin: 0 0 10px 0; pa=
+dding: 0;">
+											If this was you, you can ignore this email.
+										</p>
+								=09
+										<p class=3D"force-overleaf-style" style=3D"margin: 0 0 10px 0; pa=
+dding: 0;">
+											If this was not you, we recommend getting in touch with our supp=
+ort team at support@overleaf.com to report this as potentially suspicious a=
+ctivity on your account.
+										</p>
+								=09
+										<p class=3D"force-overleaf-style" style=3D"margin: 0 0 10px 0; pa=
+dding: 0;">
+											We also encourage you to read our <a href=3D"https://www.overlea=
+f.com/learn/how-to/Keeping_your_account_secure">quick guide</a> to keeping =
+your Overleaf account safe.
+										</p>
+								=09
+                 =20
+                </td>
+							</tr>
+            </tr>
+					</table>
+				</th>
+			</tr>
+		</tbody>
+	</table>
+
+
+							<table class=3D"wrapper secondary" align=3D"center" style=3D"backgro=
+und: #E4E8EE; border-collapse: collapse; border-spacing: 0; padding: 0; tex=
+t-align: left; vertical-align: top; width: 100%;"><tr style=3D"padding: 0; =
+text-align: left; vertical-align: top;"><td class=3D"wrapper-inner" style=
+=3D"-moz-hyphens: auto; -webkit-hyphens: auto; Margin: 0; border-collapse: =
+collapse !important; color: #5D6879; font-family: Helvetica, Arial, sans-se=
+rif; font-size: 16px; font-weight: normal; hyphens: auto; line-height: 1.3;=
+ margin: 0; padding: 0; text-align: left; vertical-align: top; word-wrap: b=
+reak-word;">
+								<table class=3D"spacer" style=3D"border-collapse: collapse; border-=
+spacing: 0; padding: 0; text-align: left; vertical-align: top; width: 100%;=
+"><tbody><tr style=3D"padding: 0; text-align: left; vertical-align: top;"><=
+td height=3D"10px" style=3D"-moz-hyphens: auto; -webkit-hyphens: auto; Marg=
+in: 0; border-collapse: collapse !important; color: #5D6879; font-family: H=
+elvetica, Arial, sans-serif; font-size: 10px; font-weight: normal; hyphens:=
+ auto; line-height: 10px; margin: 0; mso-line-height-rule: exactly; padding=
+: 0; text-align: left; vertical-align: top; word-wrap: break-word;">&nbsp;<=
+/td></tr></tbody></table>
+								<p style=3D"Margin: 0; Margin-bottom: 10px; color: #5D6879; font-fa=
+mily: Helvetica, Arial, sans-serif; font-size: 16px; font-weight: normal; l=
+ine-height: 1.3; margin: 0; margin-bottom: 10px; padding: 0; text-align: le=
+ft;"><small style=3D"color: #5D6879; font-size: 80%;">
+									Overleaf &#8226; <a href=3D"https://www.overleaf.com" style=3D"Mar=
+gin: 0; color: #0F7A06; font-family: Helvetica, Arial, sans-serif; font-wei=
+ght: normal; line-height: 1.3; margin: 0; padding: 0; text-align: left; tex=
+t-decoration: none;">https://www.overleaf.com</a>
+								</small></p>
+							</td></tr></table>
+						</td></tr></tbody></table>
+
+					</center>
+				</td>
+			</tr>
+		</table>
+		<!-- prevent Gmail on iOS font size manipulation -->
+	<div style=3D"display:none; white-space:nowrap; font:15px courier; line-he=
+ight:0;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &n=
+bsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; =
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </div=
+>
+	<img src=3D"http://email-link.overleaf.com/wf/open?upn=3Du001.NXCjQaYKJy1m=
+stdzIzPDX9LuZl8YcDT7qHbVJmYXgL3tClys1CD2LghVVS-2FE-2Bg1GuD-2BJcBGL76Bx9jp5Q=
+cK2MBV1maGJPVv-2Bhgx9nrs76PRzq8u6uTHgy5RY48b0ueD6rswVqV36zFtYig6NAuqWUjczf9=
+FwsgnsjxMFWe2BIJvLR3JUo5Nb5-2FXfqIaiF4KbKl3mvKauw4M6BgGRXosSlg-3D-3D" alt=
+=3D"" width=3D"1" height=3D"1" border=3D"0" style=3D"height:1px !important;=
+width:1px !important;border-width:0 !important;margin-top:0 !important;marg=
+in-bottom:0 !important;margin-right:0 !important;margin-left:0 !important;p=
+adding-top:0 !important;padding-bottom:0 !important;padding-right:0 !import=
+ant;padding-left:0 !important;"></body>
+</html>=
+
+----_NmP-e54130b7acec2a91-Part_1--

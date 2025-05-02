@@ -1,192 +1,367 @@
-Received: from SJ2PR01MB8281.prod.exchangelabs.com (2603:10b6:a03:53d::5) by
- DM6PR01MB5929.prod.exchangelabs.com with HTTPS; Thu, 1 May 2025 18:32:55
+Received: from DS1PR01MB9086.prod.exchangelabs.com (2603:10b6:8:221::6) by
+ DM6PR01MB5929.prod.exchangelabs.com with HTTPS; Fri, 2 May 2025 14:17:24
  +0000
-Received: from CH0PR03CA0214.namprd03.prod.outlook.com (2603:10b6:610:e7::9)
- by SJ2PR01MB8281.prod.exchangelabs.com (2603:10b6:a03:53d::5) with Microsoft
+ARC-Seal: i=3; a=rsa-sha256; s=arcselector10001; d=microsoft.com; cv=pass;
+ b=TGKFqw8z75vHcK/e7SqgY5gXfRAzVHaf7bITwZ1DVR+qGmZ+LQaTw7KvIiZIdGtAQc4golCaslO10ByC9d4KXL5hclYMNqM5gA0fk+dHBNXCVpmhSRJHbKcRSOLz5e8dhiWvWHtGgIvbq0sz90/WHEogKB+TQdfke5w/rMobH4i+24ob3nNlWTzmryyITdO/SB5mDl2TSmXjSjfuOIbpC6D4u3FGvjutYW0ebkAnv1LmcoXe8nPQeUriq4iIv+YSHvBvGoM+/NpqgGuc3PjDDRGca/tGDHeJbzi5r0+gxjyYQ3b/jzw/+BIIpsChtFY2YS8gtW+NH3p/1Xk1EuaeeQ==
+ARC-Message-Signature: i=3; a=rsa-sha256; c=relaxed/relaxed; d=microsoft.com;
+ s=arcselector10001;
+ h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-AntiSpam-MessageData-ChunkCount:X-MS-Exchange-AntiSpam-MessageData-0:X-MS-Exchange-AntiSpam-MessageData-1;
+ bh=GYi1jznAGGf7VLPSULUfo+t4zKEqArd0jOIGWTaTDjI=;
+ b=KMtnVXV5A+HxyNr7FEE2gy1QJOGV7D5zPuitu23LMqwtoWIZexrinqBvw6GfiKJeeeOXsWBug3h90rrfGT+cvdPSRMTCEta3Jt/wfM6nieAF79N/qKYxz43DQZ/jPFfAOHBEXMPJQzi+761MfMOtDppO5+sm/4gDU+ICLj8+HMa5oH1uNL5g4qLpUhpNyBRKFIDCdZhqckf/WYQ3JenkXRWjzlZh2vc6GHtvKXrO79mzqNeHaZjvtdSB6zmz1/nHwZC94NPRik7TvuiKbV2k5KbB0VRF5BzWCasOWYbWpGTxK7pCo4TUr6CqTAGHGRFr47k3WdObUff5bD7vkvhzxw==
+ARC-Authentication-Results: i=3; mx.microsoft.com 1; spf=pass (sender ip is
+ 2a00:1450:4864:20::13e) smtp.rcpttodomain=mit.edu
+ smtp.mailfrom=googlegroups.com; dmarc=pass (p=none sp=quarantine pct=100)
+ action=none header.from=gmail.com; dkim=pass (signature was verified)
+ header.d=googlegroups.com; dkim=pass (signature was verified)
+ header.d=gmail.com; arc=pass (0 oda=1 ltdi=1
+ spf=[1,2,smtp.mailfrom=humathematics@gmail.com]
+ dkim=[1,2,header.i=@gmail.com] dmarc=[1,2,header.from=gmail.com])
+Received: from SJ0PR13CA0230.namprd13.prod.outlook.com (2603:10b6:a03:2c1::25)
+ by DS1PR01MB9086.prod.exchangelabs.com (2603:10b6:8:221::6) with Microsoft
  SMTP Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
- 15.20.8699.21; Thu, 1 May 2025 18:32:53 +0000
-Received: from CH1PEPF0000A34C.namprd04.prod.outlook.com
- (2603:10b6:610:e7:cafe::78) by CH0PR03CA0214.outlook.office365.com
- (2603:10b6:610:e7::9) with Microsoft SMTP Server (version=TLS1_3,
- cipher=TLS_AES_256_GCM_SHA384) id 15.20.8655.42 via Frontend Transport; Thu,
- 1 May 2025 18:32:52 +0000
-Authentication-Results: spf=pass (sender IP is 76.223.138.254)
- smtp.mailfrom=bounce.piazza.com; dkim=pass (signature was verified)
- header.d=piazza.com;dkim=pass (signature was verified)
- header.d=amazonses.com;dmarc=pass action=none
- header.from=piazza.com;compauth=pass reason=100
-Received-SPF: Pass (protection.outlook.com: domain of bounce.piazza.com
- designates 76.223.138.254 as permitted sender)
- receiver=protection.outlook.com; client-ip=76.223.138.254;
- helo=c138-254.smtp-out.amazonses.com; pr=C
-Received: from c138-254.smtp-out.amazonses.com (76.223.138.254) by
- CH1PEPF0000A34C.mail.protection.outlook.com (10.167.244.6) with Microsoft
- SMTP Server (version=TLS1_3, cipher=TLS_AES_256_GCM_SHA384) id 15.20.8699.20
- via Frontend Transport; Thu, 1 May 2025 18:32:52 +0000
-DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/simple;
-	s=rkxjria5fi6isroby2ng5lkes6nmrdx5; d=piazza.com; t=1746124372;
-	h=Date:From:To:Message-ID:References:Subject:MIME-Version:Content-Type;
-	bh=rBOlECT+7gn+M0N0pgf0vjFHKa/CTTVf/9I/ldSdsmo=;
-	b=rpX5SiaWkEGHsdrDT5l2XKPtXWLl3RTfZhU4m/Eo2PYby8SioramyHYNObXrBtmB
-	1RAx/tAeoLDbOBH21W6FEB7nPzItv0YztWpNP5hAf5i/Cyt0cWyfGJ2VAJVvL5kTvP7
-	vbPQKbFvzXYDUd+4B6l3SPbeFhCDZeIUTlshQwa0uv8eXe6UlidvsNqkbz3deICZq8C
-	o36DUjO8Lzd/HNvs+iIerKlbjhrh5wJfRft/Yj9+D0retCQ91aMPnkNaRljOvXJt3IH
-	Fo+7dqpRwwJ0ysK4LwcgdeWBhURLSKQFcXJkPD2HifHmeFCiha3JfDlHwdTo7bOGzO9
-	kcBWfSf+ow==
-DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/simple;
-	s=6gbrjpgwjskckoa6a5zn6fwqkn67xbtw; d=amazonses.com; t=1746124372;
-	h=Date:From:To:Message-ID:References:Subject:MIME-Version:Content-Type:Feedback-ID;
-	bh=rBOlECT+7gn+M0N0pgf0vjFHKa/CTTVf/9I/ldSdsmo=;
-	b=UvvgXmsXO86aOpB3KbGxvD0AP+QmiSrBxn6N3G48opnHiSzmay9FKu75FrWc90QF
-	EJTv5+1frwQ+k0wKDlfcF3a8EgZNpKq+5k+zpbjxeSPQ+7ANxSwctZmVcCDZaA9/3o4
-	AkCWeDZiN3ivaLCfacQBjqsxKbx9KtP9qvAcxE/o=
-Date: Thu, 1 May 2025 18:32:52 +0000
-From: Piazza Team <no-reply@piazza.com>
-To: nathra@mit.edu
-Message-ID: <010001968d1f792b-9562bc51-61b3-458a-b559-880d6ea043f4-000000@email.amazonses.com>
-References: <null_u@piazza.com>
-Subject: 05/01/25 Daily Digest for 6.7720/15.070 on Piazza
-Content-Type: multipart/related; 
-	boundary="----=_Part_348780_357676898.1746124372259"
-Feedback-ID: ::1.us-east-1.IJxEZsT1vZDY+yek0x98cniKjBNb3XwMrqCPImPEw3Y=:AmazonSES
-X-SES-Outgoing: 2025.05.01-76.223.138.254
-Return-Path: 010001968d1f792b-9562bc51-61b3-458a-b559-880d6ea043f4-000000@bounce.piazza.com
-X-MS-Exchange-Organization-ExpirationStartTime: 01 May 2025 18:32:52.8468
+ 15.20.8699.23; Fri, 2 May 2025 14:17:22 +0000
+Received: from SJ1PEPF000026C9.namprd04.prod.outlook.com
+ (2603:10b6:a03:2c1:cafe::ba) by SJ0PR13CA0230.outlook.office365.com
+ (2603:10b6:a03:2c1::25) with Microsoft SMTP Server (version=TLS1_3,
+ cipher=TLS_AES_256_GCM_SHA384) id 15.20.8699.18 via Frontend Transport; Fri,
+ 2 May 2025 14:17:22 +0000
+Authentication-Results: spf=pass (sender IP is 2a00:1450:4864:20::13e)
+ smtp.mailfrom=googlegroups.com; dkim=pass (signature was verified)
+ header.d=googlegroups.com;dkim=pass (signature was verified)
+ header.d=gmail.com;dmarc=pass action=none header.from=gmail.com;compauth=pass
+ reason=100
+Received-SPF: Pass (protection.outlook.com: domain of googlegroups.com
+ designates 2a00:1450:4864:20::13e as permitted sender)
+ receiver=protection.outlook.com; client-ip=2a00:1450:4864:20::13e;
+ helo=mail-lf1-x13e.google.com; pr=C
+Received: from mail-lf1-x13e.google.com (2a00:1450:4864:20::13e) by
+ SJ1PEPF000026C9.mail.protection.outlook.com (2603:10b6:a0f:fc02::56a) with
+ Microsoft SMTP Server (version=TLS1_3, cipher=TLS_AES_256_GCM_SHA384) id
+ 15.20.8699.20 via Frontend Transport; Fri, 2 May 2025 14:17:22 +0000
+Received: by mail-lf1-x13e.google.com with SMTP id 2adb3069b0e04-5498d2a8b88sf871726e87.1
+        for <nathra@mit.edu>; Fri, 02 May 2025 07:17:22 -0700 (PDT)
+ARC-Seal: i=2; a=rsa-sha256; t=1746195440; cv=pass;
+        d=google.com; s=arc-20240605;
+        b=OmRaL0ZdA6meBt/cbLEkVrToh/8o+kFAr+ENkjgU7658TeiCxyphcysz5dpxd67WoO
+         oBdoV3i/RP7gVVxbG+O54XOodzzYUQEV4LVnDJx3taYVPQWmJ28ouDHKfn5Qpu62pfcN
+         u9Mg2wX+cQ9sitj8qTPHh1LpKHXZhx8V55wp9L4y3tdrsz9bn9Z1O27CdPMnVK8GRZnH
+         4jjjsEcKN/sLyCf6AUYnmKgFBJq2cVE1LdSDw/TC8sVSrUCFERd8BAZjSo7oyLUX1Lz1
+         KkQJpC8osAv/eUZwexCasgMtfTvZ3y5LsaPZ7LGOpCoBaqGhYCLkaAxe8h7ZDFHtn+mA
+         gohw==
+ARC-Message-Signature: i=2; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=list-unsubscribe:list-archive:list-help:list-post:list-id
+         :mailing-list:precedence:to:subject:message-id:date:from:in-reply-to
+         :references:mime-version:sender:dkim-signature:dkim-signature;
+        bh=GYi1jznAGGf7VLPSULUfo+t4zKEqArd0jOIGWTaTDjI=;
+        fh=c5jPoh8OQR9NOzpolLbxXyWHQXYpKbIbJnF0KuitqR0=;
+        b=e8NO61+X/S3ypzmrHKQ8ELtdrPgvB1eKsR1Mc60hMmlIxvtHEiXeOGf9+ieyCLpHzk
+         k028MfyV+kgp8wiZI7CkZ+Mc2+/kvdTQIeARIfqOQ8UBpFTN6ZrrLFVRZkqNT45sIpAr
+         KwXQqk7mtT0gKwNMtVvxO/Ai5IB0M3WAT1JQ53DrqgHq0k/ANmF6sBso1aZqfR40+e42
+         agiCF45woJ/Ps8G861/S2E//0M8ZYODIzET7W0CNO95NSBaAw4z6z+cMJ7sOkNU7LZDS
+         6/VW/uaR9Okk8/gHURhtDBhWhU87VMvm5EQR30HLZAH9BItZ92F1U0T/nbx8qCAev9o9
+         j1/w==;
+        darn=mit.edu
+ARC-Authentication-Results: i=2; gmr-mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=Pv7C0rDC;
+       spf=pass (google.com: domain of humathematics@gmail.com designates 2a00:1450:4864:20::633 as permitted sender) smtp.mailfrom=humathematics@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@googlegroups.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20230601; t=1746195440; x=1746800240; darn=mit.edu;
+        h=list-unsubscribe:list-archive:list-help:list-post:list-id
+         :mailing-list:precedence:x-original-authentication-results
+         :x-original-sender:to:subject:message-id:date:from:in-reply-to
+         :references:mime-version:sender:from:to:cc:subject:date:message-id
+         :reply-to;
+        bh=GYi1jznAGGf7VLPSULUfo+t4zKEqArd0jOIGWTaTDjI=;
+        b=pU7gIk3N2zFa7PjRzt+EE3kMSrL6xAyGZHmVMK37DxfGQFeYXF01qUVMzAi0li73wP
+         4VMQK6vAdxGyX88O9gudfPaM3gYVPUljOqzQ+Ow+EJgk4Ts7bIC23ox4YP5OGzcXWNac
+         Kn1zidM0Icb/GQp/FsaBlyvHLZ9A2aZ/uhSUvkOgPfFNwQ+YTdtXLGqMj6AxLWQoZatL
+         nl1NhFovDyUP/l4sfVhKXLReflkF/6MQ7fNBJX4ki/SF1wMumo9aU7PmJm4K3KfPwi3Q
+         rof3Qn5ey9DfIIXI0XjYsDx2nT4Ezp+bx8R7lDS+p1s04qp/GsOIDvkwhwaDlIu9XEp1
+         fCWQ==
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20230601; t=1746195440; x=1746800240; darn=mit.edu;
+        h=list-unsubscribe:list-archive:list-help:list-post:list-id
+         :mailing-list:precedence:x-original-authentication-results
+         :x-original-sender:to:subject:message-id:date:from:in-reply-to
+         :references:mime-version:from:to:cc:subject:date:message-id:reply-to;
+        bh=GYi1jznAGGf7VLPSULUfo+t4zKEqArd0jOIGWTaTDjI=;
+        b=lQznUKxmTJZFfxplE3UCCme1jV7c+GqDTrLMQoYcbp2uZedpWbslvFV1GUd6ZO8daI
+         PZQ27DgzzrrvsLQYHv0QnlyzZQcaRXUUqJ9HMwhAXf+QYDoFqhPzhgb2v7xGHr7hsv0A
+         rqzSso4NiFlhszVhKPMJ6SYoegkqotjOhiz0wV0Y/nErgZ5ieuOnC3pP4px1I+NpuECs
+         pShdknmZ5p6JO2qTkU4z3IO/fRN2Q9guRDZLI8qgkNLSZjTOzsvDdS/njAWhXDYd0z/Q
+         R7M5uIQou3RO0xS+RgHB3xyAbERb4FdbbMtPl7KOyAz3dk+fGtD60Y7c3rF34g81ihp6
+         is4g==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1746195440; x=1746800240;
+        h=list-unsubscribe:list-archive:list-help:list-post
+         :x-spam-checked-in-group:list-id:mailing-list:precedence
+         :x-original-authentication-results:x-original-sender:to:subject
+         :message-id:date:from:in-reply-to:references:mime-version
+         :x-beenthere:x-gm-message-state:sender:from:to:cc:subject:date
+         :message-id:reply-to;
+        bh=GYi1jznAGGf7VLPSULUfo+t4zKEqArd0jOIGWTaTDjI=;
+        b=kBxnnk6qKZQqhb1AN4WQBsW1ge57LbCtMYrzwqlDd6xvUsaRXKbKdNPv9YifaRyb+B
+         os7k3q2EO6d5ab24zN6W1WuZ+tN61tljtF9RLvrKPDQ34jmg4DZHofFXOVn5Hkk4tLQd
+         t7pgOwm+9C9yxhN91tCpfWgRRwlta5ZajjSERS6EHn8/9RSrMctKgMVzUpE8FAvaWjwH
+         ClaYmLfd5NFiyCtkJuHTctCdeQR9Z6nluC/CAeK+UF8djv/7X7jrJwLms0+gn/8Lzarp
+         2NEHXVHVnPz52ELC78twL4W2ZMU4X+TvlxCsnDyQzeV9CePfAO48U0NXsiV8d5rxYAyF
+         6f+w==
+Sender: harvard-undergraduate-mathematics-association@googlegroups.com
+X-Forwarded-Encrypted: i=2; AJvYcCUt0MYun5rN+rPaFM0eO1phv1x9ia7xMsv01QuEuqAEe5pHsIDhbOfWLu44sW7MSNmT5N9PbV4=@mit.edu
+X-Gm-Message-State: AOJu0YwrEzMJQvfItfaSc7JxDplylvHsVxmkyvgr421YA6d1TQBg/N9h
+	W9wRR/QTT7XxsFKcHzvuMP3S0BeBROfjBW24vtpxWZzdQeo1ORWY
+X-Google-Smtp-Source: AGHT+IGxVuO6pzQh7RXVMCT/YQ8cRYoLOeruh09D/Dgx595p5Cr8AA/9gdACI9xjwpCEgoj9K2WTMA==
+X-Received: by 2002:a05:6512:3090:b0:545:9ce:7608 with SMTP id 2adb3069b0e04-54eac24a88amr972759e87.50.1746195438518;
+        Fri, 02 May 2025 07:17:18 -0700 (PDT)
+X-BeenThere: harvard-undergraduate-mathematics-association@googlegroups.com; h=AVT/gBENbllM8ikxZ3bEMQc6wqGPZB922YEXBroOoNk012UAag==
+Received: by 2002:a19:2d16:0:b0:549:91ca:8970 with SMTP id 2adb3069b0e04-54ea6759fc1ls335082e87.1.-pod-prod-05-eu;
+ Fri, 02 May 2025 07:17:12 -0700 (PDT)
+X-Received: by 2002:a2e:ad85:0:b0:30d:e104:a943 with SMTP id 38308e7fff4ca-320c5cdb6f9mr7839571fa.39.1746195432507;
+        Fri, 02 May 2025 07:17:12 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1746195432; cv=none;
+        d=google.com; s=arc-20240605;
+        b=BP7auPhO9qqU63HFJcFjl6ngDYEmYBfVcXOMivJca4vi+2NHi3LTU25OppQWuQkmTA
+         xEeRUIeI4x7m3cnvLHep61X4RcqHudNCnPGLymcZm2gewmPhhpZmpJV4wahDr4zsx8bf
+         4LcJyUjBaVIhB4BPjsCqUZ/GAQXmJgtCjUimJTCuE2IgmvCtPxulxG3aWP8fVudeHE8m
+         2+TVFWboaZLY5pwPkdSBnZ4DK6ywUPcPQWgZOXSVOE7l/z5lMA3OZ0m77mfn1bLnZfqK
+         WiUCXIu/bi/keBsJMUx9LksyFUZkFzdEr2h3Mdq6t0N3yEv0wbeH9JEIdhTEDTHRH8Om
+         rP5A==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=to:subject:message-id:date:from:in-reply-to:references:mime-version
+         :dkim-signature;
+        bh=jSQScHMZil5bREQwuJDUyxPNQunYVk0nzuKTK04nWqM=;
+        fh=PvBpv11iTMGq3Ab1T83vhWkpCUI4gOXJd8VSvMwlM+c=;
+        b=fRkSUCP4uRBVzFIlfGey3QZjm/vCYRO5WxHU8uAkP7QYJb82+hNdqCVIXzJehPUZ8w
+         2IIIiDw/VRvo7+DbhwTqqEtv4iLKChz48MebXysMR2ULlLKzYDh28P6EbzDP26m3u2hM
+         uvOXLgYDb0ttYANOzJbUugC7e0/fBr/62f8AChjOnEgWYk9ZzDgsdVfSo8V2d3YRrlE2
+         TZzUS46t6kYt/S1eToaSj22y4tCPItfo1iBuEby7Bb2uMZise3Z9Ki+73eDXGeKEdlSO
+         FZlk9030SSk27Atj8hpN2Cvlp9Try0KO9qqoDto6dewahiMrdC0GhsTevw96sSBFgI/I
+         WcQQ==;
+        dara=google.com
+ARC-Authentication-Results: i=1; gmr-mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=Pv7C0rDC;
+       spf=pass (google.com: domain of humathematics@gmail.com designates 2a00:1450:4864:20::633 as permitted sender) smtp.mailfrom=humathematics@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@googlegroups.com
+Received: from mail-ej1-x633.google.com (mail-ej1-x633.google.com. [2a00:1450:4864:20::633])
+        by gmr-mx.google.com with ESMTPS id 38308e7fff4ca-3202a5b2067si1091181fa.5.2025.05.02.07.17.12
+        for <harvard-undergraduate-mathematics-association@googlegroups.com>
+        (version=TLS1_3 cipher=TLS_AES_128_GCM_SHA256 bits=128/128);
+        Fri, 02 May 2025 07:17:12 -0700 (PDT)
+Received-SPF: pass (google.com: domain of humathematics@gmail.com designates 2a00:1450:4864:20::633 as permitted sender) client-ip=2a00:1450:4864:20::633;
+Received: by mail-ej1-x633.google.com with SMTP id a640c23a62f3a-acb2faa9f55so261853666b.3
+        for <harvard-undergraduate-mathematics-association@googlegroups.com>; Fri, 02 May 2025 07:17:12 -0700 (PDT)
+X-Gm-Gg: ASbGncu7ryPX/jA28y1tLOxby+WoEZi8lFhJXj4Ob1NTD5hqKkYYkIerW7W6Z7dD5/t
+	t2icI+34u7gLsjg43cXaEPIUq2GmmXrgqsx00jGJcfa2bk4+hU1/IrXiby3V+Q36yPi7cte3pfI
+	pdMh55VH1VZBbIErV/TMOn06lufPY5FHYECxXJsGWynWAfa3UpmFZcPiU=
+X-Received: by 2002:a17:906:dc90:b0:aca:d5a1:c324 with SMTP id
+ a640c23a62f3a-ad17a85fe80mr295194666b.0.1746195431372; Fri, 02 May 2025
+ 07:17:11 -0700 (PDT)
+References: <CAGThTLJpu45s5NQw9-AP=ptgYWV_fF2EcjvWV2wDb_-10o7Erg@mail.gmail.com>
+In-Reply-To: <CAGThTLJpu45s5NQw9-AP=ptgYWV_fF2EcjvWV2wDb_-10o7Erg@mail.gmail.com>
+From: HUMA Harvard Undergraduate Mathematics Association <humathematics@gmail.com>
+Date: Fri, 2 May 2025 10:16:58 -0400
+X-Gm-Features: ATxdqUG_Lz3AMkqWLRN0gqQO0STPpNzOq45QVtphTmwlJNYKX-ChrWy-TzbwdOE
+Message-ID: <CAGThTLL8woPuUs6ZmsRGFVv=WXX+L3LHGtiovf831CeJt_G=9Q@mail.gmail.com>
+Subject: Re: Etched at Harvard
+To: harvard-undergraduate-mathematics-association@googlegroups.com
+Content-Type: multipart/alternative; boundary="000000000000653c6f063427ce12"
+X-Original-Sender: humathematics@gmail.com
+X-Original-Authentication-Results: gmr-mx.google.com;       dkim=pass
+ header.i=@gmail.com header.s=20230601 header.b=Pv7C0rDC;       spf=pass
+ (google.com: domain of humathematics@gmail.com designates 2a00:1450:4864:20::633
+ as permitted sender) smtp.mailfrom=humathematics@gmail.com;       dmarc=pass
+ (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;       dara=pass header.i=@googlegroups.com
+Precedence: list
+Mailing-list: list harvard-undergraduate-mathematics-association@googlegroups.com;
+ contact harvard-undergraduate-mathematics-association+owners@googlegroups.com
+List-ID: <harvard-undergraduate-mathematics-association.googlegroups.com>
+X-Spam-Checked-In-Group: harvard-undergraduate-mathematics-association@googlegroups.com
+X-Google-Group-Id: 652568206101
+List-Post: <https://groups.google.com/group/harvard-undergraduate-mathematics-association/post>,
+ <mailto:harvard-undergraduate-mathematics-association@googlegroups.com>
+List-Help: <https://groups.google.com/support/>, <mailto:harvard-undergraduate-mathematics-association+help@googlegroups.com>
+List-Archive: <https://groups.google.com/group/harvard-undergraduate-mathematics-association
+List-Unsubscribe: <mailto:googlegroups-manage+652568206101+unsubscribe@googlegroups.com>,
+ <https://groups.google.com/group/harvard-undergraduate-mathematics-association/subscribe>
+Return-Path: harvard-undergraduate-mathematics-association+bncBC6MHOMW6QMBB2VH2PAAMGQE3IOE3SI@googlegroups.com
+X-MS-Exchange-Organization-ExpirationStartTime: 02 May 2025 14:17:22.3078
  (UTC)
 X-MS-Exchange-Organization-ExpirationStartTimeReason: OriginalSubmit
 X-MS-Exchange-Organization-ExpirationInterval: 1:00:00:00.0000000
 X-MS-Exchange-Organization-ExpirationIntervalReason: OriginalSubmit
-X-MS-Exchange-Organization-Network-Message-Id: 34380ff8-b249-4abf-1851-08dd88de957b
+X-MS-Exchange-Organization-Network-Message-Id: d53f1d5e-2fb0-4827-4081-08dd89840e2e
 X-EOPAttributedMessage: 0
 X-EOPTenantAttributedMessage: 64afd9ba-0ecf-4acf-bc36-935f6235ba8b:0
 X-MS-Exchange-Organization-MessageDirectionality: Incoming
 X-MS-PublicTrafficType: Email
-X-MS-TrafficTypeDiagnostic: CH1PEPF0000A34C:EE_|SJ2PR01MB8281:EE_|DM6PR01MB5929:EE_
-X-MS-Exchange-Organization-AuthSource: CH1PEPF0000A34C.namprd04.prod.outlook.com
+X-MS-TrafficTypeDiagnostic: SJ1PEPF000026C9:EE_|DS1PR01MB9086:EE_|DM6PR01MB5929:EE_
+X-MS-Exchange-Organization-AuthSource: SJ1PEPF000026C9.namprd04.prod.outlook.com
 X-MS-Exchange-Organization-AuthAs: Anonymous
-X-MS-Office365-Filtering-Correlation-Id: 34380ff8-b249-4abf-1851-08dd88de957b
+X-MS-Office365-Filtering-Correlation-Id: d53f1d5e-2fb0-4827-4081-08dd89840e2e
 X-MS-Exchange-AtpMessageProperties: SA|SL
 X-MS-Exchange-Organization-SCL: 1
-X-Microsoft-Antispam: BCL:4;ARA:13230040|13012899012|13102899012|4022899009|2092899012|12012899012|5062899012|3092899012|3072899012|32142699015|8096899003|7053199007|13003099007;
-X-Forefront-Antispam-Report: CIP:76.223.138.254;CTRY:US;LANG:en;SCL:1;SRV:;IPV:NLI;SFV:NSPM;H:c138-254.smtp-out.amazonses.com;PTR:c138-254.smtp-out.amazonses.com;CAT:NONE;SFS:(13230040)(13012899012)(13102899012)(4022899009)(2092899012)(12012899012)(5062899012)(3092899012)(3072899012)(32142699015)(8096899003)(7053199007)(13003099007);DIR:INB;
-X-MS-Exchange-CrossTenant-OriginalArrivalTime: 01 May 2025 18:32:52.7366
+X-Microsoft-Antispam: BCL:0;ARA:13230040|7093399015|12012899012|4022899009|13003099007|8096899003;
+X-Forefront-Antispam-Report: CIP:2a00:1450:4864:20::13e;CTRY:;LANG:en;SCL:1;SRV:;IPV:NLI;SFV:NSPM;H:mail-lf1-x13e.google.com;PTR:mail-lf1-x13e.google.com;CAT:NONE;SFS:(13230040)(7093399015)(12012899012)(4022899009)(13003099007)(8096899003);DIR:INB;
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 02 May 2025 14:17:22.2171
  (UTC)
-X-MS-Exchange-CrossTenant-Network-Message-Id: 34380ff8-b249-4abf-1851-08dd88de957b
+X-MS-Exchange-CrossTenant-Network-Message-Id: d53f1d5e-2fb0-4827-4081-08dd89840e2e
 X-MS-Exchange-CrossTenant-Id: 64afd9ba-0ecf-4acf-bc36-935f6235ba8b
-X-MS-Exchange-CrossTenant-AuthSource: CH1PEPF0000A34C.namprd04.prod.outlook.com
+X-MS-Exchange-CrossTenant-AuthSource: SJ1PEPF000026C9.namprd04.prod.outlook.com
 X-MS-Exchange-CrossTenant-AuthAs: Anonymous
 X-MS-Exchange-CrossTenant-FromEntityHeader: Internet
-X-MS-Exchange-Transport-CrossTenantHeadersStamped: SJ2PR01MB8281
-X-MS-Exchange-Transport-EndToEndLatency: 00:00:02.7316990
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: DS1PR01MB9086
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:02.5764479
 X-MS-Exchange-Processed-By-BccFoldering: 15.20.8678.021
 X-Microsoft-Antispam-Mailbox-Delivery:
 	ucf:0;jmr:0;auth:0;dest:I;ENG:(910005)(944506478)(944626604)(920097)(930097)(140003);
 X-Microsoft-Antispam-Message-Info:
-	=?utf-8?B?ZkhjbGxCZGJzVmN1MHhxUENtYVVveS9hSXZUeUZNRjZ0Nyt6b01jUnl5cGdk?=
- =?utf-8?B?ZWMwbkxEd2xiK2x4VERjVzdNRnhTRG84TlV1bHFVdk1NK1Q1aXAwOGZNRkx6?=
- =?utf-8?B?cnZ6Y0xycEsyR0JzMXppYWJIalVoVHFjdWhkUGFCYjU4WXVFY0tlQ0VsVTM0?=
- =?utf-8?B?Qjh2ZkJ1MEZaUzdTSVNjUHRnUkJ5Z3MyVjB3TVE3azUvTHJjWFFPYTBtVUJx?=
- =?utf-8?B?czlhY3M4Z2JRSEM2LzExc1BwRlJ1SG1Dd1JVTDJnYXc3Y29hYWhFZVFUaDFW?=
- =?utf-8?B?a1NNTVhnK25MYVNwNzdzNEJEb1o3a1RkN2oyWFRmSHhjT0F6T1gzK0Q3MXA0?=
- =?utf-8?B?bGRJQXZxa1VHSEYwUmdwSjlkOUNtdkxCY1pZYkI0dXhkSmtBQ05GTytHdEph?=
- =?utf-8?B?RjhpeFkzeDBISjhVUnM5YXNyT0pKMzUzNnNDYnNmVmtmQlVCUnFldjV4Ukhj?=
- =?utf-8?B?VzBvNXk0dWdlT05NNmg1eVZWMk5lQ2FXWkZSNG1GK0xnVFJVTk9reXAvYjFX?=
- =?utf-8?B?emgxeG55MWYveWdhcWd5anRtQTZ1dmZDT3JaNlE1SmdBZHppL09tdzhxaWtq?=
- =?utf-8?B?aXVxRXZIZW41WjFnWS94NDN1MVZoYndEditrUDNRQWN3Y3FGWXJtdmtWZ1hY?=
- =?utf-8?B?djJaT3hCL3BtTXJZTEIyRzRKUVhHWnpTTmNMblpabHVwWVUxNTdFK05BUE5E?=
- =?utf-8?B?UVc0ZUJFS1JEeURPd2pPY1B4UGE3aTh3WWRtd2E5eGg0WFJIM29SbHNIU2R1?=
- =?utf-8?B?UjBxclR3b0xUK1R1RTdiQ2lMMGFNcEtFNVZPa0QxcC9pV0VoZTVDd2ZzUzM5?=
- =?utf-8?B?amJBTFVlMWZwODlacWMxcEdlVzk5T2V6S0NPOStkTE1LeUJXaTBHbnBCdzMr?=
- =?utf-8?B?bVl2YU11R1FSazJxSTYrOVA3RE1CNlllMzdpYmRuQWZWY3ZSRVIyMHk1Y3Vs?=
- =?utf-8?B?S0ZwcUpkMXcwVTNoc013TUVsdU9ZT0gvRyt5L0ZqTEUwZXFNT0p0UmwzUzhk?=
- =?utf-8?B?NXlxUkJQYVdFdkxiN0dCUzJGbUpHeTk3ZEhqRkNHVmkzQ3lOaFl6REQ5c2g1?=
- =?utf-8?B?VXJ5aG1odWRzQ2Ewa3RSWUdhZDA4RGZhRC8yNWhyeEtFN05XVENxbzNOTTdu?=
- =?utf-8?B?a0xTNUw0NzBUdmYya1pQY2VJckFxRjJ3RklpeUtHS0pjU2daRnZ0OHpiaEh6?=
- =?utf-8?B?SEFiOVdBOHdLOE42RHJuQWVzNXNZZzZQNVNuQm9SSTNmR0lnbVRMbS9sUWZR?=
- =?utf-8?B?ai90RWRjRS9TZEUreWNGTUhQSW9qb3lhekx3WkszWEt4cG9FTjQ1QXBTVFlh?=
- =?utf-8?B?ZXQ5T1BlSTdZU1pJTnNuSHYvN2NFQzltb1U2bGpCUkQ4ayt5ME84Q0xsREdx?=
- =?utf-8?B?R2xtNURudkFaQXlWNERTRFBVckIvcEFCNXl4VnFScUpFZ2J4VDlYUExiQ3cv?=
- =?utf-8?B?akQzYlVzOTkvUDFMOGx1VkE5clhuT2lNSDBrNkhPN2VXMGVVNHNKQjNXUFIv?=
- =?utf-8?B?SjRjcWRqSE5kVHR1MEhnVHEvb3lKekI1M0pjMDFHMFRHRExxbjVja3pOQ1k4?=
- =?utf-8?B?WkJiZHhhZU53QmdtUjNyRU9NbHFXam43WDZSbU9xLy91UXN6UmQxWitEWjht?=
- =?utf-8?B?R1hSb1hobU1nK096ZG9McmZWTXJaVXk4TGp3cE5MMFBYOGErMzYxN05wM3R5?=
- =?utf-8?B?anZhS0JFc2lzdnZ4VWc5ZFVjTGNzK3haY21mRkMwa281M3VvNmpQZ3g4MVBX?=
- =?utf-8?B?RmNOZk9uZ1BXTVdnS2RPV3FWZmo5NkZoMlFaU21FTkRaQ3dkd1ZWMWpBbTc2?=
- =?utf-8?B?dWMwYWRRaVJKTXJjZFFwMXV6MjQwUGpOR2FRNWsyL2RQOGRvSUdIQ1Y1SDFm?=
- =?utf-8?B?R29yNnVDRFJOTHpFZW1yQ3dDSkpNQjBiazVSWkdsMVJkT1NqV1p6blZORHh2?=
- =?utf-8?B?eUdpMlFPWDJMb0tKdGlzdUxHUlNmUVFSZ2ZHdVB6VGF3MG9NVkhrcWtXQU1M?=
- =?utf-8?B?UmltM0R3TUxMYVNuMml6MWhxTVpSaE5wTkpXZWJQUElSeWFyRGtkNWRERDZn?=
- =?utf-8?B?NkVidlBXYjBTVjB5UGo4ZGdjWldkKzEzbVBjS2dGUWxzblZZTXVlVUJ4LzVZ?=
- =?utf-8?B?RmZENUtyblFhbHp2LysvZnFRQTNQVkNFUk1VckhtWVQwNUpxRjkwSytncWtM?=
- =?utf-8?B?b0ZIMSt6Y0VZZ3c4bWMvZnFIRi9TcUFoR2R6bVlScU9ITTVSSnZCenRJY3R6?=
- =?utf-8?B?RFdPS3h6bldFZlBFay9hKzFmTFFKdVlOOXJWMVpObEx1Qm5oT0hWdTFuWUUz?=
- =?utf-8?B?TUFNbVJUSk45SkJtSXBVZ1NsM0ZDb2dJaDFOT0c0ZWM4OEpSSEJHc2NoakN3?=
- =?utf-8?B?TkNvSTk5OUVmUlZrNFA3M1MzVC9KcFNkYUVTSHdDS2lzd21NRzlJcTlxY1BJ?=
- =?utf-8?B?Qk40NmNHWUsyZmQ5THBWMU52bERDS3A2UTZRT2ViQnZpd0hkdFNKMStQMzJT?=
- =?utf-8?B?a294dmtPT1BKc1hRRG5vUlF6Tnl2dzQ0YmRlMWZGVWdrakxVSkFkdWVlc0FK?=
- =?utf-8?B?UXZUcmh4Zjh2eWdqbENTbk9sTm0wdnFXZWtPeFBmdThFZnowN29sTmVDTDFv?=
- =?utf-8?B?UWViREZJR3FHNXFBbTlsRlBsM3llejlwMW13TWttQ1RtVE55L0J3eHpVeG1k?=
- =?utf-8?B?QjR3VVJzVm9JSDJsSHVBd2Eyam5GRjFuQjBMdi85M0kyc0FVZ0Q0K1ZyQXVR?=
- =?utf-8?B?YmhxOTlxcEk2LyswdUh1RmJxd3pMak9zamo2Um1iUVdxRWJhUW9JZXBkYXM2?=
- =?utf-8?Q?WUq+3p0+Rl4vyLIbg15cM=3D?=
+	=?utf-8?B?UTlCRzFUdXc5NUpONWFkMWN4RjlPZW1EYnQrMTFXOENXNFBoR0xOTHlPZ3li?=
+ =?utf-8?B?ZS92MkxRclpPcStpVHJIa3NzK3Nlc1I0WnVmQ2lOWm1kTk1JR0lBby8yQjVG?=
+ =?utf-8?B?ZzUydWlDTTB3TWZSa0V1bk9EbFIyQVdPSFF4V2dwclMwSWVoTzc2QzhsazFy?=
+ =?utf-8?B?WlhTVHRrQUJ5MHh0ZGd6NDJob2M0bHByWlozOEtLc05uMjliZGZvN0lkNThW?=
+ =?utf-8?B?RU11WmZ5dGVTNkN5T3FBL3pXa2NQYXY3anY2Q1hTSXBHRUQ5K0VHWENXL0da?=
+ =?utf-8?B?ZisyUUU5ZmFTWExjOUtyMkVkWnBqdURLa285c2tJTzJFcldxL1crbUYwazZt?=
+ =?utf-8?B?bWhOWjVISTdXd3V3c3BwT09UZTNNQlYwd1dMcnBvaldrOFZGbjRocjlBL041?=
+ =?utf-8?B?REU5QmlRcldqVCtHL3Vtb2RJTm5hT21jSFFJSDVKNHl6YW4wSVVkK0VvUkhq?=
+ =?utf-8?B?dkN4SXVKRXAwVUxyUS9VeFJOY01QeGwxRThpSzRITTdNNHNWYUFHd2tHU05H?=
+ =?utf-8?B?QXZtdWx6ckRSdU1MNnlXZHRBNnBpZDNpWEV5QWFIMVJFRGRPc0FXWHF3Zm5M?=
+ =?utf-8?B?RFB4cXR6dDBHYXpZdlYvRldDV3FpSDc3aTRaUFArWW9hbDBwSWdZdjhpQlJ4?=
+ =?utf-8?B?QjFsQjA1ZGxjcUFLSkhJTjZpdXV3Ti9MdFZPa1ZyM0lwNFBPNklsQXNQWXFh?=
+ =?utf-8?B?cVkxZGxqUlkza1owb0szaGtUb3JwYkR4Nm44YXJrRVRzUFAxSmFmUzlsTkxH?=
+ =?utf-8?B?R2s3MXpnTEdFMnFBM0pyQWRWd2crb2d6M2gwMjZYdktHanQwS01jays3dU5y?=
+ =?utf-8?B?UXVjS0ZGS0F0STJGaTU5ekpQUjZMckFpNERYWWpBa08zY2J0cmg2cGZVYmMw?=
+ =?utf-8?B?WXBsYWRFOURlMkZDb0ZEVVpJa3k5WEhkSHNLdXhxRGgrNm5GSms2cnlPUUkx?=
+ =?utf-8?B?c1oyVUZjOEUvOHk1NGlpVVNVdUxFaCtrMTk3dlpZTitLN0p0UGdGWlUvdjdH?=
+ =?utf-8?B?V0xiV1QxNXArQkFpaDRpYk9PTjNTWmNCNXFUQU1PMENSdGlQLzlsak1TK1Rn?=
+ =?utf-8?B?WSt1VkE1eCt5VnZKSTR4dXlsdW1BcEJyUHREQnc0KzZKSTNWSHo2UVd0Q3lx?=
+ =?utf-8?B?dzhpeGZrTWNjMzdsZUFkcTVFajUrUHlxcjVEdklXUjNDQ2dFazM2RW9OcFA3?=
+ =?utf-8?B?bDlqUm1sU2k2STAxNEIwQ0c2bGJnM2U2c0pkdWdaTmZxYlY2dFNYWGFxSGVF?=
+ =?utf-8?B?NzNKeHArdUxicGFEeWh5TjFMMzhSYjVVTDRJcVI1WkFpNm9HcXFKbFBQQXFr?=
+ =?utf-8?B?ZGwvc2FWTjZ6QmVVcVVoR0FWSE02TDh4UTZmYnhEUWJNNEZqeXl4ZGM3dURQ?=
+ =?utf-8?B?aHZRaFBPd2d0Z1gwMnpIRlRPdlZET2JzMjRIMjQxQnBEMTJsdDZmR0tWa1F4?=
+ =?utf-8?B?TUp4VkM2Z1RjUHNrdFNCY1lTb3puZkVWVllyaUNzMHV3YUFTNzVnU01zWERl?=
+ =?utf-8?B?alo1dTUvczNMenU3cXJ4YXUyVG8zT3luaFFQcHQ5eWJFOER1V012bkphRyts?=
+ =?utf-8?B?QUtsejg4MFVOZUdoRFdNZjJJQ285azJLM21ZMGZXY3RlU294Y2ZWazVnYTJV?=
+ =?utf-8?B?ODhjMlR3YkhQdTNOdDd1U0JoQWFUdVVsM2p2Y0ttV1VBTWRWVlNyK3BLSmU0?=
+ =?utf-8?B?VjU0S3FzVzBFeXhMQzVzVHcvbXF4VGI2R3hLWmlZeTUxVG1QRUFRNS9UdUYz?=
+ =?utf-8?B?T3NOQjNEUWs5MXFkRjdzRm5DazZwUjcrS2Y3R1RiQnd0UVNlY3lKOHE3K21Y?=
+ =?utf-8?B?TDJHZ3ZPZjhIcnFHWUVmZ2U3LzBVZnVhVjY4UEVMN2ZmdTJrb1ltQm5ONEJX?=
+ =?utf-8?B?UGVGaUo0SjhWTksxNEJ1bDRpUldIOHIrQUo2dmFycHZwcE5SQ1Zla28zQTBu?=
+ =?utf-8?B?Q2ZjOVBjc1RuaVlzVG5MdXFxWFMyUHQ4Nm1XZVBRTSs1cmNBbDJWMGZRSEs2?=
+ =?utf-8?B?N0dDTkJGT2dwUnZTaXl0T1hEVGNnU3NOSGVYbHJ2RUJWUzViMUk1TjhXdzNs?=
+ =?utf-8?B?eE5KSXpJemYyZjJjMGhvZXlsbkM0QXh5dFBKQVU0SUpGVzYrU0JvZGRER244?=
+ =?utf-8?B?b2lmdzJ4MlFWN01aczNTWktQamcwSzE0U0k4WnVtelN0YzczL0ZsejByQ2wv?=
+ =?utf-8?B?Nm1keE8rYjQwK29pcjB6S1lGUVdLUHJKZm83d0E4YkhTaHhOUmxmRWl3VndY?=
+ =?utf-8?B?REZWYU1lVDRib3FPZXhOclBveVNYSXJiOFpUWGUzSUhrSUFSZG90ZmJWa3ZW?=
+ =?utf-8?B?VlMvRnVNTHJkWm83by9EUmRHbm5pUTlaRjNTcWFHMGJrNXI5OGpBT1F4VG5s?=
+ =?utf-8?B?NGpmNTZocm5TYlIyMXo2OTVyTDRMTUZVQlNrSUxINks5aWlpYVZCdWJqVUF5?=
+ =?utf-8?B?aXAvNDNSR3IzbkUxaXJlMzZFaE9XdkZzVDhhdldrMFdOc3ptZVFOMk1RWVZD?=
+ =?utf-8?B?VllsWXpTTTBySmxaUEdnaklxcHNrcUFZWjArL3B0SDYwTDdqRmtqcGtGcnBU?=
+ =?utf-8?B?c1VLNHF1NjZjQU94UG54cHkySk9ZUnUzczFha0cyUFVTcnNHcU41endNSzRx?=
+ =?utf-8?B?SnRqUVpaTTdHU1hjaEhSeTJKYXF1WGk4SlozaVBDWDBMUVJUcmhGSXZNUXpK?=
+ =?utf-8?Q?AJU1?=
 MIME-Version: 1.0
 
-------=_Part_348780_357676898.1746124372259
-Content-Type: multipart/alternative; 
-	boundary="----=_Part_348781_661128185.1746124372259"
+--000000000000653c6f063427ce12
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
 
-------=_Part_348781_661128185.1746124372259
-Content-Type: text/plain; charset=UTF-8
-Content-Transfer-Encoding: 7bit
+Hi everyone!
 
-05/01/25 Daily Digest for 6.7720/15.070: 6.7720/15.070/18.619 Discrete Probability and Stochastic Processes
+Sorry for the double email--following up with more details!
 
+Prod is thrilled to welcome the Etched team back to Harvard this Saturday!
+(Location shared upon registration.)
 
-------------------------------------------------------------
-Final Paper Expectations  (4/30/2025, 11:40:48 PM)
+Since graduating, Gavin, Chris, and Robert have built one of the most
+ambitious AI hardware startups, raising hundreds of millions from top
+investors like Peter Thiel, Jane Street, and Two Sigma.
 
-What are the expectations for the final paper? I.e. what is the expected length? Do we need sources external to the lecture notes (or whatever paper/UROP/lab project we're studying)? How should it be formatted? Do we need to explain any tools/methods from class we end up using, or can we assume the audience knows these already? I.e. how much mathematical context is needed?
+Etched=E2=80=99s chip, *Sohu*, is a transformer-optimized AI inference engi=
+ne that
+runs over 10x faster than NVIDIA GPUs=E2=80=94unlocking massive gains in
+throughput, latency, and cost per token. This makes once-impossible
+applications, like real-time video and swarms of research agents,
+deployable at scale.
 
-I've never had to write a math paper before, and I assume some others in the class haven't either, so some more specifics would be appreciated.
+Now a 150-person team, Etched includes top talent from AI, hardware, and
+quant research=E2=80=94including Brian Loiler (HGX/DGX, 80%+ of NVIDIA=E2=
+=80=99s revenue)
+and David Munday (Google TPU v1=E2=80=93v5).
 
-Go to https://piazza.com/class?cid=ma4ti1hzc1f46z&nid=m6l4kt94gnz70a&token=KbFmKa1TWak to view.
+https://lu.ma/etched
 
-------------------------------------------------------------
+On Fri, May 2, 2025 at 9:46=E2=80=AFAM HUMA Harvard Undergraduate Mathemati=
+cs
+Association <humathematics@gmail.com> wrote:
 
+> Hi all,
+>
+> For those of you interested in AI hardware, check out this event from
+> Etched https://lu.ma/etched.
+>
+> Best,
+> HUMA Board
+>
 
-Thanks,
-The Piazza Team
---
-Contact us at team@piazza.com
+--=20
+You received this message because you are subscribed to the Google Groups "=
+Harvard Undergraduate Mathematics Association" group.
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to harvard-undergraduate-mathematics-association+unsubscribe@googlegro=
+ups.com.
+To view this discussion visit https://groups.google.com/d/msgid/harvard-und=
+ergraduate-mathematics-association/CAGThTLL8woPuUs6ZmsRGFVv%3DWXX%2BL3LHGti=
+ovf831CeJt_G%3D9Q%40mail.gmail.com.
 
+--000000000000653c6f063427ce12
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
 
-You're receiving this email because nathra@mit.edu is enrolled in 6.7720/15.070 at Massachusetts Institute of Technology (MIT). Go to https://piazza.com/login to sign in and manage your email preferences or proceed to https://piazza.com/remove/KbFmKa1TWak/m6l4kt94gnz70a to un-enroll from this class.
-If you already have a Piazza account under another email address, link nathra@mit.edu to that account here: https://piazza.com/link_accounts/KbFmKa1TWak
-------=_Part_348781_661128185.1746124372259
-Content-Type: text/html; charset=UTF-8
-Content-Transfer-Encoding: 7bit
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8"><d=
+iv dir=3D"ltr">Hi everyone!&nbsp;<br><div><br></div><div>Sorry for the doub=
+le email--following up with more details!</div><div><br></div><div>Prod is =
+thrilled to welcome the Etched team back to Harvard this Saturday! (Locatio=
+n shared upon registration.)<br><br>Since graduating, Gavin, Chris, and Rob=
+ert have built one of the most ambitious AI hardware startups, raising hund=
+reds of millions from top investors like Peter Thiel, Jane Street, and Two =
+Sigma.<br><br>Etched=E2=80=99s chip, *Sohu*, is a transformer-optimized AI =
+inference engine that runs over 10x faster than NVIDIA GPUs=E2=80=94unlocki=
+ng massive gains in throughput, latency, and cost per token. This makes onc=
+e-impossible applications, like real-time video and swarms of research agen=
+ts, deployable at scale.<br><br>Now a 150-person team, Etched includes top =
+talent from AI, hardware, and quant research=E2=80=94including Brian Loiler=
+ (HGX/DGX, 80%+ of NVIDIA=E2=80=99s revenue) and David Munday (Google TPU v=
+1=E2=80=93v5).</div><div><br></div><div><a href=3D"https://lu.ma/etched" ta=
+rget=3D"_blank">https://lu.ma/etched</a></div></div><br><div class=3D"gmail=
+_quote gmail_quote_container"><div dir=3D"ltr" class=3D"gmail_attr">On Fri,=
+ May 2, 2025 at 9:46=E2=80=AFAM HUMA Harvard Undergraduate Mathematics Asso=
+ciation &lt;<a href=3D"mailto:humathematics@gmail.com">humathematics@gmail.=
+com</a>&gt; wrote:<br></div><blockquote class=3D"gmail_quote" style=3D"marg=
+in:0px 0px 0px 0.8ex;border-left:1px solid rgb(204,204,204);padding-left:1e=
+x"><div dir=3D"ltr">Hi all,<br><div><br></div><div>For those of you interes=
+ted in AI hardware, check out this event from Etched&nbsp;<a href=3D"https:=
+//lu.ma/etched" target=3D"_blank">https://lu.ma/etched</a>.</div><div><br><=
+/div><div>Best,</div><div>HUMA Board</div></div>
+</blockquote></div>
 
-<html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"></head>
-<h2>05/01/25 Daily Digest for 6.7720/15.070: 6.7720/15.070/18.619 Discrete Probability and Stochastic Processes</h2>
-<br><hr>
-<b>Final Paper Expectations</b>  <i>4/30/2025, 11:40:48 PM</i><br><br>
-<p>What are the expectations for the final paper? I.e. what is the expected length? Do we need sources external to the lecture notes (or whatever paper/UROP/lab project we're studying)? How should it be formatted? Do we need to explain any tools/methods from class we end up using, or can we assume the audience knows these already? I.e. how much mathematical context is needed?</p>
 <p></p>
-<p>I've never had to write a math paper before, and I assume some others in the class haven't either, so some more specifics would be appreciated.</p><br>
-<br>
-<a href="https://piazza.com/class?cid=ma4ti1hzc1f46z&amp;nid=m6l4kt94gnz70a&amp;token=KbFmKa1TWak">Click here</a> to view.<br>
-<br><hr><br>
-<br>
-<br>
-Thanks,<br>
-The Piazza Team<br>
---<br>
-Contact us at team@piazza.com<br><br><br>
-<font size="-2">
-You're receiving this email because nathra@mit.edu is enrolled in 6.7720/15.070 at Massachusetts Institute of Technology (MIT). Click <a href="https://piazza.com/unsubscribe/l7qgp2ubbsg31i/m6l4kt94gnz70a">here</a> to unsubscribe from digest emails. Or, <a href="https://piazza.com/login">sign in</a> to manage your email preferences or <a href="https://piazza.com/remove/KbFmKa1TWak/m6l4kt94gnz70a">un-enroll</a> from this class.<br>If you already have a Piazza account under another email address, link nathra@mit.edu to that account <a href="https://piazza.com/link_accounts/KbFmKa1TWak">here</a>.</font>
-</html>
-------=_Part_348781_661128185.1746124372259--
 
-------=_Part_348780_357676898.1746124372259--
+-- <br>
+You received this message because you are subscribed to the Google Groups &=
+quot;Harvard Undergraduate Mathematics Association&quot; group.<br>
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to <a href=3D"mailto:harvard-undergraduate-mathematics-association+uns=
+ubscribe@googlegroups.com">harvard-undergraduate-mathematics-association+un=
+subscribe@googlegroups.com</a>.<br>
+To view this discussion visit <a href=3D"https://groups.google.com/d/msgid/=
+harvard-undergraduate-mathematics-association/CAGThTLL8woPuUs6ZmsRGFVv%3DWX=
+X%2BL3LHGtiovf831CeJt_G%3D9Q%40mail.gmail.com?utm_medium=3Demail&amp;utm_so=
+urce=3Dfooter">https://groups.google.com/d/msgid/harvard-undergraduate-math=
+ematics-association/CAGThTLL8woPuUs6ZmsRGFVv%3DWXX%2BL3LHGtiovf831CeJt_G%3D=
+9Q%40mail.gmail.com</a>.<br>
+
+--000000000000653c6f063427ce12--

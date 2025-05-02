@@ -1,0 +1,189 @@
+Received: from CY1PR01MB9267.prod.exchangelabs.com (2603:10b6:930:104::20) by
+ DM6PR01MB5929.prod.exchangelabs.com with HTTPS; Wed, 30 Apr 2025 18:09:02
+ +0000
+Received: from MW4PR03CA0285.namprd03.prod.outlook.com (2603:10b6:303:b5::20)
+ by CY1PR01MB9267.prod.exchangelabs.com (2603:10b6:930:104::20) with Microsoft
+ SMTP Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.20.8699.19; Wed, 30 Apr 2025 18:09:00 +0000
+Received: from MWH0EPF000989EA.namprd02.prod.outlook.com
+ (2603:10b6:303:b5:cafe::1f) by MW4PR03CA0285.outlook.office365.com
+ (2603:10b6:303:b5::20) with Microsoft SMTP Server (version=TLS1_3,
+ cipher=TLS_AES_256_GCM_SHA384) id 15.20.8655.38 via Frontend Transport; Wed,
+ 30 Apr 2025 18:09:00 +0000
+Authentication-Results: spf=pass (sender IP is 76.223.138.252)
+ smtp.mailfrom=bounce.piazza.com; dkim=pass (signature was verified)
+ header.d=piazza.com;dkim=pass (signature was verified)
+ header.d=amazonses.com;dmarc=pass action=none
+ header.from=piazza.com;compauth=pass reason=100
+Received-SPF: Pass (protection.outlook.com: domain of bounce.piazza.com
+ designates 76.223.138.252 as permitted sender)
+ receiver=protection.outlook.com; client-ip=76.223.138.252;
+ helo=c138-252.smtp-out.amazonses.com; pr=C
+Received: from c138-252.smtp-out.amazonses.com (76.223.138.252) by
+ MWH0EPF000989EA.mail.protection.outlook.com (10.167.241.137) with Microsoft
+ SMTP Server (version=TLS1_3, cipher=TLS_AES_256_GCM_SHA384) id 15.20.8699.20
+ via Frontend Transport; Wed, 30 Apr 2025 18:09:00 +0000
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/simple;
+	s=rkxjria5fi6isroby2ng5lkes6nmrdx5; d=piazza.com; t=1746036539;
+	h=Date:From:To:Message-ID:References:Subject:MIME-Version:Content-Type;
+	bh=oxnORSMjI95cWOMlKNA09TcUdyzSS42soMx8qqS7h+M=;
+	b=jlfoRjz5iMr9rBW9sBMdgFK99+/lCjSSDExwGOh8zhXydT1vGltRZcs84Z456sHD
+	Kmv63qOCJQKfh9jzgngouLLAs6Ab+pgzBgH7AOZjRSSTNoXTKRfg4Hxq1/zU1/tY4il
+	t7yK4lhzPiYrDZtz010J/lI1djBeMmCxPELCq1MMaUHfkohs5oJbRr779xyZmZb1Dts
+	zMnGHR8jLSGYKAruU1+N3o8++UqC5KNtTZaUOyWV+5Pex9WsL5/37Z0ld9k9Ku+zRXf
+	ttn3mhUAUhhAfvrSLfISB8//msVZOTuuVDMM9PuwlGNGczN5JcZdOTvhGyLphe1vOdz
+	e6ws7LoQzA==
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/simple;
+	s=6gbrjpgwjskckoa6a5zn6fwqkn67xbtw; d=amazonses.com; t=1746036539;
+	h=Date:From:To:Message-ID:References:Subject:MIME-Version:Content-Type:Feedback-ID;
+	bh=oxnORSMjI95cWOMlKNA09TcUdyzSS42soMx8qqS7h+M=;
+	b=krgq/9nE1B/Mvv63R2wWg1UZaUM5MqTAdjovrJPS7/bnpXDyC21+CGGoaHltAdFw
+	v3tARuufHXzsLdBYUquUKjWhsXEmt6zUDSX3Js80Opm/7OYPbdpYH36YPwVvuS0UIkH
+	gTwd8QxdLcOZPtyK0efUybkLUrmTmbGOJ5eg/05Y=
+Date: Wed, 30 Apr 2025 18:08:59 +0000
+From: Piazza Team <no-reply@piazza.com>
+To: nathra@mit.edu
+Message-ID: <0100019687e33f6d-30cc59c2-6e65-4f7e-b32c-5f51274a7f90-000000@email.amazonses.com>
+References: <null_u@piazza.com>
+Subject: 04/30/25 Daily Digest for 6.7720/15.070 on Piazza
+Content-Type: multipart/related; 
+	boundary="----=_Part_90910_1354574206.1746036539238"
+Feedback-ID: ::1.us-east-1.IJxEZsT1vZDY+yek0x98cniKjBNb3XwMrqCPImPEw3Y=:AmazonSES
+X-SES-Outgoing: 2025.04.30-76.223.138.252
+Return-Path: 0100019687e33f6d-30cc59c2-6e65-4f7e-b32c-5f51274a7f90-000000@bounce.piazza.com
+X-MS-Exchange-Organization-ExpirationStartTime: 30 Apr 2025 18:09:00.2820
+ (UTC)
+X-MS-Exchange-Organization-ExpirationStartTimeReason: OriginalSubmit
+X-MS-Exchange-Organization-ExpirationInterval: 1:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: OriginalSubmit
+X-MS-Exchange-Organization-Network-Message-Id: fbb81c03-a95c-4987-5021-08dd88121531
+X-EOPAttributedMessage: 0
+X-EOPTenantAttributedMessage: 64afd9ba-0ecf-4acf-bc36-935f6235ba8b:0
+X-MS-Exchange-Organization-MessageDirectionality: Incoming
+X-MS-PublicTrafficType: Email
+X-MS-TrafficTypeDiagnostic: MWH0EPF000989EA:EE_|CY1PR01MB9267:EE_|DM6PR01MB5929:EE_
+X-MS-Exchange-Organization-AuthSource: MWH0EPF000989EA.namprd02.prod.outlook.com
+X-MS-Exchange-Organization-AuthAs: Anonymous
+X-MS-Office365-Filtering-Correlation-Id: fbb81c03-a95c-4987-5021-08dd88121531
+X-MS-Exchange-AtpMessageProperties: SA|SL
+X-MS-Exchange-Organization-SCL: 1
+X-Microsoft-Antispam: BCL:4;ARA:13230040|3072899012|5062899012|32142699015|3092899012|2092899012|12012899012|4022899009|13102899012|13012899012|7053199007|8096899003|13003099007;
+X-Forefront-Antispam-Report: CIP:76.223.138.252;CTRY:US;LANG:en;SCL:1;SRV:;IPV:NLI;SFV:NSPM;H:c138-252.smtp-out.amazonses.com;PTR:c138-252.smtp-out.amazonses.com;CAT:NONE;SFS:(13230040)(3072899012)(5062899012)(32142699015)(3092899012)(2092899012)(12012899012)(4022899009)(13102899012)(13012899012)(7053199007)(8096899003)(13003099007);DIR:INB;
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 30 Apr 2025 18:09:00.0715
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: fbb81c03-a95c-4987-5021-08dd88121531
+X-MS-Exchange-CrossTenant-Id: 64afd9ba-0ecf-4acf-bc36-935f6235ba8b
+X-MS-Exchange-CrossTenant-AuthSource: MWH0EPF000989EA.namprd02.prod.outlook.com
+X-MS-Exchange-CrossTenant-AuthAs: Anonymous
+X-MS-Exchange-CrossTenant-FromEntityHeader: Internet
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: CY1PR01MB9267
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:02.3234399
+X-MS-Exchange-Processed-By-BccFoldering: 15.20.8678.021
+X-Microsoft-Antispam-Mailbox-Delivery:
+	ucf:0;jmr:0;auth:0;dest:I;ENG:(910005)(944506478)(944626604)(920097)(930097)(140003);
+X-Microsoft-Antispam-Message-Info:
+	=?utf-8?B?cXRXSjRuOGMzK3A4am1qUXBoR1pvZ3lJazVLWmhUK2xlWWFobEx0WHlSK3Z5?=
+ =?utf-8?B?YXNZL3phSjFYaDVNcWZEVk9vQmRGOVdJSm1qanJQQkVaVG9DU3FzeDUwajh5?=
+ =?utf-8?B?aGZPZ2RERGZ1LzV6WWdNT1ZyREt5NVR3b1VmOUtvVnNYUUt5UUQwSG9samda?=
+ =?utf-8?B?UzA1Ykg1UGJ1L1RYTklJTkQyQXN6UVpkdlE2T1laSm5UZGFacnFaL1RraVEv?=
+ =?utf-8?B?K0UvLzRMZ0U0YWwvU1BjR0NYT09BNmpwVmxCOEZwUmRaR3ZWVjJkUGs0Y2Ex?=
+ =?utf-8?B?VGY1cjEwa2ZDYlNLbHdpVUlOUVYvSVQvQkZiREpTK3RkdTZ5d3JpSUp6bjdL?=
+ =?utf-8?B?cE1OTWx4c1ZFbyt5bkZ1TVJ6czQyMkFHRm9iaWtQekdJM2lZVjgxUVJMaGZt?=
+ =?utf-8?B?UFkyVWczNGJackVNVW95aWtOZDZhUUZ6eWtHKzFRMDY0aWRGQ3l1Sjc4c3B1?=
+ =?utf-8?B?SjhXZURuSWZmSG1JT0FPVEFmNFUwcjlLMUpSZGlvTUxXd1EyYW5EdTdESW5J?=
+ =?utf-8?B?cmZOM2JUTUtoa1BNRDlSVUMrRUJMV3VSVFY4R0xkSEwrQ05VVlpVQi9EUE5p?=
+ =?utf-8?B?QXhlbWhEbWY5aGhaT1dZaTRycFlVd05EZ0NqbFpmOWVXcmdEVUNxOHdrZjdK?=
+ =?utf-8?B?SlhUYlV3TFJSOXdHNXJjY1liUTJJL3RoNnJ4SmZKL2hBWXpCUzRCT3B1VjdX?=
+ =?utf-8?B?VXNiWGJZajNXNzN5b0EwZnY0M28wK0RMdjBqN1Qrd0tFa21Gbjh6S0NHV0Ri?=
+ =?utf-8?B?dTBESWVaQU5KYnpwVTBkeXpBdGx0M0tzMlFUNjNSQkVubnJyVklWQnk0a0Fl?=
+ =?utf-8?B?RWxBSUlQdWxoVEc1UERmWDQ1K1NKU3M3VkgvRFBXSXFrTVZub1JlNFBwVnJQ?=
+ =?utf-8?B?RlArR2hqM1JQWXJuRGZ6azlBdW1rVVp0bXkvNkREQWtrck1oNTRNOEF0eXUy?=
+ =?utf-8?B?MkxCSW9seVBjanF3NEZ4eUoxK1g5QVBmMHpKWE9OVUN3NUh1Qjdvb0VVMzJV?=
+ =?utf-8?B?R2ZvK3ZyWlh3Vi9Bakk4cVBCN2h3R2RQUHJ5ZFBabGZ1MDdCeXBwYUZIL1Fl?=
+ =?utf-8?B?VkFlcmxvTGlKNkcrTTM3Vi9mRkhya0QvMHgxM0t2bmh2aDBmZFpSTnFEbEQ0?=
+ =?utf-8?B?eW5LUWIwZXRUcDM1QlhIVUR5TWdNbng4V3A1ZkY0dVlpM3pESkZ0anVqUlYx?=
+ =?utf-8?B?Qnh4SWJmRllZd2FiQlAvYkVaVHNzZ2RjTGJ0T3l1aGxvR2hmRGkwMkhORVZl?=
+ =?utf-8?B?T3JtZnBzQTZhQ2NxLzFzdFB0dGFHd3VGYmlNczc3KzZMd251czNOcWJFT2U2?=
+ =?utf-8?B?eU5vM2htT09ZS1V2TWpKOERDZGMrTDZVV3lkMUpNaGFzV3BRNEN2aFphOWVv?=
+ =?utf-8?B?K3V1WDdLajJyYUltOEhFaVMzSy84Y2pDUlRyalQ0MGFQUStUMGR1ajMrWGVu?=
+ =?utf-8?B?QjBHKzZsd281N28vN2ZMKzM4N0NGSmlnVU4wZVlCNk50ZXRtQU81eEdlTU44?=
+ =?utf-8?B?S1JRU0dsT3J0a3hkZmh3cFhFSGhkODZIOG5NZlVsWXBzaGhCb1FBMTIvQzFJ?=
+ =?utf-8?B?ZVhLS0VTak5mUXVoWU85a1g5MUJHVXRSVkRMQk1wOVROSk1DVzFRV1FEcGRm?=
+ =?utf-8?B?VXM2NldZRDQvcXpGY3NNanZXZWIreXlVanpPTmgyZThCQ2sreGxpTDVXUk5U?=
+ =?utf-8?B?M1RaQWUvZ0hmQS9pcjlNV1RMWlAxNDRjQjJEZEREVnI1QkpVRnBER01Tclhw?=
+ =?utf-8?B?dkpaR3I5bkoza0NGNHhDZTRBeEQzN1FJZ2dDb2RyRkdHRVBpV3J6MjR2K01O?=
+ =?utf-8?B?SXlWZGxOTEM4REpqMWRscitaMDFMcEU4TFpWTUhGVEpBSGpZZTFGSW8vYTUr?=
+ =?utf-8?B?MXRsQk94QXNxL05PaWRDZDY3alZKOS8vdjNuN1FzbWx6cGJIRG9PVk1DY2tk?=
+ =?utf-8?B?dEtzdjYyYjRtZEQ0UEV2UGNHeW9JSlpCcndHcmdFMGx6blNFaWs0Yi9wUFhB?=
+ =?utf-8?B?ZG5BNmdwN2w4YzNSWmlaZkcvMU8rVnJzcnRhZzN3VzFmSmZrME5hV0x6anJQ?=
+ =?utf-8?B?MXhaRDB1Q2QxUmx2RnB1MmF6eEQwdkloMVczRE82aE1sNmh4TVVoSmpTd1hs?=
+ =?utf-8?B?MVNpdnMyaGd5cTBPOGZKZVQzWG84ekEyVWROSEt6aHlhWG5nWGJ5TTBwdFFU?=
+ =?utf-8?B?Smxwam8yQU95d2dKSElqZzRPeitQVzBVODJqSFVYYklUMFUwNUIxV2dyZ2d3?=
+ =?utf-8?B?NlErQWhxVGF3MlN4SUJhTkFPMVNhTkJIcVpZMXQ5VC9CSzdZa0I4QmZCZThN?=
+ =?utf-8?B?NVkwSzVPR3I5RTF2RGhqV1lRY1VtWk9QdnNqM25kM1ZWZE9QekhQSkZ0Nnl1?=
+ =?utf-8?B?RU9uUERPY1BSS1ZjeHNuZm55RG1WVS9uRHd5R3hQcDQzQ083cC9FUDJTMElS?=
+ =?utf-8?B?QlhSRkFIN0xwb0Y3SG5ST1B1cmZIYlAwYzZUSjVwL2lEN0lsczkyS1h4QjE4?=
+ =?utf-8?B?enRvQzYxL3BORDZuVXltSXkwMDhKOXh6aXJkNHFYN1dSSUpHUlMyeTVLZm94?=
+ =?utf-8?B?Y3VySVMxcGIwaGVreWZJYWx3L2paUE42cjhEbktKMDNOVFlOcVU0bWRWNG5m?=
+ =?utf-8?B?a2ZvcDA0VUpqUnJIbERBeXNCbWVxSzJVdldkdjJHNzZ5b1Y4QWFNdlhWVmJv?=
+ =?utf-8?B?SnhWM1NucEZPVkdkMGVBcENiU09MQzFOMnAxL1NxaWl4aEFXVm9vZEFXeXZk?=
+ =?utf-8?B?MmhhWkZUNTBtV1VGVXljZXZpUU82TmVuWlNlY01HYWpDOGtCQ1lBT1lxTHNu?=
+ =?utf-8?Q?7ZceHd08XooLK7O/p79F0=3D?=
+MIME-Version: 1.0
+
+------=_Part_90910_1354574206.1746036539238
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_90911_486022522.1746036539238"
+
+------=_Part_90911_486022522.1746036539238
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+04/30/25 Daily Digest for 6.7720/15.070: 6.7720/15.070/18.619 Discrete Probability and Stochastic Processes
+
+
+------------------------------------------------------------
+HW6 Problem 1(a)  (4/29/2025, 1:41:20 PM)
+
+Do we assume that $$P_\mu$$ and $$P_
+u$$ are ergodic, or is that assumption not necessary?
+
+Go to https://piazza.com/class?cid=ma2sn9whzkg1ft&nid=m6l4kt94gnz70a&token=KbFmKa1TWak to view.
+
+------------------------------------------------------------
+
+
+Thanks,
+The Piazza Team
+--
+Contact us at team@piazza.com
+
+
+You're receiving this email because nathra@mit.edu is enrolled in 6.7720/15.070 at Massachusetts Institute of Technology (MIT). Go to https://piazza.com/login to sign in and manage your email preferences or proceed to https://piazza.com/remove/KbFmKa1TWak/m6l4kt94gnz70a to un-enroll from this class.
+If you already have a Piazza account under another email address, link nathra@mit.edu to that account here: https://piazza.com/link_accounts/KbFmKa1TWak
+------=_Part_90911_486022522.1746036539238
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"></head>
+<h2>04/30/25 Daily Digest for 6.7720/15.070: 6.7720/15.070/18.619 Discrete Probability and Stochastic Processes</h2>
+<br><hr>
+<b>HW6 Problem 1(a)</b>  <i>4/29/2025, 1:41:20 PM</i><br><br>
+Do we assume that $$P_\mu$$ and $$P_\nu$$ are ergodic, or is that assumption not necessary?<br>
+<br>
+<a href="https://piazza.com/class?cid=ma2sn9whzkg1ft&amp;nid=m6l4kt94gnz70a&amp;token=KbFmKa1TWak">Click here</a> to view.<br>
+<br><hr><br>
+<br>
+<br>
+Thanks,<br>
+The Piazza Team<br>
+--<br>
+Contact us at team@piazza.com<br><br><br>
+<font size="-2">
+You're receiving this email because nathra@mit.edu is enrolled in 6.7720/15.070 at Massachusetts Institute of Technology (MIT). Click <a href="https://piazza.com/unsubscribe/l7qgp2ubbsg31i/m6l4kt94gnz70a">here</a> to unsubscribe from digest emails. Or, <a href="https://piazza.com/login">sign in</a> to manage your email preferences or <a href="https://piazza.com/remove/KbFmKa1TWak/m6l4kt94gnz70a">un-enroll</a> from this class.<br>If you already have a Piazza account under another email address, link nathra@mit.edu to that account <a href="https://piazza.com/link_accounts/KbFmKa1TWak">here</a>.</font>
+</html>
+------=_Part_90911_486022522.1746036539238--
+
+------=_Part_90910_1354574206.1746036539238--
