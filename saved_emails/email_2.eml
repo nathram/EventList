@@ -1,0 +1,192 @@
+Received: from SJ2PR01MB8281.prod.exchangelabs.com (2603:10b6:a03:53d::5) by
+ DM6PR01MB5929.prod.exchangelabs.com with HTTPS; Thu, 1 May 2025 18:32:55
+ +0000
+Received: from CH0PR03CA0214.namprd03.prod.outlook.com (2603:10b6:610:e7::9)
+ by SJ2PR01MB8281.prod.exchangelabs.com (2603:10b6:a03:53d::5) with Microsoft
+ SMTP Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.20.8699.21; Thu, 1 May 2025 18:32:53 +0000
+Received: from CH1PEPF0000A34C.namprd04.prod.outlook.com
+ (2603:10b6:610:e7:cafe::78) by CH0PR03CA0214.outlook.office365.com
+ (2603:10b6:610:e7::9) with Microsoft SMTP Server (version=TLS1_3,
+ cipher=TLS_AES_256_GCM_SHA384) id 15.20.8655.42 via Frontend Transport; Thu,
+ 1 May 2025 18:32:52 +0000
+Authentication-Results: spf=pass (sender IP is 76.223.138.254)
+ smtp.mailfrom=bounce.piazza.com; dkim=pass (signature was verified)
+ header.d=piazza.com;dkim=pass (signature was verified)
+ header.d=amazonses.com;dmarc=pass action=none
+ header.from=piazza.com;compauth=pass reason=100
+Received-SPF: Pass (protection.outlook.com: domain of bounce.piazza.com
+ designates 76.223.138.254 as permitted sender)
+ receiver=protection.outlook.com; client-ip=76.223.138.254;
+ helo=c138-254.smtp-out.amazonses.com; pr=C
+Received: from c138-254.smtp-out.amazonses.com (76.223.138.254) by
+ CH1PEPF0000A34C.mail.protection.outlook.com (10.167.244.6) with Microsoft
+ SMTP Server (version=TLS1_3, cipher=TLS_AES_256_GCM_SHA384) id 15.20.8699.20
+ via Frontend Transport; Thu, 1 May 2025 18:32:52 +0000
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/simple;
+	s=rkxjria5fi6isroby2ng5lkes6nmrdx5; d=piazza.com; t=1746124372;
+	h=Date:From:To:Message-ID:References:Subject:MIME-Version:Content-Type;
+	bh=rBOlECT+7gn+M0N0pgf0vjFHKa/CTTVf/9I/ldSdsmo=;
+	b=rpX5SiaWkEGHsdrDT5l2XKPtXWLl3RTfZhU4m/Eo2PYby8SioramyHYNObXrBtmB
+	1RAx/tAeoLDbOBH21W6FEB7nPzItv0YztWpNP5hAf5i/Cyt0cWyfGJ2VAJVvL5kTvP7
+	vbPQKbFvzXYDUd+4B6l3SPbeFhCDZeIUTlshQwa0uv8eXe6UlidvsNqkbz3deICZq8C
+	o36DUjO8Lzd/HNvs+iIerKlbjhrh5wJfRft/Yj9+D0retCQ91aMPnkNaRljOvXJt3IH
+	Fo+7dqpRwwJ0ysK4LwcgdeWBhURLSKQFcXJkPD2HifHmeFCiha3JfDlHwdTo7bOGzO9
+	kcBWfSf+ow==
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/simple;
+	s=6gbrjpgwjskckoa6a5zn6fwqkn67xbtw; d=amazonses.com; t=1746124372;
+	h=Date:From:To:Message-ID:References:Subject:MIME-Version:Content-Type:Feedback-ID;
+	bh=rBOlECT+7gn+M0N0pgf0vjFHKa/CTTVf/9I/ldSdsmo=;
+	b=UvvgXmsXO86aOpB3KbGxvD0AP+QmiSrBxn6N3G48opnHiSzmay9FKu75FrWc90QF
+	EJTv5+1frwQ+k0wKDlfcF3a8EgZNpKq+5k+zpbjxeSPQ+7ANxSwctZmVcCDZaA9/3o4
+	AkCWeDZiN3ivaLCfacQBjqsxKbx9KtP9qvAcxE/o=
+Date: Thu, 1 May 2025 18:32:52 +0000
+From: Piazza Team <no-reply@piazza.com>
+To: nathra@mit.edu
+Message-ID: <010001968d1f792b-9562bc51-61b3-458a-b559-880d6ea043f4-000000@email.amazonses.com>
+References: <null_u@piazza.com>
+Subject: 05/01/25 Daily Digest for 6.7720/15.070 on Piazza
+Content-Type: multipart/related; 
+	boundary="----=_Part_348780_357676898.1746124372259"
+Feedback-ID: ::1.us-east-1.IJxEZsT1vZDY+yek0x98cniKjBNb3XwMrqCPImPEw3Y=:AmazonSES
+X-SES-Outgoing: 2025.05.01-76.223.138.254
+Return-Path: 010001968d1f792b-9562bc51-61b3-458a-b559-880d6ea043f4-000000@bounce.piazza.com
+X-MS-Exchange-Organization-ExpirationStartTime: 01 May 2025 18:32:52.8468
+ (UTC)
+X-MS-Exchange-Organization-ExpirationStartTimeReason: OriginalSubmit
+X-MS-Exchange-Organization-ExpirationInterval: 1:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: OriginalSubmit
+X-MS-Exchange-Organization-Network-Message-Id: 34380ff8-b249-4abf-1851-08dd88de957b
+X-EOPAttributedMessage: 0
+X-EOPTenantAttributedMessage: 64afd9ba-0ecf-4acf-bc36-935f6235ba8b:0
+X-MS-Exchange-Organization-MessageDirectionality: Incoming
+X-MS-PublicTrafficType: Email
+X-MS-TrafficTypeDiagnostic: CH1PEPF0000A34C:EE_|SJ2PR01MB8281:EE_|DM6PR01MB5929:EE_
+X-MS-Exchange-Organization-AuthSource: CH1PEPF0000A34C.namprd04.prod.outlook.com
+X-MS-Exchange-Organization-AuthAs: Anonymous
+X-MS-Office365-Filtering-Correlation-Id: 34380ff8-b249-4abf-1851-08dd88de957b
+X-MS-Exchange-AtpMessageProperties: SA|SL
+X-MS-Exchange-Organization-SCL: 1
+X-Microsoft-Antispam: BCL:4;ARA:13230040|13012899012|13102899012|4022899009|2092899012|12012899012|5062899012|3092899012|3072899012|32142699015|8096899003|7053199007|13003099007;
+X-Forefront-Antispam-Report: CIP:76.223.138.254;CTRY:US;LANG:en;SCL:1;SRV:;IPV:NLI;SFV:NSPM;H:c138-254.smtp-out.amazonses.com;PTR:c138-254.smtp-out.amazonses.com;CAT:NONE;SFS:(13230040)(13012899012)(13102899012)(4022899009)(2092899012)(12012899012)(5062899012)(3092899012)(3072899012)(32142699015)(8096899003)(7053199007)(13003099007);DIR:INB;
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 01 May 2025 18:32:52.7366
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: 34380ff8-b249-4abf-1851-08dd88de957b
+X-MS-Exchange-CrossTenant-Id: 64afd9ba-0ecf-4acf-bc36-935f6235ba8b
+X-MS-Exchange-CrossTenant-AuthSource: CH1PEPF0000A34C.namprd04.prod.outlook.com
+X-MS-Exchange-CrossTenant-AuthAs: Anonymous
+X-MS-Exchange-CrossTenant-FromEntityHeader: Internet
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: SJ2PR01MB8281
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:02.7316990
+X-MS-Exchange-Processed-By-BccFoldering: 15.20.8678.021
+X-Microsoft-Antispam-Mailbox-Delivery:
+	ucf:0;jmr:0;auth:0;dest:I;ENG:(910005)(944506478)(944626604)(920097)(930097)(140003);
+X-Microsoft-Antispam-Message-Info:
+	=?utf-8?B?ZkhjbGxCZGJzVmN1MHhxUENtYVVveS9hSXZUeUZNRjZ0Nyt6b01jUnl5cGdk?=
+ =?utf-8?B?ZWMwbkxEd2xiK2x4VERjVzdNRnhTRG84TlV1bHFVdk1NK1Q1aXAwOGZNRkx6?=
+ =?utf-8?B?cnZ6Y0xycEsyR0JzMXppYWJIalVoVHFjdWhkUGFCYjU4WXVFY0tlQ0VsVTM0?=
+ =?utf-8?B?Qjh2ZkJ1MEZaUzdTSVNjUHRnUkJ5Z3MyVjB3TVE3azUvTHJjWFFPYTBtVUJx?=
+ =?utf-8?B?czlhY3M4Z2JRSEM2LzExc1BwRlJ1SG1Dd1JVTDJnYXc3Y29hYWhFZVFUaDFW?=
+ =?utf-8?B?a1NNTVhnK25MYVNwNzdzNEJEb1o3a1RkN2oyWFRmSHhjT0F6T1gzK0Q3MXA0?=
+ =?utf-8?B?bGRJQXZxa1VHSEYwUmdwSjlkOUNtdkxCY1pZYkI0dXhkSmtBQ05GTytHdEph?=
+ =?utf-8?B?RjhpeFkzeDBISjhVUnM5YXNyT0pKMzUzNnNDYnNmVmtmQlVCUnFldjV4Ukhj?=
+ =?utf-8?B?VzBvNXk0dWdlT05NNmg1eVZWMk5lQ2FXWkZSNG1GK0xnVFJVTk9reXAvYjFX?=
+ =?utf-8?B?emgxeG55MWYveWdhcWd5anRtQTZ1dmZDT3JaNlE1SmdBZHppL09tdzhxaWtq?=
+ =?utf-8?B?aXVxRXZIZW41WjFnWS94NDN1MVZoYndEditrUDNRQWN3Y3FGWXJtdmtWZ1hY?=
+ =?utf-8?B?djJaT3hCL3BtTXJZTEIyRzRKUVhHWnpTTmNMblpabHVwWVUxNTdFK05BUE5E?=
+ =?utf-8?B?UVc0ZUJFS1JEeURPd2pPY1B4UGE3aTh3WWRtd2E5eGg0WFJIM29SbHNIU2R1?=
+ =?utf-8?B?UjBxclR3b0xUK1R1RTdiQ2lMMGFNcEtFNVZPa0QxcC9pV0VoZTVDd2ZzUzM5?=
+ =?utf-8?B?amJBTFVlMWZwODlacWMxcEdlVzk5T2V6S0NPOStkTE1LeUJXaTBHbnBCdzMr?=
+ =?utf-8?B?bVl2YU11R1FSazJxSTYrOVA3RE1CNlllMzdpYmRuQWZWY3ZSRVIyMHk1Y3Vs?=
+ =?utf-8?B?S0ZwcUpkMXcwVTNoc013TUVsdU9ZT0gvRyt5L0ZqTEUwZXFNT0p0UmwzUzhk?=
+ =?utf-8?B?NXlxUkJQYVdFdkxiN0dCUzJGbUpHeTk3ZEhqRkNHVmkzQ3lOaFl6REQ5c2g1?=
+ =?utf-8?B?VXJ5aG1odWRzQ2Ewa3RSWUdhZDA4RGZhRC8yNWhyeEtFN05XVENxbzNOTTdu?=
+ =?utf-8?B?a0xTNUw0NzBUdmYya1pQY2VJckFxRjJ3RklpeUtHS0pjU2daRnZ0OHpiaEh6?=
+ =?utf-8?B?SEFiOVdBOHdLOE42RHJuQWVzNXNZZzZQNVNuQm9SSTNmR0lnbVRMbS9sUWZR?=
+ =?utf-8?B?ai90RWRjRS9TZEUreWNGTUhQSW9qb3lhekx3WkszWEt4cG9FTjQ1QXBTVFlh?=
+ =?utf-8?B?ZXQ5T1BlSTdZU1pJTnNuSHYvN2NFQzltb1U2bGpCUkQ4ayt5ME84Q0xsREdx?=
+ =?utf-8?B?R2xtNURudkFaQXlWNERTRFBVckIvcEFCNXl4VnFScUpFZ2J4VDlYUExiQ3cv?=
+ =?utf-8?B?akQzYlVzOTkvUDFMOGx1VkE5clhuT2lNSDBrNkhPN2VXMGVVNHNKQjNXUFIv?=
+ =?utf-8?B?SjRjcWRqSE5kVHR1MEhnVHEvb3lKekI1M0pjMDFHMFRHRExxbjVja3pOQ1k4?=
+ =?utf-8?B?WkJiZHhhZU53QmdtUjNyRU9NbHFXam43WDZSbU9xLy91UXN6UmQxWitEWjht?=
+ =?utf-8?B?R1hSb1hobU1nK096ZG9McmZWTXJaVXk4TGp3cE5MMFBYOGErMzYxN05wM3R5?=
+ =?utf-8?B?anZhS0JFc2lzdnZ4VWc5ZFVjTGNzK3haY21mRkMwa281M3VvNmpQZ3g4MVBX?=
+ =?utf-8?B?RmNOZk9uZ1BXTVdnS2RPV3FWZmo5NkZoMlFaU21FTkRaQ3dkd1ZWMWpBbTc2?=
+ =?utf-8?B?dWMwYWRRaVJKTXJjZFFwMXV6MjQwUGpOR2FRNWsyL2RQOGRvSUdIQ1Y1SDFm?=
+ =?utf-8?B?R29yNnVDRFJOTHpFZW1yQ3dDSkpNQjBiazVSWkdsMVJkT1NqV1p6blZORHh2?=
+ =?utf-8?B?eUdpMlFPWDJMb0tKdGlzdUxHUlNmUVFSZ2ZHdVB6VGF3MG9NVkhrcWtXQU1M?=
+ =?utf-8?B?UmltM0R3TUxMYVNuMml6MWhxTVpSaE5wTkpXZWJQUElSeWFyRGtkNWRERDZn?=
+ =?utf-8?B?NkVidlBXYjBTVjB5UGo4ZGdjWldkKzEzbVBjS2dGUWxzblZZTXVlVUJ4LzVZ?=
+ =?utf-8?B?RmZENUtyblFhbHp2LysvZnFRQTNQVkNFUk1VckhtWVQwNUpxRjkwSytncWtM?=
+ =?utf-8?B?b0ZIMSt6Y0VZZ3c4bWMvZnFIRi9TcUFoR2R6bVlScU9ITTVSSnZCenRJY3R6?=
+ =?utf-8?B?RFdPS3h6bldFZlBFay9hKzFmTFFKdVlOOXJWMVpObEx1Qm5oT0hWdTFuWUUz?=
+ =?utf-8?B?TUFNbVJUSk45SkJtSXBVZ1NsM0ZDb2dJaDFOT0c0ZWM4OEpSSEJHc2NoakN3?=
+ =?utf-8?B?TkNvSTk5OUVmUlZrNFA3M1MzVC9KcFNkYUVTSHdDS2lzd21NRzlJcTlxY1BJ?=
+ =?utf-8?B?Qk40NmNHWUsyZmQ5THBWMU52bERDS3A2UTZRT2ViQnZpd0hkdFNKMStQMzJT?=
+ =?utf-8?B?a294dmtPT1BKc1hRRG5vUlF6Tnl2dzQ0YmRlMWZGVWdrakxVSkFkdWVlc0FK?=
+ =?utf-8?B?UXZUcmh4Zjh2eWdqbENTbk9sTm0wdnFXZWtPeFBmdThFZnowN29sTmVDTDFv?=
+ =?utf-8?B?UWViREZJR3FHNXFBbTlsRlBsM3llejlwMW13TWttQ1RtVE55L0J3eHpVeG1k?=
+ =?utf-8?B?QjR3VVJzVm9JSDJsSHVBd2Eyam5GRjFuQjBMdi85M0kyc0FVZ0Q0K1ZyQXVR?=
+ =?utf-8?B?YmhxOTlxcEk2LyswdUh1RmJxd3pMak9zamo2Um1iUVdxRWJhUW9JZXBkYXM2?=
+ =?utf-8?Q?WUq+3p0+Rl4vyLIbg15cM=3D?=
+MIME-Version: 1.0
+
+------=_Part_348780_357676898.1746124372259
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_348781_661128185.1746124372259"
+
+------=_Part_348781_661128185.1746124372259
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+05/01/25 Daily Digest for 6.7720/15.070: 6.7720/15.070/18.619 Discrete Probability and Stochastic Processes
+
+
+------------------------------------------------------------
+Final Paper Expectations  (4/30/2025, 11:40:48 PM)
+
+What are the expectations for the final paper? I.e. what is the expected length? Do we need sources external to the lecture notes (or whatever paper/UROP/lab project we're studying)? How should it be formatted? Do we need to explain any tools/methods from class we end up using, or can we assume the audience knows these already? I.e. how much mathematical context is needed?
+
+I've never had to write a math paper before, and I assume some others in the class haven't either, so some more specifics would be appreciated.
+
+Go to https://piazza.com/class?cid=ma4ti1hzc1f46z&nid=m6l4kt94gnz70a&token=KbFmKa1TWak to view.
+
+------------------------------------------------------------
+
+
+Thanks,
+The Piazza Team
+--
+Contact us at team@piazza.com
+
+
+You're receiving this email because nathra@mit.edu is enrolled in 6.7720/15.070 at Massachusetts Institute of Technology (MIT). Go to https://piazza.com/login to sign in and manage your email preferences or proceed to https://piazza.com/remove/KbFmKa1TWak/m6l4kt94gnz70a to un-enroll from this class.
+If you already have a Piazza account under another email address, link nathra@mit.edu to that account here: https://piazza.com/link_accounts/KbFmKa1TWak
+------=_Part_348781_661128185.1746124372259
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"></head>
+<h2>05/01/25 Daily Digest for 6.7720/15.070: 6.7720/15.070/18.619 Discrete Probability and Stochastic Processes</h2>
+<br><hr>
+<b>Final Paper Expectations</b>  <i>4/30/2025, 11:40:48 PM</i><br><br>
+<p>What are the expectations for the final paper? I.e. what is the expected length? Do we need sources external to the lecture notes (or whatever paper/UROP/lab project we're studying)? How should it be formatted? Do we need to explain any tools/methods from class we end up using, or can we assume the audience knows these already? I.e. how much mathematical context is needed?</p>
+<p></p>
+<p>I've never had to write a math paper before, and I assume some others in the class haven't either, so some more specifics would be appreciated.</p><br>
+<br>
+<a href="https://piazza.com/class?cid=ma4ti1hzc1f46z&amp;nid=m6l4kt94gnz70a&amp;token=KbFmKa1TWak">Click here</a> to view.<br>
+<br><hr><br>
+<br>
+<br>
+Thanks,<br>
+The Piazza Team<br>
+--<br>
+Contact us at team@piazza.com<br><br><br>
+<font size="-2">
+You're receiving this email because nathra@mit.edu is enrolled in 6.7720/15.070 at Massachusetts Institute of Technology (MIT). Click <a href="https://piazza.com/unsubscribe/l7qgp2ubbsg31i/m6l4kt94gnz70a">here</a> to unsubscribe from digest emails. Or, <a href="https://piazza.com/login">sign in</a> to manage your email preferences or <a href="https://piazza.com/remove/KbFmKa1TWak/m6l4kt94gnz70a">un-enroll</a> from this class.<br>If you already have a Piazza account under another email address, link nathra@mit.edu to that account <a href="https://piazza.com/link_accounts/KbFmKa1TWak">here</a>.</font>
+</html>
+------=_Part_348781_661128185.1746124372259--
+
+------=_Part_348780_357676898.1746124372259--

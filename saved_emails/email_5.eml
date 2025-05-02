@@ -1,0 +1,214 @@
+Received: from BN0PR01MB7086.prod.exchangelabs.com (::1) by
+ DM6PR01MB5929.prod.exchangelabs.com with HTTPS; Thu, 1 May 2025 13:43:56
+ +0000
+Received: from CH2PR11CA0004.namprd11.prod.outlook.com (2603:10b6:610:54::14)
+ by BN0PR01MB7086.prod.exchangelabs.com (2603:10b6:408:14a::16) with Microsoft
+ SMTP Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.20.8699.24; Thu, 1 May 2025 13:42:21 +0000
+Received: from CH1PEPF0000AD83.namprd04.prod.outlook.com
+ (2603:10b6:610:54:cafe::a6) by CH2PR11CA0004.outlook.office365.com
+ (2603:10b6:610:54::14) with Microsoft SMTP Server (version=TLS1_3,
+ cipher=TLS_AES_256_GCM_SHA384) id 15.20.8655.41 via Frontend Transport; Thu,
+ 1 May 2025 13:42:21 +0000
+Authentication-Results: spf=pass (sender IP is 18.1.37.68)
+ smtp.mailfrom=math.mit.edu; dkim=none (message not signed)
+ header.d=none;dmarc=pass action=none header.from=math.mit.edu;compauth=pass
+ reason=100
+Received-SPF: Pass (protection.outlook.com: domain of math.mit.edu designates
+ 18.1.37.68 as permitted sender) receiver=protection.outlook.com;
+ client-ip=18.1.37.68; helo=littlewood.mit.edu; pr=C
+Received: from littlewood.mit.edu (18.1.37.68) by
+ CH1PEPF0000AD83.mail.protection.outlook.com (10.167.244.85) with Microsoft
+ SMTP Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.20.8699.20 via Frontend Transport; Thu, 1 May 2025 13:42:20 +0000
+Received: from localhost (localhost [127.0.0.1])
+	by littlewood.mit.edu (Postfix) with ESMTP id 2F13B71019;
+	Thu,  1 May 2025 09:42:20 -0400 (EDT)
+X-Virus-Scanned: Debian amavisd-new at math.mit.edu
+Received: from littlewood.mit.edu ([127.0.0.1])
+	by localhost (math.mit.edu [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id 2B1ld9a6PQFc; Thu,  1 May 2025 09:42:19 -0400 (EDT)
+Received: from [10.21.1.154] (unknown [10.21.1.154])
+	(using TLSv1.2 with cipher ECDHE-RSA-AES128-GCM-SHA256 (128/128 bits))
+	(No client certificate requested)
+	(Authenticated sender: debbie)
+	by littlewood.mit.edu (Postfix) with ESMTPSA id DF6D271018;
+	Thu,  1 May 2025 09:42:19 -0400 (EDT)
+Content-Type: multipart/alternative;
+	boundary="------------cVh0nHnv86s617odxXvBuw38"
+Message-ID: <8fb73555-bcd3-4a60-9142-f4b879377b61@math.mit.edu>
+Date: Thu, 1 May 2025 09:42:19 -0400
+User-Agent: Mozilla Thunderbird
+Subject: UMA Elections
+Content-Language: en-US
+References: <LV8P223MB1201930D937C6649F67707ABF0832@LV8P223MB1201.NAMP223.PROD.OUTLOOK.COM>
+To: <math_majors_25_info@mit.edu>, <math_majors_26_info@mit.edu>,
+	<math_majors_27_info@mit.edu>, <math_prospective@mit.edu>
+From: Deborah J Bower <debbie@math.mit.edu>
+In-Reply-To: <LV8P223MB1201930D937C6649F67707ABF0832@LV8P223MB1201.NAMP223.PROD.OUTLOOK.COM>
+X-Forwarded-Message-Id: <LV8P223MB1201930D937C6649F67707ABF0832@LV8P223MB1201.NAMP223.PROD.OUTLOOK.COM>
+Return-Path: debbie@math.mit.edu
+X-MS-Exchange-Organization-ExpirationStartTime: 01 May 2025 13:42:20.8913
+ (UTC)
+X-MS-Exchange-Organization-ExpirationStartTimeReason: OriginalSubmit
+X-MS-Exchange-Organization-ExpirationInterval: 1:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: OriginalSubmit
+X-MS-Exchange-Organization-Network-Message-Id: a0a9614f-923d-43b5-c93e-08dd88b5ff39
+X-EOPAttributedMessage: 0
+X-EOPTenantAttributedMessage: 64afd9ba-0ecf-4acf-bc36-935f6235ba8b:0
+X-MS-Exchange-Organization-MessageDirectionality: Incoming
+X-MS-PublicTrafficType: Email
+X-MS-TrafficTypeDiagnostic: CH1PEPF0000AD83:EE_|BN0PR01MB7086:EE_|DM6PR01MB5929:EE_
+X-MS-Exchange-Organization-AuthSource: CH1PEPF0000AD83.namprd04.prod.outlook.com
+X-MS-Exchange-Organization-AuthAs: Anonymous
+X-MS-Office365-Filtering-Correlation-Id: a0a9614f-923d-43b5-c93e-08dd88b5ff39
+X-MS-Exchange-AtpMessageProperties: SA|SL
+X-MS-Exchange-Organization-SCL: 1
+X-Microsoft-Antispam: BCL:0;ARA:13230040|12012899012|3072899012|2092899012|8096899003|13003099007;
+X-Forefront-Antispam-Report: CIP:18.1.37.68;CTRY:US;LANG:en;SCL:1;SRV:;IPV:NLI;SFV:NSPM;H:littlewood.mit.edu;PTR:littlewood.mit.edu;CAT:NONE;SFS:(13230040)(12012899012)(3072899012)(2092899012)(8096899003)(13003099007);DIR:INB;
+X-Auto-Response-Suppress: DR, OOF, AutoReply
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 01 May 2025 13:42:20.6600
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: a0a9614f-923d-43b5-c93e-08dd88b5ff39
+X-MS-Exchange-CrossTenant-Id: 64afd9ba-0ecf-4acf-bc36-935f6235ba8b
+X-MS-Exchange-CrossTenant-AuthSource: CH1PEPF0000AD83.namprd04.prod.outlook.com
+X-MS-Exchange-CrossTenant-AuthAs: Anonymous
+X-MS-Exchange-CrossTenant-FromEntityHeader: Internet
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: BN0PR01MB7086
+X-MS-Exchange-Transport-EndToEndLatency: 00:01:35.7638098
+X-MS-Exchange-Processed-By-BccFoldering: 15.20.8678.021
+X-Microsoft-Antispam-Mailbox-Delivery:
+	ucf:0;jmr:0;auth:0;dest:I;ENG:(910005)(920097)(930097)(140003);
+X-Microsoft-Antispam-Message-Info:
+	=?utf-8?B?T1l2WjA1czFycmhNeFA2aVRBbjgyYWFkNVZlZi9xVVRNVTg4S2xHV21SUXZu?=
+ =?utf-8?B?N1BJTjlmUUNRdFZBMTE4c1RHMEk0WENwSHVTd3llbml4eFdmL2pSbmJHMzNR?=
+ =?utf-8?B?NUhIbWtmYnI1OGF5VFJoU2llTjRsTnZKNHJhN2dPc1VzeXlTS1VDckZQNW80?=
+ =?utf-8?B?SGYxeE5qZTlVc01OQTdnT1hOUUlIQkhKMEhRUzJXL2ZBTW01cW9HR1RkWURQ?=
+ =?utf-8?B?N0NGc2sxYmtYNnN0UVRPYXZlY2hMVThFM1U0bTJMNWc5YmpoSWdrcDhVYVIr?=
+ =?utf-8?B?YWcxQzhPdmVvM2tjd3lGQmMrdmw4R2lQd1ppOTdIU2ZicWtkTnZRdGpQREtx?=
+ =?utf-8?B?NWgvd3RnN240RlI0d3ZxaUtTYTkvbVQ0UENQTzh4ZGRkeFdncldMZWRMWlBW?=
+ =?utf-8?B?SVo4OWFkK2IxanJXNzc2KzVBY2NyM3pMWWs0NTY1bjEyZCtBaVFGL29FTU9P?=
+ =?utf-8?B?Qk9TRzBacTZTd1d4V2FLM3lSdCtmcEQ4NitaR0FYaHM0dzdpZ0RRQk83ekpN?=
+ =?utf-8?B?QUFtMTVQTmdxakNTbXNoQmF5czd6MnRvT2xsNTh2M1JkS3o4MEF2NEJwTElD?=
+ =?utf-8?B?WGhkVDg3aE5sMVIvdkZoUGs2ZHoxWkRtc0pJMlc0dmoxOE8vUkE1SHgxSnJi?=
+ =?utf-8?B?RGRoM3VNSUlKUGwrOUxNQzVmMDlRcC9VZitnb0ZtMHBCS2hPOHY5eGRuUXJn?=
+ =?utf-8?B?amduRWhqZDd0YnZJMkZYTVl3TW9qeG12aGQwa2xGVlA1dnptUVk5U0RnVXc5?=
+ =?utf-8?B?VGdpSXJZZk9sTXhDSHp6aTg5YXJ4eTFkSWdXNnlBcmJUbmdXcWxCTHZmeWdz?=
+ =?utf-8?B?OUxDT1JOYkdlSENZbGVJc0ZuaVlwUllSWVZhdGZTay94ZHBXbU9xcThhYzk3?=
+ =?utf-8?B?cjNlQVlWY3BzQ2p0N1R3UHZMV1N0OUMvMGpXZEtXQ1BlNnZNSTVxM215VWNt?=
+ =?utf-8?B?RnlmNVdqa3pwNEYyRzNRUzkrMm5xL1ZZRWlrUHhDM3NlcHRwNzVuVnZhd3hI?=
+ =?utf-8?B?bEdIZTh4eC9qTVEyNnJkdFA1RG5Hc09KNG15QkN5d1BXNFZSanFPT3BmaUFP?=
+ =?utf-8?B?bSs1YUZTWDJFaFZLY2ovb1BaTGxpUGp2a29RMUZTbm5SclZKR0thaVQrM0hZ?=
+ =?utf-8?B?Q1JSZjR2b0JaKzRKRkFYYXRSSHJUdVdNUXgrRGs5d0tkSjFOTER6a1IrZjFJ?=
+ =?utf-8?B?UWhKUlNUdmxram5oZXpzbWdXYm9CZjY5Z1JUMTNQakluSGRuMjBTUm96YTFO?=
+ =?utf-8?B?L2xwa29kTHZITEIxQ3JHeGhoMjVlOU9lcm5MUHhZelBZSFUwdkdHc21LM3Mx?=
+ =?utf-8?B?am5HVzhsaFBOckRsOFlhS2Z3TmlEeGNJU1lESms1LzdQOHFpcm14NEkvcUt1?=
+ =?utf-8?B?bTYxS2gzNDYvTXc1NnRVcFZCbXVKZ25TQzFRb2tyem9zV25hUmZMZzNkMG9C?=
+ =?utf-8?B?V2Y5WVJ2QUxJZ2NsaU8xUFZ4dDV0ZnhLRFRmZWFHKzlTK2o3UXVIMGNoSVRi?=
+ =?utf-8?B?bzdCRnFna2xXekcvZWlUMENqUjZMb1VOWVRjT2duNVYvM2JMZ1dnZmM3VUl6?=
+ =?utf-8?B?elZTSWtiWlpJUk9ldDl1bmVwbmhUN0JoR3JodFlhb251cTBWenNZSHlGZGY0?=
+ =?utf-8?B?M0txN0ljTWRIMHkvUmExN0xXQWtuZXhPai9iOG5vdDR6NXVZTVFPM3Z1YXM3?=
+ =?utf-8?B?cTk2VUw2Q0hKSDhrVitoWEtOekVuWVNyWjVtN2Q5QUZ4VmhEY1MrTkR0a0Nz?=
+ =?utf-8?B?WUZXQnhOU1prSVBady9Cekw1L2pmQkdtWjV2V1dHS21FbXlIbW13cGlJWTdV?=
+ =?utf-8?B?K0t1N1IvRlRSVEhuS2lwVzRFQ2hEd3pyTit1c29ncHk0b3VyOUN2RHBjM2Ft?=
+ =?utf-8?B?MXZGUEpPbXBpdmVYK0Y3WWpLcjEwMHIyYXFhZFVabU1JTE9sY1o1QWJoeXND?=
+ =?utf-8?B?VGppUVpQbzdQZWtsck40MjFWMFlxQSt0Z1RMblN1Q1pZakt5Q3dkWm84T2I3?=
+ =?utf-8?B?WTVpYmlTUHhTUlVTQ0NzTUR1Qi8zYzFqL3IxamhPTFI2d1dTVDNJY015Wkwz?=
+ =?utf-8?B?c2lZb1hYeFkvYWNoMktOc1ZmUkw4QkRuaGJpM3BibktWVGJOZ2wwdnN0aHls?=
+ =?utf-8?B?aU5YZDcyRVRraUwzTmFsRkQrS2Y3dzB1eTRpN0NwVXRpM0cxbjBYZzVNbFY4?=
+ =?utf-8?B?RVoxT2hSVStRVVBXQ1YwdUJuRm02Uk4wekxSR0VqUEZKQWNrcWJmQmQxWktB?=
+ =?utf-8?B?VmZsNjFZc2R6Qnp0bjZSTGt1NU9Sc3VrMDRVT3orR3lMV2FxbXJGckdzeFV2?=
+ =?utf-8?B?b2djMTd6VG9qN3JkczkxUU1zWFFsNDQzTnZ6RVl1dDBNV0g0TUhRSnc4OVlv?=
+ =?utf-8?B?VWxKanVxWFE2cGJscVNkdWZKaHo4K0hzQkFNekF6SEpyYndIU3lNbkw2b3Fo?=
+ =?utf-8?B?TDk4b2pqV2pFVm1DQXRMcGhlODIyL3ZYWExqMWZ0MzcraGtITjVSd0QzZ0tz?=
+ =?utf-8?B?dTAyVjJYcE15QXY1NHl4VHZ0SU9RSFEwaVFkbXRFMEZnQU01SGFTODVSM2kx?=
+ =?utf-8?B?eTN6cUZnMjVsa0IxaVdzQWQ1T2JQb0RuY1VqUzVOdy82SnFYeDFoZEVDYlpw?=
+ =?utf-8?B?clVOK3RpM2dQWCsxMkt3QTZMWFBYWmtQNzJRRVF4eE12MC82bmN4U1JnRExx?=
+ =?utf-8?B?ai9vTVhCaXhiSS9GcHNUWEM5MFBSSzdZdEJJSDZxZlpXVU1LREpSQW8vV2k3?=
+ =?utf-8?B?OFBEZzFqeHJqa1d0L1lCSDNSTnpxNEhzTm5DME51WFlYdkZFdU5IdDR1YWxp?=
+ =?utf-8?B?Tk5WaTdTTS9FbHFNTGgySitSQ2Q5TnY2TGk3SjlTWDBtaTV0blBldnZyZE10?=
+ =?utf-8?B?SGd0RS90NGFJSXg3V1dwSVF1NkpRTmRkSGFiNG5OR2F2cnZ1a1NJckZpeTdH?=
+ =?utf-8?B?dUpBS0VIcE42NHptMDkyNFR6eWZ5b29HQVk0dXRMWGlUUUlXazNReGJ2QlUx?=
+ =?utf-8?Q?sRyJr35AB0vHcx5uVw0DT+42odTKT/AuHlc?=
+MIME-Version: 1.0
+
+--------------cVh0nHnv86s617odxXvBuw38
+Content-Type: text/plain; charset="UTF-8"; format=flowed
+Content-Transfer-Encoding: 8bit
+
+Hello all,
+
+The UMA is hosting our final GBM of the semester and elections for our 
+2025-2026 Executive Committee, Sunday May 4th from 1:00-2:00 PM! This 
+event will be hosted in room 3-270. We will elect every position: 
+President, VP, and Committee Heads(Academic, Social, DEI, and Tech).
+
+Elections are open to all undergraduates, to view or participate! To 
+nominate yourself or someone else, fill out this quick form! 
+https://tinyurl.com/UMA2526.**While experience as a UMA staffer is 
+preferred, it is not a requirement to run!
+*
+*
+It has been an amazing experience being on exec my 4 years at MIT, and I 
+am incredibly excited to hear all the amazing platforms and elections 
+for our new executive committee!
+
+Cheers,
+Laasya Nagareddy
+UMA President
+laasya@mit.edu
+uma_exec@mit.edu
+
+--------------cVh0nHnv86s617odxXvBuw38
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: 8bit
+
+<!DOCTYPE html><html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  </head>
+  <body dir="ltr">
+    <div class="moz-forward-container">
+      <div id="divRplyFwdMsg" dir="ltr">
+        <div>&nbsp;</div>
+      </div>
+      <div>
+        <div dir="ltr">
+          <div>Hello all,</div>
+          <div><br>
+          </div>
+          <div>The UMA is hosting our final GBM of the semester&nbsp;and
+            elections for our 2025-2026 Executive Committee, Sunday May
+            4th from 1:00-2:00 PM! This event will be hosted in room
+            3-270. We will elect every position: President, VP, and
+            Committee Heads(Academic, Social, DEI, and Tech).&nbsp;</div>
+          <div><br>
+          </div>
+          <div>Elections are open to all undergraduates, to view or
+            participate!&nbsp;To nominate yourself or someone else, fill out
+            this quick&nbsp;form!&nbsp;<a href="https://tinyurl.com/UMA2526" style="" moz-do-not-send="true" class="moz-txt-link-freetext">https://tinyurl.com/UMA2526</a>.<b>&nbsp;</b>While
+            experience&nbsp;as a UMA staffer is preferred, it is not a
+            requirement&nbsp;to run!</div>
+          <div><b><br>
+            </b></div>
+          <div>
+            <div>It has been an amazing experience being on exec my 4
+              years at MIT, and I am incredibly&nbsp;excited to hear all the
+              amazing platforms and elections for our new executive
+              committee!&nbsp;</div>
+            <div><br>
+            </div>
+            <div>Cheers,</div>
+            <div>Laasya Nagareddy</div>
+            <div>UMA President</div>
+            <div><a href="mailto:laasya@mit.edu" moz-do-not-send="true" class="moz-txt-link-freetext">laasya@mit.edu</a></div>
+            <div><a href="mailto:uma_exec@mit.edu" moz-do-not-send="true" class="moz-txt-link-freetext">uma_exec@mit.edu</a></div>
+          </div>
+          <div><br>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
+--------------cVh0nHnv86s617odxXvBuw38--

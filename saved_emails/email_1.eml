@@ -1,0 +1,158 @@
+Received: from PH0PR01MB6391.prod.exchangelabs.com (2603:10b6:510:18::12) by
+ DM6PR01MB5929.prod.exchangelabs.com with HTTPS; Fri, 2 May 2025 10:31:21
+ +0000
+Received: from PH0PR07CA0001.namprd07.prod.outlook.com (2603:10b6:510:5::6) by
+ PH0PR01MB6391.prod.exchangelabs.com (2603:10b6:510:18::12) with Microsoft
+ SMTP Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.20.8699.24; Fri, 2 May 2025 10:31:19 +0000
+Received: from SN1PEPF0002BA4F.namprd03.prod.outlook.com
+ (2603:10b6:510:5:cafe::22) by PH0PR07CA0001.outlook.office365.com
+ (2603:10b6:510:5::6) with Microsoft SMTP Server (version=TLS1_3,
+ cipher=TLS_AES_256_GCM_SHA384) id 15.20.8655.42 via Frontend Transport; Fri,
+ 2 May 2025 10:31:19 +0000
+Authentication-Results: spf=pass (sender IP is 198.187.196.100)
+ smtp.mailfrom=mit.edu; dkim=none (message not signed)
+ header.d=none;dmarc=pass action=none header.from=mit.edu;compauth=pass
+ reason=100
+Received-SPF: Pass (protection.outlook.com: domain of mit.edu designates
+ 198.187.196.100 as permitted sender) receiver=protection.outlook.com;
+ client-ip=198.187.196.100; helo=tufmon.touchnet.com; pr=C
+Received: from tufmon.touchnet.com (198.187.196.100) by
+ SN1PEPF0002BA4F.mail.protection.outlook.com (10.167.242.72) with Microsoft
+ SMTP Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.20.8699.20 via Frontend Transport; Fri, 2 May 2025 10:31:19 +0000
+Received: from tn-sl2-app-f1n1 ([10.99.4.22]) by tufmon.touchnet.com with Microsoft SMTPSVC(10.0.17763.1697);
+	 Fri, 2 May 2025 05:31:18 -0500
+Message-ID: <399838448.1746181878668.JavaMail.TN-SL2-APP-F1N1$@smtp2>
+Date: Fri, 2 May 2025 05:31:18 -0500
+From: sfs@mit.edu
+To: <nathra@mit.edu>, <ramnanjun@yahoo.com>
+Subject: Your MIT payment plan amounts have changed
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+Return-Path: sfs@mit.edu
+X-OriginalArrivalTime: 02 May 2025 10:31:18.0688 (UTC) FILETIME=[572B1A00:01DBBB4D]
+X-MS-Exchange-Organization-ExpirationStartTime: 02 May 2025 10:31:19.6600
+ (UTC)
+X-MS-Exchange-Organization-ExpirationStartTimeReason: OriginalSubmit
+X-MS-Exchange-Organization-ExpirationInterval: 1:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: OriginalSubmit
+X-MS-Exchange-Organization-Network-Message-Id: 39cf707c-4973-4944-6c7f-08dd89647a36
+X-EOPAttributedMessage: 0
+X-EOPTenantAttributedMessage: 64afd9ba-0ecf-4acf-bc36-935f6235ba8b:0
+X-MS-Exchange-Organization-MessageDirectionality: Incoming
+X-MS-PublicTrafficType: Email
+X-MS-TrafficTypeDiagnostic: SN1PEPF0002BA4F:EE_|PH0PR01MB6391:EE_|DM6PR01MB5929:EE_
+X-MS-Exchange-Organization-AuthSource: SN1PEPF0002BA4F.namprd03.prod.outlook.com
+X-MS-Exchange-Organization-AuthAs: Anonymous
+X-MS-Office365-Filtering-Correlation-Id: 39cf707c-4973-4944-6c7f-08dd89647a36
+X-MS-Exchange-AtpMessageProperties: SA|SL
+X-MS-Exchange-Organization-SCL: 1
+X-Microsoft-Antispam: BCL:0;ARA:13230040|69100299015|3613699012|4076899003|8096899003;
+X-Forefront-Antispam-Report: CIP:198.187.196.100;CTRY:US;LANG:en;SCL:1;SRV:;IPV:NLI;SFV:NSPM;H:tufmon.touchnet.com;PTR:tufmon.touchnet.com;CAT:NONE;SFS:(13230040)(69100299015)(3613699012)(4076899003)(8096899003);DIR:INB;
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 02 May 2025 10:31:19.5669
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: 39cf707c-4973-4944-6c7f-08dd89647a36
+X-MS-Exchange-CrossTenant-Id: 64afd9ba-0ecf-4acf-bc36-935f6235ba8b
+X-MS-Exchange-CrossTenant-AuthSource: SN1PEPF0002BA4F.namprd03.prod.outlook.com
+X-MS-Exchange-CrossTenant-AuthAs: Anonymous
+X-MS-Exchange-CrossTenant-FromEntityHeader: Internet
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: PH0PR01MB6391
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:01.4553392
+X-MS-Exchange-Processed-By-BccFoldering: 15.20.8678.021
+X-Microsoft-Antispam-Mailbox-Delivery:
+	ucf:0;jmr:0;auth:0;dest:I;ENG:(910005)(944506478)(944626604)(920097)(930097)(140003);
+X-Microsoft-Antispam-Message-Info:
+	=?utf-8?B?amhteHlmTGYreWdWVXlKT1hCTnFLZmI1d0NVUW0yV1QxbUszNktkdlZ2d29B?=
+ =?utf-8?B?WFg2dGdsR1BWcFkvUGxrZkV6ODdQNExlWnJpeGNFYVRiN0U0N2pLSVZkTkU1?=
+ =?utf-8?B?aFZxUnowWTZLdGpYR0U0SlhnVGJrc0VCQloyOHNGTGdQOVg2TFAxZFpNK2w1?=
+ =?utf-8?B?NFhjZzVWZ3UrMnVTTjFuckU1L3VWNDhEckozbmtBTHlKRFNuNEdEa2dteHMv?=
+ =?utf-8?B?ZjRqQjlhRlBrQlJCS3A2Rkl5aWpFdEozRkJ0N01Nbm8zc3RKYVhuNWJHdW5E?=
+ =?utf-8?B?OStWLzQwRTNCZCtybzN5d0pvaVN2SmgwUVZwTjBHV2NheDhOQlgxQlQ1VWg4?=
+ =?utf-8?B?L01kUjFjdHBqSkhZdGI1ZjZkZDVlZEdubjN0TjNSWVZLV3dWcTJjbHdzWHBa?=
+ =?utf-8?B?OWt6a0ZONmZldXM0THlsUGZhdnVZd002TEpjVE5wYXZaT3Jsb1NOSVVWcDcv?=
+ =?utf-8?B?c2dLU0pnM1pZRmpFZWIwN216dVc5SmQwRk15aHlmMUYyV1ljVjJvaUZJc1F1?=
+ =?utf-8?B?QmFJa1hJZU5sQU02ZXgyQUlJTUZUekYxWEJWK2d2S2owaTNXT1RNTEpCcUZG?=
+ =?utf-8?B?V04vWnF2ekhNMWRhRncwdnNoK2N6QS9OREFoSnBFT2N0aGwzcXVmUXhqVUZ5?=
+ =?utf-8?B?d2xzRllORXRvQnJyOW5xSmdPNXI3WktqbFlDcUJOVXp2VEErT0RXL2FKVGFX?=
+ =?utf-8?B?dE1HQU03TTFsV2pHemdEQnZKL0R3OUorMWY2aDU3K0k2TUVkQ29jUUc3Y20w?=
+ =?utf-8?B?VjM4SW1RQXZhY1FvS1BweDFqZjJ2d3Z4TUwzZVJZL050QmZTanhvSjJldFQx?=
+ =?utf-8?B?MWE4WElWOHRrUys3RmptRkFlOU1SOW5GVkVzL0dHR3FWeDkrQ0c2c0dIcU5B?=
+ =?utf-8?B?UmorUW1lZTFIR3M1eEkrenhjV3NVSmhCUUhoS01GekkxK0pvRWVlQWJDODNv?=
+ =?utf-8?B?NXhpVzJqcEdaeFpvcGZUZURwd3I3RlJZSWZWUFltTFhXRlMvaFVBcHZqU3lQ?=
+ =?utf-8?B?VkdmSXByTElyUjVSSTQvbTBxUi9xM3Z1YjJkb0drV0NvUEEwY251WFJzTGln?=
+ =?utf-8?B?Z1gvZnFmNVkxL3B2UVhoKzVLanRtc3h2ZVBUajhHQlN2aWRLYkROdktqRDlp?=
+ =?utf-8?B?S29MRnFQRE9SM0ROeUVhZGRoZlF5WisxSTFlUTRYRTdzM0tzV3ZxQU1UdDU0?=
+ =?utf-8?B?WXh4SmF4MVM4RHZXMlFOYzc1RzFLY1VSVkt1bDNvUG56NmFrM29tOGNHQnlz?=
+ =?utf-8?B?OXZ2V1pKc2g3YnJ2eTBRamZYOHI1TUh1enNuNDFKc0d0UW4wU1d1Zmo5b0Rz?=
+ =?utf-8?B?MFV4T3dwYXFOVjJheUZLUmZOWU9DbnN3WEwyaGtmdXU4b0k1UUNYcER2b2hU?=
+ =?utf-8?B?aWxnTFB0WjhkUUhWQ0RzVWRCVkJDNThFMFVZVDRIeDlLdHQ1WkhQeVEvek1t?=
+ =?utf-8?B?UGkrN0lpRU8wd0JKK2lVM2Z5V0F4TkxwMVJVeG1Jc1l2MWZhKzlHalNUSGRM?=
+ =?utf-8?B?aTRhSVdpRzhSZUFwZ0RXQlpQRkllc3VnYzBCRUc4TVgva3Vuc0ViNHJPK1VD?=
+ =?utf-8?B?dDNySzViSTZPZXN3NnN2WE1wQVJQb3JtWVBRcVdiSHZWdEY2UkE4TEVpaTNI?=
+ =?utf-8?B?UFQzWmxBYU5JaXhGZVJXdVJUU05tWUJlVXphZ200SU5taEsvNmVodndNQ3lT?=
+ =?utf-8?B?UmNiVmkzTStOYVN3eXJheUJNeUdEZUFOTHQ2U2RDKzN0cXVQa2JjdXpZZGhK?=
+ =?utf-8?Q?Cz4xLGlmy8FG89HQmM=3D?=
+MIME-Version: 1.0
+
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8"><s=
+tyle>    .tbpContentBox    {      max-width: 920px;      font-family: "Treb=
+uchet MS", Arial, Helvetica, sans-serif;    }    a    {      color: #0782C1=
+;    }    ol,ul,dl    {      *margin-right: 0px;      padding: 0 40px;    }=
+    h1,h2,h3,h4,h5,h6    {      font-weight: normal;      line-height: 1.2;=
+    }    blockquote {      border-color: #ccc;      border-style: solid;   =
+   border-width: 0;      font-family: Georgia, Times, "Times New Roman", se=
+rif;      font-style: italic;      padding: 2px 0;      border-left-width: =
+5px;      padding-left: 20px;      padding-right: 8px;    }    hr {      -m=
+oz-border-bottom-colors: none;      -moz-border-left-colors: none;      -mo=
+z-border-right-colors: none;      -moz-border-top-colors: none;      border=
+-color: #ccc currentcolor currentcolor;      border-image: none;      borde=
+r-style: solid none none;      border-width: 1px 0 0;    }    img.right {  =
+    border: 1px solid #ccc;      float: right;      margin-left: 15px;     =
+ padding: 5px;    }    img.left {      border: 1px solid #ccc;      float: =
+left;      margin-right: 15px;      padding: 5px;    }    pre {      -moz-t=
+ab-size: 4;      overflow-wrap: break-word;      white-space: pre-wrap;    =
+}    .marker {      background-color: Yellow;    }    figure {      backgro=
+und: rgba(0, 0, 0, 0.05) none repeat scroll 0 0;      border: 1px solid #cc=
+c;      border-radius: 2px;      display: inline-block;      margin: 10px 2=
+0px;      padding: 10px;      text-align: center;    }    figure > figcapti=
+on {      display: block;      text-align: center;    }    .specialContaine=
+r {      padding: 5px 10px;      background: #eee;      border: 1px solid #=
+ccc;    }</style><div class=3D"tbpContentBox"><div>
+  <img src=3D"https://secure.touchnet.net/C21021_tsa/web/images/email-heade=
+r.jpg?t=3D1746181878653">
+</div>
+<p>Hello,</p>
+<p>
+  <br> Installment amounts for your payment plan have changed to reflect
+  new charges and/or credits.Please log in to view the full disclosure
+  statement for payment plan changes. No adjustments will be made to any
+  installment within 14 days of the payment due date.</p>
+<p>&nbsp;</p>
+<div>
+  <b>Payment Plan Details</b>
+</div>
+<div>
+  <hr>Payment Plan Name: Spring 24/25 MPP  </div>
+<div>   &nbsp;  </div>
+<div>   Changed Payment Plan Installment Schedule:  </div>
+<div>
+  <div> 1 Installment: $0.00 amount due,&nbsp;$10,054.93 paid </div>
+  <div> 2 Installment: $0.00 amount due,&nbsp;$10,054.92 paid </div>
+  <div> 3 Installment: $0.00 amount due,&nbsp;$10,072.43 paid </div>
+  <div> 4 Installment: $0.00 amount due,&nbsp;$10,072.42 paid </div>
+</div>
+<div>
+  <hr>
+</div>
+<div>   Please feel free to contact us at sfs@mit.edu, or 617.258.8600
+  if you have any questions or need assistance. You can also schedule an
+  appointment to chat over the phone or via Zoom if you prefer. Students
+  can access MITPay through WebSIS at student.mit.edu. Authorized Users
+  can access MITPay through https://secure.touchnet.net/C21021_tsa/web/logi=
+n.jsp.<br>
+  <br>Thank you,<br>The SFS Team  </div>
+<div>
+  <img src=3D"https://secure.touchnet.net/C21021_tsa/web/images/email-foote=
+r.jpg?t=3D1746181878653">
+</div></div>
