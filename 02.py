@@ -32,12 +32,12 @@ cursor.execute(f'''
     )
 ''')
 
-def extract_email_data(eml_path, threshold):
+def extract_email_data(eml_path, threshold, date_pos):
     with open(eml_path, 'rb') as file:
         msg = BytesParser(policy=policy.default).parse(file)
 
     # Prefer 'X-Mailman-Approved-At' over 'Date'
-    date_header = msg.get("X-Mailman-Approved-At") or msg.get("Date") or ""
+    date_header = msg.get("X-Mailman-Approved-At")or ""
     subject = msg.get("subject", "")
     body = get_body(msg)
 
@@ -45,33 +45,36 @@ def extract_email_data(eml_path, threshold):
     split_messages = split_replies(body)
 
     parsed_messages = []
-    for i, segment in enumerate(split_messages):
-        # Use known subject to remove reply header chunk in later segments
+    i = len(split_messages)-1
+    segment = split_messages[-1]
+    
+    # Adjust subject
+    final_subject = subject if i == 0 and not subject.startswith("Re: ") else subject[4:]
+    
+    if i == 0:
+        cleaned_segment = segment.strip()
+    else:
+        cleaned_segment = strip_leading_headers(segment, final_subject)
 
-        # Adjust subject only for the first message
-        final_subject = subject if i == 0 and not subject.startswith("Re: ") else subject[4:]
-        
-        if i == 0:
-            cleaned_segment = segment.strip()
-        else:
-            cleaned_segment = strip_leading_headers(segment, final_subject)
+    # Extract date
+    segment_date = date_pos #or (format_email_header_date(date_header) if i == 0 else date_from_headers(segment)) or msg.get("Date")
 
-        # Extract date
-        segment_date = extract_reply_date(segment) or (format_email_header_date(date_header) if i == 0 else date_from_headers(segment))
 
-        threshold_datetime = datetime.strptime(threshold, "%a %m/%d/%Y %I:%M %p")
-        segment_datetime = datetime.strptime(segment_date, "%a %m/%d/%Y %I:%M %p")
+    threshold_datetime = datetime.strptime(threshold, "%a %m/%d/%Y %I:%M %p")
+    segment_datetime = datetime.strptime(segment_date, "%a %m/%d/%Y %I:%M %p")
 
-        # Compare
-        if threshold_datetime > segment_datetime:
-            continue
+    # Compare
+    if threshold_datetime > segment_datetime:
+        if i > 0:
+            return [0]
+        return []
 
-        parsed_messages.append({
-            "subject": final_subject,
-            "from": msg.get("from", ""),
-            "date": segment_date,
-            "body": cleaned_segment
-        })
+    parsed_messages.append({
+        "subject": final_subject,
+        "from": msg.get("from", ""),
+        "date": segment_date,
+        "body": cleaned_segment
+    })
 
     return parsed_messages
 
@@ -198,9 +201,11 @@ def run():
     # Get local timezone explicitly as US/Eastern
     local_tz = pytz.timezone("US/Eastern")
 
+    back_up = 2
+
     if result is None:
         print("First time user! Backing up.")
-        threshold_dt = datetime.now(local_tz) - timedelta(days=1095)
+        threshold_dt = datetime.now(local_tz) - timedelta(days=back_up)
     else:
         # Parse the latest date from the DB
         latest_stored = result[0]
@@ -213,7 +218,7 @@ def run():
             print(f"Latest email in database is from {threshold_dt.isoformat()}")
         except Exception:
             print("⚠️ Could not parse latest stored date..")
-            threshold_dt = datetime.now(local_tz) - timedelta(days=1095)
+            threshold_dt = datetime.now(local_tz) - timedelta(days=back_up)
 
     # Format threshold_dt to "Fri 5/10/2025 11:14 PM"
     threshold_dt = threshold_dt.strftime("%a %-m/%-d/%Y %-I:%M %p")
@@ -298,12 +303,15 @@ def run():
                 email_fresh.click()
                 page.wait_for_timeout(2000)
 
+                page.screenshot(path="more_actions.png", full_page=True)
                 page.click('button[aria-label="More actions"]')
                 page.wait_for_timeout(500)
+                page.screenshot(path="download.png", full_page=True)
                 page.click('button[aria-label="Download"]')
                 page.wait_for_timeout(500)
 
                 with page.expect_download() as download_info:
+                    page.screenshot(path="failure.png", full_page=True)
                     page.click('button[aria-label="Download as EML"]')
 
                 download = download_info.value
@@ -312,22 +320,28 @@ def run():
 
                 # ✅ Get visible date from page
                 try:
-                    dom_date = page.locator('[data-testid="SentReceivedSavedTime"]').text_content(timeout=5000)
+                    elements = page.locator('[data-testid="SentReceivedSavedTime"]')
+                    count = elements.count()
+                    if count > 1:
+                        dom_date = elements.all()[0].text_content(timeout=5000)
+                    else:
+                        dom_date = elements.text_content(timeout=5000)
+
+                        
                 except:
                     dom_date = ""
 
-                # ✅ Parse and store email data (override date for original email with DOM date)
-                parsed_segments = extract_email_data(filepath, threshold_dt)
-                if dom_date and parsed_segments:
-                    parsed_segments[0]["date"] = dom_date
+                parsed_segments = extract_email_data(filepath, threshold_dt, dom_date)
 
                 if parsed_segments:
-                    all_emails.extend(parsed_segments)
+                    if parsed_segments != [0]:
+                        all_emails.extend(parsed_segments)
                 else:
                     reached_threshold = True
+                    # ✅ Delete .eml file
+                    os.remove(filepath)
                     break
 
-                # ✅ Delete .eml file
                 os.remove(filepath)
                 print(f"✅ Saved and parsed {filepath} ({len(parsed_segments)} part(s))")
                 downloaded_count += 1
