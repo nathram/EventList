@@ -9,9 +9,9 @@ from dateutil import parser
 from bs4 import BeautifulSoup
 
 # Prompt user for KERBEROS (username) and PASSWORD
-KERBEROS = 'nathra' #input("Enter your KERBEROS (MIT username): ")
+KERBEROS = input("Enter your KERBEROS (MIT username): ")
 EMAIL = KERBEROS + "@mit.edu"
-PASSWORD = '86Bl3940' #getpass("Enter your password: ")  # Hides the input for security
+PASSWORD = getpass("Enter your password: ")  # Hides the input for security
 DOWNLOAD_DIR = "saved_emails"
 OUTPUT_JSON = "parsed_emails.json"
 

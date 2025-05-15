@@ -1,8 +1,11 @@
 import sqlite3
 import json
-import subprocess
 import time
 from tqdm import tqdm
+from langchain_ollama import OllamaLLM
+
+# Initialize Ollama model once (adjust model name if needed)
+model = OllamaLLM(model="llama3.2:1b")
 
 # Prompt template for Ollama
 def build_prompt(subject, body):
@@ -31,26 +34,24 @@ Extract and return the following as a JSON object with exactly these keys:
 Return only the JSON. Do not include any explanations or extra text.
 """
 
-# Run a prompt through Ollama and return parsed JSON
-def query_ollama(prompt, model="llama3"):
+# Query Ollama using langchain-ollama and parse JSON output
+def query_ollama(prompt):
+    result = model.invoke(input=prompt)
+    output = result.strip()
+
+    # Extract JSON substring from output
+    start = output.find("{")
+    end = output.rfind("}") + 1
+    json_str = output[start:end]
+
     try:
-        result = subprocess.run(
-            ["ollama", "run", model],
-            input=prompt.encode("utf-8"),
-            capture_output=True,
-            timeout=30
-        )
-        output = result.stdout.decode("utf-8")
-
-        # Find first valid JSON block in output
-        start = output.find("{")
-        end = output.rfind("}") + 1
-        json_str = output[start:end]
         return json.loads(json_str)
-
-    except Exception as e:
-        print("Failed to parse or run model:", e)
-        return None
+    except json.JSONDecodeError:
+        try:
+            return json.loads(output + "}")
+        except json.JSONDecodeError:
+            print("Warning: Failed to parse JSON output:", output)
+            return None
 
 # Load emails from events DB
 def load_emails():
@@ -84,12 +85,12 @@ def save_extracted(events):
             VALUES (?, ?, ?, ?, ?, ?, ?)
         ''', (
             item['id'],
-            item.get('event_name'),
-            item.get('description'),
-            item.get('location'),
-            item.get('date'),
-            item.get('registration_required'),
-            item.get('food_provided')
+            item.get('event_name', "unknown"),
+            item.get('description', "unknown"),
+            item.get('location', "unknown"),
+            item.get('date', "unknown"),
+            item.get('registration_required', "unknown"),
+            item.get('food_provided', "unknown")
         ))
 
     conn.commit()
@@ -107,6 +108,9 @@ def main():
         if info:
             info['id'] = id_
             extracted.append(info)
+        else:
+            print(f"Skipping email id {id_} due to parse error.")
+
         time.sleep(1)  # prevent overload if needed
 
     save_extracted(extracted)
