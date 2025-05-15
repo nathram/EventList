@@ -9,9 +9,9 @@ from dateutil import parser
 from bs4 import BeautifulSoup
 
 # Prompt user for KERBEROS (username) and PASSWORD
-KERBEROS = input("Enter your KERBEROS (MIT username): ")
+KERBEROS = 'nathra' #input("Enter your KERBEROS (MIT username): ")
 EMAIL = KERBEROS + "@mit.edu"
-PASSWORD = getpass("Enter your password: ")  # Hides the input for security
+PASSWORD = '86Bl3940' #getpass("Enter your password: ")  # Hides the input for security
 DOWNLOAD_DIR = "saved_emails"
 OUTPUT_JSON = "parsed_emails.json"
 
@@ -43,11 +43,16 @@ def extract_email_data(eml_path, threshold, date_pos):
 
     # Split the body into original and replies
     split_messages = split_replies(body)
+    
 
     parsed_messages = []
     i = len(split_messages)-1
     segment = split_messages[-1]
-    
+    if i > 0:
+        date_p = date_pos[0]
+    else:
+        date_p = date_pos[-1]
+
     # Adjust subject
     final_subject = subject if i == 0 and not subject.startswith("Re: ") else subject[4:]
     
@@ -57,17 +62,17 @@ def extract_email_data(eml_path, threshold, date_pos):
         cleaned_segment = strip_leading_headers(segment, final_subject)
 
     # Extract date
-    segment_date = date_pos #or (format_email_header_date(date_header) if i == 0 else date_from_headers(segment)) or msg.get("Date")
+    segment_date = date_p #or (format_email_header_date(date_header) if i == 0 else date_from_headers(segment)) or msg.get("Date")
 
 
     threshold_datetime = datetime.strptime(threshold, "%a %m/%d/%Y %I:%M %p")
     segment_datetime = datetime.strptime(segment_date, "%a %m/%d/%Y %I:%M %p")
 
     # Compare
-    if threshold_datetime > segment_datetime:
+    if threshold_datetime >= segment_datetime:
         if i > 0:
-            return [0]
-        return []
+            return ([0], None)
+        return ([], None)
 
     parsed_messages.append({
         "subject": final_subject,
@@ -76,7 +81,7 @@ def extract_email_data(eml_path, threshold, date_pos):
         "body": cleaned_segment
     })
 
-    return parsed_messages
+    return [parsed_messages, segment_date]
 
 def strip_leading_headers(segment, subject):
     """
@@ -89,7 +94,7 @@ def strip_leading_headers(segment, subject):
     # Escape special characters in subject for regex
     escaped_subject = re.escape(subject)
     
-    # Look for the full subject line like "Subject: [USWIM] Board Games & Pizza 🍕"
+    # Look for the full subject line
     match = re.search(rf"Subject:\s*{escaped_subject}", segment)
     if match:
         # Remove everything up to the end of the Subject line
@@ -201,11 +206,11 @@ def run():
     # Get local timezone explicitly as US/Eastern
     local_tz = pytz.timezone("US/Eastern")
 
-    back_up = 2
+    back_up = 30
 
     if result is None:
-        print("First time user! Backing up.")
         threshold_dt = datetime.now(local_tz) - timedelta(days=back_up)
+        print(f"First time user! Downloading from the following date: {threshold_dt.strftime("%a %-m/%-d/%Y %-I:%M %p")}")
     else:
         # Parse the latest date from the DB
         latest_stored = result[0]
@@ -215,14 +220,13 @@ def run():
                 threshold_dt = threshold_dt.replace(tzinfo=local_tz)
             else:
                 threshold_dt = threshold_dt.astimezone(local_tz)
-            print(f"Latest email in database is from {threshold_dt.isoformat()}")
+            print(f"Backing up until date of latest email: {threshold_dt.strftime("%a %-m/%-d/%Y %-I:%M %p")}")
         except Exception:
-            print("⚠️ Could not parse latest stored date..")
+            print("Could not parse latest stored date..")
             threshold_dt = datetime.now(local_tz) - timedelta(days=back_up)
 
     # Format threshold_dt to "Fri 5/10/2025 11:14 PM"
     threshold_dt = threshold_dt.strftime("%a %-m/%-d/%Y %-I:%M %p")
-    print("thresh " + threshold_dt)
 
     all_emails = []
 
@@ -238,28 +242,25 @@ def run():
         page.type('input[type="email"]', EMAIL)
         page.press('input[type="email"]', 'Enter')
 
-        print("Email entered, moving to MIT Touchstone Page")
-        time.sleep(10)
+        print("Email entered.")
 
         page.wait_for_selector('input[name="identifier"]', timeout=10000)
         page.fill('input[name="identifier"]', '')
         page.type('input[name="identifier"]', KERBEROS)
         page.press('input[name="identifier"]', 'Enter')
 
-        print("Kerberos entered, moving to password")
-        time.sleep(10)
+        print("Kerberos entered.")
 
         page.wait_for_selector('input[name="credentials.passcode"]', timeout=10000)
         page.fill('input[name="credentials.passcode"]', '')
         page.type('input[name="credentials.passcode"]', PASSWORD)
         page.press('input[name="credentials.passcode"]', 'Enter')
 
-        print("Password entered, moving to Duo MFA")
+        print("Password entered.")
         print("Please wait for Duo Push to your device...")
-        page.wait_for_timeout(20000)
 
         try:
-            page.wait_for_selector('#trust-browser-button', timeout=15000)
+            page.wait_for_selector('#trust-browser-button', timeout=60000)
             page.click('#trust-browser-button')
             print("Clicked 'Yes, this is my device'")
         except:
@@ -277,19 +278,26 @@ def run():
         page.wait_for_selector('[data-convid]', timeout=60000)
         print("Inbox loaded.")
 
+        
         reached_threshold = False
 
         for _ in range(max_scrolls):
             emails = page.query_selector_all('[data-convid]')
-            print("emails grabbed: " + str(len(emails)))
+            #print("emails grabbed: " + str(len(emails)))
             total_skipped = 0
 
+            refreshed = 0
             for email in emails:
                 cid = email.get_attribute("data-convid")
                 if not cid or cid in seen_ids:
                     total_skipped += 1
                     if total_skipped == len(emails):
-                        reached_threshold = True
+                        if refreshed == 0:
+                            page.screenshot(path="refresh0.png", full_page=True)
+                            refreshed += 1
+                        else:
+                            page.screenshot(path="refresh1.png", full_page=True)
+                            reached_threshold = True
                     continue
 
                 seen_ids.add(cid)
@@ -297,54 +305,83 @@ def run():
                 
                 email_fresh = page.query_selector(f'[data-convid="{cid}"]')
                 if not email_fresh:
-                    print(f"⚠️ Skipping email {cid} (element no longer in DOM)")
+                    print(f"Skipping email {cid} (element no longer in DOM)")
                     continue
 
                 email_fresh.click()
                 page.wait_for_timeout(2000)
 
                 page.screenshot(path="more_actions.png", full_page=True)
-                page.click('button[aria-label="More actions"]')
-                page.wait_for_timeout(500)
+                try:
+                    page.wait_for_selector('button[aria-label="More actions"]', timeout=5000)
+                    page.click('button[aria-label="More actions"]')
+                except:
+                    print("Error with download, skipping email.")
+                    continue
+
                 page.screenshot(path="download.png", full_page=True)
-                page.click('button[aria-label="Download"]')
-                page.wait_for_timeout(500)
+                
+                try:
+                    page.wait_for_selector('button[aria-label="Download"]', timeout=5000)
+                    page.click('button[aria-label="Download"]')
+                except:
+                    try:
+                        page.click('button[aria-label="More actions"]')
+                        page.wait_for_selector('button[aria-label="Download"]', timeout=5000)
+                        page.click('button[aria-label="Download"]')
+                    except:
+                        print("Error with download, skipping email.")
+                        continue
 
                 with page.expect_download() as download_info:
                     page.screenshot(path="failure.png", full_page=True)
-                    page.click('button[aria-label="Download as EML"]')
+                    try:
+                        page.wait_for_selector('button[aria-label="Download as EML"]', timeout=5000)
+                        page.click('button[aria-label="Download as EML"]')
+                    except:
+                        try:
+                            page.click('button[aria-label="Download"]')
+                            page.wait_for_selector('button[aria-label="Download as EML"]', timeout=5000)
+                            page.click('button[aria-label="Download as EML"]')
+                        except:
+                            print("Error with download, skipping email.")
+                            continue
+                    
 
                 download = download_info.value
                 filepath = f"{DOWNLOAD_DIR}/{cid}.eml"
                 download.save_as(filepath)
 
-                # ✅ Get visible date from page
-                try:
-                    elements = page.locator('[data-testid="SentReceivedSavedTime"]')
-                    count = elements.count()
-                    if count > 1:
-                        dom_date = elements.all()[0].text_content(timeout=5000)
-                    else:
-                        dom_date = elements.text_content(timeout=5000)
+                # Get visible date from page
+                elements = page.locator('[data-testid="SentReceivedSavedTime"]')
+                count = elements.count()
+                if count > 1:
+                    dom_date = [elements.all()[i].text_content(timeout=5000) for i in range(count)]
+                else:
+                    dom_date = [elements.text_content(timeout=5000)]
 
-                        
-                except:
-                    dom_date = ""
+                #print(dom_date)
 
                 parsed_segments = extract_email_data(filepath, threshold_dt, dom_date)
 
-                if parsed_segments:
-                    if parsed_segments != [0]:
-                        all_emails.extend(parsed_segments)
+                if parsed_segments[0]:
+                    if parsed_segments[0] != [0]:
+                        all_emails.extend(parsed_segments[0])
                 else:
+                    print('sad face')
+                    print(parsed_segments)
                     reached_threshold = True
-                    # ✅ Delete .eml file
+                    # Delete .eml file
                     os.remove(filepath)
                     break
 
                 os.remove(filepath)
-                print(f"✅ Saved and parsed {filepath} ({len(parsed_segments)} part(s))")
                 downloaded_count += 1
+                print(downloaded_count)
+                recent_date = ""
+                if parsed_segments[1]:
+                    recent_date = parsed_segments[1]
+                print(f"Saved and parsed {downloaded_count} emails. Most recent download date: {recent_date}. Downloading until: {threshold_dt}")
 
             if reached_threshold:
                 break
@@ -352,7 +389,7 @@ def run():
             page.keyboard.press("PageDown")
             time.sleep(1)
 
-        print(f"✅ Finished downloading and parsing {downloaded_count} emails.")
+        print(f"Finished downloading and parsing {downloaded_count} emails.")
         browser.close()
 
     # Sort emails by date, most recent first
