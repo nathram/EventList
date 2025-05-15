@@ -206,7 +206,7 @@ def run():
     # Get local timezone explicitly as US/Eastern
     local_tz = pytz.timezone("US/Eastern")
 
-    back_up = 30
+    back_up = 60
 
     if result is None:
         threshold_dt = datetime.now(local_tz) - timedelta(days=back_up)
@@ -293,10 +293,10 @@ def run():
                     total_skipped += 1
                     if total_skipped == len(emails):
                         if refreshed == 0:
-                            page.screenshot(path="refresh0.png", full_page=True)
+                            #page.screenshot(path="refresh0.png", full_page=True)
                             refreshed += 1
                         else:
-                            page.screenshot(path="refresh1.png", full_page=True)
+                            #page.screenshot(path="refresh1.png", full_page=True)
                             reached_threshold = True
                     continue
 
@@ -311,7 +311,7 @@ def run():
                 email_fresh.click()
                 page.wait_for_timeout(2000)
 
-                page.screenshot(path="more_actions.png", full_page=True)
+                #page.screenshot(path="more_actions.png", full_page=True)
                 try:
                     page.wait_for_selector('button[aria-label="More actions"]', timeout=5000)
                     page.click('button[aria-label="More actions"]')
@@ -319,7 +319,7 @@ def run():
                     print("Error with download, skipping email.")
                     continue
 
-                page.screenshot(path="download.png", full_page=True)
+                #page.screenshot(path="download.png", full_page=True)
                 
                 try:
                     page.wait_for_selector('button[aria-label="Download"]', timeout=5000)
@@ -334,7 +334,7 @@ def run():
                         continue
 
                 with page.expect_download() as download_info:
-                    page.screenshot(path="failure.png", full_page=True)
+                    #page.screenshot(path="failure.png", full_page=True)
                     try:
                         page.wait_for_selector('button[aria-label="Download as EML"]', timeout=5000)
                         page.click('button[aria-label="Download as EML"]')
@@ -368,8 +368,6 @@ def run():
                     if parsed_segments[0] != [0]:
                         all_emails.extend(parsed_segments[0])
                 else:
-                    print('sad face')
-                    print(parsed_segments)
                     reached_threshold = True
                     # Delete .eml file
                     os.remove(filepath)
@@ -377,7 +375,6 @@ def run():
 
                 os.remove(filepath)
                 downloaded_count += 1
-                print(downloaded_count)
                 recent_date = ""
                 if parsed_segments[1]:
                     recent_date = parsed_segments[1]
