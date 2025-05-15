@@ -31,6 +31,18 @@ model = make_pipeline(
 model.fit(X_train, y_train)
 print(classification_report(y_test, model.predict(X_test)))
 
+'''
+Accuracy:
+ precision    recall  f1-score   support
+
+           0       0.98      0.96      0.97        54
+           1       0.87      0.93      0.90        14
+
+    accuracy                           0.96        68
+   macro avg       0.92      0.95      0.93        68
+weighted avg       0.96      0.96      0.96        68
+'''
+
 # Save model
 joblib.dump(model, "event_classifier.pkl")
 print("Model saved as 'event_classifier.pkl'")

@@ -206,7 +206,7 @@ def run():
     # Get local timezone explicitly as US/Eastern
     local_tz = pytz.timezone("US/Eastern")
 
-    back_up = 60
+    back_up = 30
 
     if result is None:
         threshold_dt = datetime.now(local_tz) - timedelta(days=back_up)

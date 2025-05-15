@@ -4,7 +4,7 @@ import joblib
 
 def load_unlabeled_emails():
     conn = sqlite3.connect("emails.db")
-    df = pd.read_sql_query("SELECT id, subject, sender, date, body FROM emails", conn)
+    df = pd.read_sql_query("SELECT subject, sender, date, body FROM emails", conn)
     conn.close()
     return df
 
@@ -15,7 +15,7 @@ def save_events_to_new_db(events_df):
     # Create table if it doesn't exist
     cursor.execute('''
         CREATE TABLE IF NOT EXISTS emails (
-            id INTEGER PRIMARY KEY,
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
             subject TEXT,
             sender TEXT,
             date TEXT,
@@ -23,12 +23,12 @@ def save_events_to_new_db(events_df):
         )
     ''')
 
-    # Insert rows
+    # Insert rows without specifying id (let SQLite auto-increment)
     for _, row in events_df.iterrows():
         cursor.execute('''
-            INSERT INTO emails (id, subject, sender, date, body)
-            VALUES (?, ?, ?, ?, ?)
-        ''', (row['id'], row['subject'], row['sender'], row['date'], row['body']))
+            INSERT INTO emails (subject, sender, date, body)
+            VALUES (?, ?, ?, ?)
+        ''', (row['subject'], row['sender'], row['date'], row['body']))
 
     conn.commit()
     conn.close()
